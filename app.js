@@ -28,7 +28,7 @@ function initSegmentedControls() {
           input.closest('.segmented-tab').classList.add('active');
           
           // Toggle shift class based on value
-          if (input.value === 'random') {
+          if (input.value === 'random' || input.value === 'off') {
             control.classList.add('shift');
           } else {
             control.classList.remove('shift');
@@ -242,8 +242,9 @@ function selectOption(selectedIdx) {
     }
   });
 
-  // Delay transition for better user experience (only if correct)
-  if (isCorrect) {
+  // Delay transition for better user experience (only if correct and auto-transition is enabled)
+  const autoTransition = document.querySelector('input[name="autoTransition"]:checked').value;
+  if (isCorrect && autoTransition === 'on') {
     setTimeout(() => {
       if (currentQuestionIdx < quizQuestions.length - 1) {
         nextQuestion();
