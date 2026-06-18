@@ -346,7 +346,7 @@ function displayQuestion() {
 
   let displayText = currentQ.qText;
   if (questionOrder === 'default' && optionOrder === 'default' && currentQ.num) {
-    displayText = `Q${currentQ.num}. ${displayText}`;
+    displayText = `${currentQ.num}. ${displayText}`;
   }
   document.getElementById('question-text').innerText = displayText;
 
