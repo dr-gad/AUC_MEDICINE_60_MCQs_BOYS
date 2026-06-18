@@ -9,7 +9,35 @@ let answersState = []; // Tracks user answers: { selectedIdx, isCorrect }
 // Initialization
 document.addEventListener('DOMContentLoaded', () => {
   renderCategories();
+  initSegmentedControls();
 });
+
+// Initialize Segmented Controls
+function initSegmentedControls() {
+  const controls = document.querySelectorAll('.segmented-control');
+  controls.forEach(control => {
+    const inputs = control.querySelectorAll('input[type="radio"]');
+    inputs.forEach(input => {
+      input.addEventListener('change', () => {
+        if (input.checked) {
+          // Clear active class from siblings
+          control.querySelectorAll('.segmented-tab').forEach(tab => {
+            tab.classList.remove('active');
+          });
+          // Add active class to selected tab
+          input.closest('.segmented-tab').classList.add('active');
+          
+          // Toggle shift class based on value
+          if (input.value === 'random') {
+            control.classList.add('shift');
+          } else {
+            control.classList.remove('shift');
+          }
+        }
+      });
+    });
+  });
+}
 
 // Render Category Cards
 function renderCategories() {
