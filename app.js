@@ -365,6 +365,18 @@ function resetApp() {
 
 // Navigation Helper
 function switchScreen(fromId, toId) {
+  // Toggle quiz-active class on body and html based on active screen
+  if (toId === 'quiz-screen') {
+    document.body.classList.add('quiz-active');
+    document.documentElement.classList.add('quiz-active');
+  } else {
+    document.body.classList.remove('quiz-active');
+    document.documentElement.classList.remove('quiz-active');
+    // Reset scroll position when going back to home/results screen
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }
+
   // Hide all screens to prevent any overlap
   document.querySelectorAll('.screen').forEach(screen => {
     screen.classList.remove('active');
