@@ -17,6 +17,7 @@
   --color-violet: #8b5cf6;
   --color-emerald: #10b981;
   --color-rose: #f43f5e;
+  --color-orange: #f97316;
   
   --accent-gradient: linear-gradient(135deg, var(--color-blue) 0%, var(--color-violet) 100%);
   --accent-glow: rgba(59, 130, 246, 0.15);
@@ -602,6 +603,56 @@ body {
   text-shadow: 0 0 12px rgba(59, 130, 246, 0.25);
 }
 
+/* Saved Reviews Bento Button Styles */
+.btn-review-saved {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  cursor: not-allowed;
+  opacity: 0.4;
+  transition: var(--transition-fast);
+  font-family: var(--font-arabic);
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-review-saved:not(:disabled) {
+  cursor: pointer;
+  opacity: 1;
+  color: var(--text-primary);
+}
+
+.btn-review-saved:not(:disabled)#start-saved-very-important-btn {
+  border-color: rgba(244, 63, 94, 0.3);
+  background: rgba(244, 63, 94, 0.04);
+  color: var(--color-rose);
+}
+
+.btn-review-saved:not(:disabled)#start-saved-very-important-btn:hover {
+  background: var(--color-rose);
+  border-color: var(--color-rose);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.3);
+}
+
+.btn-review-saved:not(:disabled)#start-saved-important-btn {
+  border-color: rgba(249, 115, 22, 0.3);
+  background: rgba(249, 115, 22, 0.04);
+  color: var(--color-orange);
+}
+
+.btn-review-saved:not(:disabled)#start-saved-important-btn:hover {
+  background: var(--color-orange);
+  border-color: var(--color-orange);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(249, 115, 22, 0.3);
+}
+
 /* Premium Start Button */
 .btn-start {
   width: 100%;
@@ -771,6 +822,89 @@ body {
   font-family: var(--font-english);
   text-align: left;
   text-wrap: pretty;
+}
+
+/* Question Flags & Flag Buttons */
+.question-flags {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-bottom: 20px;
+  direction: ltr; /* Ensure left-to-right layout and right-aligned container */
+}
+
+.flag-btn {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  font-family: var(--font-english);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  outline: none;
+  user-select: none;
+}
+
+.flag-btn:focus-visible {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.flag-btn.flag-important {
+  border-color: rgba(249, 115, 22, 0.25);
+  color: rgba(249, 115, 22, 0.75);
+}
+
+.flag-btn.flag-important:hover,
+.flag-btn.flag-important.active {
+  background: var(--color-orange);
+  border-color: var(--color-orange);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(249, 115, 22, 0.35);
+}
+
+.flag-btn.flag-very-important {
+  border-color: rgba(244, 63, 94, 0.25);
+  color: rgba(244, 63, 94, 0.75);
+}
+
+.flag-btn.flag-very-important:hover,
+.flag-btn.flag-very-important.active {
+  background: var(--color-rose);
+  border-color: var(--color-rose);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(244, 63, 94, 0.35);
+}
+
+/* Results Screen Flag Review Button Overrides */
+.btn-action-primary.btn-action-very-important {
+  background: rgba(244, 63, 94, 0.08) !important;
+  border: 1px solid rgba(244, 63, 94, 0.2) !important;
+  color: var(--color-rose) !important;
+}
+
+.btn-action-primary.btn-action-very-important:hover {
+  background: var(--color-rose) !important;
+  border-color: var(--color-rose) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 20px rgba(244, 63, 94, 0.3) !important;
+}
+
+.btn-action-primary.btn-action-important {
+  background: rgba(249, 115, 22, 0.08) !important;
+  border: 1px solid rgba(249, 115, 22, 0.2) !important;
+  color: var(--color-orange) !important;
+}
+
+.btn-action-primary.btn-action-important:hover {
+  background: var(--color-orange) !important;
+  border-color: var(--color-orange) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.3) !important;
 }
 
 /* Option Buttons list */

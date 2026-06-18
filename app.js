@@ -12,6 +12,7 @@ let timeElapsed = 0; // in seconds
 document.addEventListener('DOMContentLoaded', () => {
   renderCategories();
   initSegmentedControls();
+  updateSavedCounts();
 });
 
 // Initialize Segmented Controls
@@ -170,6 +171,7 @@ function updateTotalCounter() {
     }
   });
   document.getElementById('selected-total').innerText = total;
+  updateSavedCounts();
 }
 
 // Shuffle Utility
@@ -216,7 +218,10 @@ function startQuiz(customQuestions = null) {
               section: `${secName} - ${examName}`,
               qText: q.q,
               options: options,
-              correct: correctIdx
+              correct: correctIdx,
+              originalQ: q,
+              secName: secName,
+              examName: examName
             });
           });
         }
@@ -293,6 +298,25 @@ function displayQuestion() {
     if (quizQuestions[i].section === currentQ.section) remainingInSec++;
   }
   document.getElementById('remaining-section').innerText = remainingInSec;
+
+  // Question Flags
+  const flagsContainer = document.getElementById('question-flags');
+  if (flagsContainer) {
+    const flagged = getFlaggedQuestions();
+    const qKey = getQuestionKey(currentQ);
+    const savedFlag = flagged[qKey];
+    const isVeryImportant = savedFlag && savedFlag.flagType === 'very_important';
+    const isImportant = savedFlag && savedFlag.flagType === 'important';
+
+    flagsContainer.innerHTML = `
+      <button class="flag-btn flag-important ${isImportant ? 'active' : ''}" onclick="toggleFlagCurrentQuestion('important')">
+        ⭐️ Important
+      </button>
+      <button class="flag-btn flag-very-important ${isVeryImportant ? 'active' : ''}" onclick="toggleFlagCurrentQuestion('very_important')">
+        🔥 V. Important
+      </button>
+    `;
+  }
 
   // Question Text
   document.getElementById('question-text').innerText = currentQ.qText;
@@ -445,6 +469,39 @@ function finishQuiz() {
   } else {
     reviewSkippedBtn.style.display = 'none';
   }
+
+  // Toggle review flagged very important button visibility
+  const flagged = getFlaggedQuestions();
+  let quizVeryImportantCount = 0;
+  let quizImportantCount = 0;
+
+  quizQuestions.forEach(q => {
+    const qKey = getQuestionKey(q);
+    if (flagged[qKey]) {
+      if (flagged[qKey].flagType === 'very_important') quizVeryImportantCount++;
+      if (flagged[qKey].flagType === 'important') quizImportantCount++;
+    }
+  });
+
+  const reviewVIBtn = document.getElementById('review-very-important-btn');
+  if (reviewVIBtn) {
+    if (quizVeryImportantCount > 0) {
+      reviewVIBtn.style.display = 'block';
+      reviewVIBtn.innerText = `🔥 مراجعة الأسئلة الهامة جداً في هذا الاختبار (${quizVeryImportantCount})`;
+    } else {
+      reviewVIBtn.style.display = 'none';
+    }
+  }
+
+  const reviewIBtn = document.getElementById('review-important-btn');
+  if (reviewIBtn) {
+    if (quizImportantCount > 0) {
+      reviewIBtn.style.display = 'block';
+      reviewIBtn.innerText = `⭐️ مراجعة الأسئلة الهامة في هذا الاختبار (${quizImportantCount})`;
+    } else {
+      reviewIBtn.style.display = 'none';
+    }
+  }
 }
 
 // Review Wrong Answers Only
@@ -454,10 +511,7 @@ function reviewWrongAnswers() {
     const answer = answersState[idx];
     if (answer !== null && !answer.isCorrect) {
       wrongQs.push({
-        section: q.section,
-        qText: q.qText,
-        options: q.options,
-        correct: q.correct
+        ...q
       });
     }
   });
@@ -474,10 +528,7 @@ function reviewSkippedAnswers() {
     const answer = answersState[idx];
     if (answer === null) {
       skippedQs.push({
-        section: q.section,
-        qText: q.qText,
-        options: q.options,
-        correct: q.correct
+        ...q
       });
     }
   });
@@ -519,5 +570,187 @@ function switchScreen(fromId, toId) {
     toEl.style.display = 'block';
     toEl.offsetHeight; // Trigger reflow
     toEl.classList.add('active');
+  }
+}
+
+// === Flagging Storage & Management Helpers ===
+
+// Get flagged questions from localStorage
+function getFlaggedQuestions() {
+  try {
+    return JSON.parse(localStorage.getItem('auc_mcq_flagged_questions') || '{}');
+  } catch (e) {
+    console.error("Error reading flagged questions from localStorage", e);
+    return {};
+  }
+}
+
+// Save flagged questions to localStorage
+function saveFlaggedQuestions(flagged) {
+  try {
+    localStorage.setItem('auc_mcq_flagged_questions', JSON.stringify(flagged));
+  } catch (e) {
+    console.error("Error saving flagged questions to localStorage", e);
+  }
+}
+
+// Generate unique key for a question
+function getQuestionKey(q) {
+  return `${q.secName || ''}|${q.examName || ''}|||${q.qText}`;
+}
+
+// Toggle a flag of a specific type for the current question
+function toggleFlagCurrentQuestion(type) {
+  const currentQ = quizQuestions[currentQuestionIdx];
+  if (!currentQ) return;
+
+  const flagged = getFlaggedQuestions();
+  const qKey = getQuestionKey(currentQ);
+
+  if (flagged[qKey] && flagged[qKey].flagType === type) {
+    // Remove flag if already same type
+    delete flagged[qKey];
+  } else {
+    // Save/update flag (use canonical question representation)
+    const origQ = currentQ.originalQ || { q: currentQ.qText, o: currentQ.options, c: currentQ.correct };
+    flagged[qKey] = {
+      key: qKey,
+      section: currentQ.section,
+      qText: origQ.q,
+      options: [...origQ.o],
+      correct: origQ.c,
+      secName: currentQ.secName || '',
+      examName: currentQ.examName || '',
+      flagType: type,
+      flaggedAt: Date.now()
+    };
+  }
+
+  saveFlaggedQuestions(flagged);
+
+  // Instantly update UI toggles state
+  const updatedFlagged = getFlaggedQuestions();
+  const savedFlag = updatedFlagged[qKey];
+  const isVeryImportant = savedFlag && savedFlag.flagType === 'very_important';
+  const isImportant = savedFlag && savedFlag.flagType === 'important';
+
+  const flagsContainer = document.getElementById('question-flags');
+  if (flagsContainer) {
+    const impBtn = flagsContainer.querySelector('.flag-important');
+    const vimpBtn = flagsContainer.querySelector('.flag-very-important');
+
+    if (impBtn) {
+      if (isImportant) impBtn.classList.add('active');
+      else impBtn.classList.remove('active');
+    }
+    if (vimpBtn) {
+      if (isVeryImportant) vimpBtn.classList.add('active');
+      else vimpBtn.classList.remove('active');
+    }
+  }
+}
+
+// Update flagged counts on the setup screen
+function updateSavedCounts() {
+  const flagged = getFlaggedQuestions();
+  const flaggedList = Object.values(flagged);
+
+  let veryImportantCount = 0;
+  let importantCount = 0;
+
+  if (selectedExams.size === 0) {
+    // Show global counts if no exams are selected
+    veryImportantCount = flaggedList.filter(q => q.flagType === 'very_important').length;
+    importantCount = flaggedList.filter(q => q.flagType === 'important').length;
+  } else {
+    // Show filtered counts for selected exams
+    flaggedList.forEach(q => {
+      const key = `${q.secName}|${q.examName}`;
+      if (selectedExams.has(key)) {
+        if (q.flagType === 'very_important') veryImportantCount++;
+        if (q.flagType === 'important') importantCount++;
+      }
+    });
+  }
+
+  const viBtn = document.getElementById('start-saved-very-important-btn');
+  const iBtn = document.getElementById('start-saved-important-btn');
+  const viCountSpan = document.getElementById('saved-very-important-count');
+  const iCountSpan = document.getElementById('saved-important-count');
+
+  if (viCountSpan) viCountSpan.innerText = veryImportantCount;
+  if (iCountSpan) iCountSpan.innerText = importantCount;
+
+  if (viBtn) viBtn.disabled = veryImportantCount === 0;
+  if (iBtn) iBtn.disabled = importantCount === 0;
+}
+
+// Start a quiz composed of saved questions of a specific type
+function startSavedQuiz(type) {
+  const flagged = getFlaggedQuestions();
+  const flaggedList = Object.values(flagged);
+
+  let questionsToQuiz = [];
+
+  if (selectedExams.size === 0) {
+    // Review all globally
+    questionsToQuiz = flaggedList.filter(q => q.flagType === type);
+  } else {
+    // Filter by selected exams
+    flaggedList.forEach(q => {
+      const key = `${q.secName}|${q.examName}`;
+      if (selectedExams.has(key) && q.flagType === type) {
+        questionsToQuiz.push(q);
+      }
+    });
+  }
+
+  if (questionsToQuiz.length === 0) return;
+
+  const optionOrder = document.querySelector('input[name="optionOrder"]:checked').value;
+  const formattedQs = questionsToQuiz.map(q => {
+    let options = [...q.options];
+    let correctIdx = q.correct;
+    if (optionOrder === 'random') {
+      const indices = options.map((_, i) => i);
+      shuffleArray(indices);
+      options = indices.map(i => q.options[i]);
+      correctIdx = indices.indexOf(q.correct);
+    }
+    return {
+      section: q.section,
+      qText: q.qText,
+      options: options,
+      correct: correctIdx,
+      originalQ: { q: q.qText, o: q.options, c: q.correct },
+      secName: q.secName,
+      examName: q.examName
+    };
+  });
+
+  const questionOrder = document.querySelector('input[name="questionOrder"]:checked').value;
+  if (questionOrder === 'random') {
+    shuffleArray(formattedQs);
+  }
+
+  startQuiz(formattedQs);
+}
+
+// Review flagged questions in the current quiz run
+function reviewCurrentQuizFlagged(type) {
+  const flagged = getFlaggedQuestions();
+  const flaggedQs = [];
+
+  quizQuestions.forEach(q => {
+    const qKey = getQuestionKey(q);
+    if (flagged[qKey] && flagged[qKey].flagType === type) {
+      flaggedQs.push({
+        ...q
+      });
+    }
+  });
+
+  if (flaggedQs.length > 0) {
+    startQuiz(flaggedQs);
   }
 }

@@ -100,6 +100,21 @@
                         </div>
                     </div>
 
+                    <div class="settings-card" id="saved-review-card">
+                        <h4 class="settings-label">⭐ الأسئلة المحفوظة للمراجعة</h4>
+                        <p class="settings-description" style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin-top: -6px;">
+                            يمكنك مراجعة الأسئلة التي قمت بحفظها سابقاً كـ Important أو Very Important للتخصصات المحددة.
+                        </p>
+                        <div class="saved-review-buttons" style="display: flex; gap: 12px; margin-top: 6px;">
+                            <button id="start-saved-very-important-btn" class="btn-review-saved" onclick="startSavedQuiz('very_important')" style="flex: 1; padding: 12px; font-size: 0.85rem;" disabled>
+                                🔥 هام جداً (<span id="saved-very-important-count">0</span>)
+                            </button>
+                            <button id="start-saved-important-btn" class="btn-review-saved" onclick="startSavedQuiz('important')" style="flex: 1; padding: 12px; font-size: 0.85rem;" disabled>
+                                ⭐️ هام (<span id="saved-important-count">0</span>)
+                            </button>
+                        </div>
+                    </div>
+
                     <div class="total-counter">
                         <span class="counter-label">إجمالي الأسئلة المحددة</span>
                         <span class="counter-number" id="selected-total">0</span>
@@ -143,6 +158,9 @@
 
             <!-- Question Card -->
             <div class="question-container">
+                <div class="question-flags" id="question-flags">
+                    <!-- Flag buttons will be rendered here dynamically -->
+                </div>
                 <h2 class="question-text" id="question-text">Loading…</h2>
                 <div class="options-container" id="options-container">
                     <!-- Populated dynamically -->
@@ -219,6 +237,12 @@
                 </button>
                 <button class="btn-action-primary" id="review-skipped-btn" onclick="reviewSkippedAnswers()">
                     📝 مراجعة الأسئلة المتروكة فقط
+                </button>
+                <button class="btn-action-primary btn-action-very-important" id="review-very-important-btn" onclick="reviewCurrentQuizFlagged('very_important')" style="display: none;">
+                    🔥 مراجعة الأسئلة الهامة جداً في هذا الاختبار
+                </button>
+                <button class="btn-action-primary btn-action-important" id="review-important-btn" onclick="reviewCurrentQuizFlagged('important')" style="display: none;">
+                    ⭐️ مراجعة الأسئلة الهامة في هذا الاختبار
                 </button>
                 <button class="btn-action-secondary" onclick="resetApp()">
                     🏠 العودة للرئيسية
