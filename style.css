@@ -1240,6 +1240,7 @@ body {
 
 .option-btn.disabled {
   pointer-events: none;
+  transform: none !important;
 }
 
 .option-btn.correct-reveal {
@@ -1825,7 +1826,7 @@ body.quiz-active #quiz-screen .quiz-nav {
     }
 
     body.quiz-active #quiz-screen .section-badge {
-        max-width: 110px !important;
+        max-width: none !important;
     }
 
     body.quiz-active #quiz-screen .quiz-score-pill {
