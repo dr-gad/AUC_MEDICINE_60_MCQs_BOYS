@@ -290,21 +290,28 @@ function finishQuiz() {
   const offset = circumference - (circumference * pct) / 100;
   circle.style.strokeDashoffset = offset;
 
-  // Toggle review wrong button visibility
+  // Calculate skipped questions
+  let scoreSkipped = 0;
+  answersState.forEach(ans => {
+    if (ans === null) scoreSkipped++;
+  });
+
+  // Toggle review wrong & skipped button visibility
   const reviewBtn = document.getElementById('review-wrong-btn');
-  if (scoreWrong > 0) {
+  if (scoreWrong > 0 || scoreSkipped > 0) {
     reviewBtn.style.display = 'block';
+    reviewBtn.innerText = '🔍 مراجعة الأسئلة الخاطئة والمتروكة';
   } else {
     reviewBtn.style.display = 'none';
   }
 }
 
-// Review Wrong Answers Only
+// Review Wrong & Skipped Answers
 function reviewWrongAnswers() {
   const wrongQs = [];
   quizQuestions.forEach((q, idx) => {
     const answer = answersState[idx];
-    if (answer && !answer.isCorrect) {
+    if (answer === null || !answer.isCorrect) {
       wrongQs.push({
         section: q.section,
         qText: q.qText,
@@ -327,15 +334,17 @@ function resetApp() {
 
 // Navigation Helper
 function switchScreen(fromId, toId) {
-  const fromEl = document.getElementById(fromId);
-  const toEl = document.getElementById(toId);
+  // Hide all screens to prevent any overlap
+  document.querySelectorAll('.screen').forEach(screen => {
+    screen.classList.remove('active');
+    screen.style.display = 'none';
+  });
 
-  fromEl.classList.remove('active');
-  setTimeout(() => {
-    fromEl.style.display = 'none';
+  // Show the target screen and transition it in
+  const toEl = document.getElementById(toId);
+  if (toEl) {
     toEl.style.display = 'block';
-    setTimeout(() => {
-      toEl.classList.add('active');
-    }, 50);
-  }, 400);
+    toEl.offsetHeight; // Trigger reflow
+    toEl.classList.add('active');
+  }
 }

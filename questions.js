@@ -3,7 +3,7 @@
 
 const allSections = [
   {
-    "name": "Dermatology (الجلدية)",
+    "name": "Dermatology",
     "questions": [
       {
         "q": "What is the most superficial layer of the epidermis?",
@@ -28,7 +28,7 @@ const allSections = [
     ]
   },
   {
-    "name": "ENT (الأنف والأذن والحنجرة)",
+    "name": "ENT",
     "questions": [
       {
         "q": "Which of the following is the most common bacterial cause of acute otitis media?",
@@ -53,7 +53,7 @@ const allSections = [
     ]
   },
   {
-    "name": "Ophthalmology (الرمد)",
+    "name": "Ophthalmology",
     "questions": [
       {
         "q": "What is the leading cause of reversible blindness worldwide?",
