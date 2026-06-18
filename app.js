@@ -295,23 +295,33 @@ function finishQuiz() {
   answersState.forEach(ans => {
     if (ans === null) scoreSkipped++;
   });
+  document.getElementById('total-skipped').innerText = scoreSkipped;
 
-  // Toggle review wrong & skipped button visibility
-  const reviewBtn = document.getElementById('review-wrong-btn');
-  if (scoreWrong > 0 || scoreSkipped > 0) {
-    reviewBtn.style.display = 'block';
-    reviewBtn.innerText = '🔍 مراجعة الأسئلة الخاطئة والمتروكة';
+  // Toggle review wrong button visibility
+  const reviewWrongBtn = document.getElementById('review-wrong-btn');
+  if (scoreWrong > 0) {
+    reviewWrongBtn.style.display = 'block';
+    reviewWrongBtn.innerText = `🔄 مراجعة الأسئلة الخاطئة فقط (${scoreWrong})`;
   } else {
-    reviewBtn.style.display = 'none';
+    reviewWrongBtn.style.display = 'none';
+  }
+
+  // Toggle review skipped button visibility
+  const reviewSkippedBtn = document.getElementById('review-skipped-btn');
+  if (scoreSkipped > 0) {
+    reviewSkippedBtn.style.display = 'block';
+    reviewSkippedBtn.innerText = `📝 مراجعة الأسئلة المتروكة فقط (${scoreSkipped})`;
+  } else {
+    reviewSkippedBtn.style.display = 'none';
   }
 }
 
-// Review Wrong & Skipped Answers
+// Review Wrong Answers Only
 function reviewWrongAnswers() {
   const wrongQs = [];
   quizQuestions.forEach((q, idx) => {
     const answer = answersState[idx];
-    if (answer === null || !answer.isCorrect) {
+    if (answer !== null && !answer.isCorrect) {
       wrongQs.push({
         section: q.section,
         qText: q.qText,
@@ -323,6 +333,26 @@ function reviewWrongAnswers() {
 
   if (wrongQs.length > 0) {
     startQuiz(wrongQs);
+  }
+}
+
+// Review Skipped Answers Only
+function reviewSkippedAnswers() {
+  const skippedQs = [];
+  quizQuestions.forEach((q, idx) => {
+    const answer = answersState[idx];
+    if (answer === null) {
+      skippedQs.push({
+        section: q.section,
+        qText: q.qText,
+        options: q.options,
+        correct: q.correct
+      });
+    }
+  });
+
+  if (skippedQs.length > 0) {
+    startQuiz(skippedQs);
   }
 }
 

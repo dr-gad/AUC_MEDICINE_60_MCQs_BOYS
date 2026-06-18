@@ -189,11 +189,19 @@
                     <span class="result-number" id="total-wrong">0</span>
                     <span class="result-label">خاطئة</span>
                 </div>
+                <div class="result-card result-skipped">
+                    <div class="result-icon">⏭️</div>
+                    <span class="result-number" id="total-skipped">0</span>
+                    <span class="result-label">متروكة</span>
+                </div>
             </div>
 
             <div class="results-actions">
                 <button class="btn-action-primary" id="review-wrong-btn" onclick="reviewWrongAnswers()">
-                    🔍 مراجعة الإجابات الخاطئة فقط
+                    🔄 مراجعة الأسئلة الخاطئة فقط
+                </button>
+                <button class="btn-action-primary" id="review-skipped-btn" onclick="reviewSkippedAnswers()">
+                    📝 مراجعة الأسئلة المتروكة فقط
                 </button>
                 <button class="btn-action-secondary" onclick="resetApp()">
                     🏠 العودة للرئيسية

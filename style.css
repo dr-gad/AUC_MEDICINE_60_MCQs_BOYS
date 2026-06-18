@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  --font-arabic: 'Cairo', sans-serif;
-  --font-english: 'Outfit', sans-serif;
+  --font-arabic: 'Cairo', 'Segoe UI', sans-serif;
+  --font-english: 'Outfit', 'Inter', 'Segoe UI', sans-serif;
   
   /* Color Palette - Ultra Modern Dark Canvas */
   --bg-primary: #030712;
@@ -59,6 +59,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
 }
 
 body {
@@ -946,15 +950,15 @@ body {
 /* Score Breakdown Grid */
 .results-breakdown {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
   margin-bottom: 30px;
 }
 
 .result-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  padding: 20px;
+  padding: 16px 12px;
   border-radius: var(--radius-md);
   display: flex;
   flex-direction: column;
@@ -974,6 +978,7 @@ body {
 
 .result-card.result-correct .result-number { color: var(--color-success); }
 .result-card.result-wrong .result-number { color: var(--color-wrong); }
+.result-card.result-skipped .result-number { color: var(--text-secondary); }
 
 .result-label {
   color: var(--text-secondary);
