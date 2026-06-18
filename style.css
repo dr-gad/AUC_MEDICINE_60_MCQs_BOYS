@@ -990,11 +990,13 @@ body {
 
 .section-badge {
   color: var(--color-blue);
-  max-width: calc(100% - 90px);
+  flex: 1;
+  min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   flex-shrink: 1;
+  margin-left: 8px;
 }
 
 .number-badge {
@@ -1862,11 +1864,12 @@ body.quiz-active #quiz-screen .quiz-nav {
     }
 
     body.quiz-active #quiz-screen .section-badge {
-        max-width: calc(100% - 80px) !important;
+        flex: 1 !important;
+        min-width: 0 !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
         white-space: nowrap !important;
-        flex-shrink: 1 !important;
+        margin-left: 8px !important;
     }
 
     body.quiz-active #quiz-screen .quiz-score-pill {
