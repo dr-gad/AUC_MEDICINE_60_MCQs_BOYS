@@ -17,7 +17,8 @@ const allSections = [
               "Never leave scar",
               "Treated by surgical drainage"
             ],
-            "c": 0
+            "c": 0,
+            "num": 1
           },
           {
             "q": "False statement about Kerion",
@@ -28,7 +29,8 @@ const allSections = [
               "Main differential diagnosis is Psoriasis",
               "It most often occurs on the scalp"
             ],
-            "c": 3
+            "c": 3,
+            "num": 2
           },
           {
             "q": "Griseofulvin may be used in the treatment of",
@@ -39,7 +41,8 @@ const allSections = [
               "Pityriasis versicolor",
               "Pediculosis capites"
             ],
-            "c": 1
+            "c": 1,
+            "num": 3
           },
           {
             "q": "Endothrix",
@@ -50,7 +53,8 @@ const allSections = [
               "May fluoresce with Wood's light examination",
               "Treated by topical antifungals"
             ],
-            "c": 2
+            "c": 2,
+            "num": 4
           },
           {
             "q": "Budding spores and short hyphae 'spaghetti and meatballs' are characteristic for",
@@ -61,7 +65,8 @@ const allSections = [
               "Tinea cruris",
               "Tinea unguium"
             ],
-            "c": 1
+            "c": 1,
+            "num": 5
           },
           {
             "q": "Commonest fungal infection of the female genitalia in diabetes is",
@@ -72,7 +77,8 @@ const allSections = [
               "Aspergillosis",
               "Tinea cruris"
             ],
-            "c": 2
+            "c": 2,
+            "num": 6
           },
           {
             "q": "Spaghetti and meat ball appearance is seen in",
@@ -83,7 +89,8 @@ const allSections = [
               "Candida",
               "Toxoplasmosis"
             ],
-            "c": 2
+            "c": 2,
+            "num": 7
           },
           {
             "q": "Favus: (Al-Azhar exam)",
@@ -94,7 +101,8 @@ const allSections = [
               "Caused by Candida albicans",
               "Treated by surgical drainage"
             ],
-            "c": 2
+            "c": 2,
+            "num": 8
           },
           {
             "q": "Wrong statement about Kerion: (Al-Azhar exam)",
@@ -105,7 +113,8 @@ const allSections = [
               "May be mistaken with an abscess",
               "It most often occurs on the scalp"
             ],
-            "c": 2
+            "c": 2,
+            "num": 9
           },
           {
             "q": "Griseofulvin is not useful in treatment of one of the following diseases",
@@ -116,7 +125,8 @@ const allSections = [
               "Tinea cruris",
               "Tinea pedis"
             ],
-            "c": 1
+            "c": 1,
+            "num": 10
           },
           {
             "q": "A 10-years-old boy presented with painful boggy swelling of scalp, multiple sinuses with purulent discharge, easily pluckable hairs and lymph nodes enlarged in occipital region. Which one of the following would be most helpful for diagnostic evaluation?",
@@ -127,7 +137,8 @@ const allSections = [
               "Patch test",
               "CBC w differential leucocytic count"
             ],
-            "c": 2
+            "c": 2,
+            "num": 11
           }
         ]
       },
@@ -143,7 +154,8 @@ const allSections = [
               "Glomerulonephritis",
               "Bullous impetigo"
             ],
-            "c": 2
+            "c": 2,
+            "num": 12
           },
           {
             "q": "Erythrasma is a superficial infection caused by",
@@ -154,7 +166,8 @@ const allSections = [
               "Streptococcus viridans",
               "Bacillus anthracis"
             ],
-            "c": 1
+            "c": 1,
+            "num": 13
           },
           {
             "q": "The deep infection of a group of contiguous follicles with Staph. Aureus is called",
@@ -165,7 +178,8 @@ const allSections = [
               "Erysipelas",
               "Favus"
             ],
-            "c": 1
+            "c": 1,
+            "num": 14
           },
           {
             "q": "One of the following is exogenous cutaneous tuberculosis",
@@ -176,7 +190,8 @@ const allSections = [
               "Tuberculous chancre",
               "Tuberculous gumma"
             ],
-            "c": 3
+            "c": 3,
+            "num": 15
           },
           {
             "q": "A 48-year-old woman presents to the Emergency Room with a 2-day history of fever and a well demarcated erythematous plaque on her right cheek. The primary diagnosis was Erysipelas. What is the treatment of choice?",
@@ -187,7 +202,8 @@ const allSections = [
               "Fluconazole",
               "Potent topical corticosteroid"
             ],
-            "c": 1
+            "c": 1,
+            "num": 16
           },
           {
             "q": "A child develops honey-colored crusts around the mouth and nose. What is the most likely diagnosis?",
@@ -198,7 +214,8 @@ const allSections = [
               "Scabies",
               "Psoriasis"
             ],
-            "c": 1
+            "c": 1,
+            "num": 17
           }
         ]
       },
@@ -214,7 +231,8 @@ const allSections = [
               "Treated with systemic steroid",
               "Common to occur in children who suck their thumbs or medical and dental workers"
             ],
-            "c": 4
+            "c": 4,
+            "num": 18
           },
           {
             "q": "Wrong statement about Herpes gladiatorum",
@@ -225,7 +243,8 @@ const allSections = [
               "A primary herpes simplex infection in infants and children with atopic dermatitis due to inoculation of the atopic area with the vaccine virus",
               "In severe cases better treated with systemic antivirus"
             ],
-            "c": 3
+            "c": 3,
+            "num": 19
           },
           {
             "q": "Wrong statement about Herpetic sycosis",
@@ -236,7 +255,8 @@ const allSections = [
               "Anti-fungal can be used in the treatment",
               "Usually affect adult male"
             ],
-            "c": 3
+            "c": 3,
+            "num": 20
           },
           {
             "q": "Suppressive therapy of recurrent Herpes simplex infection",
@@ -247,7 +267,8 @@ const allSections = [
               "Acyclovir 200mg once daily can be used",
               "Valacyclovir 500mg once daily or Famcyclovir 250mg twice daily can be used"
             ],
-            "c": 4
+            "c": 4,
+            "num": 21
           },
           {
             "q": "Causative organism of molluscum contagiosum is",
@@ -258,7 +279,8 @@ const allSections = [
               "Parvovirus",
               "RNA virus"
             ],
-            "c": 1
+            "c": 1,
+            "num": 22
           },
           {
             "q": "Podophylline is used in treatment of",
@@ -269,7 +291,8 @@ const allSections = [
               "Condylomata lata",
               "Molluscum contagiosum"
             ],
-            "c": 2
+            "c": 2,
+            "num": 23
           },
           {
             "q": "This Human Papilloma Virus (HPV) strain mostly related to cervical intraepithelial neoplasm (CIN)",
@@ -280,7 +303,8 @@ const allSections = [
               "HPV 3,10",
               "HPV 16,18"
             ],
-            "c": 4
+            "c": 4,
+            "num": 24
           },
           {
             "q": "Erythema multiforme is most often related to",
@@ -291,7 +315,8 @@ const allSections = [
               "Lupus vulgaris",
               "Herpes simplex infection"
             ],
-            "c": 4
+            "c": 4,
+            "num": 25
           },
           {
             "q": "The commonest viral infection involved in the etiology of erythema multiforme is",
@@ -302,7 +327,8 @@ const allSections = [
               "Varicella Zoster virus",
               "Epstein Barr virus"
             ],
-            "c": 1
+            "c": 1,
+            "num": 26
           },
           {
             "q": "Sun exposure has been associated with the development of what type of warts?",
@@ -313,7 +339,8 @@ const allSections = [
               "Butcher's warts",
               "Condyloma acuminatum"
             ],
-            "c": 0
+            "c": 0,
+            "num": 27
           },
           {
             "q": "Podophyllin is contraindicated in",
@@ -324,7 +351,8 @@ const allSections = [
               "Condylomata lata",
               "Molluscum contagiosum"
             ],
-            "c": 1
+            "c": 1,
+            "num": 28
           },
           {
             "q": "The primary lesion of molluscum contagiosum is",
@@ -335,7 +363,8 @@ const allSections = [
               "Vesicle",
               "Pustule"
             ],
-            "c": 1
+            "c": 1,
+            "num": 29
           },
           {
             "q": "Treatment of choice for genital warts in pregnancy",
@@ -346,7 +375,8 @@ const allSections = [
               "Imiquimod",
               "Cryotherapy"
             ],
-            "c": 4
+            "c": 4,
+            "num": 30
           },
           {
             "q": "Genital warts (condyloma accuminata)",
@@ -357,7 +387,8 @@ const allSections = [
               "Treated w phototherapy",
               "Non sexually transmitted disease"
             ],
-            "c": 0
+            "c": 0,
+            "num": 31
           },
           {
             "q": "A known immunocompromised child with atopic dermatitis presents with clusters of itchy blisters, fever, and painful skin rashes. Which of the following organisms is most likely causative agent for this superadded infection?",
@@ -368,7 +399,8 @@ const allSections = [
               "Staphylococcous aureus",
               "Pox virus"
             ],
-            "c": 1
+            "c": 1,
+            "num": 32
           },
           {
             "q": "A 25-year-old female presents with a 2-day history of painful genital ulcers. On examination, multiple small vesicles on an erythematous base are noted on the labia majora. Which of the following is the most appropriate initial diagnostic test?",
@@ -379,7 +411,8 @@ const allSections = [
               "PCR for HSV DNA",
               "Bacterial culture"
             ],
-            "c": 0
+            "c": 0,
+            "num": 33
           },
           {
             "q": "Tzanck smear used to aid diagnosis?",
@@ -390,7 +423,8 @@ const allSections = [
               "Urticaria",
               "EBV"
             ],
-            "c": 1
+            "c": 1,
+            "num": 34
           },
           {
             "q": "This Human Papilloma Virus strain responsible for anogenital warts with very high risk of cervical carcinoma",
@@ -401,7 +435,8 @@ const allSections = [
               "HPV 3, 10",
               "HPV 7"
             ],
-            "c": 1
+            "c": 1,
+            "num": 35
           }
         ]
       },
@@ -417,7 +452,8 @@ const allSections = [
               "Permethrin 2.5 - 5%",
               "Iverzin lotion"
             ],
-            "c": 3
+            "c": 3,
+            "num": 36
           },
           {
             "q": "Pediculosis capitis may be treated by",
@@ -428,7 +464,8 @@ const allSections = [
               "Trimethoprim/sulphamethoxazole",
               "Amphotericin B"
             ],
-            "c": 0
+            "c": 0,
+            "num": 37
           },
           {
             "q": "Adult scabies is characterized by",
@@ -439,7 +476,8 @@ const allSections = [
               "Non itchy",
               "Involve genitalia and web space"
             ],
-            "c": 4
+            "c": 4,
+            "num": 38
           },
           {
             "q": "Treatment of choice for scabies in pregnancy?",
@@ -450,7 +488,8 @@ const allSections = [
               "Sulphur oint 5%",
               "Systemic anti scabietic and methotrexate"
             ],
-            "c": 2
+            "c": 2,
+            "num": 39
           },
           {
             "q": "Characteristic lesion in scabies",
@@ -461,7 +500,8 @@ const allSections = [
               "Pustule",
               "Nodule"
             ],
-            "c": 0
+            "c": 0,
+            "num": 40
           },
           {
             "q": "What is the least effective topical scabicide treatment?",
@@ -472,7 +512,8 @@ const allSections = [
               "Permethrin 2.5 - 5%",
               "Crotamiton 10%"
             ],
-            "c": 4
+            "c": 4,
+            "num": 41
           },
           {
             "q": "Not a common site for predilection of scabies",
@@ -483,7 +524,8 @@ const allSections = [
               "Outer thighs",
               "Buttocks"
             ],
-            "c": 3
+            "c": 3,
+            "num": 42
           },
           {
             "q": "Scabies in children differ than adult scabies that it can involves the following body site",
@@ -494,7 +536,8 @@ const allSections = [
               "Flexures",
               "Buttocks"
             ],
-            "c": 0
+            "c": 0,
+            "num": 43
           },
           {
             "q": "Burrow is",
@@ -505,7 +548,8 @@ const allSections = [
               "Deroofed furrow",
               "Area of depigmented skin"
             ],
-            "c": 2
+            "c": 2,
+            "num": 44
           }
         ]
       },
@@ -521,7 +565,8 @@ const allSections = [
               "Dapsone is the backbone of treatment of all types of leprosy",
               "Not an autoimmune disease"
             ],
-            "c": 2
+            "c": 2,
+            "num": 45
           },
           {
             "q": "In leprosy, the minimum number of T-cell lymphocytes is seen in",
@@ -532,7 +577,8 @@ const allSections = [
               "Border line lepromatous leprosy",
               "Lepromatous leprosy"
             ],
-            "c": 4
+            "c": 4,
+            "num": 46
           },
           {
             "q": "Lepromin test is strongly positive in",
@@ -543,7 +589,8 @@ const allSections = [
               "BB (Borderline tuberculoid)",
               "Lepra reaction"
             ],
-            "c": 1
+            "c": 1,
+            "num": 47
           },
           {
             "q": "The characteristics of tuberculoid leprosy is",
@@ -554,7 +601,8 @@ const allSections = [
               "Lepromin test -ve",
               "No loss of sensation or sweating"
             ],
-            "c": 0
+            "c": 0,
+            "num": 48
           },
           {
             "q": "In leprosy, the maximum number of T-cell lymphocytes is seen in",
@@ -565,7 +613,8 @@ const allSections = [
               "Borderline lepromatous leprosy",
               "Lepromatous leprosy"
             ],
-            "c": 0
+            "c": 0,
+            "num": 49
           },
           {
             "q": "As regard leprosy, choose one correct answer",
@@ -576,7 +625,8 @@ const allSections = [
               "Dapsone is the backbone of treatment of all types of leprosy",
               "Leprosy is autoimmune disease"
             ],
-            "c": 3
+            "c": 3,
+            "num": 50
           },
           {
             "q": "A patient presents with multiple a sensate patches on the abdomen. A diagnosis of leprosy is made. Which of the following regimens is the WHO recommendation for treatment of paucibacillary leprosy?",
@@ -587,7 +637,8 @@ const allSections = [
               "Minocycline100mg daily and rifampin600monthly",
               "Minocycline 300mg monthly and clofazimine 300mg monthly"
             ],
-            "c": 0
+            "c": 0,
+            "num": 51
           },
           {
             "q": "A 45 yrs old patient presents with multiple diffuse thickening, numerous discrete, and confluent nodules. A diagnosis of lepromatous leprosy is made. Which of the following regimens is the WHO recommendation for treatment of multibacillary leprosy?",
@@ -598,7 +649,8 @@ const allSections = [
               "Clofazimine 300mg monthly and rifampin 600mg monthly",
               "Minocycline100mg daily and rifampin600 monthly"
             ],
-            "c": 1
+            "c": 1,
+            "num": 52
           },
           {
             "q": "Worst prognosis in leptrotic cases is in",
@@ -609,7 +661,8 @@ const allSections = [
               "Borderline tuberculoid leprosy",
               "Tuberculoid leprosy"
             ],
-            "c": 2
+            "c": 2,
+            "num": 53
           },
           {
             "q": "One of the following is exogenous cutaneous tuberculosis",
@@ -620,7 +673,8 @@ const allSections = [
               "Tuberculous chancre",
               "Tuberculous gumma"
             ],
-            "c": 3
+            "c": 3,
+            "num": 54
           }
         ]
       },
@@ -636,7 +690,8 @@ const allSections = [
               "Cyclophosphamide",
               "Oral glucocorticoids"
             ],
-            "c": 4
+            "c": 4,
+            "num": 55
           },
           {
             "q": "Not an indication for systemic therapy of psoriasis",
@@ -647,7 +702,8 @@ const allSections = [
               "Moderate to severe psoriasis",
               "Localized pustular psoriasis"
             ],
-            "c": 4
+            "c": 4,
+            "num": 56
           },
           {
             "q": "Wrong statement about Herald patch",
@@ -658,7 +714,8 @@ const allSections = [
               "The long axes of the lesions follow Christmas-tree pattern on the upper chest and back",
               "The disease is self-limiting"
             ],
-            "c": 2
+            "c": 2,
+            "num": 57
           },
           {
             "q": "Kobner's phenomenon is seen in one of the following disease",
@@ -669,7 +726,8 @@ const allSections = [
               "Lichen planus",
               "Melasma"
             ],
-            "c": 3
+            "c": 3,
+            "num": 58
           },
           {
             "q": "Auspitz sign (pin point bleeding upon scratching of a lesion with a glass slide) is seen in",
@@ -680,7 +738,8 @@ const allSections = [
               "Scabies",
               "Tinea capitis"
             ],
-            "c": 2
+            "c": 2,
+            "num": 59
           },
           {
             "q": "This type of psoriasis is commonly seen in children and may follow a streptococcal sore throat",
@@ -691,7 +750,8 @@ const allSections = [
               "Arthropathic",
               "Erythrodermic"
             ],
-            "c": 2
+            "c": 2,
+            "num": 60
           },
           {
             "q": "Kobner's phenomenon is NOT seen in",
@@ -702,7 +762,8 @@ const allSections = [
               "Atopic dermatitis",
               "Vitiligo"
             ],
-            "c": 3
+            "c": 3,
+            "num": 61
           },
           {
             "q": "A young adult presents with silvery-white scales on erythematous plaques over the elbows and knees. What is the most probable diagnosis?",
@@ -713,7 +774,8 @@ const allSections = [
               "Erythema multiform",
               "Lichen planus"
             ],
-            "c": 1
+            "c": 1,
+            "num": 62
           },
           {
             "q": "Mucosa is involved in",
@@ -724,7 +786,8 @@ const allSections = [
               "Scabies",
               "Onychomycosis"
             ],
-            "c": 1
+            "c": 1,
+            "num": 63
           },
           {
             "q": "Severe generalized psoriasis and hepatic cirrhosis is best treated by",
@@ -735,7 +798,8 @@ const allSections = [
               "Systemic photochemotherapy (PUVA)",
               "Acitretin"
             ],
-            "c": 1
+            "c": 1,
+            "num": 64
           },
           {
             "q": "The treatment of choice for erythrodermic psoriasis is",
@@ -746,7 +810,8 @@ const allSections = [
               "Crude Coal tar",
               "Phototherapy"
             ],
-            "c": 2
+            "c": 2,
+            "num": 65
           },
           {
             "q": "This type of psoriasis is seen in pregnant women",
@@ -757,7 +822,8 @@ const allSections = [
               "Arthropathic",
               "Erythrodermic"
             ],
-            "c": 4
+            "c": 4,
+            "num": 66
           },
           {
             "q": "One of the following diseases heal without cicatricial alopecia",
@@ -768,7 +834,8 @@ const allSections = [
               "Favus",
               "Kerion"
             ],
-            "c": 1
+            "c": 1,
+            "num": 67
           }
         ]
       },
@@ -784,7 +851,8 @@ const allSections = [
               "Infectious eczematoid dermatitis",
               "Hereditary angioedema"
             ],
-            "c": 1
+            "c": 1,
+            "num": 68
           },
           {
             "q": "Worldwide most common cause for contact dermatitis is",
@@ -795,7 +863,8 @@ const allSections = [
               "Chromium",
               "Mercury"
             ],
-            "c": 0
+            "c": 0,
+            "num": 69
           },
           {
             "q": "Patch test is an important method for diagnosis of",
@@ -806,7 +875,8 @@ const allSections = [
               "Atopic dermatitis",
               "Urticaria"
             ],
-            "c": 0
+            "c": 0,
+            "num": 70
           },
           {
             "q": "A 25-year old presents with recurrent episodes of flexural eczema, contact urticaria, recurrent skin infections and severe abdominal cramps and diarrhea upon taking sea foods. He is suffering from",
@@ -817,7 +887,8 @@ const allSections = [
               "Acute urticaria",
               "Cow's milk protein allergy"
             ],
-            "c": 1
+            "c": 1,
+            "num": 71
           },
           {
             "q": "Discoid lupus erythematosus is best treated by",
@@ -828,7 +899,8 @@ const allSections = [
               "Topical antimalarials + systemic steroids",
               "Systemic antimalarials + topical steroids"
             ],
-            "c": 4
+            "c": 4,
+            "num": 72
           }
         ]
       },
@@ -844,7 +916,8 @@ const allSections = [
               "Inflammation arises from the action of enzymes produced by the bacteria",
               "Isotretinoin improve acne via its antiandrogen effect"
             ],
-            "c": 4
+            "c": 4,
+            "num": 73
           },
           {
             "q": "Wrong statement about systemic isotretinoin in the treatment of acne vulgaris",
@@ -855,7 +928,8 @@ const allSections = [
               "Should be discontinued in female in child bearing period one month before pregnancy",
               "Dose is 0.5 - 1mg / kg / day"
             ],
-            "c": 1
+            "c": 1,
+            "num": 74
           },
           {
             "q": "Wrong statement about Miliaria",
@@ -866,7 +940,8 @@ const allSections = [
               "Miliaria crystallina is a type that occurs deeper in the skin",
               "Miliaria pustulosa occurs when the vesicles of miliaria rubra become inflamed and pus-filled (pustular)"
             ],
-            "c": 3
+            "c": 3,
+            "num": 75
           },
           {
             "q": "Treatment of severe nodulocystic acne with which of the following vitamin derivatives may arrest the disease process through decreasing sebaceous activity and decreasing P. acnes?",
@@ -877,7 +952,8 @@ const allSections = [
               "Vitamin D",
               "Vitamin B3"
             ],
-            "c": 1
+            "c": 1,
+            "num": 76
           },
           {
             "q": "What is the minimum amount of time that you would advise the woman to avoid childbearing after completing a course of isotretinoin for treatment of acne?",
@@ -888,7 +964,8 @@ const allSections = [
               "1 year",
               "3 years"
             ],
-            "c": 1
+            "c": 1,
+            "num": 77
           },
           {
             "q": "The most common laboratory abnormality in patients treated with isotretinoin is",
@@ -899,7 +976,8 @@ const allSections = [
               "Hypertriglyceridemia",
               "Elevated CPK"
             ],
-            "c": 3
+            "c": 3,
+            "num": 78
           },
           {
             "q": "Severe nodulocystic acne Patient on vitamin A derivatives (isotretinoin oral), pseudotumor cerebri is most likely to occur with which of the following systemic medication?",
@@ -910,7 +988,8 @@ const allSections = [
               "Sulphur",
               "Amoxicillin"
             ],
-            "c": 0
+            "c": 0,
+            "num": 79
           },
           {
             "q": "The dominant organism present on oily regions of the skin is",
@@ -921,7 +1000,8 @@ const allSections = [
               "Corynebacterium spp.",
               "Propionibacterium avidum"
             ],
-            "c": 2
+            "c": 2,
+            "num": 80
           },
           {
             "q": "Sebaceous glands secrete sebum via",
@@ -932,7 +1012,8 @@ const allSections = [
               "Exostosis",
               "Merocrine mechanism"
             ],
-            "c": 0
+            "c": 0,
+            "num": 81
           },
           {
             "q": "Regarding sebaceous glands",
@@ -943,7 +1024,8 @@ const allSections = [
               "Are found everywhere on the skin except palms and soles",
               "Are unilobular glands"
             ],
-            "c": 3
+            "c": 3,
+            "num": 82
           }
         ]
       },
@@ -959,7 +1041,8 @@ const allSections = [
               "The phase of transition",
               "The phase of degeneration"
             ],
-            "c": 1
+            "c": 1,
+            "num": 83
           },
           {
             "q": "Telogen effluvium",
@@ -970,7 +1053,8 @@ const allSections = [
               "Is a patchy alopecia affecting less than 50% of the scalp",
               "Results from sudden illness or surgery"
             ],
-            "c": 4
+            "c": 4,
+            "num": 84
           },
           {
             "q": "Hair follicle development in the human embryo begins during",
@@ -981,7 +1065,8 @@ const allSections = [
               "At the blastocoele stage",
               "Within 2 weeks of fertilization"
             ],
-            "c": 0
+            "c": 0,
+            "num": 85
           },
           {
             "q": "Contraindicated in androgenic alopecia",
@@ -992,7 +1077,8 @@ const allSections = [
               "Finasteride",
               "Spironolactone"
             ],
-            "c": 0
+            "c": 0,
+            "num": 86
           }
         ]
       },
@@ -1008,7 +1094,8 @@ const allSections = [
               "Melasma",
               "Freckles"
             ],
-            "c": 4
+            "c": 4,
+            "num": 87
           },
           {
             "q": "A 5 year boy has recurrent multiple asymptomatic oval and circular faintly hypopigmented macules with fine scaling on his face. The most probable clinical diagnosis is",
@@ -1019,7 +1106,8 @@ const allSections = [
               "Indeterminate leprosy",
               "Acrofacial vitiligo"
             ],
-            "c": 1
+            "c": 1,
+            "num": 88
           },
           {
             "q": "Wrong statement about Melanin",
@@ -1030,7 +1118,8 @@ const allSections = [
               "Every person has the special degree of pigmentation",
               "Increase number of both melanin and melanocytes in freckles"
             ],
-            "c": 4
+            "c": 4,
+            "num": 89
           },
           {
             "q": "In a patch of vitiligo",
@@ -1041,7 +1130,8 @@ const allSections = [
               "Melanocytes are reduced",
               "Acanthosis of the epidermis"
             ],
-            "c": 2
+            "c": 2,
+            "num": 90
           },
           {
             "q": "A 22-year-old woman developed small itchy wheals after physical exertion, walking in the sun, eating hot spicy food and when she was angry. The most likely diagnosis is",
@@ -1052,7 +1142,8 @@ const allSections = [
               "Aquagenic urticaria",
               "Solar urticaria"
             ],
-            "c": 0
+            "c": 0,
+            "num": 91
           },
           {
             "q": "A 28-year-old woman developed itchy red wheals after walking in the sun. The most likely diagnosis is",
@@ -1063,7 +1154,8 @@ const allSections = [
               "Aquagenic urticaria",
               "Solar urticaria"
             ],
-            "c": 4
+            "c": 4,
+            "num": 92
           },
           {
             "q": "A 18-year-old woman developed small, raised 1-4 mm wheals which last for 15-30 minutes after walking in the sun or after vigorous exercise, the most likely diagnosis is",
@@ -1074,7 +1166,8 @@ const allSections = [
               "Aquagenic urticaria",
               "Solar urticaria"
             ],
-            "c": 0
+            "c": 0,
+            "num": 93
           },
           {
             "q": "The deepest layer of the epidermis",
@@ -1085,7 +1178,8 @@ const allSections = [
               "Stratum lucidum",
               "Stratum spinosum"
             ],
-            "c": 1
+            "c": 1,
+            "num": 94
           },
           {
             "q": "A skin lesion with fluid-filled blisters larger than 0.5cm in diameter belongs to",
@@ -1096,7 +1190,8 @@ const allSections = [
               "Bulla",
               "Ulcer"
             ],
-            "c": 3
+            "c": 3,
+            "num": 95
           },
           {
             "q": "A skin lesion with small fluid-filled blisters less than 0.5cm in diameter belongs to",
@@ -1107,7 +1202,8 @@ const allSections = [
               "Bulla",
               "Ulcer"
             ],
-            "c": 2
+            "c": 2,
+            "num": 96
           },
           {
             "q": "A skin lesion with large clear fluid-filled blisters more than 0.5cm in diameter belongs to",
@@ -1118,7 +1214,8 @@ const allSections = [
               "Bulla",
               "Ulcer"
             ],
-            "c": 3
+            "c": 3,
+            "num": 97
           },
           {
             "q": "Exogenous injury to all parts of the epidermis is called",
@@ -1129,7 +1226,8 @@ const allSections = [
               "Fissuring",
               "Lichenification"
             ],
-            "c": 0
+            "c": 0,
+            "num": 98
           },
           {
             "q": "A plaque is a",
@@ -1140,7 +1238,8 @@ const allSections = [
               "Localised epidermal collection of fluid",
               "Deroofed burrow"
             ],
-            "c": 0
+            "c": 0,
+            "num": 99
           },
           {
             "q": "Histamine is the chief mediator of",
@@ -1151,7 +1250,8 @@ const allSections = [
               "Discoid lupus erythematosus",
               "Psoriasis"
             ],
-            "c": 1
+            "c": 1,
+            "num": 100
           },
           {
             "q": "Vitiligo as an autoimmune disease may be associated with",
@@ -1162,7 +1262,8 @@ const allSections = [
               "Pityriasis rosea",
               "Lichen planus"
             ],
-            "c": 2
+            "c": 2,
+            "num": 101
           },
           {
             "q": "Which of the following is not true about the effects of ultraviolet radiation on the immune system?",
@@ -1173,7 +1274,8 @@ const allSections = [
               "UV radiation acts to suppress the immune system both locally and systematically",
               "Effects can be demonstrated by the ability of an antigen to induce an allergic hypersensitivity reaction when applied to skin which has been exposed to low doses of UV radiation"
             ],
-            "c": 0
+            "c": 0,
+            "num": 102
           },
           {
             "q": "The active spectrum for cutaneous vitamin D3 synthesis is",
@@ -1184,7 +1286,8 @@ const allSections = [
               "400-410 nm",
               "300-460 nm"
             ],
-            "c": 1
+            "c": 1,
+            "num": 103
           },
           {
             "q": "A patient with atopic dermatitis presents with frequent flares of dermatitis. They have multiple lichenified plaques, some with serum crust. Which of the following organisms is most likely colonizing these areas?",
@@ -1195,7 +1298,8 @@ const allSections = [
               "Staphylococcus aureus",
               "Propionibacterium avidum"
             ],
-            "c": 3
+            "c": 3,
+            "num": 104
           },
           {
             "q": "The most potent topical corticosteroids is",
@@ -1206,7 +1310,8 @@ const allSections = [
               "Clobetasone butyrate cream 0.5%",
               "Mometasone furoate 0.1%"
             ],
-            "c": 2
+            "c": 2,
+            "num": 105
           },
           {
             "q": "The most potent topical corticosteroids are: (second exam)",
@@ -1217,7 +1322,8 @@ const allSections = [
               "Clobetasone butyrate cream 0.5%",
               "Mometasone furoate 0.1%"
             ],
-            "c": 1
+            "c": 1,
+            "num": 106
           }
         ]
       },
@@ -1233,7 +1339,8 @@ const allSections = [
               "Metronidazole",
               "Ceftriaxone"
             ],
-            "c": 3
+            "c": 3,
+            "num": 107
           },
           {
             "q": "Which of the following is the drug of choice for non-gonococcal urethritis",
@@ -1244,7 +1351,8 @@ const allSections = [
               "Sulphamethoxazole-trimethoprim",
               "Ceftriaxone"
             ],
-            "c": 0
+            "c": 0,
+            "num": 108
           },
           {
             "q": "Which of the following is used to confirm nontreponemal assays?",
@@ -1255,7 +1363,8 @@ const allSections = [
               "Venereal Disease Research Laboratory (VDRL) test",
               "Wasserman test"
             ],
-            "c": 1
+            "c": 1,
+            "num": 109
           },
           {
             "q": "Wrong statement about the primary syphilis",
@@ -1266,7 +1375,8 @@ const allSections = [
               "Regional lymph nodes are normal",
               "Painless"
             ],
-            "c": 3
+            "c": 3,
+            "num": 110
           },
           {
             "q": "Early latent syphilis",
@@ -1277,7 +1387,8 @@ const allSections = [
               "Infection for more than two years",
               "The patient is non contagious through Sexual contact"
             ],
-            "c": 0
+            "c": 0,
+            "num": 111
           },
           {
             "q": "A young man presents to the emergency department with a maculopapular rash 2 weeks after healing of a painless genital ulcer. The most likely etiological agent is",
@@ -1288,7 +1399,8 @@ const allSections = [
               "Calymmatobacter granulomatis",
               "HPV"
             ],
-            "c": 1
+            "c": 1,
+            "num": 112
           },
           {
             "q": "Which stage of syphilis is most contagious?",
@@ -1299,7 +1411,8 @@ const allSections = [
               "Late latent",
               "Stigmata"
             ],
-            "c": 1
+            "c": 1,
+            "num": 113
           },
           {
             "q": "Most specific test for syphilis",
@@ -1310,7 +1423,8 @@ const allSections = [
               "Kahn's test",
               "Dark ground microscopy"
             ],
-            "c": 2
+            "c": 2,
+            "num": 114
           },
           {
             "q": "Which of the following tests is the most sensitive serologic test in late primary syphilis?",
@@ -1321,7 +1435,8 @@ const allSections = [
               "RPR",
               "MHA-TP"
             ],
-            "c": 0
+            "c": 0,
+            "num": 115
           },
           {
             "q": "A 23-year-old male presents with ulcerated lesion on the penis as well as marked unilateral inguinal lymphadenopathy. The lymph node, however, is not particularly painful to the touch. The patient denies abnormal discharge. What is the probable causative etiology?",
@@ -1332,7 +1447,8 @@ const allSections = [
               "Treponema pallidum",
               "Trichomonas vaginalis"
             ],
-            "c": 0
+            "c": 0,
+            "num": 116
           },
           {
             "q": "An 18-year old man presents to the Dermatology Clinic with a nontender penile erosion that has been present for 2 weeks. An indurated border and nontender bilateral inguinal lymphadenopathy are also noted. What is the most likely diagnosis?",
@@ -1343,7 +1459,8 @@ const allSections = [
               "Lymphogranuloma venereum",
               "HIV"
             ],
-            "c": 0
+            "c": 0,
+            "num": 117
           },
           {
             "q": "A 42 year-old woman presents with a large, vegetating ulcer involving her left labia majora and groin for over 1 year. A Giemsa's stained touch preparation reveals bipolar, safety pin-shaped intracytoplasmic inclusions. What is the most likely diagnosis?",
@@ -1354,7 +1471,8 @@ const allSections = [
               "Primary herpes simplex",
               "Gonorrhea"
             ],
-            "c": 1
+            "c": 1,
+            "num": 118
           },
           {
             "q": "Granuloma Inguinale is caused by",
@@ -1365,7 +1483,8 @@ const allSections = [
               "Treponema pertenue",
               "Treponema pallidum"
             ],
-            "c": 2
+            "c": 2,
+            "num": 119
           },
           {
             "q": "The diagnosis of leishmaniasis can be confirmed by which of the following techniques?",
@@ -1376,7 +1495,8 @@ const allSections = [
               "Culture in Novy-MacNeal-Nicolle (NNN) medium",
               "Culture in Michel's medium"
             ],
-            "c": 3
+            "c": 3,
+            "num": 120
           },
           {
             "q": "The primary site of infection of gonorrhea in adult male is",
@@ -1387,7 +1507,8 @@ const allSections = [
               "Fossa navicularis",
               "Glans penis"
             ],
-            "c": 0
+            "c": 0,
+            "num": 121
           },
           {
             "q": "The most common cause of non-gonococcal urethritis is",
@@ -1398,7 +1519,8 @@ const allSections = [
               "Treponema pallidum",
               "Intrameatal wart"
             ],
-            "c": 1
+            "c": 1,
+            "num": 122
           },
           {
             "q": "What is the preferred medication for treating nongonococcal urethritis caused by chlamydia trachomatis?",
@@ -1409,7 +1531,8 @@ const allSections = [
               "Paracetamol",
               "Ciprofloxacin"
             ],
-            "c": 1
+            "c": 1,
+            "num": 123
           },
           {
             "q": "Patients that have diagnosed with congenital syphilis have dental findings called",
@@ -1420,7 +1543,8 @@ const allSections = [
               "Peg-shaped teeth",
               "Enamel hypoplasia"
             ],
-            "c": 0
+            "c": 0,
+            "num": 124
           },
           {
             "q": "This type of syphilis has the clinical characteristic of widespread cutaneous eruptions, erythematous macules on the palms and soles, moth eaten alopecia and condyloma lata.",
@@ -1431,7 +1555,8 @@ const allSections = [
               "Latent",
               "Congenital"
             ],
-            "c": 1
+            "c": 1,
+            "num": 125
           },
           {
             "q": "A 36 yrs. old man presents to the dermatology clinic with a painful genital and lip erosion 2 weeks after he was admitted for treatment of severe pyogenic infection. The most likely diagnosis is",
@@ -1442,7 +1567,8 @@ const allSections = [
               "Toxic shock syndrome",
               "Herpetic infection"
             ],
-            "c": 0
+            "c": 0,
+            "num": 126
           }
         ]
       },
@@ -1458,7 +1584,8 @@ const allSections = [
               "Oligozoospermia",
               "Hypospermia"
             ],
-            "c": 0
+            "c": 0,
+            "num": 127
           },
           {
             "q": "The term aspermia refer to",
@@ -1469,7 +1596,8 @@ const allSections = [
               "Absence of sperm tail",
               "Total absence of semen"
             ],
-            "c": 4
+            "c": 4,
+            "num": 128
           },
           {
             "q": "One of the following is a sure causes of azoospermia",
@@ -1480,7 +1608,8 @@ const allSections = [
               "Spermatocele",
               "Unilateral cryptorchidism"
             ],
-            "c": 1
+            "c": 1,
+            "num": 129
           },
           {
             "q": "The commonest semen abnormality seen in infertile patients who have varicocele is",
@@ -1491,7 +1620,8 @@ const allSections = [
               "Necrospermia",
               "Azoospermia"
             ],
-            "c": 0
+            "c": 0,
+            "num": 130
           },
           {
             "q": "Wrong statement regarding erection",
@@ -1502,7 +1632,8 @@ const allSections = [
               "Nitrous oxide is the main neurotransmitter",
               "Passive veno-occlusion occurs during erection"
             ],
-            "c": 2
+            "c": 2,
+            "num": 131
           },
           {
             "q": "Testosterone is mainly secreted by",
@@ -1513,7 +1644,8 @@ const allSections = [
               "Sertoli cell",
               "Peritubular cell"
             ],
-            "c": 0
+            "c": 0,
+            "num": 132
           },
           {
             "q": "A 62-year-old man with a history of coronary artery disease presents with erectile dysfunction. He is interested in pharmacotherapy. Which of the following is an absolute contraindication to the use of phosphodiesterase-5 inhibitors in this patient?",
@@ -1524,7 +1656,8 @@ const allSections = [
               "Diabetes mellitus",
               "Hypertension"
             ],
-            "c": 2
+            "c": 2,
+            "num": 133
           },
           {
             "q": "A 35-year-old man presents with premature ejaculation and erectile dysfunction. He reports significant performance anxiety. Which of the following is the most appropriate initial treatment approach?",
@@ -1535,7 +1668,8 @@ const allSections = [
               "Combination therapy with SSRIs and PDE-5 inhibitors",
               "Penile prosthesis"
             ],
-            "c": 2
+            "c": 2,
+            "num": 134
           },
           {
             "q": "Which anatomical structure traps blood within the penis to maintain an erection?",
@@ -1546,7 +1680,8 @@ const allSections = [
               "Inguinal ligaments",
               "Glans penis"
             ],
-            "c": 0
+            "c": 0,
+            "num": 135
           },
           {
             "q": "Which enzyme plays a key role in terminating the erection process?",
@@ -1557,7 +1692,8 @@ const allSections = [
               "Lipase",
               "Hydroxysteroid dehydrogenase"
             ],
-            "c": 0
+            "c": 0,
+            "num": 136
           },
           {
             "q": "Which hormone is primarily responsible for stimulating testosterone production in males?",
@@ -1568,7 +1704,8 @@ const allSections = [
               "Estrogen",
               "LH"
             ],
-            "c": 4
+            "c": 4,
+            "num": 137
           },
           {
             "q": "In semen analysis, which parameter is most critical in determining male fertility?",
@@ -1579,7 +1716,8 @@ const allSections = [
               "pH of semen",
               "Volume of ejaculate"
             ],
-            "c": 2
+            "c": 2,
+            "num": 138
           },
           {
             "q": "A young male presents with small, firm testes and gynecomastia. Karyotype shows 47, XXY. What is the diagnosis?",
@@ -1590,7 +1728,8 @@ const allSections = [
               "Testicular feminization",
               "Down syndrome"
             ],
-            "c": 2
+            "c": 2,
+            "num": 139
           },
           {
             "q": "A 32-year-old male presents with infertility. His semen analysis reveals azoospermia. Which of the following is the most likely cause if FSH is elevated?",
@@ -1601,7 +1740,8 @@ const allSections = [
               "Retrograde ejaculation",
               "Erectile dysfunction"
             ],
-            "c": 2
+            "c": 2,
+            "num": 140
           },
           {
             "q": "A male patient is found to have low testosterone and low LH/FSH. What is the most likely diagnosis?",
@@ -1612,7 +1752,8 @@ const allSections = [
               "Androgen insensitivity syndrome",
               "Pituitary adenoma"
             ],
-            "c": 2
+            "c": 2,
+            "num": 141
           },
           {
             "q": "Which test is most appropriate to confirm retrograde ejaculation?",
@@ -1623,7 +1764,8 @@ const allSections = [
               "Serum prolactin",
               "FSH/LH levels"
             ],
-            "c": 2
+            "c": 2,
+            "num": 142
           },
           {
             "q": "One of the following is NOT a clinical type of tinea pedis",
@@ -1634,7 +1776,8 @@ const allSections = [
               "Interdigital",
               "Ulcerative"
             ],
-            "c": 1
+            "c": 1,
+            "num": 143
           }
         ]
       }

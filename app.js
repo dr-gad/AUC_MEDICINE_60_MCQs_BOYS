@@ -62,7 +62,14 @@ function renderCategories() {
       totalQuestions += exam.questions.length;
     });
 
-    let countText = `${section.exams.length} امتحانات (${totalQuestions} سؤال)`;
+    let countText = '';
+    if (section.exams.length === 1) {
+      countText = `1 قسم (${totalQuestions} سؤال)`;
+    } else if (section.exams.length >= 3 && section.exams.length <= 10) {
+      countText = `${section.exams.length} أقسام (${totalQuestions} سؤال)`;
+    } else {
+      countText = `${section.exams.length} قسم (${totalQuestions} سؤال)`;
+    }
     if (section.soon) {
       countText = 'قريباً...';
     }
@@ -229,6 +236,7 @@ function startQuiz(customQuestions = null) {
             quizQuestions.push({
               section: `${secName} - ${examName}`,
               qText: q.q,
+              num: q.num,
               options: options,
               correct: correctIdx,
               originalQ: q,
@@ -333,7 +341,14 @@ function displayQuestion() {
   }
 
   // Question Text
-  document.getElementById('question-text').innerText = currentQ.qText;
+  const questionOrder = document.querySelector('input[name="questionOrder"]:checked') ? document.querySelector('input[name="questionOrder"]:checked').value : 'default';
+  const optionOrder = document.querySelector('input[name="optionOrder"]:checked') ? document.querySelector('input[name="optionOrder"]:checked').value : 'default';
+
+  let displayText = currentQ.qText;
+  if (questionOrder === 'default' && optionOrder === 'default' && currentQ.num) {
+    displayText = `Q${currentQ.num}. ${displayText}`;
+  }
+  document.getElementById('question-text').innerText = displayText;
 
   // Options
   const optionsContainer = document.getElementById('options-container');
@@ -677,6 +692,7 @@ function toggleFlagCurrentQuestion(type, btn) {
       key: qKey,
       section: currentQ.section,
       qText: origQ.q,
+      num: currentQ.num,
       options: [...origQ.o],
       correct: origQ.c,
       secName: currentQ.secName || '',
@@ -780,6 +796,7 @@ function startSavedQuiz(type) {
     return {
       section: q.section,
       qText: q.qText,
+      num: q.num,
       options: options,
       correct: correctIdx,
       originalQ: { q: q.qText, o: q.options, c: q.correct },
@@ -817,13 +834,18 @@ function reviewCurrentQuizFlagged(type) {
 
 // === Quiz Progress Persistence Helpers ===
 function saveQuizProgress() {
+  const questionOrder = document.querySelector('input[name="questionOrder"]:checked') ? document.querySelector('input[name="questionOrder"]:checked').value : 'default';
+  const optionOrder = document.querySelector('input[name="optionOrder"]:checked') ? document.querySelector('input[name="optionOrder"]:checked').value : 'default';
+
   const state = {
     quizQuestions,
     currentQuestionIdx,
     scoreCorrect,
     scoreWrong,
     answersState,
-    timeElapsed
+    timeElapsed,
+    questionOrder,
+    optionOrder
   };
   try {
     localStorage.setItem('auc_mcq_active_quiz_state', JSON.stringify(state));
@@ -854,6 +876,30 @@ function restoreQuizProgress() {
     scoreWrong = state.scoreWrong || 0;
     answersState = state.answersState || [];
     timeElapsed = state.timeElapsed || 0;
+
+    // Restore radio selections
+    if (state.questionOrder) {
+      const qInput = document.querySelector(`input[name="questionOrder"][value="${state.questionOrder}"]`);
+      if (qInput) {
+        qInput.checked = true;
+        const tab = qInput.closest('.segmented-tab');
+        if (tab) {
+          tab.parentNode.querySelectorAll('.segmented-tab').forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+        }
+      }
+    }
+    if (state.optionOrder) {
+      const oInput = document.querySelector(`input[name="optionOrder"][value="${state.optionOrder}"]`);
+      if (oInput) {
+        oInput.checked = true;
+        const tab = oInput.closest('.segmented-tab');
+        if (tab) {
+          tab.parentNode.querySelectorAll('.segmented-tab').forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+        }
+      }
+    }
 
     // Update UI Counters
     document.getElementById('score-correct').innerText = scoreCorrect;
