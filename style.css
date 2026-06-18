@@ -861,15 +861,15 @@ body {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-full);
-  padding: 6px 14px;
-  font-size: 0.8rem;
+  padding: 5px 11px; /* reduced from 6px 14px */
+  font-size: 0.74rem; /* reduced from 0.8rem */
   font-weight: 700;
   cursor: pointer;
   transition: var(--transition-fast);
   font-family: var(--font-english);
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px; /* reduced from 6px */
   outline: none;
   user-select: none;
 }
@@ -883,7 +883,6 @@ body {
   color: rgba(249, 115, 22, 0.75);
 }
 
-.flag-btn.flag-important:hover,
 .flag-btn.flag-important.active {
   background: var(--color-orange);
   border-color: var(--color-orange);
@@ -891,17 +890,34 @@ body {
   box-shadow: 0 0 12px rgba(249, 115, 22, 0.35);
 }
 
+@media (hover: hover) {
+  .flag-btn.flag-important:hover {
+    background: var(--color-orange);
+    border-color: var(--color-orange);
+    color: #fff;
+    box-shadow: 0 0 12px rgba(249, 115, 22, 0.35);
+  }
+}
+
 .flag-btn.flag-very-important {
   border-color: rgba(244, 63, 94, 0.25);
   color: rgba(244, 63, 94, 0.75);
 }
 
-.flag-btn.flag-very-important:hover,
 .flag-btn.flag-very-important.active {
   background: var(--color-rose);
   border-color: var(--color-rose);
   color: #fff;
   box-shadow: 0 0 12px rgba(244, 63, 94, 0.35);
+}
+
+@media (hover: hover) {
+  .flag-btn.flag-very-important:hover {
+    background: var(--color-rose);
+    border-color: var(--color-rose);
+    color: #fff;
+    box-shadow: 0 0 12px rgba(244, 63, 94, 0.35);
+  }
 }
 
 /* Results Screen Flag Review Button Overrides */
@@ -972,14 +988,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 24px; /* reduced from 28px */
+  height: 24px; /* reduced from 28px */
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-color);
-  border-radius: 50%;
+  border-radius: 6px; /* changed from 50% for modern tight fit */
   font-family: var(--font-english);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.78rem; /* reduced from 0.85rem */
   color: var(--color-blue);
   flex-shrink: 0;
   transition: var(--transition-fast);
