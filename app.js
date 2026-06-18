@@ -309,10 +309,10 @@ function displayQuestion() {
     const isImportant = savedFlag && savedFlag.flagType === 'important';
 
     flagsContainer.innerHTML = `
-      <button class="flag-btn flag-important ${isImportant ? 'active' : ''}" onclick="toggleFlagCurrentQuestion('important')">
+      <button class="flag-btn flag-important ${isImportant ? 'active' : ''}" onclick="toggleFlagCurrentQuestion('important', this)">
         ⭐️ Important
       </button>
-      <button class="flag-btn flag-very-important ${isVeryImportant ? 'active' : ''}" onclick="toggleFlagCurrentQuestion('very_important')">
+      <button class="flag-btn flag-very-important ${isVeryImportant ? 'active' : ''}" onclick="toggleFlagCurrentQuestion('very_important', this)">
         🔥 V. Important
       </button>
     `;
@@ -470,6 +470,18 @@ function finishQuiz() {
     reviewSkippedBtn.style.display = 'none';
   }
 
+  // Toggle review wrong + skipped button visibility
+  const reviewWrongSkippedBtn = document.getElementById('review-wrong-skipped-btn');
+  const wrongAndSkippedCount = scoreWrong + scoreSkipped;
+  if (reviewWrongSkippedBtn) {
+    if (wrongAndSkippedCount > 0) {
+      reviewWrongSkippedBtn.style.display = 'block';
+      reviewWrongSkippedBtn.innerText = `🔄 مراجعة الأخطاء + المتروك (${wrongAndSkippedCount})`;
+    } else {
+      reviewWrongSkippedBtn.style.display = 'none';
+    }
+  }
+
   // Toggle review flagged very important button visibility
   const flagged = getFlaggedQuestions();
   let quizVeryImportantCount = 0;
@@ -538,6 +550,23 @@ function reviewSkippedAnswers() {
   }
 }
 
+// Review Wrong & Skipped Answers together
+function reviewWrongAndSkippedAnswers() {
+  const combinedQs = [];
+  quizQuestions.forEach((q, idx) => {
+    const answer = answersState[idx];
+    if (answer === null || !answer.isCorrect) {
+      combinedQs.push({
+        ...q
+      });
+    }
+  });
+
+  if (combinedQs.length > 0) {
+    startQuiz(combinedQs);
+  }
+}
+
 // Reset App State
 function resetApp() {
   switchScreen('results-screen', 'setup-screen');
@@ -600,7 +629,8 @@ function getQuestionKey(q) {
 }
 
 // Toggle a flag of a specific type for the current question
-function toggleFlagCurrentQuestion(type) {
+function toggleFlagCurrentQuestion(type, btn) {
+  if (btn) btn.blur();
   const currentQ = quizQuestions[currentQuestionIdx];
   if (!currentQ) return;
 
