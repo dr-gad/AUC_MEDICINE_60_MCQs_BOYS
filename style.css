@@ -1990,3 +1990,28 @@ body.quiz-active #quiz-screen .quiz-nav {
     transition-delay: 0s !important;
   }
 }
+
+/* Toast Notification */
+.quiz-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: rgba(8, 20, 16, 0.9);
+  border: 1px solid rgba(6, 214, 160, 0.3);
+  color: var(--text-primary);
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 700;
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(6, 214, 160, 0.2);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+  pointer-events: none;
+}
+.quiz-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}

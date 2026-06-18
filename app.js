@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderCategories();
   initSegmentedControls();
   updateSavedCounts();
+  restoreQuizProgress();
 });
 
 // Initialize Segmented Controls
@@ -250,11 +251,13 @@ function startQuiz(customQuestions = null) {
   timerInterval = setInterval(() => {
     timeElapsed++;
     updateTimerDisplay();
+    saveQuizProgress();
   }, 1000);
 
   // Screen transition
   switchScreen('setup-screen', 'quiz-screen');
   displayQuestion();
+  saveQuizProgress();
 }
 
 // Update Timer Display
@@ -382,6 +385,8 @@ function selectOption(selectedIdx) {
     }
   });
 
+  saveQuizProgress();
+
   // Delay transition for better user experience (only if correct and auto-transition is enabled)
   const autoTransition = document.querySelector('input[name="autoTransition"]:checked').value;
   if (isCorrect && autoTransition === 'on') {
@@ -400,6 +405,7 @@ function nextQuestion() {
   if (currentQuestionIdx < quizQuestions.length - 1) {
     currentQuestionIdx++;
     displayQuestion();
+    saveQuizProgress();
   } else {
     finishQuiz();
   }
@@ -409,6 +415,7 @@ function prevQuestion() {
   if (currentQuestionIdx > 0) {
     currentQuestionIdx--;
     displayQuestion();
+    saveQuizProgress();
   }
 }
 
@@ -416,6 +423,7 @@ function prevQuestion() {
 function finishQuiz() {
   // Stop Timer
   clearInterval(timerInterval);
+  clearQuizProgress();
 
   // Set total time on results screen
   const hrs = Math.floor(timeElapsed / 3600);
@@ -571,6 +579,7 @@ function reviewWrongAndSkippedAnswers() {
 function resetApp() {
   switchScreen('results-screen', 'setup-screen');
   updateTotalCounter();
+  clearQuizProgress();
 }
 
 // Navigation Helper
@@ -793,4 +802,85 @@ function reviewCurrentQuizFlagged(type) {
   if (flaggedQs.length > 0) {
     startQuiz(flaggedQs);
   }
+}
+
+// === Quiz Progress Persistence Helpers ===
+function saveQuizProgress() {
+  const state = {
+    quizQuestions,
+    currentQuestionIdx,
+    scoreCorrect,
+    scoreWrong,
+    answersState,
+    timeElapsed
+  };
+  try {
+    localStorage.setItem('auc_mcq_active_quiz_state', JSON.stringify(state));
+  } catch (e) {
+    console.error("Error saving quiz progress", e);
+  }
+}
+
+function clearQuizProgress() {
+  try {
+    localStorage.removeItem('auc_mcq_active_quiz_state');
+  } catch (e) {
+    console.error("Error clearing quiz progress", e);
+  }
+}
+
+function restoreQuizProgress() {
+  try {
+    const saved = localStorage.getItem('auc_mcq_active_quiz_state');
+    if (!saved) return;
+
+    const state = JSON.parse(saved);
+    if (!state || !state.quizQuestions || state.quizQuestions.length === 0) return;
+
+    quizQuestions = state.quizQuestions;
+    currentQuestionIdx = state.currentQuestionIdx || 0;
+    scoreCorrect = state.scoreCorrect || 0;
+    scoreWrong = state.scoreWrong || 0;
+    answersState = state.answersState || [];
+    timeElapsed = state.timeElapsed || 0;
+
+    // Update UI Counters
+    document.getElementById('score-correct').innerText = scoreCorrect;
+    document.getElementById('score-wrong').innerText = scoreWrong;
+
+    // Restore Timer
+    updateTimerDisplay();
+    clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+      timeElapsed++;
+      updateTimerDisplay();
+      saveQuizProgress();
+    }, 1000);
+
+    // Switch screen to quiz-screen
+    switchScreen('setup-screen', 'quiz-screen');
+
+    // Display current question
+    displayQuestion();
+
+    // Show a visual notification/toast
+    showToast("تم استعادة تقدمك في الاختبار تلقائياً ⏱️");
+  } catch (e) {
+    console.error("Error restoring quiz progress", e);
+  }
+}
+
+// Toast Notification helper
+function showToast(message) {
+  let toast = document.getElementById('quiz-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'quiz-toast';
+    document.body.appendChild(toast);
+  }
+  toast.innerText = message;
+  toast.className = 'quiz-toast show';
+  setTimeout(() => {
+    toast.className = 'quiz-toast';
+  }, 3000);
 }
