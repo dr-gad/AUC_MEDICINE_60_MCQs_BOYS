@@ -587,6 +587,16 @@ function switchScreen(fromId, toId) {
     document.body.scrollTop = 0;
   }
 
+  // Toggle footer visibility: only show on setup screen
+  const footer = document.getElementById('site-footer');
+  if (footer) {
+    if (toId === 'setup-screen') {
+      footer.style.display = 'block';
+    } else {
+      footer.style.display = 'none';
+    }
+  }
+
   // Hide all screens to prevent any overlap
   document.querySelectorAll('.screen').forEach(screen => {
     screen.classList.remove('active');
