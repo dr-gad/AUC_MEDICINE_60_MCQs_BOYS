@@ -556,6 +556,12 @@ body {
   user-select: none;
 }
 
+.category-card.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
 .category-card:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-color-hover);
@@ -609,7 +615,7 @@ body {
 }
 
 .category-card.expanded .category-details {
-  max-height: 600px;
+  max-height: 2000px;
   padding: 8px 22px 20px 22px;
   opacity: 1;
   border-top: 1px solid var(--border-color);
@@ -620,6 +626,19 @@ body {
   gap: 16px;
   margin-bottom: 14px;
   font-size: 0.85rem;
+}
+
+.group-title {
+  font-size: 0.95rem;
+  font-weight: 850;
+  color: var(--color-blue);
+  background: rgba(0, 230, 118, 0.05);
+  border-right: 3px solid var(--color-blue);
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  text-align: right;
+  letter-spacing: 0.01em;
 }
 
 .action-link {

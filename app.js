@@ -51,6 +51,9 @@ function renderCategories() {
   allSections.forEach(section => {
     const card = document.createElement('div');
     card.className = 'category-card';
+    if (section.disabled) {
+      card.classList.add('disabled');
+    }
     card.dataset.name = section.name;
 
     // Calculate total questions in this category
@@ -59,19 +62,25 @@ function renderCategories() {
       totalQuestions += exam.questions.length;
     });
 
+    let countText = `${section.exams.length} امتحانات (${totalQuestions} سؤال)`;
+    if (section.soon) {
+      countText = 'قريباً...';
+    }
+
     card.innerHTML = `
       <div class="category-main-row">
         <div class="category-info">
           <span class="category-name">${section.name}</span>
-          <span class="category-count">${section.exams.length} امتحانات (${totalQuestions} سؤال)</span>
+          <span class="category-count">${countText}</span>
         </div>
-        <div class="accordion-chevron">▼</div>
+        <div class="accordion-chevron">${section.disabled ? '' : '▼'}</div>
       </div>
       <div class="category-details">
         <div class="category-actions">
           <span class="action-link select-all-btn">تحديد الكل</span>
           <span class="action-link deselect-all-btn">إلغاء الكل</span>
         </div>
+        ${section.groupTitle ? `<div class="group-title">${section.groupTitle}</div>` : ''}
         <div class="exams-list">
           ${section.exams.map(exam => {
             const examKey = `${section.name}|${exam.name}`;
@@ -90,41 +99,43 @@ function renderCategories() {
       </div>
     `;
 
-    // Event listener for expanding/collapsing
-    const mainRow = card.querySelector('.category-main-row');
-    mainRow.addEventListener('click', () => {
-      card.classList.toggle('expanded');
-    });
-
-    // Select All action
-    const selectAllBtn = card.querySelector('.select-all-btn');
-    selectAllBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      selectAllExams(section.name, card);
-    });
-
-    // Deselect All action
-    const deselectAllBtn = card.querySelector('.deselect-all-btn');
-    deselectAllBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      deselectAllExams(section.name, card);
-    });
-
-    // Individual exam click listeners
-    card.querySelectorAll('.exam-item').forEach(item => {
-      item.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const key = item.dataset.key;
-        if (selectedExams.has(key)) {
-          selectedExams.delete(key);
-          item.classList.remove('selected');
-        } else {
-          selectedExams.add(key);
-          item.classList.add('selected');
-        }
-        updateTotalCounter();
+    // Event listener for expanding/collapsing (only if not disabled)
+    if (!section.disabled) {
+      const mainRow = card.querySelector('.category-main-row');
+      mainRow.addEventListener('click', () => {
+        card.classList.toggle('expanded');
       });
-    });
+
+      // Select All action
+      const selectAllBtn = card.querySelector('.select-all-btn');
+      selectAllBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        selectAllExams(section.name, card);
+      });
+
+      // Deselect All action
+      const deselectAllBtn = card.querySelector('.deselect-all-btn');
+      deselectAllBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        deselectAllExams(section.name, card);
+      });
+
+      // Individual exam click listeners
+      card.querySelectorAll('.exam-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const key = item.dataset.key;
+          if (selectedExams.has(key)) {
+            selectedExams.delete(key);
+            item.classList.remove('selected');
+          } else {
+            selectedExams.add(key);
+            item.classList.add('selected');
+          }
+          updateTotalCounter();
+        });
+      });
+    }
 
     sectionsList.appendChild(card);
   });
