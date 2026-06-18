@@ -162,17 +162,7 @@ body {
 
 /* Banner Design */
 .prayer-banner {
-  background: rgba(11, 15, 25, 0.7);
-  border-bottom: 1px solid var(--border-color);
-  padding: 10px 16px;
-  text-align: center;
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  backdrop-filter: blur(12px);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  display: none;
 }
 
 .prayer-text {
@@ -972,13 +962,21 @@ body {
   flex-wrap: nowrap;
 }
 
-.quiz-header-row-1,
+.quiz-header-row-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
 .quiz-header-row-2 {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 8px;
-  min-width: 0;
+  flex-shrink: 0;
 }
 
 .meta-badge {
@@ -992,11 +990,12 @@ body {
 
 .section-badge {
   color: var(--color-blue);
-  max-width: 220px;
+  flex: 1;
+  min-width: 0;
+  max-width: none;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  flex-shrink: 1;
 }
 
 .number-badge {
