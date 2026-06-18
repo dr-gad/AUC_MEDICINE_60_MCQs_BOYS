@@ -344,11 +344,12 @@ function displayQuestion() {
   const questionOrder = document.querySelector('input[name="questionOrder"]:checked') ? document.querySelector('input[name="questionOrder"]:checked').value : 'default';
   const optionOrder = document.querySelector('input[name="optionOrder"]:checked') ? document.querySelector('input[name="optionOrder"]:checked').value : 'default';
 
-  let displayText = currentQ.qText;
+  const questionTextEl = document.getElementById('question-text');
   if (questionOrder === 'default' && optionOrder === 'default' && currentQ.num) {
-    displayText = `${currentQ.num}. ${displayText}`;
+    questionTextEl.innerHTML = `<span class="q-num-prefix">${currentQ.num}.</span> ${currentQ.qText.replace(/</g,'&lt;').replace(/>/g,'&gt;')}`;
+  } else {
+    questionTextEl.textContent = currentQ.qText;
   }
-  document.getElementById('question-text').innerText = displayText;
 
   // Options
   const optionsContainer = document.getElementById('options-container');
