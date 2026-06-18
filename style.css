@@ -690,6 +690,11 @@ body {
   font-family: var(--font-arabic);
 }
 
+.timer-badge {
+  color: var(--color-violet);
+  font-family: var(--font-english);
+}
+
 .number-badge strong {
   font-family: var(--font-english);
   font-size: 0.95rem;

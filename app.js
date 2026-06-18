@@ -5,6 +5,8 @@ let currentQuestionIdx = 0;
 let scoreCorrect = 0;
 let scoreWrong = 0;
 let answersState = []; // Tracks user answers: { selectedIdx, isCorrect }
+let timerInterval = null;
+let timeElapsed = 0; // in seconds
 
 // Initialization
 document.addEventListener('DOMContentLoaded', () => {
@@ -236,9 +238,35 @@ function startQuiz(customQuestions = null) {
   document.getElementById('score-correct').innerText = '0';
   document.getElementById('score-wrong').innerText = '0';
 
+  // Reset and Start Timer
+  timeElapsed = 0;
+  updateTimerDisplay();
+  clearInterval(timerInterval);
+  timerInterval = setInterval(() => {
+    timeElapsed++;
+    updateTimerDisplay();
+  }, 1000);
+
   // Screen transition
   switchScreen('setup-screen', 'quiz-screen');
   displayQuestion();
+}
+
+// Update Timer Display
+function updateTimerDisplay() {
+  const timerEl = document.getElementById('quiz-timer');
+  if (!timerEl) return;
+
+  const hrs = Math.floor(timeElapsed / 3600);
+  const mins = Math.floor((timeElapsed % 3600) / 60);
+  const secs = timeElapsed % 60;
+
+  let timeStr = '';
+  if (hrs > 0) {
+    timeStr += `${hrs.toString().padStart(2, '0')}:`;
+  }
+  timeStr += `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  timerEl.innerText = `⏱️ ${timeStr}`;
 }
 
 // Display Question
@@ -362,6 +390,20 @@ function prevQuestion() {
 
 // Finish Quiz & Show Results
 function finishQuiz() {
+  // Stop Timer
+  clearInterval(timerInterval);
+
+  // Set total time on results screen
+  const hrs = Math.floor(timeElapsed / 3600);
+  const mins = Math.floor((timeElapsed % 3600) / 60);
+  const secs = timeElapsed % 60;
+  let timeStr = '';
+  if (hrs > 0) {
+    timeStr += `${hrs.toString().padStart(2, '0')}:`;
+  }
+  timeStr += `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  document.getElementById('results-time').innerText = timeStr;
+
   // Switch screen
   switchScreen('quiz-screen', 'results-screen');
 
