@@ -963,14 +963,17 @@ body {
 
 .quiz-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 12px;
   margin-bottom: 20px;
 }
 
-.quiz-meta {
+.quiz-header-row-1,
+.quiz-header-row-2 {
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .meta-badge {
@@ -984,10 +987,11 @@ body {
 
 .section-badge {
   color: var(--color-blue);
-  max-width: 220px;
+  max-width: calc(100% - 90px);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex-shrink: 1;
 }
 
 .number-badge {
