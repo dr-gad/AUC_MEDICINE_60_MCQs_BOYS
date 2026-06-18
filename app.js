@@ -326,7 +326,7 @@ function displayQuestion() {
   optionsContainer.innerHTML = '';
 
   const savedAnswer = answersState[currentQuestionIdx];
-  const optionLetters = ['A', 'B', 'C', 'D', 'E'];
+  const optionLetters = ['A)', 'B)', 'C)', 'D)', 'E)'];
 
   currentQ.options.forEach((opt, idx) => {
     const btn = document.createElement('button');

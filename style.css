@@ -656,27 +656,34 @@ body {
 /* Premium Start Button */
 .btn-start {
   width: 100%;
-  background: var(--accent-gradient);
-  border: none;
+  background: rgba(59, 130, 246, 0.03);
+  border: 1px solid var(--color-blue);
   padding: 18px;
   border-radius: var(--radius-md);
-  color: var(--text-primary);
+  color: var(--color-blue);
   font-size: 1.15rem;
   font-weight: 800;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   transition: var(--transition-fast);
-  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+  font-family: var(--font-arabic);
 }
 
 .btn-start:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35);
+  background: var(--color-blue);
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
+  transform: translateY(-1.5px);
 }
 
 .btn-start:active {
   transform: translateY(-0.5px);
+}
+
+.btn-shine {
+  display: none !important;
 }
 
 .btn-text {
@@ -920,33 +927,6 @@ body {
   }
 }
 
-/* Results Screen Flag Review Button Overrides */
-.btn-action-primary.btn-action-very-important {
-  background: rgba(244, 63, 94, 0.08) !important;
-  border: 1px solid rgba(244, 63, 94, 0.2) !important;
-  color: var(--color-rose) !important;
-}
-
-.btn-action-primary.btn-action-very-important:hover {
-  background: var(--color-rose) !important;
-  border-color: var(--color-rose) !important;
-  color: #fff !important;
-  box-shadow: 0 6px 20px rgba(244, 63, 94, 0.3) !important;
-}
-
-.btn-action-primary.btn-action-important {
-  background: rgba(249, 115, 22, 0.08) !important;
-  border: 1px solid rgba(249, 115, 22, 0.2) !important;
-  color: var(--color-orange) !important;
-}
-
-.btn-action-primary.btn-action-important:hover {
-  background: var(--color-orange) !important;
-  border-color: var(--color-orange) !important;
-  color: #fff !important;
-  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.3) !important;
-}
-
 /* Option Buttons list */
 .options-container {
   display: flex;
@@ -971,6 +951,7 @@ body {
   font-family: var(--font-english);
   transition: var(--transition-fast);
   outline: none;
+  direction: ltr; /* Ensure layout goes from left to right: letter badge on left, option text to its right */
 }
 
 .option-btn:hover {
@@ -988,14 +969,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px; /* reduced from 28px */
-  height: 24px; /* reduced from 28px */
+  padding: 2px 6px;
+  min-width: 24px;
+  width: auto;
+  height: 24px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-color);
-  border-radius: 6px; /* changed from 50% for modern tight fit */
+  border-radius: 6px; /* modern rounded rect fit */
   font-family: var(--font-english);
   font-weight: 700;
-  font-size: 0.78rem; /* reduced from 0.85rem */
+  font-size: 0.78rem;
   color: var(--color-blue);
   flex-shrink: 0;
   transition: var(--transition-fast);
@@ -1081,35 +1064,39 @@ body {
 }
 
 .btn-next {
-  background: var(--accent-gradient);
-  border: none;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+  box-shadow: none !important;
 }
 
 .btn-next:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.25);
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: var(--border-color-hover) !important;
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 .btn-finish {
-  background: rgba(244, 63, 94, 0.08);
-  border: 1px solid rgba(244, 63, 94, 0.15);
-  color: var(--color-wrong);
-  padding: 14px 20px;
-  border-radius: var(--radius-md);
-  font-weight: 700;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: var(--transition-fast);
-  outline: none;
+  background: transparent !important;
+  border: none !important;
+  color: var(--color-wrong) !important;
+  padding: 14px 20px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: var(--transition-fast) !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .btn-finish:hover {
-  background: var(--color-wrong);
-  color: var(--text-primary);
-  border-color: var(--color-wrong);
+  opacity: 0.8 !important;
+  background: transparent !important;
+  color: var(--color-wrong) !important;
+  border: none !important;
 }
 
 .btn-finish:focus-visible {
@@ -1222,6 +1209,22 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 6px;
+  transition: var(--transition-fast);
+}
+
+.result-card.result-correct {
+  border-color: rgba(16, 185, 129, 0.25) !important;
+  background: rgba(16, 185, 129, 0.02) !important;
+}
+
+.result-card.result-wrong {
+  border-color: rgba(244, 63, 94, 0.25) !important;
+  background: rgba(244, 63, 94, 0.02) !important;
+}
+
+.result-card.result-skipped {
+  border-color: rgba(249, 115, 22, 0.25) !important;
+  background: rgba(249, 115, 22, 0.02) !important;
 }
 
 .result-card .result-icon {
@@ -1236,7 +1239,7 @@ body {
 
 .result-card.result-correct .result-number { color: var(--color-success); }
 .result-card.result-wrong .result-number { color: var(--color-wrong); }
-.result-card.result-skipped .result-number { color: var(--text-secondary); }
+.result-card.result-skipped .result-number { color: var(--color-orange); }
 
 .result-label {
   color: var(--text-secondary);
@@ -1253,24 +1256,6 @@ body {
 
 .btn-action-primary {
   width: 100%;
-  background: var(--accent-gradient);
-  border: none;
-  padding: 16px;
-  border-radius: var(--radius-md);
-  color: var(--text-primary);
-  font-size: 1.05rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: var(--transition-fast);
-}
-
-.btn-action-primary:hover {
-  transform: translateY(-1.5px);
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25);
-}
-
-.btn-action-secondary {
-  width: 100%;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border-color);
   padding: 16px;
@@ -1280,11 +1265,82 @@ body {
   font-weight: 700;
   cursor: pointer;
   transition: var(--transition-fast);
+  outline: none;
+}
+
+/* Outlined styling for specific results screen action buttons */
+#review-wrong-btn {
+  border-color: rgba(245, 158, 11, 0.35) !important;
+  color: #f59e0b !important;
+  background: rgba(245, 158, 11, 0.03) !important;
+}
+#review-wrong-btn:hover {
+  background: #f59e0b !important;
+  border-color: #f59e0b !important;
+  color: #fff !important;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3) !important;
+  transform: translateY(-1px);
+}
+
+#review-skipped-btn {
+  border-color: rgba(16, 185, 129, 0.35) !important;
+  color: #10b981 !important;
+  background: rgba(16, 185, 129, 0.03) !important;
+}
+#review-skipped-btn:hover {
+  background: #10b981 !important;
+  border-color: #10b981 !important;
+  color: #fff !important;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3) !important;
+  transform: translateY(-1px);
+}
+
+.btn-action-primary.btn-action-very-important {
+  background: rgba(244, 63, 94, 0.03) !important;
+  border: 1px solid rgba(244, 63, 94, 0.35) !important;
+  color: var(--color-rose) !important;
+}
+.btn-action-primary.btn-action-very-important:hover {
+  background: var(--color-rose) !important;
+  border-color: var(--color-rose) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 15px rgba(244, 63, 94, 0.3) !important;
+  transform: translateY(-1px);
+}
+
+.btn-action-primary.btn-action-important {
+  background: rgba(249, 115, 22, 0.03) !important;
+  border: 1px solid rgba(249, 115, 22, 0.35) !important;
+  color: var(--color-orange) !important;
+}
+.btn-action-primary.btn-action-important:hover {
+  background: var(--color-orange) !important;
+  border-color: var(--color-orange) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3) !important;
+  transform: translateY(-1px);
+}
+
+.btn-action-secondary {
+  width: 100%;
+  background: rgba(6, 182, 212, 0.03) !important;
+  border: 1px solid rgba(6, 182, 212, 0.35) !important;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  color: #06b6d4 !important;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  outline: none;
 }
 
 .btn-action-secondary:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: var(--border-color-hover);
+  background: #06b6d4 !important;
+  border-color: #06b6d4 !important;
+  color: #fff !important;
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3) !important;
+  transform: translateY(-1px);
 }
 
 /* Viewport-Locking Quiz Layout */
