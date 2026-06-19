@@ -1573,7 +1573,7 @@ const allSections = [
         ]
       },
       {
-        "name": "Andrology & Infertility",
+        "name": "Sexology & Andrology",
         "questions": [
           {
             "q": "A condition characterized by the presence of abnormally high sperm count that affects fertility in males is called",
