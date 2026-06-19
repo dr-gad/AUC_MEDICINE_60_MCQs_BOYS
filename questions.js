@@ -1447,7 +1447,7 @@ const allSections = [
               "Treponema pallidum",
               "Trichomonas vaginalis"
             ],
-            "c": 0,
+            "c": 3
             "num": 116
           },
           {
