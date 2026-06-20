@@ -798,7 +798,7 @@ const allSections = [
               "Systemic photochemotherapy (PUVA)",
               "Acitretin"
             ],
-            "c": 1,
+            "c": 0,
             "num": 64
           },
           {
@@ -1507,7 +1507,7 @@ const allSections = [
               "Fossa navicularis",
               "Glans penis"
             ],
-            "c": 0,
+            "c": 2,
             "num": 121
           },
           {
