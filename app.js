@@ -234,7 +234,7 @@ function startQuiz(customQuestions = null) {
             }
 
             quizQuestions.push({
-              section: `${secName} - ${examName}`,
+              section: secName === 'Ophthalmology' ? examName : `${secName} - ${examName}`,
               qText: q.q,
               num: q.num,
               options: options,
@@ -872,7 +872,7 @@ function startSavedQuiz(type) {
               ...flaggedQ,
               secName: section.name,
               examName: exam.name,
-              section: `${section.name} - ${exam.name}`
+              section: section.name === 'Ophthalmology' ? exam.name : `${section.name} - ${exam.name}`
             });
           }
         });
@@ -896,7 +896,7 @@ function startSavedQuiz(type) {
               ...flaggedQ,
               secName: section.name,
               examName: exam.name,
-              section: `${section.name} - ${exam.name}`
+              section: section.name === 'Ophthalmology' ? exam.name : `${section.name} - ${exam.name}`
             });
           }
         });
