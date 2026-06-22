@@ -30,7 +30,7 @@ function initSegmentedControls() {
           });
           // Add active class to selected tab
           input.closest('.segmented-tab').classList.add('active');
-          
+
           // Toggle shift class based on value
           if (input.value === 'random' || input.value === 'off') {
             control.classList.add('shift');
@@ -90,9 +90,9 @@ function renderCategories() {
         ${section.groupTitle ? `<div class="group-title">${section.groupTitle}</div>` : ''}
         <div class="exams-list">
           ${section.exams.map(exam => {
-            const examKey = `${section.name}|${exam.name}`;
-            const isChecked = selectedExams.has(examKey);
-            return `
+      const examKey = `${section.name}|${exam.name}`;
+      const isChecked = selectedExams.has(examKey);
+      return `
               <div class="exam-item ${isChecked ? 'selected' : ''}" data-key="${examKey}">
                 <div class="exam-info">
                   <span class="exam-name">${exam.name}</span>
@@ -101,7 +101,7 @@ function renderCategories() {
                 <div class="checkbox-custom"></div>
               </div>
             `;
-          }).join('')}
+    }).join('')}
         </div>
       </div>
     `;
@@ -305,11 +305,11 @@ function displayQuestion() {
   if (quizQuestions.length === 0) return;
 
   const currentQ = quizQuestions[currentQuestionIdx];
-  
+
   // Meta Info
   document.getElementById('q-section').innerText = currentQ.section;
   document.getElementById('q-number').innerText = currentQuestionIdx + 1;
-  
+
   // Progress Bar
   const progressPct = ((currentQuestionIdx + 1) / quizQuestions.length) * 100;
   document.getElementById('progress-fill').style.width = `${progressPct}%`;
@@ -350,7 +350,7 @@ function displayQuestion() {
 
   const questionTextEl = document.getElementById('question-text');
   if (questionOrder === 'default' && optionOrder === 'default' && currentQ.num) {
-    questionTextEl.innerHTML = `<span class="q-num-prefix">${currentQ.num}.</span> ${currentQ.qText.replace(/</g,'&lt;').replace(/>/g,'&gt;')}`;
+    questionTextEl.innerHTML = `<span class="q-num-prefix">${currentQ.num}.</span> ${currentQ.qText.replace(/</g, '&lt;').replace(/>/g, '&gt;')}`;
   } else {
     questionTextEl.textContent = currentQ.qText;
   }
@@ -658,26 +658,66 @@ function switchScreen(fromId, toId) {
 
 // === Flagging Storage & Management Helpers ===
 
-// Get flagged questions from localStorage (with auto-migration from old key format)
+// Normalize question text for comparison: trim + collapse whitespace
+function normalizeQText(text) {
+  return (text || '').trim().replace(/\s+/g, ' ');
+}
+
+// FNV-1a 32-bit hash → compact base-36 key (e.g. "qt_2k4f9m")
+// Same text always produces the same key — works across exams with different num values
+function hashQText(text) {
+  let h = 0x811c9dc5;
+  const s = normalizeQText(text);
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 0x01000193) >>> 0;
+  }
+  return 'qt_' + h.toString(36);
+}
+
+// Get flagged questions from localStorage (with full auto-migration chain)
 function getFlaggedQuestions() {
   try {
     const raw = JSON.parse(localStorage.getItem('auc_mcq_flagged_questions') || '{}');
-    // Migrate old keys (format: "secName|examName|||qText") → new format ("q_NUM")
     let didMigrate = false;
     const result = {};
+
     Object.entries(raw).forEach(([key, value]) => {
+      // Format 1 (oldest): "secName|examName|||qText"
       if (key.includes('|||')) {
-        // Old format — migrate using the stored num field
-        if (value.num) {
-          const newKey = `q_${value.num}`;
-          result[newKey] = { ...value, key: newKey };
+        const qText = key.split('|||')[1];
+        if (qText) {
+          const newKey = hashQText(qText);
+          result[newKey] = { ...value, key: newKey, qText: normalizeQText(qText) };
           didMigrate = true;
         }
-        // If num is missing, skip (can't safely migrate)
-      } else {
+      }
+      // Format 2 (old): "q_NUM"
+      else if (/^q_\d+$/.test(key)) {
+        // Try to get qText from stored value or look up by num in allSections
+        let qText = value.qText || null;
+        if (!qText) {
+          allSections.forEach(sec => {
+            sec.exams.forEach(exam => {
+              const q = exam.questions.find(q => q.num === value.num);
+              if (q) qText = q.q;
+            });
+          });
+        }
+        if (qText) {
+          const newKey = hashQText(qText);
+          result[newKey] = { ...value, key: newKey, qText: normalizeQText(qText) };
+          didMigrate = true;
+        }
+        // If we can't find the text, keep old key (can't migrate)
+        else { result[key] = value; }
+      }
+      // Format 3 (current): "qt_HASH" — keep as-is
+      else {
         result[key] = value;
       }
     });
+
     if (didMigrate) {
       localStorage.setItem('auc_mcq_flagged_questions', JSON.stringify(result));
     }
@@ -697,10 +737,10 @@ function saveFlaggedQuestions(flagged) {
   }
 }
 
-// Generate unique key for a question
-// Uses question num (e.g. "q_42") — stable even if question text is edited later
+// Generate unique key from question TEXT (not num)
+// Same question in any exam / with any num → same key → same flag
 function getQuestionKey(q) {
-  return `q_${q.num}`;
+  return hashQText(q.qText);
 }
 
 // Toggle a flag of a specific type for the current question
@@ -716,9 +756,10 @@ function toggleFlagCurrentQuestion(type, btn) {
     // Remove flag if already same type
     delete flagged[qKey];
   } else {
-    // Store minimal data — full question data is always looked up live from allSections
+    // Store qText (normalized) — critical for cross-exam text-based lookup
     flagged[qKey] = {
       key: qKey,
+      qText: normalizeQText(currentQ.qText),
       num: currentQ.num,
       section: currentQ.section,
       secName: currentQ.secName || '',
@@ -765,11 +806,10 @@ function updateSavedCounts() {
     veryImportantCount = flaggedList.filter(q => q.flagType === 'very_important').length;
     importantCount = flaggedList.filter(q => q.flagType === 'important').length;
   } else {
-    // Count flags whose question (by num) exists in any currently-selected exam
-    const countedNums = new Set();
+    // Count flags whose question TEXT exists in any currently-selected exam
     flaggedList.forEach(flaggedQ => {
-      if (countedNums.has(flaggedQ.num)) return; // don't double-count same question
-      // Search for this question's num across all selected exams
+      if (!flaggedQ.qText) return;
+      const normalText = normalizeQText(flaggedQ.qText);
       let found = false;
       for (const section of allSections) {
         if (found) break;
@@ -777,11 +817,10 @@ function updateSavedCounts() {
           if (found) break;
           const examKey = `${section.name}|${exam.name}`;
           if (!selectedExams.has(examKey)) continue;
-          if (exam.questions.some(q => q.num === flaggedQ.num)) found = true;
+          if (exam.questions.some(q => normalizeQText(q.q) === normalText)) found = true;
         }
       }
       if (found) {
-        countedNums.add(flaggedQ.num);
         if (flaggedQ.flagType === 'very_important') veryImportantCount++;
         if (flaggedQ.flagType === 'important') importantCount++;
       }
@@ -811,19 +850,19 @@ function startSavedQuiz(type) {
     // Review all globally
     questionsToQuiz = flaggedList.filter(q => q.flagType === type);
   } else {
-    // Search by question num across all selected exams (not by stored secName/examName)
-    // This ensures a flag follows the question wherever it appears
-    const addedNums = new Set();
+    // Find flagged questions by TEXT match in selected exams
+    // This handles the same question appearing with different nums in different exams
+    const addedTexts = new Set();
     allSections.forEach(section => {
       section.exams.forEach(exam => {
         const examKey = `${section.name}|${exam.name}`;
         if (!selectedExams.has(examKey)) return;
         flaggedList.forEach(flaggedQ => {
-          if (flaggedQ.flagType !== type) return;
-          if (addedNums.has(flaggedQ.num)) return; // already added from another exam
-          if (exam.questions.some(q => q.num === flaggedQ.num)) {
-            addedNums.add(flaggedQ.num);
-            // Use the current exam context for accurate display
+          if (flaggedQ.flagType !== type || !flaggedQ.qText) return;
+          const normalText = normalizeQText(flaggedQ.qText);
+          if (addedTexts.has(normalText)) return; // already added from another exam
+          if (exam.questions.some(q => normalizeQText(q.q) === normalText)) {
+            addedTexts.add(normalText);
             questionsToQuiz.push({
               ...flaggedQ,
               secName: section.name,
@@ -840,10 +879,11 @@ function startSavedQuiz(type) {
 
   const optionOrder = document.querySelector('input[name="optionOrder"]:checked').value;
   const formattedQs = questionsToQuiz.map(q => {
-    // Look up fresh question data from allSections using num
+    // Look up question by TEXT match — finds correct instance even if num differs across exams
     const sec = allSections.find(s => s.name === q.secName);
     const exam = sec && sec.exams.find(e => e.name === q.examName);
-    const origQ = exam && exam.questions.find(question => question.num === q.num);
+    const normalText = normalizeQText(q.qText || '');
+    const origQ = exam && exam.questions.find(question => normalizeQText(question.q) === normalText);
     if (!origQ) return null;
 
     let options = [...origQ.o];
