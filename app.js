@@ -748,15 +748,16 @@ function getFlaggedQuestions() {
       }
       // Format 2 (old): "q_NUM"
       else if (/^q_\d+$/.test(key)) {
-        // Try to get qText from stored value or look up by num in allSections
+        // Try to get qText from stored value or look up by num (historically only in Dermatology)
         let qText = value.qText || null;
         if (!qText) {
-          allSections.forEach(sec => {
-            sec.exams.forEach(exam => {
+          const dermatology = allSections.find(s => s.name === 'Dermatology');
+          if (dermatology) {
+            dermatology.exams.forEach(exam => {
               const q = exam.questions.find(q => q.num === value.num);
               if (q) qText = q.q;
             });
-          });
+          }
         }
         if (qText) {
           const newKey = hashQText(qText);
@@ -844,6 +845,15 @@ function toggleFlagCurrentQuestion(type, btn) {
       if (isVeryImportant) vimpBtn.classList.add('active');
       else vimpBtn.classList.remove('active');
     }
+  }
+}
+
+// Clear all flagged questions from localStorage
+function clearAllFlags() {
+  if (confirm('هل أنت متأكد من مسح جميع الأسئلة المحفوظة للمراجعة؟')) {
+    localStorage.removeItem('auc_mcq_flagged_questions');
+    updateSavedCounts();
+    showToast('تم مسح جميع الأسئلة المحفوظة بنجاح 🧹');
   }
 }
 
