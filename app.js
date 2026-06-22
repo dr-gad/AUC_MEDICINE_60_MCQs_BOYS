@@ -802,9 +802,19 @@ function updateSavedCounts() {
   let importantCount = 0;
 
   if (selectedExams.size === 0) {
-    // Show global counts if no exams are selected
-    veryImportantCount = flaggedList.filter(q => q.flagType === 'very_important').length;
-    importantCount = flaggedList.filter(q => q.flagType === 'important').length;
+    // Show active global counts (questions existing in active sections)
+    flaggedList.forEach(flaggedQ => {
+      if (!flaggedQ.qText) return;
+      const normalText = normalizeQText(flaggedQ.qText);
+      const existsInActive = allSections.some(sec => {
+        if (sec.disabled) return false;
+        return sec.exams.some(exam => exam.questions.some(q => normalizeQText(q.q) === normalText));
+      });
+      if (existsInActive) {
+        if (flaggedQ.flagType === 'very_important') veryImportantCount++;
+        if (flaggedQ.flagType === 'important') importantCount++;
+      }
+    });
   } else {
     // Count flags whose question TEXT exists in any currently-selected exam
     flaggedList.forEach(flaggedQ => {
@@ -847,8 +857,27 @@ function startSavedQuiz(type) {
   let questionsToQuiz = [];
 
   if (selectedExams.size === 0) {
-    // Review all globally
-    questionsToQuiz = flaggedList.filter(q => q.flagType === type);
+    // Review active global flags (only those belonging to active sections)
+    const addedTexts = new Set();
+    allSections.forEach(section => {
+      if (section.disabled) return;
+      section.exams.forEach(exam => {
+        flaggedList.forEach(flaggedQ => {
+          if (flaggedQ.flagType !== type || !flaggedQ.qText) return;
+          const normalText = normalizeQText(flaggedQ.qText);
+          if (addedTexts.has(normalText)) return; // already added from another exam
+          if (exam.questions.some(q => normalizeQText(q.q) === normalText)) {
+            addedTexts.add(normalText);
+            questionsToQuiz.push({
+              ...flaggedQ,
+              secName: section.name,
+              examName: exam.name,
+              section: `${section.name} - ${exam.name}`
+            });
+          }
+        });
+      });
+    });
   } else {
     // Find flagged questions by TEXT match in selected exams
     // This handles the same question appearing with different nums in different exams
