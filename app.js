@@ -1155,7 +1155,7 @@ function showToast(message) {
 function createParticles() {
   const container = document.getElementById('particles');
   if (!container) return;
-  const count = 30;
+  const count = 60;
   const colors = ['#00f5d4', '#06d6a0', '#ef476f', '#ffd166'];
 
   for (let i = 0; i < count; i++) {

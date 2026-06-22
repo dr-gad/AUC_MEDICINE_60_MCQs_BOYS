@@ -113,9 +113,9 @@ body {
 .orb {
   position: absolute;
   border-radius: var(--radius-full);
-  filter: blur(140px);
-  opacity: 0.12;
-  animation: floatOrb 30s infinite alternate ease-in-out;
+  filter: blur(90px);
+  opacity: 0.22;
+  animation: floatOrb 22s infinite ease-in-out;
 }
 
 .orb-1 {
@@ -124,7 +124,7 @@ body {
   width: 55vw;
   height: 55vw;
   background: radial-gradient(circle, var(--color-blue) 0%, transparent 80%);
-  animation-duration: 25s;
+  animation-duration: 22s;
 }
 
 .orb-2 {
@@ -133,7 +133,8 @@ body {
   width: 60vw;
   height: 60vw;
   background: radial-gradient(circle, var(--color-violet) 0%, transparent 80%);
-  animation-duration: 35s;
+  animation-duration: 18s;
+  animation-delay: -5s;
 }
 
 .orb-3 {
@@ -142,14 +143,16 @@ body {
   width: 40vw;
   height: 40vw;
   background: radial-gradient(circle, var(--color-emerald) 0%, transparent 80%);
-  animation-duration: 28s;
-  opacity: 0.06;
+  animation-duration: 25s;
+  animation-delay: -10s;
+  opacity: 0.15;
 }
 
 @keyframes floatOrb {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(40px, -40px) scale(1.08); }
-  100% { transform: translate(-20px, 30px) scale(0.92); }
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(50px, -30px) scale(1.08); }
+  50% { transform: translate(-25px, 40px) scale(0.96); }
+  75% { transform: translate(35px, 20px) scale(1.04); }
 }
 
 /* Subtle pattern overlay */
