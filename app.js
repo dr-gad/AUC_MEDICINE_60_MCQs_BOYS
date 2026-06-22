@@ -241,7 +241,7 @@ function startQuiz(customQuestions = null) {
             }
 
             quizQuestions.push({
-              section: secName === 'Ophthalmology' ? examName : `${secName} - ${examName}`,
+              section: getSectionDisplayName(secName, examName),
               qText: q.q,
               num: q.num,
               options: options,
@@ -792,6 +792,15 @@ function saveFlaggedQuestions(flagged) {
   }
 }
 
+// Get section display name (omits prefix if only one section is active/unlocked)
+function getSectionDisplayName(secName, examName) {
+  const activeSections = allSections.filter(sec => !sec.disabled && sec.exams && sec.exams.length > 0);
+  if (activeSections.length === 1) {
+    return examName;
+  }
+  return `${secName} - ${examName}`;
+}
+
 // Generate unique key from question TEXT (not num)
 // Same question in any exam / with any num → same key → same flag
 function getQuestionKey(q) {
@@ -951,7 +960,7 @@ function startSavedQuiz(type) {
               ...flaggedQ,
               secName: section.name,
               examName: exam.name,
-              section: section.name === 'Ophthalmology' ? exam.name : `${section.name} - ${exam.name}`
+              section: getSectionDisplayName(section.name, exam.name)
             });
           }
         });
@@ -980,7 +989,7 @@ function startSavedQuiz(type) {
               ...flaggedQ,
               secName: section.name,
               examName: exam.name,
-              section: section.name === 'Ophthalmology' ? exam.name : `${section.name} - ${exam.name}`
+              section: getSectionDisplayName(section.name, exam.name)
             });
           }
         });
