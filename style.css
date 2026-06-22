@@ -2101,8 +2101,8 @@ body.quiz-active #quiz-screen .quiz-nav {
 
 /* === Premium Animations & Click Interactions === */
 .option-btn {
-  opacity: 0;
-  animation: slideInOption 0.4s ease-out forwards;
+  opacity: 1;
+  animation: slideInOption 0.4s ease-out both;
 }
 
 .option-btn:nth-child(1) { animation-delay: 0.04s; }
