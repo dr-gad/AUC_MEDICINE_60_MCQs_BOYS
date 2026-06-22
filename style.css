@@ -798,6 +798,19 @@ body {
   text-shadow: 0 0 12px rgba(59, 130, 246, 0.25);
 }
 
+.saved-review-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+@media (max-width: 600px) {
+  .saved-review-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
 /* Saved Reviews Bento Button Styles */
 .btn-review-saved {
   background: rgba(255, 255, 255, 0.02);
