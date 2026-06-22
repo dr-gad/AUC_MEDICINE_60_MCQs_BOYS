@@ -112,6 +112,9 @@
                             <button id="start-saved-important-btn" class="btn-review-saved" onclick="startSavedQuiz('important')" style="flex: 1; padding: 12px; font-size: 0.85rem;" disabled>
                                 ⭐️ هام (<span id="saved-important-count">0</span>)
                             </button>
+                            <button id="start-saved-all-important-btn" class="btn-review-saved" onclick="startSavedQuiz('all')" style="flex: 1; padding: 12px; font-size: 0.85rem;" disabled>
+                                🔥⭐️ الكل (<span id="saved-all-important-count">0</span>)
+                            </button>
                         </div>
                     </div>
 
@@ -251,6 +254,9 @@
                 </button>
                 <button class="btn-action-primary btn-action-important" id="review-important-btn" onclick="reviewCurrentQuizFlagged('important')" style="display: none;">
                     ⭐️ مراجعة الأسئلة الهامة في هذا الاختبار
+                </button>
+                <button class="btn-action-primary btn-action-all-important" id="review-all-important-btn" onclick="reviewCurrentQuizFlagged('all')" style="display: none;">
+                    🔥⭐️ مراجعة الهام + الهام جداً معاً في هذا الاختبار
                 </button>
                 <button class="btn-action-secondary" onclick="resetApp()">
                     🏠 العودة للرئيسية

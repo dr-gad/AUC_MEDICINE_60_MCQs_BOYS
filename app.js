@@ -7,6 +7,8 @@ let scoreWrong = 0;
 let answersState = []; // Tracks user answers: { selectedIdx, isCorrect }
 let timerInterval = null;
 let timeElapsed = 0; // in seconds
+let parentQuizQuestions = null;
+let parentAnswersState = null;
 
 // Initialization
 document.addEventListener('DOMContentLoaded', () => {
@@ -204,6 +206,11 @@ function shuffleArray(array) {
 
 // Start Quiz
 function startQuiz(customQuestions = null) {
+  if (!customQuestions) {
+    parentQuizQuestions = null;
+    parentAnswersState = null;
+  }
+
   if (!customQuestions && selectedExams.size === 0) {
     alert('من فضلك اختر امتحاناً واحداً على الأقل للبدء.');
     return;
@@ -495,27 +502,48 @@ function finishQuiz() {
   });
   document.getElementById('total-skipped').innerText = scoreSkipped;
 
+  // Compute counts for action buttons based on parent or current quiz
+  let displayWrongCount = scoreWrong;
+  let displaySkippedCount = scoreSkipped;
+
+  if (parentQuizQuestions) {
+    let pCorrect = 0;
+    let pWrong = 0;
+    parentQuizQuestions.forEach((q, idx) => {
+      const ans = parentAnswersState[idx];
+      if (ans === null || ans === undefined) {
+        // skipped
+      } else if (ans.isCorrect) {
+        pCorrect++;
+      } else {
+        pWrong++;
+      }
+    });
+    displayWrongCount = pWrong;
+    displaySkippedCount = parentQuizQuestions.length - (pCorrect + pWrong);
+  }
+
   // Toggle review wrong button visibility
   const reviewWrongBtn = document.getElementById('review-wrong-btn');
-  if (scoreWrong > 0) {
+  if (displayWrongCount > 0) {
     reviewWrongBtn.style.display = 'block';
-    reviewWrongBtn.innerText = `🔄 مراجعة الأسئلة الخاطئة فقط (${scoreWrong})`;
+    reviewWrongBtn.innerText = `🔄 مراجعة الأسئلة الخاطئة فقط (${displayWrongCount})`;
   } else {
     reviewWrongBtn.style.display = 'none';
   }
 
   // Toggle review skipped button visibility
   const reviewSkippedBtn = document.getElementById('review-skipped-btn');
-  if (scoreSkipped > 0) {
+  if (displaySkippedCount > 0) {
     reviewSkippedBtn.style.display = 'block';
-    reviewSkippedBtn.innerText = `📝 مراجعة الأسئلة المتروكة فقط (${scoreSkipped})`;
+    reviewSkippedBtn.innerText = `📝 مراجعة الأسئلة المتروكة فقط (${displaySkippedCount})`;
   } else {
     reviewSkippedBtn.style.display = 'none';
   }
 
   // Toggle review wrong + skipped button visibility
   const reviewWrongSkippedBtn = document.getElementById('review-wrong-skipped-btn');
-  const wrongAndSkippedCount = scoreWrong + scoreSkipped;
+  const wrongAndSkippedCount = displayWrongCount + displaySkippedCount;
   if (reviewWrongSkippedBtn) {
     if (wrongAndSkippedCount > 0) {
       reviewWrongSkippedBtn.style.display = 'block';
@@ -530,7 +558,8 @@ function finishQuiz() {
   let quizVeryImportantCount = 0;
   let quizImportantCount = 0;
 
-  quizQuestions.forEach(q => {
+  const targetQuestions = parentQuizQuestions || quizQuestions;
+  targetQuestions.forEach(q => {
     const qKey = getQuestionKey(q);
     if (flagged[qKey]) {
       if (flagged[qKey].flagType === 'very_important') quizVeryImportantCount++;
@@ -557,14 +586,29 @@ function finishQuiz() {
       reviewIBtn.style.display = 'none';
     }
   }
+
+  const reviewAllImportantBtn = document.getElementById('review-all-important-btn');
+  const quizAllImportantCount = quizVeryImportantCount + quizImportantCount;
+  if (reviewAllImportantBtn) {
+    if (quizAllImportantCount > 0) {
+      reviewAllImportantBtn.style.display = 'block';
+      reviewAllImportantBtn.innerText = `🔥⭐️ مراجعة الهام + الهام جداً معاً (${quizAllImportantCount})`;
+    } else {
+      reviewAllImportantBtn.style.display = 'none';
+    }
+  }
 }
 
 // Review Wrong Answers Only
 function reviewWrongAnswers() {
+  if (!parentQuizQuestions) {
+    parentQuizQuestions = [...quizQuestions];
+    parentAnswersState = [...answersState];
+  }
   const wrongQs = [];
-  quizQuestions.forEach((q, idx) => {
-    const answer = answersState[idx];
-    if (answer !== null && !answer.isCorrect) {
+  parentQuizQuestions.forEach((q, idx) => {
+    const answer = parentAnswersState[idx];
+    if (answer !== null && answer !== undefined && !answer.isCorrect) {
       wrongQs.push({
         ...q
       });
@@ -578,10 +622,14 @@ function reviewWrongAnswers() {
 
 // Review Skipped Answers Only
 function reviewSkippedAnswers() {
+  if (!parentQuizQuestions) {
+    parentQuizQuestions = [...quizQuestions];
+    parentAnswersState = [...answersState];
+  }
   const skippedQs = [];
-  quizQuestions.forEach((q, idx) => {
-    const answer = answersState[idx];
-    if (answer === null) {
+  parentQuizQuestions.forEach((q, idx) => {
+    const answer = parentAnswersState[idx];
+    if (answer === null || answer === undefined) {
       skippedQs.push({
         ...q
       });
@@ -595,10 +643,14 @@ function reviewSkippedAnswers() {
 
 // Review Wrong & Skipped Answers together
 function reviewWrongAndSkippedAnswers() {
+  if (!parentQuizQuestions) {
+    parentQuizQuestions = [...quizQuestions];
+    parentAnswersState = [...answersState];
+  }
   const combinedQs = [];
-  quizQuestions.forEach((q, idx) => {
-    const answer = answersState[idx];
-    if (answer === null || !answer.isCorrect) {
+  parentQuizQuestions.forEach((q, idx) => {
+    const answer = parentAnswersState[idx];
+    if (answer === null || answer === undefined || !answer.isCorrect) {
       combinedQs.push({
         ...q
       });
@@ -612,6 +664,8 @@ function reviewWrongAndSkippedAnswers() {
 
 // Reset App State
 function resetApp() {
+  parentQuizQuestions = null;
+  parentAnswersState = null;
   switchScreen('results-screen', 'setup-screen');
   updateTotalCounter();
   clearQuizProgress();
@@ -839,18 +893,28 @@ function updateSavedCounts() {
 
   const viBtn = document.getElementById('start-saved-very-important-btn');
   const iBtn = document.getElementById('start-saved-important-btn');
+  const allBtn = document.getElementById('start-saved-all-important-btn');
+
   const viCountSpan = document.getElementById('saved-very-important-count');
   const iCountSpan = document.getElementById('saved-important-count');
+  const allCountSpan = document.getElementById('saved-all-important-count');
+
+  const allCount = veryImportantCount + importantCount;
 
   if (viCountSpan) viCountSpan.innerText = veryImportantCount;
   if (iCountSpan) iCountSpan.innerText = importantCount;
+  if (allCountSpan) allCountSpan.innerText = allCount;
 
   if (viBtn) viBtn.disabled = veryImportantCount === 0;
   if (iBtn) iBtn.disabled = importantCount === 0;
+  if (allBtn) allBtn.disabled = allCount === 0;
 }
 
 // Start a quiz composed of saved questions of a specific type
 function startSavedQuiz(type) {
+  parentQuizQuestions = null;
+  parentAnswersState = null;
+
   const flagged = getFlaggedQuestions();
   const flaggedList = Object.values(flagged);
 
@@ -863,7 +927,12 @@ function startSavedQuiz(type) {
       if (section.disabled) return;
       section.exams.forEach(exam => {
         flaggedList.forEach(flaggedQ => {
-          if (flaggedQ.flagType !== type || !flaggedQ.qText) return;
+          if (!flaggedQ.qText) return;
+          const isMatch = (type === 'all')
+            ? (flaggedQ.flagType === 'important' || flaggedQ.flagType === 'very_important')
+            : (flaggedQ.flagType === type);
+          if (!isMatch) return;
+
           const normalText = normalizeQText(flaggedQ.qText);
           if (addedTexts.has(normalText)) return; // already added from another exam
           if (exam.questions.some(q => normalizeQText(q.q) === normalText)) {
@@ -887,7 +956,12 @@ function startSavedQuiz(type) {
         const examKey = `${section.name}|${exam.name}`;
         if (!selectedExams.has(examKey)) return;
         flaggedList.forEach(flaggedQ => {
-          if (flaggedQ.flagType !== type || !flaggedQ.qText) return;
+          if (!flaggedQ.qText) return;
+          const isMatch = (type === 'all')
+            ? (flaggedQ.flagType === 'important' || flaggedQ.flagType === 'very_important')
+            : (flaggedQ.flagType === type);
+          if (!isMatch) return;
+
           const normalText = normalizeQText(flaggedQ.qText);
           if (addedTexts.has(normalText)) return; // already added from another exam
           if (exam.questions.some(q => normalizeQText(q.q) === normalText)) {
@@ -945,12 +1019,19 @@ function startSavedQuiz(type) {
 
 // Review flagged questions in the current quiz run
 function reviewCurrentQuizFlagged(type) {
+  if (!parentQuizQuestions) {
+    parentQuizQuestions = [...quizQuestions];
+    parentAnswersState = [...answersState];
+  }
   const flagged = getFlaggedQuestions();
   const flaggedQs = [];
 
-  quizQuestions.forEach(q => {
+  parentQuizQuestions.forEach(q => {
     const qKey = getQuestionKey(q);
-    if (flagged[qKey] && flagged[qKey].flagType === type) {
+    const isMatch = (type === 'all')
+      ? (flagged[qKey] && (flagged[qKey].flagType === 'important' || flagged[qKey].flagType === 'very_important'))
+      : (flagged[qKey] && flagged[qKey].flagType === type);
+    if (isMatch) {
       flaggedQs.push({
         ...q
       });
