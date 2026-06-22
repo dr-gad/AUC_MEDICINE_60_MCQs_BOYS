@@ -7,8 +7,6 @@ let scoreWrong = 0;
 let answersState = []; // Tracks user answers: { selectedIdx, isCorrect }
 let timerInterval = null;
 let timeElapsed = 0; // in seconds
-let parentQuizQuestions = null;
-let parentAnswersState = null;
 
 // Initialization
 document.addEventListener('DOMContentLoaded', () => {
@@ -275,11 +273,6 @@ function shuffleArray(array) {
 
 // Start Quiz
 function startQuiz(customQuestions = null) {
-  if (!customQuestions) {
-    parentQuizQuestions = null;
-    parentAnswersState = null;
-  }
-
   if (!customQuestions && selectedExams.size === 0) {
     alert('من فضلك اختر امتحاناً واحداً على الأقل للبدء.');
     return;
@@ -584,26 +577,9 @@ function finishQuiz() {
   });
   document.getElementById('total-skipped').innerText = scoreSkipped;
 
-  // Compute counts for action buttons based on parent or current quiz
-  let displayWrongCount = scoreWrong;
-  let displaySkippedCount = scoreSkipped;
-
-  if (parentQuizQuestions) {
-    let pCorrect = 0;
-    let pWrong = 0;
-    parentQuizQuestions.forEach((q, idx) => {
-      const ans = parentAnswersState[idx];
-      if (ans === null || ans === undefined) {
-        // skipped
-      } else if (ans.isCorrect) {
-        pCorrect++;
-      } else {
-        pWrong++;
-      }
-    });
-    displayWrongCount = pWrong;
-    displaySkippedCount = parentQuizQuestions.length - (pCorrect + pWrong);
-  }
+  // Counts for action buttons — always from the current session
+  const displayWrongCount = scoreWrong;
+  const displaySkippedCount = scoreSkipped;
 
   // Toggle review wrong button visibility
   const reviewWrongBtn = document.getElementById('review-wrong-btn');
@@ -640,7 +616,7 @@ function finishQuiz() {
   let quizVeryImportantCount = 0;
   let quizImportantCount = 0;
 
-  const targetQuestions = parentQuizQuestions || quizQuestions;
+  const targetQuestions = quizQuestions;
   targetQuestions.forEach(q => {
     const qKey = getQuestionKey(q);
     if (flagged[qKey]) {
@@ -683,71 +659,33 @@ function finishQuiz() {
 
 // Review Wrong Answers Only
 function reviewWrongAnswers() {
-  if (!parentQuizQuestions) {
-    parentQuizQuestions = [...quizQuestions];
-    parentAnswersState = [...answersState];
-  }
-  const wrongQs = [];
-  parentQuizQuestions.forEach((q, idx) => {
-    const answer = parentAnswersState[idx];
-    if (answer !== null && answer !== undefined && !answer.isCorrect) {
-      wrongQs.push({
-        ...q
-      });
-    }
+  const wrongQs = quizQuestions.filter((q, idx) => {
+    const ans = answersState[idx];
+    return ans !== null && ans !== undefined && !ans.isCorrect;
   });
-
-  if (wrongQs.length > 0) {
-    startQuiz(wrongQs);
-  }
+  if (wrongQs.length > 0) startQuiz([...wrongQs]);
 }
 
 // Review Skipped Answers Only
 function reviewSkippedAnswers() {
-  if (!parentQuizQuestions) {
-    parentQuizQuestions = [...quizQuestions];
-    parentAnswersState = [...answersState];
-  }
-  const skippedQs = [];
-  parentQuizQuestions.forEach((q, idx) => {
-    const answer = parentAnswersState[idx];
-    if (answer === null || answer === undefined) {
-      skippedQs.push({
-        ...q
-      });
-    }
+  const skippedQs = quizQuestions.filter((q, idx) => {
+    const ans = answersState[idx];
+    return ans === null || ans === undefined;
   });
-
-  if (skippedQs.length > 0) {
-    startQuiz(skippedQs);
-  }
+  if (skippedQs.length > 0) startQuiz([...skippedQs]);
 }
 
 // Review Wrong & Skipped Answers together
 function reviewWrongAndSkippedAnswers() {
-  if (!parentQuizQuestions) {
-    parentQuizQuestions = [...quizQuestions];
-    parentAnswersState = [...answersState];
-  }
-  const combinedQs = [];
-  parentQuizQuestions.forEach((q, idx) => {
-    const answer = parentAnswersState[idx];
-    if (answer === null || answer === undefined || !answer.isCorrect) {
-      combinedQs.push({
-        ...q
-      });
-    }
+  const combinedQs = quizQuestions.filter((q, idx) => {
+    const ans = answersState[idx];
+    return ans === null || ans === undefined || !ans.isCorrect;
   });
-
-  if (combinedQs.length > 0) {
-    startQuiz(combinedQs);
-  }
+  if (combinedQs.length > 0) startQuiz([...combinedQs]);
 }
 
 // Reset App State
 function resetApp() {
-  parentQuizQuestions = null;
-  parentAnswersState = null;
   switchScreen('results-screen', 'setup-screen');
   updateTotalCounter();
   clearQuizProgress();
@@ -1016,9 +954,6 @@ function updateSavedCounts() {
 
 // Start a quiz composed of saved questions of a specific type
 function startSavedQuiz(type) {
-  parentQuizQuestions = null;
-  parentAnswersState = null;
-
   const flagged = getFlaggedQuestions();
   const flaggedList = Object.values(flagged);
 
@@ -1123,28 +1058,15 @@ function startSavedQuiz(type) {
 
 // Review flagged questions in the current quiz run
 function reviewCurrentQuizFlagged(type) {
-  if (!parentQuizQuestions) {
-    parentQuizQuestions = [...quizQuestions];
-    parentAnswersState = [...answersState];
-  }
   const flagged = getFlaggedQuestions();
-  const flaggedQs = [];
-
-  parentQuizQuestions.forEach(q => {
+  const flaggedQs = quizQuestions.filter(q => {
     const qKey = getQuestionKey(q);
-    const isMatch = (type === 'all')
+    return (type === 'all')
       ? (flagged[qKey] && (flagged[qKey].flagType === 'important' || flagged[qKey].flagType === 'very_important'))
       : (flagged[qKey] && flagged[qKey].flagType === type);
-    if (isMatch) {
-      flaggedQs.push({
-        ...q
-      });
-    }
-  });
+  }).map(q => ({ ...q }));
 
-  if (flaggedQs.length > 0) {
-    startQuiz(flaggedQs);
-  }
+  if (flaggedQs.length > 0) startQuiz(flaggedQs);
 }
 
 // === Quiz Progress Persistence Helpers ===
