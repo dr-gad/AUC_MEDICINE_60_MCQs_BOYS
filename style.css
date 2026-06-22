@@ -906,6 +906,61 @@ body {
   box-shadow: 0 0 15px rgba(249, 115, 22, 0.3);
 }
 
+.btn-review-saved:not(:disabled)#start-saved-all-important-btn {
+  border-color: rgba(234, 179, 8, 0.3);
+  background: rgba(234, 179, 8, 0.04);
+  color: #eab308;
+}
+
+.btn-review-saved:not(:disabled)#start-saved-all-important-btn:hover {
+  background: #eab308;
+  border-color: #eab308;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(234, 179, 8, 0.3);
+}
+
+.btn-clear-saved {
+  background: rgba(244, 63, 94, 0.02) !important;
+  border: 1px dashed rgba(244, 63, 94, 0.25) !important;
+  color: var(--color-rose) !important;
+  border-radius: var(--radius-md) !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: var(--transition-fast) !important;
+  font-family: var(--font-arabic) !important;
+  outline: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  padding: 10px !important;
+  font-size: 0.8rem !important;
+  margin-top: 12px !important;
+}
+
+.btn-clear-saved:not(:disabled):hover {
+  background: var(--color-rose) !important;
+  border-color: var(--color-rose) !important;
+  color: #fff !important;
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.3) !important;
+  transform: translateY(-1px) !important;
+}
+
+.btn-clear-saved:not(:disabled):active {
+  transform: translateY(0) !important;
+}
+
+.btn-clear-saved:disabled {
+  cursor: not-allowed !important;
+  opacity: 0.35 !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-secondary) !important;
+  background: rgba(255, 255, 255, 0.01) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
 /* Premium Start Button */
 .btn-start {
   display: block;

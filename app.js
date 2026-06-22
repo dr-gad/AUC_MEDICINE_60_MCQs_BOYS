@@ -924,9 +924,12 @@ function updateSavedCounts() {
   if (iCountSpan) iCountSpan.innerText = importantCount;
   if (allCountSpan) allCountSpan.innerText = allCount;
 
+  const clearBtn = document.getElementById('clear-all-flags-btn');
+
   if (viBtn) viBtn.disabled = veryImportantCount === 0;
   if (iBtn) iBtn.disabled = importantCount === 0;
   if (allBtn) allBtn.disabled = allCount === 0;
+  if (clearBtn) clearBtn.disabled = allCount === 0;
 }
 
 // Start a quiz composed of saved questions of a specific type
