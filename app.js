@@ -16,7 +16,103 @@ document.addEventListener('DOMContentLoaded', () => {
   updateSavedCounts();
   restoreQuizProgress();
   createParticles();
+  bindStaticEvents();
+  bindKeyboardNavigation();
 });
+
+// Wire all static button event listeners (replaces inline onclick in HTML)
+function bindStaticEvents() {
+  // Setup screen
+  document.getElementById('start-btn')
+    .addEventListener('click', () => startQuiz());
+  document.getElementById('start-saved-very-important-btn')
+    .addEventListener('click', () => startSavedQuiz('very_important'));
+  document.getElementById('start-saved-important-btn')
+    .addEventListener('click', () => startSavedQuiz('important'));
+  document.getElementById('start-saved-all-important-btn')
+    .addEventListener('click', () => startSavedQuiz('all'));
+  document.getElementById('clear-all-flags-btn')
+    .addEventListener('click', () => clearAllFlags());
+
+  // Quiz screen navigation
+  document.getElementById('btn-next')
+    .addEventListener('click', () => nextQuestion());
+  document.getElementById('btn-prev')
+    .addEventListener('click', () => prevQuestion());
+  document.getElementById('btn-finish')
+    .addEventListener('click', () => finishQuiz());
+
+  // Flag buttons — event delegation on the container (buttons are re-rendered per question)
+  document.getElementById('question-flags')
+    .addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-flag-type]');
+      if (btn) toggleFlagCurrentQuestion(btn.dataset.flagType, btn);
+    });
+
+  // Results screen
+  document.getElementById('review-wrong-btn')
+    .addEventListener('click', () => reviewWrongAnswers());
+  document.getElementById('review-skipped-btn')
+    .addEventListener('click', () => reviewSkippedAnswers());
+  document.getElementById('review-wrong-skipped-btn')
+    .addEventListener('click', () => reviewWrongAndSkippedAnswers());
+  document.getElementById('review-very-important-btn')
+    .addEventListener('click', () => reviewCurrentQuizFlagged('very_important'));
+  document.getElementById('review-important-btn')
+    .addEventListener('click', () => reviewCurrentQuizFlagged('important'));
+  document.getElementById('review-all-important-btn')
+    .addEventListener('click', () => reviewCurrentQuizFlagged('all'));
+  document.getElementById('btn-reset-app')
+    .addEventListener('click', () => resetApp());
+}
+
+// Keyboard Navigation — only active when quiz screen is visible
+function bindKeyboardNavigation() {
+  document.addEventListener('keydown', (e) => {
+    // Ignore if an input/textarea is focused
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+    const quizScreen = document.getElementById('quiz-screen');
+    if (!quizScreen || !quizScreen.classList.contains('active')) return;
+
+    switch (e.key) {
+      // Next question: → or L
+      case 'ArrowRight':
+      case 'l':
+      case 'L':
+        e.preventDefault();
+        nextQuestion();
+        break;
+
+      // Previous question: ← or H
+      case 'ArrowLeft':
+      case 'h':
+      case 'H':
+        e.preventDefault();
+        prevQuestion();
+        break;
+
+      // Select answer: 1–5 maps to option A–E
+      case '1': case '2': case '3': case '4': case '5': {
+        if (answersState[currentQuestionIdx] !== null) break; // already answered
+        const idx = parseInt(e.key, 10) - 1;
+        const currentQ = quizQuestions[currentQuestionIdx];
+        if (currentQ && idx < currentQ.options.length) {
+          selectOption(idx);
+        }
+        break;
+      }
+
+      // Enter: go next if question already answered
+      case 'Enter':
+        if (answersState[currentQuestionIdx] !== null) {
+          e.preventDefault();
+          nextQuestion();
+        }
+        break;
+    }
+  });
+}
 
 // Render Category Cards (Accordion Bento Layout)
 function renderCategories() {
@@ -315,10 +411,10 @@ function displayQuestion() {
     const isImportant = savedFlag && savedFlag.flagType === 'important';
 
     flagsContainer.innerHTML = `
-      <button class="flag-btn flag-important ${isImportant ? 'active' : ''}" onclick="toggleFlagCurrentQuestion('important', this)">
+      <button class="flag-btn flag-important ${isImportant ? 'active' : ''}" data-flag-type="important">
         ⭐️ Important
       </button>
-      <button class="flag-btn flag-very-important ${isVeryImportant ? 'active' : ''}" onclick="toggleFlagCurrentQuestion('very_important', this)">
+      <button class="flag-btn flag-very-important ${isVeryImportant ? 'active' : ''}" data-flag-type="very_important">
         🔥 V. Important
       </button>
     `;
@@ -424,7 +520,7 @@ function selectOption(selectedIdx) {
       } else {
         finishQuiz();
       }
-    }, 1000);
+    }, 500);
   }
 }
 
