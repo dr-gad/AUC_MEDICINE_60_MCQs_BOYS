@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSegmentedControls();
   updateSavedCounts();
   restoreQuizProgress();
+  createParticles();
 });
 
 // Initialize Segmented Controls
@@ -417,13 +418,26 @@ function selectOption(selectedIdx) {
   // Visual Feedback
   const optionsContainer = document.getElementById('options-container');
   const buttons = optionsContainer.getElementsByClassName('option-btn');
+  const questionContainer = document.querySelector('.question-container');
 
   Array.from(buttons).forEach((btn, idx) => {
     btn.classList.add('disabled');
     if (idx === currentQ.correct) {
       btn.classList.add('correct');
+      if (isCorrect) {
+        btn.classList.add('bounce');
+      }
     } else if (idx === selectedIdx) {
       btn.classList.add('wrong');
+      if (!isCorrect) {
+        btn.classList.add('shake');
+        if (questionContainer) {
+          questionContainer.classList.add('shake');
+          setTimeout(() => {
+            questionContainer.classList.remove('shake');
+          }, 400);
+        }
+      }
     }
   });
 
@@ -1173,4 +1187,34 @@ function showToast(message) {
   setTimeout(() => {
     toast.className = 'quiz-toast';
   }, 3000);
+}
+
+// Floating Particles Effect
+function createParticles() {
+  const container = document.getElementById('particles');
+  if (!container) return;
+  const count = 30;
+  const colors = ['#00f5d4', '#06d6a0', '#ef476f', '#ffd166'];
+
+  for (let i = 0; i < count; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+
+    const size = Math.random() * 3 + 1;
+    const left = Math.random() * 100;
+    const duration = Math.random() * 20 + 12;
+    const delay = Math.random() * 15;
+    const color = colors[Math.floor(Math.random() * colors.length)];
+
+    particle.style.cssText = `
+      width: ${size}px;
+      height: ${size}px;
+      left: ${left}%;
+      background: ${color};
+      animation-duration: ${duration}s;
+      animation-delay: ${delay}s;
+    `;
+
+    container.appendChild(particle);
+  }
 }
