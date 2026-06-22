@@ -658,10 +658,30 @@ function switchScreen(fromId, toId) {
 
 // === Flagging Storage & Management Helpers ===
 
-// Get flagged questions from localStorage
+// Get flagged questions from localStorage (with auto-migration from old key format)
 function getFlaggedQuestions() {
   try {
-    return JSON.parse(localStorage.getItem('auc_mcq_flagged_questions') || '{}');
+    const raw = JSON.parse(localStorage.getItem('auc_mcq_flagged_questions') || '{}');
+    // Migrate old keys (format: "secName|examName|||qText") → new format ("q_NUM")
+    let didMigrate = false;
+    const result = {};
+    Object.entries(raw).forEach(([key, value]) => {
+      if (key.includes('|||')) {
+        // Old format — migrate using the stored num field
+        if (value.num) {
+          const newKey = `q_${value.num}`;
+          result[newKey] = { ...value, key: newKey };
+          didMigrate = true;
+        }
+        // If num is missing, skip (can't safely migrate)
+      } else {
+        result[key] = value;
+      }
+    });
+    if (didMigrate) {
+      localStorage.setItem('auc_mcq_flagged_questions', JSON.stringify(result));
+    }
+    return result;
   } catch (e) {
     console.error("Error reading flagged questions from localStorage", e);
     return {};
@@ -678,8 +698,9 @@ function saveFlaggedQuestions(flagged) {
 }
 
 // Generate unique key for a question
+// Uses question num (e.g. "q_42") — stable even if question text is edited later
 function getQuestionKey(q) {
-  return `${q.secName || ''}|${q.examName || ''}|||${q.qText}`;
+  return `q_${q.num}`;
 }
 
 // Toggle a flag of a specific type for the current question
@@ -695,15 +716,11 @@ function toggleFlagCurrentQuestion(type, btn) {
     // Remove flag if already same type
     delete flagged[qKey];
   } else {
-    // Save/update flag (use canonical question representation)
-    const origQ = currentQ.originalQ || { q: currentQ.qText, o: currentQ.options, c: currentQ.correct };
+    // Store minimal data — full question data is always looked up live from allSections
     flagged[qKey] = {
       key: qKey,
-      section: currentQ.section,
-      qText: origQ.q,
       num: currentQ.num,
-      options: [...origQ.o],
-      correct: origQ.c,
+      section: currentQ.section,
       secName: currentQ.secName || '',
       examName: currentQ.examName || '',
       flagType: type,
@@ -794,25 +811,31 @@ function startSavedQuiz(type) {
 
   const optionOrder = document.querySelector('input[name="optionOrder"]:checked').value;
   const formattedQs = questionsToQuiz.map(q => {
-    let options = [...q.options];
-    let correctIdx = q.correct;
+    // Look up fresh question data from allSections using num — never uses stale stored data
+    const sec = allSections.find(s => s.name === q.secName);
+    const exam = sec && sec.exams.find(e => e.name === q.examName);
+    const origQ = exam && exam.questions.find(question => question.num === q.num);
+    if (!origQ) return null; // question was removed from questions.js
+
+    let options = [...origQ.o];
+    let correctIdx = origQ.c;
     if (optionOrder === 'random') {
       const indices = options.map((_, i) => i);
       shuffleArray(indices);
-      options = indices.map(i => q.options[i]);
-      correctIdx = indices.indexOf(q.correct);
+      options = indices.map(i => origQ.o[i]);
+      correctIdx = indices.indexOf(origQ.c);
     }
     return {
-      section: q.section,
-      qText: q.qText,
-      num: q.num,
+      section: q.section || `${q.secName} - ${q.examName}`,
+      qText: origQ.q,
+      num: origQ.num,
       options: options,
       correct: correctIdx,
-      originalQ: { q: q.qText, o: q.options, c: q.correct },
+      originalQ: origQ,
       secName: q.secName,
       examName: q.examName
     };
-  });
+  }).filter(Boolean);
 
   const questionOrder = document.querySelector('input[name="questionOrder"]:checked').value;
   if (questionOrder === 'random') {
