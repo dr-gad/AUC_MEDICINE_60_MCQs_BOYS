@@ -55,48 +55,66 @@
 
                     <div class="settings-card">
                         <h4 class="settings-label">🔀 ترتيب الأسئلة</h4>
-                        <div class="segmented-control" id="question-order-control">
-                            <label class="segmented-tab active">
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <span class="radio-label">
+                                    <strong>الترتيب الافتراضي</strong>
+                                    <small>نفس تسلسل الأسئلة الأصلي</small>
+                                </span>
                                 <input type="radio" name="questionOrder" value="default" checked>
-                                <strong>الترتيب الافتراضي</strong>
-                                <small>نفس تسلسل الأسئلة الأصلي</small>
+                                <span class="radio-custom"></span>
                             </label>
-                            <label class="segmented-tab">
+                            <label class="radio-option">
+                                <span class="radio-label">
+                                    <strong>ترتيب عشوائي</strong>
+                                    <small>خلط الأسئلة لتحدي أكبر</small>
+                                </span>
                                 <input type="radio" name="questionOrder" value="random">
-                                <strong>ترتيب عشوائي</strong>
-                                <small>خلط الأسئلة لتحدي أكبر</small>
+                                <span class="radio-custom"></span>
                             </label>
                         </div>
                     </div>
 
                     <div class="settings-card">
                         <h4 class="settings-label">🔤 ترتيب الاختيارات</h4>
-                        <div class="segmented-control" id="option-order-control">
-                            <label class="segmented-tab active">
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <span class="radio-label">
+                                    <strong>الترتيب الافتراضي</strong>
+                                    <small>الحفاظ على ترتيب الخيارات الأصلي</small>
+                                </span>
                                 <input type="radio" name="optionOrder" value="default" checked>
-                                <strong>الترتيب الافتراضي</strong>
-                                <small>الحفاظ على ترتيب الخيارات الأصلي</small>
+                                <span class="radio-custom"></span>
                             </label>
-                            <label class="segmented-tab">
+                            <label class="radio-option">
+                                <span class="radio-label">
+                                    <strong>ترتيب عشوائي</strong>
+                                    <small>خلط الاختيارات لمنع حفظ النمط</small>
+                                </span>
                                 <input type="radio" name="optionOrder" value="random">
-                                <strong>ترتيب عشوائي</strong>
-                                <small>خلط الاختيارات لمنع حفظ النمط</small>
+                                <span class="radio-custom"></span>
                             </label>
                         </div>
                     </div>
 
                     <div class="settings-card">
                         <h4 class="settings-label">⚡ الانتقال التلقائي</h4>
-                        <div class="segmented-control" id="auto-transition-control">
-                            <label class="segmented-tab active">
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <span class="radio-label">
+                                    <strong>تفعيل</strong>
+                                    <small>انتقال تلقائي للسؤال التالي عند الإجابة الصحيحة</small>
+                                </span>
                                 <input type="radio" name="autoTransition" value="on" checked>
-                                <strong>تفعيل</strong>
-                                <small>انتقال تلقائي للسؤال التالي عند الإجابة الصحيحة</small>
+                                <span class="radio-custom"></span>
                             </label>
-                            <label class="segmented-tab">
+                            <label class="radio-option">
+                                <span class="radio-label">
+                                    <strong>تعطيل</strong>
+                                    <small>الانتظار ونقر "التالي" دائماً</small>
+                                </span>
                                 <input type="radio" name="autoTransition" value="off">
-                                <strong>تعطيل</strong>
-                                <small>الانتظار ونقر "التالي" دائماً</small>
+                                <span class="radio-custom"></span>
                             </label>
                         </div>
                     </div>

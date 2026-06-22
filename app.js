@@ -13,38 +13,10 @@ let parentAnswersState = null;
 // Initialization
 document.addEventListener('DOMContentLoaded', () => {
   renderCategories();
-  initSegmentedControls();
   updateSavedCounts();
   restoreQuizProgress();
   createParticles();
 });
-
-// Initialize Segmented Controls
-function initSegmentedControls() {
-  const controls = document.querySelectorAll('.segmented-control');
-  controls.forEach(control => {
-    const inputs = control.querySelectorAll('input[type="radio"]');
-    inputs.forEach(input => {
-      input.addEventListener('change', () => {
-        if (input.checked) {
-          // Clear active class from siblings
-          control.querySelectorAll('.segmented-tab').forEach(tab => {
-            tab.classList.remove('active');
-          });
-          // Add active class to selected tab
-          input.closest('.segmented-tab').classList.add('active');
-
-          // Toggle shift class based on value
-          if (input.value === 'random' || input.value === 'off') {
-            control.classList.add('shift');
-          } else {
-            control.classList.remove('shift');
-          }
-        }
-      });
-    });
-  });
-}
 
 // Render Category Cards (Accordion Bento Layout)
 function renderCategories() {
@@ -1129,22 +1101,12 @@ function restoreQuizProgress() {
       const qInput = document.querySelector(`input[name="questionOrder"][value="${state.questionOrder}"]`);
       if (qInput) {
         qInput.checked = true;
-        const tab = qInput.closest('.segmented-tab');
-        if (tab) {
-          tab.parentNode.querySelectorAll('.segmented-tab').forEach(t => t.classList.remove('active'));
-          tab.classList.add('active');
-        }
       }
     }
     if (state.optionOrder) {
       const oInput = document.querySelector(`input[name="optionOrder"][value="${state.optionOrder}"]`);
       if (oInput) {
         oInput.checked = true;
-        const tab = oInput.closest('.segmented-tab');
-        if (tab) {
-          tab.parentNode.querySelectorAll('.segmented-tab').forEach(t => t.classList.remove('active'));
-          tab.classList.add('active');
-        }
       }
     }
 
