@@ -765,12 +765,25 @@ function updateSavedCounts() {
     veryImportantCount = flaggedList.filter(q => q.flagType === 'very_important').length;
     importantCount = flaggedList.filter(q => q.flagType === 'important').length;
   } else {
-    // Show filtered counts for selected exams
-    flaggedList.forEach(q => {
-      const key = `${q.secName}|${q.examName}`;
-      if (selectedExams.has(key)) {
-        if (q.flagType === 'very_important') veryImportantCount++;
-        if (q.flagType === 'important') importantCount++;
+    // Count flags whose question (by num) exists in any currently-selected exam
+    const countedNums = new Set();
+    flaggedList.forEach(flaggedQ => {
+      if (countedNums.has(flaggedQ.num)) return; // don't double-count same question
+      // Search for this question's num across all selected exams
+      let found = false;
+      for (const section of allSections) {
+        if (found) break;
+        for (const exam of section.exams) {
+          if (found) break;
+          const examKey = `${section.name}|${exam.name}`;
+          if (!selectedExams.has(examKey)) continue;
+          if (exam.questions.some(q => q.num === flaggedQ.num)) found = true;
+        }
+      }
+      if (found) {
+        countedNums.add(flaggedQ.num);
+        if (flaggedQ.flagType === 'very_important') veryImportantCount++;
+        if (flaggedQ.flagType === 'important') importantCount++;
       }
     });
   }
@@ -798,12 +811,28 @@ function startSavedQuiz(type) {
     // Review all globally
     questionsToQuiz = flaggedList.filter(q => q.flagType === type);
   } else {
-    // Filter by selected exams
-    flaggedList.forEach(q => {
-      const key = `${q.secName}|${q.examName}`;
-      if (selectedExams.has(key) && q.flagType === type) {
-        questionsToQuiz.push(q);
-      }
+    // Search by question num across all selected exams (not by stored secName/examName)
+    // This ensures a flag follows the question wherever it appears
+    const addedNums = new Set();
+    allSections.forEach(section => {
+      section.exams.forEach(exam => {
+        const examKey = `${section.name}|${exam.name}`;
+        if (!selectedExams.has(examKey)) return;
+        flaggedList.forEach(flaggedQ => {
+          if (flaggedQ.flagType !== type) return;
+          if (addedNums.has(flaggedQ.num)) return; // already added from another exam
+          if (exam.questions.some(q => q.num === flaggedQ.num)) {
+            addedNums.add(flaggedQ.num);
+            // Use the current exam context for accurate display
+            questionsToQuiz.push({
+              ...flaggedQ,
+              secName: section.name,
+              examName: exam.name,
+              section: `${section.name} - ${exam.name}`
+            });
+          }
+        });
+      });
     });
   }
 
@@ -811,11 +840,11 @@ function startSavedQuiz(type) {
 
   const optionOrder = document.querySelector('input[name="optionOrder"]:checked').value;
   const formattedQs = questionsToQuiz.map(q => {
-    // Look up fresh question data from allSections using num — never uses stale stored data
+    // Look up fresh question data from allSections using num
     const sec = allSections.find(s => s.name === q.secName);
     const exam = sec && sec.exams.find(e => e.name === q.examName);
     const origQ = exam && exam.questions.find(question => question.num === q.num);
-    if (!origQ) return null; // question was removed from questions.js
+    if (!origQ) return null;
 
     let options = [...origQ.o];
     let correctIdx = origQ.c;
@@ -826,7 +855,7 @@ function startSavedQuiz(type) {
       correctIdx = indices.indexOf(origQ.c);
     }
     return {
-      section: q.section || `${q.secName} - ${q.examName}`,
+      section: q.section,
       qText: origQ.q,
       num: origQ.num,
       options: options,
