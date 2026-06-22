@@ -270,7 +270,11 @@ function startQuiz(customQuestions = null) {
   timerInterval = setInterval(() => {
     timeElapsed++;
     updateTimerDisplay();
-    saveQuizProgress();
+    // Save every 30s to avoid hammering localStorage every second
+    // (already saved on every user action: selectOption, next, prev)
+    if (timeElapsed % 30 === 0) {
+      saveQuizProgress();
+    }
   }, 1000);
 
   // Screen transition
@@ -361,10 +365,14 @@ function displayQuestion() {
   currentQ.options.forEach((opt, idx) => {
     const btn = document.createElement('button');
     btn.className = 'option-btn';
-    btn.innerHTML = `
-      <span class="option-letter">${optionLetters[idx]}</span>
-      <span class="option-val">${opt}</span>
-    `;
+    const letterSpan = document.createElement('span');
+    letterSpan.className = 'option-letter';
+    letterSpan.textContent = optionLetters[idx];
+    const valSpan = document.createElement('span');
+    valSpan.className = 'option-val';
+    valSpan.textContent = opt;
+    btn.appendChild(letterSpan);
+    btn.appendChild(valSpan);
 
     // Apply states if previously answered
     if (savedAnswer !== null) {

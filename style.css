@@ -1712,7 +1712,7 @@ body.quiz-active #quiz-screen .quiz-nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 16px 24px !important;
+    padding: 16px 24px;
     min-height: 0;
     overflow: hidden;
   }
@@ -1745,7 +1745,7 @@ body.quiz-active #quiz-screen .quiz-nav {
     overflow: hidden;
     min-height: 0;
     margin-bottom: 12px;
-    padding: 18px 24px !important; /* reduced padding from 35px */
+    padding: 18px 24px; /* reduced padding from 35px */
   }
 
   body.quiz-active #quiz-screen .question-flags {
@@ -1803,38 +1803,38 @@ body.quiz-active #quiz-screen .quiz-nav {
   }
 
   body.quiz-active #quiz-screen .meta-badge {
-    padding: 4px 10px !important;
-    font-size: 0.8rem !important;
-    border-radius: 6px !important;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    border-radius: 6px;
   }
 
   body.quiz-active #quiz-screen .quiz-score-pill {
-    padding: 4px 10px !important;
-    font-size: 0.88rem !important;
-    gap: 5px !important;
-    border-radius: 6px !important;
+    padding: 4px 10px;
+    font-size: 0.88rem;
+    gap: 5px;
+    border-radius: 6px;
   }
 
   body.quiz-active #quiz-screen .btn-nav {
-    padding: 6px 12px !important;
-    font-size: 0.85rem !important;
-    gap: 4px !important;
-    border-radius: 6px !important;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    gap: 4px;
+    border-radius: 6px;
   }
 
   body.quiz-active #quiz-screen .btn-nav svg {
-    width: 12px !important;
-    height: 12px !important;
+    width: 12px;
+    height: 12px;
   }
 
   body.quiz-active #quiz-screen .btn-finish {
-    padding: 4px 10px !important;
-    font-size: 0.78rem !important;
+    padding: 4px 10px;
+    font-size: 0.78rem;
   }
 
   body.quiz-active #quiz-screen .btn-finish svg {
-    width: 10px !important;
-    height: 10px !important;
+    width: 10px;
+    height: 10px;
   }
 
   body.quiz-active #quiz-screen .quiz-nav {
@@ -1850,97 +1850,97 @@ body.quiz-active #quiz-screen .quiz-nav {
    ================================================================= */
 @media (max-width: 768px) {
     body.quiz-active #quiz-screen {
-        padding: 6px 6px 16px 6px !important;
+        padding: 6px 6px 16px 6px;
     }
 
     body.quiz-active #quiz-screen .container.quiz-container {
-        padding: 12px !important;
-        border-radius: var(--radius-lg) !important;
+        padding: 12px;
+        border-radius: var(--radius-lg);
     }
 
     body.quiz-active #quiz-screen .quiz-score-pill {
-        padding: 3px 8px !important;
-        font-size: 0.82rem !important;
-        gap: 4px !important;
-        border-radius: 6px !important;
+        padding: 3px 8px;
+        font-size: 0.82rem;
+        gap: 4px;
+        border-radius: 6px;
     }
 
     body.quiz-active #quiz-screen .progress-bar-container {
-        margin-bottom: 8px !important;
+        margin-bottom: 8px;
     }
 
     body.quiz-active #quiz-screen .progress-info {
-        font-size: 0.78rem !important;
+        font-size: 0.78rem;
     }
 
     body.quiz-active #quiz-screen .question-container {
-        padding: 14px 16px !important;
-        margin-bottom: 8px !important;
-        border-radius: 12px !important;
+        padding: 14px 16px;
+        margin-bottom: 8px;
+        border-radius: 12px;
     }
 
     body.quiz-active #quiz-screen .question-flags {
-        margin-bottom: 8px !important;
-        gap: 8px !important;
+        margin-bottom: 8px;
+        gap: 8px;
     }
 
     body.quiz-active #quiz-screen .flag-btn {
-        padding: 4px 8px !important;
-        font-size: 0.7rem !important;
+        padding: 4px 8px;
+        font-size: 0.7rem;
     }
 
     body.quiz-active #quiz-screen .question-text {
-        font-size: 0.98rem !important;
-        line-height: 1.5 !important;
-        margin-bottom: 12px !important;
+        font-size: 0.98rem;
+        line-height: 1.5;
+        margin-bottom: 12px;
     }
 
     body.quiz-active #quiz-screen .options-container {
-        gap: 6px !important;
+        gap: 6px;
     }
 
     body.quiz-active #quiz-screen .option-btn {
-        padding: 8px 10px !important;
-        font-size: 0.88rem !important;
-        border-radius: 8px !important;
-        gap: 8px !important;
+        padding: 8px 10px;
+        font-size: 0.88rem;
+        border-radius: 8px;
+        gap: 8px;
     }
 
     body.quiz-active #quiz-screen .option-letter {
-        width: 22px !important;
-        height: 22px !important;
-        font-size: 0.72rem !important;
-        border-radius: 5px !important;
+        width: 22px;
+        height: 22px;
+        font-size: 0.72rem;
+        border-radius: 5px;
     }
 
     body.quiz-active #quiz-screen .quiz-nav {
-        margin-top: 10px !important;
-        padding-top: 8px !important;
-        gap: 6px !important;
+        margin-top: 10px;
+        padding-top: 8px;
+        gap: 6px;
     }
 
     body.quiz-active #quiz-screen .btn-nav {
-        padding: 6px 10px !important;
-        font-size: 0.8rem !important;
-        border-radius: 6px !important;
-        gap: 4px !important;
+        padding: 6px 10px;
+        font-size: 0.8rem;
+        border-radius: 6px;
+        gap: 4px;
     }
 
     body.quiz-active #quiz-screen .btn-nav svg {
-        width: 12px !important;
-        height: 12px !important;
+        width: 12px;
+        height: 12px;
     }
 
     body.quiz-active #quiz-screen .btn-finish {
-        padding: 4px 8px !important;
-        font-size: 0.75rem !important;
+        padding: 4px 8px;
+        font-size: 0.75rem;
     }
 
     body.quiz-active #quiz-screen .no-answer-badge {
-        padding: 6px 10px !important;
-        margin-top: 6px !important;
-        font-size: 0.8rem !important;
-        border-radius: 8px !important;
+        padding: 6px 10px;
+        margin-top: 6px;
+        font-size: 0.8rem;
+        border-radius: 8px;
     }
 }
 
@@ -1949,34 +1949,34 @@ body.quiz-active #quiz-screen .quiz-nav {
    ================================================================= */
 @media (max-width: 400px) {
     body.quiz-active #quiz-screen .question-text {
-        font-size: 0.95rem !important;
-        line-height: 1.5 !important;
+        font-size: 0.95rem;
+        line-height: 1.5;
     }
 
     body.quiz-active #quiz-screen .option-btn {
-        padding: 8px 10px !important;
-        font-size: 0.88rem !important;
+        padding: 8px 10px;
+        font-size: 0.88rem;
     }
 
     body.quiz-active #quiz-screen .option-letter {
-        width: 22px !important;
-        height: 22px !important;
-        font-size: 0.72rem !important;
+        width: 22px;
+        height: 22px;
+        font-size: 0.72rem;
     }
 
     body.quiz-active #quiz-screen .btn-nav {
-        padding: 7px 12px !important;
-        font-size: 0.82rem !important;
+        padding: 7px 12px;
+        font-size: 0.82rem;
     }
 
     body.quiz-active #quiz-screen .meta-badge {
-        padding: 3px 8px !important;
-        font-size: 0.75rem !important;
+        padding: 3px 8px;
+        font-size: 0.75rem;
     }
 
     body.quiz-active #quiz-screen .quiz-score-pill {
-        padding: 4px 10px !important;
-        font-size: 0.85rem !important;
+        padding: 4px 10px;
+        font-size: 0.85rem;
     }
 }
 
@@ -2050,27 +2050,27 @@ body.quiz-active #quiz-screen .quiz-nav {
    ================================================================= */
 @media (max-width: 669px) {
   body.quiz-active #quiz-screen .quiz-header {
-    flex-direction: column !important;
-    gap: 8px !important;
-    margin-bottom: 8px !important;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 8px;
   }
 
   body.quiz-active #quiz-screen .quiz-header-row-1,
   body.quiz-active #quiz-screen .quiz-header-row-2 {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 100% !important;
-    gap: 6px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 6px;
   }
 
   body.quiz-active #quiz-screen .section-badge {
-    flex: 1 !important;
-    min-width: 0 !important;
-    max-width: none !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    white-space: nowrap !important;
+    flex: 1;
+    min-width: 0;
+    max-width: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
