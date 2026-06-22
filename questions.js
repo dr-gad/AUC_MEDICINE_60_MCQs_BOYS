@@ -1226,7 +1226,7 @@ const allSections = [
               "Fissuring",
               "Lichenification"
             ],
-            "c": 0,
+            "c": 2,
             "num": 98
           },
           {
