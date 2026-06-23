@@ -156,7 +156,7 @@ const allSections = [
               "Bullous impetigo"
             ],
             "c": 2,
-            "num": 12
+            "num": 1
           },
           {
             "q": "Erythrasma is a superficial infection caused by",
@@ -168,7 +168,7 @@ const allSections = [
               "Bacillus anthracis"
             ],
             "c": 1,
-            "num": 13
+            "num": 2
           },
           {
             "q": "The deep infection of a group of contiguous follicles with Staph. Aureus is called",
@@ -180,7 +180,7 @@ const allSections = [
               "Favus"
             ],
             "c": 1,
-            "num": 14
+            "num": 3
           },
           {
             "q": "One of the following is exogenous cutaneous tuberculosis",
@@ -192,7 +192,7 @@ const allSections = [
               "Tuberculous gumma"
             ],
             "c": 3,
-            "num": 15
+            "num": 4
           },
           {
             "q": "A 48-year-old woman presents to the Emergency Room with a 2-day history of fever and a well demarcated erythematous plaque on her right cheek. The primary diagnosis was Erysipelas. What is the treatment of choice?",
@@ -204,7 +204,7 @@ const allSections = [
               "Potent topical corticosteroid"
             ],
             "c": 1,
-            "num": 16
+            "num": 5
           },
           {
             "q": "A child develops honey-colored crusts around the mouth and nose. What is the most likely diagnosis?",
@@ -216,7 +216,7 @@ const allSections = [
               "Psoriasis"
             ],
             "c": 1,
-            "num": 17
+            "num": 6
           }
         ]
       },
@@ -233,7 +233,7 @@ const allSections = [
               "Common to occur in children who suck their thumbs or medical and dental workers"
             ],
             "c": 4,
-            "num": 18
+            "num": 1
           },
           {
             "q": "Wrong statement about Herpes gladiatorum",
@@ -245,7 +245,7 @@ const allSections = [
               "In severe cases better treated with systemic antivirus"
             ],
             "c": 3,
-            "num": 19
+            "num": 2
           },
           {
             "q": "Wrong statement about Herpetic sycosis",
@@ -257,7 +257,7 @@ const allSections = [
               "Usually affect adult male"
             ],
             "c": 3,
-            "num": 20
+            "num": 3
           },
           {
             "q": "Suppressive therapy of recurrent Herpes simplex infection",
@@ -269,7 +269,7 @@ const allSections = [
               "Valacyclovir 500mg once daily or Famcyclovir 250mg twice daily can be used"
             ],
             "c": 4,
-            "num": 21
+            "num": 4
           },
           {
             "q": "Causative organism of molluscum contagiosum is",
@@ -281,7 +281,7 @@ const allSections = [
               "RNA virus"
             ],
             "c": 1,
-            "num": 22
+            "num": 5
           },
           {
             "q": "Podophylline is used in treatment of",
@@ -293,7 +293,7 @@ const allSections = [
               "Molluscum contagiosum"
             ],
             "c": 2,
-            "num": 23
+            "num": 6
           },
           {
             "q": "This Human Papilloma Virus (HPV) strain mostly related to cervical intraepithelial neoplasm (CIN)",
@@ -305,7 +305,7 @@ const allSections = [
               "HPV 16,18"
             ],
             "c": 4,
-            "num": 24
+            "num": 7
           },
           {
             "q": "Erythema multiforme is most often related to",
@@ -317,7 +317,7 @@ const allSections = [
               "Herpes simplex infection"
             ],
             "c": 4,
-            "num": 25
+            "num": 8
           },
           {
             "q": "The commonest viral infection involved in the etiology of erythema multiforme is",
@@ -329,7 +329,7 @@ const allSections = [
               "Epstein Barr virus"
             ],
             "c": 1,
-            "num": 26
+            "num": 9
           },
           {
             "q": "Sun exposure has been associated with the development of what type of warts?",
@@ -341,7 +341,7 @@ const allSections = [
               "Condyloma acuminatum"
             ],
             "c": 0,
-            "num": 27
+            "num": 10
           },
           {
             "q": "Podophyllin is contraindicated in",
@@ -353,7 +353,7 @@ const allSections = [
               "Molluscum contagiosum"
             ],
             "c": 1,
-            "num": 28
+            "num": 11
           },
           {
             "q": "The primary lesion of molluscum contagiosum is",
@@ -365,7 +365,7 @@ const allSections = [
               "Pustule"
             ],
             "c": 1,
-            "num": 29
+            "num": 12
           },
           {
             "q": "Treatment of choice for genital warts in pregnancy",
@@ -377,7 +377,7 @@ const allSections = [
               "Cryotherapy"
             ],
             "c": 4,
-            "num": 30
+            "num": 13
           },
           {
             "q": "Genital warts (condyloma accuminata)",
@@ -389,7 +389,7 @@ const allSections = [
               "Non sexually transmitted disease"
             ],
             "c": 0,
-            "num": 31
+            "num": 14
           },
           {
             "q": "A known immunocompromised child with atopic dermatitis presents with clusters of itchy blisters, fever, and painful skin rashes. Which of the following organisms is most likely causative agent for this superadded infection?",
@@ -401,7 +401,7 @@ const allSections = [
               "Pox virus"
             ],
             "c": 1,
-            "num": 32
+            "num": 15
           },
           {
             "q": "A 25-year-old female presents with a 2-day history of painful genital ulcers. On examination, multiple small vesicles on an erythematous base are noted on the labia majora. Which of the following is the most appropriate initial diagnostic test?",
@@ -413,7 +413,7 @@ const allSections = [
               "Bacterial culture"
             ],
             "c": 0,
-            "num": 33
+            "num": 16
           },
           {
             "q": "Tzanck smear used to aid diagnosis?",
@@ -425,7 +425,7 @@ const allSections = [
               "EBV"
             ],
             "c": 1,
-            "num": 34
+            "num": 17
           },
           {
             "q": "This Human Papilloma Virus strain responsible for anogenital warts with very high risk of cervical carcinoma",
@@ -437,7 +437,7 @@ const allSections = [
               "HPV 7"
             ],
             "c": 1,
-            "num": 35
+            "num": 18
           }
         ]
       },
@@ -454,7 +454,7 @@ const allSections = [
               "Iverzin lotion"
             ],
             "c": 3,
-            "num": 36
+            "num": 1
           },
           {
             "q": "Pediculosis capitis may be treated by",
@@ -466,7 +466,7 @@ const allSections = [
               "Amphotericin B"
             ],
             "c": 0,
-            "num": 37
+            "num": 2
           },
           {
             "q": "Adult scabies is characterized by",
@@ -478,7 +478,7 @@ const allSections = [
               "Involve genitalia and web space"
             ],
             "c": 4,
-            "num": 38
+            "num": 3
           },
           {
             "q": "Treatment of choice for scabies in pregnancy?",
@@ -490,7 +490,7 @@ const allSections = [
               "Systemic anti scabietic and methotrexate"
             ],
             "c": 2,
-            "num": 39
+            "num": 4
           },
           {
             "q": "Characteristic lesion in scabies",
@@ -502,7 +502,7 @@ const allSections = [
               "Nodule"
             ],
             "c": 0,
-            "num": 40
+            "num": 5
           },
           {
             "q": "What is the least effective topical scabicide treatment?",
@@ -514,7 +514,7 @@ const allSections = [
               "Crotamiton 10%"
             ],
             "c": 4,
-            "num": 41
+            "num": 6
           },
           {
             "q": "Not a common site for predilection of scabies",
@@ -526,7 +526,7 @@ const allSections = [
               "Buttocks"
             ],
             "c": 3,
-            "num": 42
+            "num": 7
           },
           {
             "q": "Scabies in children differ than adult scabies that it can involves the following body site",
@@ -538,7 +538,7 @@ const allSections = [
               "Buttocks"
             ],
             "c": 0,
-            "num": 43
+            "num": 8
           },
           {
             "q": "Burrow is",
@@ -550,7 +550,7 @@ const allSections = [
               "Area of depigmented skin"
             ],
             "c": 2,
-            "num": 44
+            "num": 9
           }
         ]
       },
@@ -567,7 +567,7 @@ const allSections = [
               "Not an autoimmune disease"
             ],
             "c": 2,
-            "num": 45
+            "num": 1
           },
           {
             "q": "In leprosy, the minimum number of T-cell lymphocytes is seen in",
@@ -579,7 +579,7 @@ const allSections = [
               "Lepromatous leprosy"
             ],
             "c": 4,
-            "num": 46
+            "num": 2
           },
           {
             "q": "Lepromin test is strongly positive in",
@@ -591,7 +591,7 @@ const allSections = [
               "Lepra reaction"
             ],
             "c": 1,
-            "num": 47
+            "num": 3
           },
           {
             "q": "The characteristics of tuberculoid leprosy is",
@@ -603,7 +603,7 @@ const allSections = [
               "No loss of sensation or sweating"
             ],
             "c": 0,
-            "num": 48
+            "num": 4
           },
           {
             "q": "In leprosy, the maximum number of T-cell lymphocytes is seen in",
@@ -615,7 +615,7 @@ const allSections = [
               "Lepromatous leprosy"
             ],
             "c": 0,
-            "num": 49
+            "num": 5
           },
           {
             "q": "As regard leprosy, choose one correct answer",
@@ -627,7 +627,7 @@ const allSections = [
               "Leprosy is autoimmune disease"
             ],
             "c": 3,
-            "num": 50
+            "num": 6
           },
           {
             "q": "A patient presents with multiple a sensate patches on the abdomen. A diagnosis of leprosy is made. Which of the following regimens is the WHO recommendation for treatment of paucibacillary leprosy?",
@@ -639,7 +639,7 @@ const allSections = [
               "Minocycline 300mg monthly and clofazimine 300mg monthly"
             ],
             "c": 0,
-            "num": 51
+            "num": 7
           },
           {
             "q": "A 45 yrs old patient presents with multiple diffuse thickening, numerous discrete, and confluent nodules. A diagnosis of lepromatous leprosy is made. Which of the following regimens is the WHO recommendation for treatment of multibacillary leprosy?",
@@ -651,7 +651,7 @@ const allSections = [
               "Minocycline100mg daily and rifampin600 monthly"
             ],
             "c": 1,
-            "num": 52
+            "num": 8
           },
           {
             "q": "Worst prognosis in leptrotic cases is in",
@@ -663,7 +663,7 @@ const allSections = [
               "Tuberculoid leprosy"
             ],
             "c": 2,
-            "num": 53
+            "num": 9
           },
           {
             "q": "One of the following is exogenous cutaneous tuberculosis",
@@ -675,7 +675,7 @@ const allSections = [
               "Tuberculous gumma"
             ],
             "c": 3,
-            "num": 54
+            "num": 10
           }
         ]
       },
@@ -692,7 +692,7 @@ const allSections = [
               "Oral glucocorticoids"
             ],
             "c": 4,
-            "num": 55
+            "num": 1
           },
           {
             "q": "Not an indication for systemic therapy of psoriasis",
@@ -704,7 +704,7 @@ const allSections = [
               "Localized pustular psoriasis"
             ],
             "c": 4,
-            "num": 56
+            "num": 2
           },
           {
             "q": "Wrong statement about Herald patch",
@@ -716,7 +716,7 @@ const allSections = [
               "The disease is self-limiting"
             ],
             "c": 2,
-            "num": 57
+            "num": 3
           },
           {
             "q": "Kobner's phenomenon is seen in one of the following disease",
@@ -728,7 +728,7 @@ const allSections = [
               "Melasma"
             ],
             "c": 3,
-            "num": 58
+            "num": 4
           },
           {
             "q": "Auspitz sign (pin point bleeding upon scratching of a lesion with a glass slide) is seen in",
@@ -740,7 +740,7 @@ const allSections = [
               "Tinea capitis"
             ],
             "c": 2,
-            "num": 59
+            "num": 5
           },
           {
             "q": "This type of psoriasis is commonly seen in children and may follow a streptococcal sore throat",
@@ -752,7 +752,7 @@ const allSections = [
               "Erythrodermic"
             ],
             "c": 2,
-            "num": 60
+            "num": 6
           },
           {
             "q": "Kobner's phenomenon is NOT seen in",
@@ -764,7 +764,7 @@ const allSections = [
               "Vitiligo"
             ],
             "c": 3,
-            "num": 61
+            "num": 7
           },
           {
             "q": "A young adult presents with silvery-white scales on erythematous plaques over the elbows and knees. What is the most probable diagnosis?",
@@ -776,7 +776,7 @@ const allSections = [
               "Lichen planus"
             ],
             "c": 1,
-            "num": 62
+            "num": 8
           },
           {
             "q": "Mucosa is involved in",
@@ -788,7 +788,7 @@ const allSections = [
               "Onychomycosis"
             ],
             "c": 1,
-            "num": 63
+            "num": 9
           },
           {
             "q": "Severe generalized psoriasis and hepatic cirrhosis is best treated by",
@@ -800,7 +800,7 @@ const allSections = [
               "Acitretin"
             ],
             "c": 0,
-            "num": 64
+            "num": 10
           },
           {
             "q": "The treatment of choice for erythrodermic psoriasis is",
@@ -812,7 +812,7 @@ const allSections = [
               "Phototherapy"
             ],
             "c": 2,
-            "num": 65
+            "num": 11
           },
           {
             "q": "This type of psoriasis is seen in pregnant women",
@@ -824,7 +824,7 @@ const allSections = [
               "Erythrodermic"
             ],
             "c": 4,
-            "num": 66
+            "num": 12
           },
           {
             "q": "One of the following diseases heal without cicatricial alopecia",
@@ -836,7 +836,7 @@ const allSections = [
               "Kerion"
             ],
             "c": 1,
-            "num": 67
+            "num": 13
           }
         ]
       },
@@ -853,7 +853,7 @@ const allSections = [
               "Hereditary angioedema"
             ],
             "c": 1,
-            "num": 68
+            "num": 1
           },
           {
             "q": "Worldwide most common cause for contact dermatitis is",
@@ -865,7 +865,7 @@ const allSections = [
               "Mercury"
             ],
             "c": 0,
-            "num": 69
+            "num": 2
           },
           {
             "q": "Patch test is an important method for diagnosis of",
@@ -877,7 +877,7 @@ const allSections = [
               "Urticaria"
             ],
             "c": 0,
-            "num": 70
+            "num": 3
           },
           {
             "q": "A 25-year old presents with recurrent episodes of flexural eczema, contact urticaria, recurrent skin infections and severe abdominal cramps and diarrhea upon taking sea foods. He is suffering from",
@@ -889,7 +889,7 @@ const allSections = [
               "Cow's milk protein allergy"
             ],
             "c": 1,
-            "num": 71
+            "num": 4
           },
           {
             "q": "Discoid lupus erythematosus is best treated by",
@@ -901,7 +901,7 @@ const allSections = [
               "Systemic antimalarials + topical steroids"
             ],
             "c": 4,
-            "num": 72
+            "num": 5
           }
         ]
       },
@@ -918,7 +918,7 @@ const allSections = [
               "Isotretinoin improve acne via its antiandrogen effect"
             ],
             "c": 4,
-            "num": 73
+            "num": 1
           },
           {
             "q": "Wrong statement about systemic isotretinoin in the treatment of acne vulgaris",
@@ -930,7 +930,7 @@ const allSections = [
               "Dose is 0.5 - 1mg / kg / day"
             ],
             "c": 1,
-            "num": 74
+            "num": 2
           },
           {
             "q": "Wrong statement about Miliaria",
@@ -942,7 +942,7 @@ const allSections = [
               "Miliaria pustulosa occurs when the vesicles of miliaria rubra become inflamed and pus-filled (pustular)"
             ],
             "c": 3,
-            "num": 75
+            "num": 3
           },
           {
             "q": "Treatment of severe nodulocystic acne with which of the following vitamin derivatives may arrest the disease process through decreasing sebaceous activity and decreasing P. acnes?",
@@ -954,7 +954,7 @@ const allSections = [
               "Vitamin B3"
             ],
             "c": 1,
-            "num": 76
+            "num": 4
           },
           {
             "q": "What is the minimum amount of time that you would advise the woman to avoid childbearing after completing a course of isotretinoin for treatment of acne?",
@@ -966,7 +966,7 @@ const allSections = [
               "3 years"
             ],
             "c": 1,
-            "num": 77
+            "num": 5
           },
           {
             "q": "The most common laboratory abnormality in patients treated with isotretinoin is",
@@ -978,7 +978,7 @@ const allSections = [
               "Elevated CPK"
             ],
             "c": 3,
-            "num": 78
+            "num": 6
           },
           {
             "q": "Severe nodulocystic acne Patient on vitamin A derivatives (isotretinoin oral), pseudotumor cerebri is most likely to occur with which of the following systemic medication?",
@@ -990,7 +990,7 @@ const allSections = [
               "Amoxicillin"
             ],
             "c": 0,
-            "num": 79
+            "num": 7
           },
           {
             "q": "The dominant organism present on oily regions of the skin is",
@@ -1002,7 +1002,7 @@ const allSections = [
               "Propionibacterium avidum"
             ],
             "c": 2,
-            "num": 80
+            "num": 8
           },
           {
             "q": "Sebaceous glands secrete sebum via",
@@ -1014,7 +1014,7 @@ const allSections = [
               "Merocrine mechanism"
             ],
             "c": 0,
-            "num": 81
+            "num": 9
           },
           {
             "q": "Regarding sebaceous glands",
@@ -1026,7 +1026,7 @@ const allSections = [
               "Are unilobular glands"
             ],
             "c": 3,
-            "num": 82
+            "num": 10
           }
         ]
       },
@@ -1043,7 +1043,7 @@ const allSections = [
               "The phase of degeneration"
             ],
             "c": 1,
-            "num": 83
+            "num": 1
           },
           {
             "q": "Telogen effluvium",
@@ -1055,7 +1055,7 @@ const allSections = [
               "Results from sudden illness or surgery"
             ],
             "c": 4,
-            "num": 84
+            "num": 2
           },
           {
             "q": "Hair follicle development in the human embryo begins during",
@@ -1067,7 +1067,7 @@ const allSections = [
               "Within 2 weeks of fertilization"
             ],
             "c": 0,
-            "num": 85
+            "num": 3
           },
           {
             "q": "Contraindicated in androgenic alopecia",
@@ -1079,7 +1079,7 @@ const allSections = [
               "Spironolactone"
             ],
             "c": 0,
-            "num": 86
+            "num": 4
           }
         ]
       },
@@ -1096,7 +1096,7 @@ const allSections = [
               "Freckles"
             ],
             "c": 4,
-            "num": 87
+            "num": 1
           },
           {
             "q": "A 5 year boy has recurrent multiple asymptomatic oval and circular faintly hypopigmented macules with fine scaling on his face. The most probable clinical diagnosis is",
@@ -1108,7 +1108,7 @@ const allSections = [
               "Acrofacial vitiligo"
             ],
             "c": 1,
-            "num": 88
+            "num": 2
           },
           {
             "q": "Wrong statement about Melanin",
@@ -1120,7 +1120,7 @@ const allSections = [
               "Increase number of both melanin and melanocytes in freckles"
             ],
             "c": 4,
-            "num": 89
+            "num": 3
           },
           {
             "q": "In a patch of vitiligo",
@@ -1132,7 +1132,7 @@ const allSections = [
               "Acanthosis of the epidermis"
             ],
             "c": 2,
-            "num": 90
+            "num": 4
           },
           {
             "q": "A 22-year-old woman developed small itchy wheals after physical exertion, walking in the sun, eating hot spicy food and when she was angry. The most likely diagnosis is",
@@ -1144,7 +1144,7 @@ const allSections = [
               "Solar urticaria"
             ],
             "c": 0,
-            "num": 91
+            "num": 5
           },
           {
             "q": "A 28-year-old woman developed itchy red wheals after walking in the sun. The most likely diagnosis is",
@@ -1156,7 +1156,7 @@ const allSections = [
               "Solar urticaria"
             ],
             "c": 4,
-            "num": 92
+            "num": 6
           },
           {
             "q": "A 18-year-old woman developed small, raised 1-4 mm wheals which last for 15-30 minutes after walking in the sun or after vigorous exercise, the most likely diagnosis is",
@@ -1168,7 +1168,7 @@ const allSections = [
               "Solar urticaria"
             ],
             "c": 0,
-            "num": 93
+            "num": 7
           },
           {
             "q": "The deepest layer of the epidermis",
@@ -1180,7 +1180,7 @@ const allSections = [
               "Stratum spinosum"
             ],
             "c": 1,
-            "num": 94
+            "num": 8
           },
           {
             "q": "A skin lesion with fluid-filled blisters larger than 0.5cm in diameter belongs to",
@@ -1192,7 +1192,7 @@ const allSections = [
               "Ulcer"
             ],
             "c": 3,
-            "num": 95
+            "num": 9
           },
           {
             "q": "A skin lesion with small fluid-filled blisters less than 0.5cm in diameter belongs to",
@@ -1204,7 +1204,7 @@ const allSections = [
               "Ulcer"
             ],
             "c": 2,
-            "num": 96
+            "num": 10
           },
           {
             "q": "A skin lesion with large clear fluid-filled blisters more than 0.5cm in diameter belongs to",
@@ -1216,7 +1216,7 @@ const allSections = [
               "Ulcer"
             ],
             "c": 3,
-            "num": 97
+            "num": 11
           },
           {
             "q": "Exogenous injury to all parts of the epidermis is called",
@@ -1228,7 +1228,7 @@ const allSections = [
               "Lichenification"
             ],
             "c": 2,
-            "num": 98
+            "num": 12
           },
           {
             "q": "A plaque is a",
@@ -1240,7 +1240,7 @@ const allSections = [
               "Deroofed burrow"
             ],
             "c": 0,
-            "num": 99
+            "num": 13
           },
           {
             "q": "Histamine is the chief mediator of",
@@ -1252,7 +1252,7 @@ const allSections = [
               "Psoriasis"
             ],
             "c": 1,
-            "num": 100
+            "num": 14
           },
           {
             "q": "Vitiligo as an autoimmune disease may be associated with",
@@ -1264,7 +1264,7 @@ const allSections = [
               "Lichen planus"
             ],
             "c": 2,
-            "num": 101
+            "num": 15
           },
           {
             "q": "Which of the following is not true about the effects of ultraviolet radiation on the immune system?",
@@ -1276,7 +1276,7 @@ const allSections = [
               "Effects can be demonstrated by the ability of an antigen to induce an allergic hypersensitivity reaction when applied to skin which has been exposed to low doses of UV radiation"
             ],
             "c": 0,
-            "num": 102
+            "num": 16
           },
           {
             "q": "The active spectrum for cutaneous vitamin D3 synthesis is",
@@ -1288,7 +1288,7 @@ const allSections = [
               "300-460 nm"
             ],
             "c": 0,
-            "num": 103
+            "num": 17
           },
           {
             "q": "A patient with atopic dermatitis presents with frequent flares of dermatitis. They have multiple lichenified plaques, some with serum crust. Which of the following organisms is most likely colonizing these areas?",
@@ -1300,7 +1300,7 @@ const allSections = [
               "Propionibacterium avidum"
             ],
             "c": 3,
-            "num": 104
+            "num": 18
           },
           {
             "q": "The most potent topical corticosteroids is",
@@ -1312,7 +1312,7 @@ const allSections = [
               "Mometasone furoate 0.1%"
             ],
             "c": 2,
-            "num": 105
+            "num": 19
           },
           {
             "q": "The most potent topical corticosteroids are: (second exam)",
@@ -1324,7 +1324,7 @@ const allSections = [
               "Mometasone furoate 0.1%"
             ],
             "c": 1,
-            "num": 106
+            "num": 20
           }
         ]
       },
@@ -1341,7 +1341,7 @@ const allSections = [
               "Ceftriaxone"
             ],
             "c": 3,
-            "num": 107
+            "num": 1
           },
           {
             "q": "Which of the following is the drug of choice for non-gonococcal urethritis",
@@ -1353,7 +1353,7 @@ const allSections = [
               "Ceftriaxone"
             ],
             "c": 0,
-            "num": 108
+            "num": 2
           },
           {
             "q": "Which of the following is used to confirm nontreponemal assays?",
@@ -1365,7 +1365,7 @@ const allSections = [
               "Wasserman test"
             ],
             "c": 1,
-            "num": 109
+            "num": 3
           },
           {
             "q": "Wrong statement about the primary syphilis",
@@ -1377,7 +1377,7 @@ const allSections = [
               "Painless"
             ],
             "c": 3,
-            "num": 110
+            "num": 4
           },
           {
             "q": "Early latent syphilis",
@@ -1389,7 +1389,7 @@ const allSections = [
               "The patient is non contagious through Sexual contact"
             ],
             "c": 0,
-            "num": 111
+            "num": 5
           },
           {
             "q": "A young man presents to the emergency department with a maculopapular rash 2 weeks after healing of a painless genital ulcer. The most likely etiological agent is",
@@ -1401,7 +1401,7 @@ const allSections = [
               "HPV"
             ],
             "c": 1,
-            "num": 112
+            "num": 6
           },
           {
             "q": "Which stage of syphilis is most contagious?",
@@ -1413,7 +1413,7 @@ const allSections = [
               "Stigmata"
             ],
             "c": 1,
-            "num": 113
+            "num": 7
           },
           {
             "q": "Most specific test for syphilis",
@@ -1425,7 +1425,7 @@ const allSections = [
               "Dark ground microscopy"
             ],
             "c": 2,
-            "num": 114
+            "num": 8
           },
           {
             "q": "Which of the following tests is the most sensitive serologic test in late primary syphilis?",
@@ -1437,7 +1437,7 @@ const allSections = [
               "MHA-TP"
             ],
             "c": 0,
-            "num": 115
+            "num": 9
           },
           {
             "q": "A 23-year-old male presents with ulcerated lesion on the penis as well as marked unilateral inguinal lymphadenopathy. The lymph node, however, is not particularly painful to the touch. The patient denies abnormal discharge. What is the probable causative etiology?",
@@ -1449,7 +1449,7 @@ const allSections = [
               "Trichomonas vaginalis"
             ],
             "c": 3,
-            "num": 116
+            "num": 10
           },
           {
             "q": "An 18-year old man presents to the Dermatology Clinic with a nontender penile erosion that has been present for 2 weeks. An indurated border and nontender bilateral inguinal lymphadenopathy are also noted. What is the most likely diagnosis?",
@@ -1461,7 +1461,7 @@ const allSections = [
               "HIV"
             ],
             "c": 0,
-            "num": 117
+            "num": 11
           },
           {
             "q": "A 42 year-old woman presents with a large, vegetating ulcer involving her left labia majora and groin for over 1 year. A Giemsa's stained touch preparation reveals bipolar, safety pin-shaped intracytoplasmic inclusions. What is the most likely diagnosis?",
@@ -1473,7 +1473,7 @@ const allSections = [
               "Gonorrhea"
             ],
             "c": 1,
-            "num": 118
+            "num": 12
           },
           {
             "q": "Granuloma Inguinale is caused by",
@@ -1485,7 +1485,7 @@ const allSections = [
               "Treponema pallidum"
             ],
             "c": 2,
-            "num": 119
+            "num": 13
           },
           {
             "q": "The diagnosis of leishmaniasis can be confirmed by which of the following techniques?",
@@ -1497,7 +1497,7 @@ const allSections = [
               "Culture in Michel's medium"
             ],
             "c": 3,
-            "num": 120
+            "num": 14
           },
           {
             "q": "The primary site of infection of gonorrhea in adult male is",
@@ -1509,7 +1509,7 @@ const allSections = [
               "Glans penis"
             ],
             "c": 2,
-            "num": 121
+            "num": 15
           },
           {
             "q": "The most common cause of non-gonococcal urethritis is",
@@ -1521,7 +1521,7 @@ const allSections = [
               "Intrameatal wart"
             ],
             "c": 1,
-            "num": 122
+            "num": 16
           },
           {
             "q": "What is the preferred medication for treating nongonococcal urethritis caused by chlamydia trachomatis?",
@@ -1533,7 +1533,7 @@ const allSections = [
               "Ciprofloxacin"
             ],
             "c": 1,
-            "num": 123
+            "num": 17
           },
           {
             "q": "Patients that have diagnosed with congenital syphilis have dental findings called",
@@ -1545,7 +1545,7 @@ const allSections = [
               "Enamel hypoplasia"
             ],
             "c": 0,
-            "num": 124
+            "num": 18
           },
           {
             "q": "This type of syphilis has the clinical characteristic of widespread cutaneous eruptions, erythematous macules on the palms and soles, moth eaten alopecia and condyloma lata.",
@@ -1557,7 +1557,7 @@ const allSections = [
               "Congenital"
             ],
             "c": 1,
-            "num": 125
+            "num": 19
           },
           {
             "q": "A 36 yrs. old man presents to the dermatology clinic with a painful genital and lip erosion 2 weeks after he was admitted for treatment of severe pyogenic infection. The most likely diagnosis is",
@@ -1569,7 +1569,7 @@ const allSections = [
               "Herpetic infection"
             ],
             "c": 0,
-            "num": 126
+            "num": 20
           }
         ]
       },
@@ -1586,7 +1586,7 @@ const allSections = [
               "Hypospermia"
             ],
             "c": 0,
-            "num": 127
+            "num": 1
           },
           {
             "q": "The term aspermia refer to",
@@ -1598,7 +1598,7 @@ const allSections = [
               "Total absence of semen"
             ],
             "c": 4,
-            "num": 128
+            "num": 2
           },
           {
             "q": "One of the following is a sure causes of azoospermia",
@@ -1610,7 +1610,7 @@ const allSections = [
               "Unilateral cryptorchidism"
             ],
             "c": 1,
-            "num": 129
+            "num": 3
           },
           {
             "q": "The commonest semen abnormality seen in infertile patients who have varicocele is",
@@ -1622,7 +1622,7 @@ const allSections = [
               "Azoospermia"
             ],
             "c": 0,
-            "num": 130
+            "num": 4
           },
           {
             "q": "Wrong statement regarding erection",
@@ -1634,7 +1634,7 @@ const allSections = [
               "Passive veno-occlusion occurs during erection"
             ],
             "c": 2,
-            "num": 131
+            "num": 5
           },
           {
             "q": "Testosterone is mainly secreted by",
@@ -1646,7 +1646,7 @@ const allSections = [
               "Peritubular cell"
             ],
             "c": 0,
-            "num": 132
+            "num": 6
           },
           {
             "q": "A 62-year-old man with a history of coronary artery disease presents with erectile dysfunction. He is interested in pharmacotherapy. Which of the following is an absolute contraindication to the use of phosphodiesterase-5 inhibitors in this patient?",
@@ -1658,7 +1658,7 @@ const allSections = [
               "Hypertension"
             ],
             "c": 2,
-            "num": 133
+            "num": 7
           },
           {
             "q": "A 35-year-old man presents with premature ejaculation and erectile dysfunction. He reports significant performance anxiety. Which of the following is the most appropriate initial treatment approach?",
@@ -1670,7 +1670,7 @@ const allSections = [
               "Penile prosthesis"
             ],
             "c": 2,
-            "num": 134
+            "num": 8
           },
           {
             "q": "Which anatomical structure traps blood within the penis to maintain an erection?",
@@ -1682,7 +1682,7 @@ const allSections = [
               "Glans penis"
             ],
             "c": 0,
-            "num": 135
+            "num": 9
           },
           {
             "q": "Which enzyme plays a key role in terminating the erection process?",
@@ -1694,7 +1694,7 @@ const allSections = [
               "Hydroxysteroid dehydrogenase"
             ],
             "c": 0,
-            "num": 136
+            "num": 10
           },
           {
             "q": "Which hormone is primarily responsible for stimulating testosterone production in males?",
@@ -1706,7 +1706,7 @@ const allSections = [
               "LH"
             ],
             "c": 4,
-            "num": 137
+            "num": 11
           },
           {
             "q": "In semen analysis, which parameter is most critical in determining male fertility?",
@@ -1718,7 +1718,7 @@ const allSections = [
               "Volume of ejaculate"
             ],
             "c": 2,
-            "num": 138
+            "num": 12
           },
           {
             "q": "A young male presents with small, firm testes and gynecomastia. Karyotype shows 47, XXY. What is the diagnosis?",
@@ -1730,7 +1730,7 @@ const allSections = [
               "Down syndrome"
             ],
             "c": 2,
-            "num": 139
+            "num": 13
           },
           {
             "q": "A 32-year-old male presents with infertility. His semen analysis reveals azoospermia. Which of the following is the most likely cause if FSH is elevated?",
@@ -1742,7 +1742,7 @@ const allSections = [
               "Erectile dysfunction"
             ],
             "c": 2,
-            "num": 140
+            "num": 14
           },
           {
             "q": "A male patient is found to have low testosterone and low LH/FSH. What is the most likely diagnosis?",
@@ -1754,7 +1754,7 @@ const allSections = [
               "Pituitary adenoma"
             ],
             "c": 2,
-            "num": 141
+            "num": 15
           },
           {
             "q": "Which test is most appropriate to confirm retrograde ejaculation?",
@@ -1766,7 +1766,7 @@ const allSections = [
               "FSH/LH levels"
             ],
             "c": 2,
-            "num": 142
+            "num": 16
           },
           {
             "q": "One of the following is NOT a clinical type of tinea pedis",
@@ -1778,7 +1778,7 @@ const allSections = [
               "Ulcerative"
             ],
             "c": 1,
-            "num": 143
+            "num": 17
           }
         ]
       }
@@ -2291,7 +2291,7 @@ const allSections = [
               "Pubic louse"
             ],
             "c": 1,
-            "num": 41
+            "num": 1
           },
           {
             "q": "Ptosis in Horner's syndrome, is due to paralysis of:",
@@ -2303,7 +2303,7 @@ const allSections = [
               "Orbicularis oculi muscle"
             ],
             "c": 2,
-            "num": 42
+            "num": 2
           },
           {
             "q": "(60) years old hypertensive male presented to the ophthalmology clinic with unilateral painless red eye. The most probable diagnosis is:",
@@ -2315,7 +2315,7 @@ const allSections = [
               "Macular edema"
             ],
             "c": 0,
-            "num": 43
+            "num": 3
           },
           {
             "q": "(30) years old male presents with a history of injury to the eye with a leaf 5 days ago and pain, photophobia, and redness of the eye for 2 days. What would be the most likely pathology?",
@@ -2327,7 +2327,7 @@ const allSections = [
               "Allergic conjunctivitis"
             ],
             "c": 2,
-            "num": 44
+            "num": 4
           },
           {
             "q": "Ten years old boy complains of itching. On examination, there are mucoid nodules with smooth rounded surface on the limbus, and mucous white ropy conjunctival discharge. He most probably suffers from:",
@@ -2339,7 +2339,7 @@ const allSections = [
               "Anterior staphyloma"
             ],
             "c": 2,
-            "num": 45
+            "num": 5
           },
           {
             "q": "(12) years old boy receiving long term treatment for spring catarrh, developed defective vision in both eyes. The likely cause is:",
@@ -2351,7 +2351,7 @@ const allSections = [
               "Retinal hemorrhage"
             ],
             "c": 0,
-            "num": 46
+            "num": 6
           },
           {
             "q": "A patient presents with decreased visual acuity, normal intraocular pressure & large optic cupping, visual field defect in form of arcuate scotoma. The likely diagnosis is:",
@@ -2363,7 +2363,7 @@ const allSections = [
               "Optic neuritis"
             ],
             "c": 1,
-            "num": 47
+            "num": 7
           },
           {
             "q": "In acute angle closure glaucoma the pupil is:",
@@ -2375,7 +2375,7 @@ const allSections = [
               "D-shaped"
             ],
             "c": 2,
-            "num": 48
+            "num": 8
           },
           {
             "q": "Cherry red spot at the macula is seen in:",
@@ -2387,7 +2387,7 @@ const allSections = [
               "Central retinal vein occlusion"
             ],
             "c": 2,
-            "num": 49
+            "num": 9
           },
           {
             "q": "Corneal sensations are lost in:",
@@ -2399,7 +2399,7 @@ const allSections = [
               "Marginal keratitis"
             ],
             "c": 0,
-            "num": 50
+            "num": 10
           },
           {
             "q": "A female patient 18 years old, who is contact lens wearer since two years, is complaining of redness, lacrimation and foreign body sensation of both eyes. On examination, visual acuity was 6/6 with negative fluorescein test. The expected diagnosis can be:",
@@ -2411,7 +2411,7 @@ const allSections = [
               "Fungal corneal ulcer"
             ],
             "c": 1,
-            "num": 51
+            "num": 11
           },
           {
             "q": "A patient of old standing diabetes mellitus noticed sudden muscle violations. On examination, the red reflex was dim, with no details of fundus could be seen. He might have:",
@@ -2423,7 +2423,7 @@ const allSections = [
               "Branch retinal vein occlusion"
             ],
             "c": 3,
-            "num": 52
+            "num": 12
           },
           {
             "q": "Tranta's nodules are seen in:",
@@ -2435,7 +2435,7 @@ const allSections = [
               "Herpetic keratitis"
             ],
             "c": 1,
-            "num": 53
+            "num": 13
           },
           {
             "q": "After 48 hours of a cataract extraction operation, a patient complained of ocular pain and visual loss. On examination, this eye looked red with ciliary injection, corneal oedema and absent red reflex. The first suspicion must be:",
@@ -2447,7 +2447,7 @@ const allSections = [
               "Secondary glaucoma"
             ],
             "c": 1,
-            "num": 54
+            "num": 14
           },
           {
             "q": "What is the etiology of phlytenular conjunctivitis?",
@@ -2459,7 +2459,7 @@ const allSections = [
               "Allergy to exogenous protein"
             ],
             "c": 2,
-            "num": 55
+            "num": 15
           },
           {
             "q": "What is the most common organism responsible for hypopyon corneal ulcer?",
@@ -2471,7 +2471,7 @@ const allSections = [
               "Herpes simplex"
             ],
             "c": 1,
-            "num": 56
+            "num": 16
           },
           {
             "q": "Band-shaped keratopathy is due to:",
@@ -2483,7 +2483,7 @@ const allSections = [
               "Acute viral keratitis"
             ],
             "c": 1,
-            "num": 57
+            "num": 17
           },
           {
             "q": "\"Mutton fat\" keratic precipitates are typically seen in:",
@@ -2495,7 +2495,7 @@ const allSections = [
               "Herpetic keratitis"
             ],
             "c": 1,
-            "num": 58
+            "num": 18
           },
           {
             "q": "What is the treatment of choice for congenital glaucoma?",
@@ -2507,7 +2507,7 @@ const allSections = [
               "Diode laser cyclo-ablation"
             ],
             "c": 0,
-            "num": 59
+            "num": 19
           },
           {
             "q": "What is the primary treatment of choice in primary open angle glaucoma?",
@@ -2519,7 +2519,7 @@ const allSections = [
               "Topical antiglaucoma medications"
             ],
             "c": 4,
-            "num": 60
+            "num": 20
           },
           {
             "q": "What is the common field change in pituitary adenoma?",
@@ -2531,7 +2531,7 @@ const allSections = [
               "Isolated paracentral scotoma"
             ],
             "c": 0,
-            "num": 61
+            "num": 21
           },
           {
             "q": "What is the most common intraocular tumor in children?",
@@ -2542,7 +2542,7 @@ const allSections = [
               "Medulloepithelioma"
             ],
             "c": 1,
-            "num": 62
+            "num": 22
           },
           {
             "q": "Exophoria can be seen with:",
@@ -2554,7 +2554,7 @@ const allSections = [
               "Blue dots' cataract"
             ],
             "c": 0,
-            "num": 63
+            "num": 23
           },
           {
             "q": "Diplopia is a characteristic feature of:",
@@ -2566,7 +2566,7 @@ const allSections = [
               "Latent squint"
             ],
             "c": 2,
-            "num": 64
+            "num": 24
           },
           {
             "q": "What is the most common complication of lagophthalmos?",
@@ -2578,7 +2578,7 @@ const allSections = [
               "Madarosis"
             ],
             "c": 1,
-            "num": 65
+            "num": 25
           },
           {
             "q": "What is the most common type of lid carcinoma?",
@@ -2590,7 +2590,7 @@ const allSections = [
               "Diktyoma"
             ],
             "c": 2,
-            "num": 66
+            "num": 26
           },
           {
             "q": "Hordeolum externum is an inflammation of:",
@@ -2602,7 +2602,7 @@ const allSections = [
               "Zeis gland"
             ],
             "c": 4,
-            "num": 67
+            "num": 27
           },
           {
             "q": "(8) years old boy had previous failed ptosis operations and levator action is poor. What is the surgery of choice?",
@@ -2614,7 +2614,7 @@ const allSections = [
               "Fasanella-Servat operation"
             ],
             "c": 0,
-            "num": 68
+            "num": 28
           },
           {
             "q": "Epiphora occurs in:",
@@ -2626,7 +2626,7 @@ const allSections = [
               "Xerosis"
             ],
             "c": 2,
-            "num": 69
+            "num": 29
           },
           {
             "q": "Diphtheric conjunctivitis pathology is primarily due to:",
@@ -2638,7 +2638,7 @@ const allSections = [
               "Bacterial overgrowth"
             ],
             "c": 0,
-            "num": 70
+            "num": 30
           },
           {
             "q": "In viral epidemic kerato- conjunctivitis; characteristically there is:",
@@ -2650,7 +2650,7 @@ const allSections = [
               "Caseous discharge"
             ],
             "c": 2,
-            "num": 71
+            "num": 31
           },
           {
             "q": "Which one of the following is the most important during accommodation?",
@@ -2662,7 +2662,7 @@ const allSections = [
               "Vitreous humor"
             ],
             "c": 3,
-            "num": 72
+            "num": 32
           },
           {
             "q": "Which one of the following has highest refractive power?",
@@ -2674,7 +2674,7 @@ const allSections = [
               "Vitreous humor"
             ],
             "c": 1,
-            "num": 73
+            "num": 33
           },
           {
             "q": "Which of the following pairs are highly important for balance?",
@@ -2686,7 +2686,7 @@ const allSections = [
               "Eye and middle ear"
             ],
             "c": 2,
-            "num": 74
+            "num": 34
           },
           {
             "q": "Which of the following statement describe the fovea centralis?",
@@ -2698,7 +2698,7 @@ const allSections = [
               "Is not crossed by any major blood vessels"
             ],
             "c": 4,
-            "num": 75
+            "num": 35
           },
           {
             "q": "Which of the following events will occur during accommodation for near vision?",
@@ -2710,7 +2710,7 @@ const allSections = [
               "The visual axes of both eyes don't converge"
             ],
             "c": 2,
-            "num": 76
+            "num": 36
           },
           {
             "q": "Lens induced glaucoma can occur in the following conditions except:",
@@ -2722,7 +2722,7 @@ const allSections = [
               "Posterior lens dislocation"
             ],
             "c": 3,
-            "num": 77
+            "num": 37
           },
           {
             "q": "Corneal causes of secondary glaucoma include all the following except:",
@@ -2734,7 +2734,7 @@ const allSections = [
               "Corneal fistula after closure and formation of anterior synechia"
             ],
             "c": 3,
-            "num": 78
+            "num": 38
           },
           {
             "q": "Which one of the following is associated with shallow anterior chamber?",
@@ -2746,7 +2746,7 @@ const allSections = [
               "High myopia"
             ],
             "c": 2,
-            "num": 79
+            "num": 39
           },
           {
             "q": "What is the most effective treatment of choice in aphakia?",
@@ -2758,7 +2758,7 @@ const allSections = [
               "Posterior chamber IOL"
             ],
             "c": 4,
-            "num": 80
+            "num": 40
           },
           {
             "q": "Distant vision is recorded at a distance of:",
@@ -2770,7 +2770,7 @@ const allSections = [
               "8 meters"
             ],
             "c": 3,
-            "num": 81
+            "num": 41
           },
           {
             "q": "What is the most common organism causing ophthalmia neonatorum?",
@@ -2782,7 +2782,7 @@ const allSections = [
               "Neisseria meningitides"
             ],
             "c": 0,
-            "num": 82
+            "num": 42
           },
           {
             "q": "What is the earliest feature of anterior uveitis?",
@@ -2794,7 +2794,7 @@ const allSections = [
               "Macular edema"
             ],
             "c": 3,
-            "num": 83
+            "num": 43
           },
           {
             "q": "(65) years old female presented to the ophthalmology clinic with gradual painless diminution of vision over 3 months. What is the most common diagnosis?",
@@ -2806,7 +2806,7 @@ const allSections = [
               "Ischemic central retinal vein occlusion"
             ],
             "c": 1,
-            "num": 84
+            "num": 44
           },
           {
             "q": "(40) years old female presented to the emergency room with unilateral severe ocular pain and blurring of vision associated with sudden headache and vomiting. What is the most probable diagnosis?",
@@ -2818,7 +2818,7 @@ const allSections = [
               "Scleritis"
             ],
             "c": 0,
-            "num": 85
+            "num": 45
           },
           {
             "q": "A young child suffering from fever and sore throat began to complain of lacrimation. On examination, follicles were found in the lower palpebral conjunctiva with tender preauricular lymph nodes. The most probable diagnosis is:",
@@ -2830,7 +2830,7 @@ const allSections = [
               "Scaly blepharitis"
             ],
             "c": 2,
-            "num": 86
+            "num": 46
           },
           {
             "q": "True membranous conjunctivitis is caused by:",
@@ -2842,7 +2842,7 @@ const allSections = [
               "Staphylococci"
             ],
             "c": 3,
-            "num": 87
+            "num": 47
           },
           {
             "q": "Leucokoria is seen in:",
@@ -2854,7 +2854,7 @@ const allSections = [
               "Acute iridocyclitis"
             ],
             "c": 3,
-            "num": 88
+            "num": 48
           },
           {
             "q": "Dendritic corneal ulcer is due to:",
@@ -2866,7 +2866,7 @@ const allSections = [
               "Marginal keratitis"
             ],
             "c": 2,
-            "num": 89
+            "num": 49
           },
           {
             "q": "Which one of these muscles combinations constitutes a yoke pair?",
@@ -2878,7 +2878,7 @@ const allSections = [
               "Right lateral rectus and left lateral rectus"
             ],
             "c": 0,
-            "num": 90
+            "num": 50
           }
         ]
       },
@@ -2895,7 +2895,7 @@ const allSections = [
               "Candida albicans"
             ],
             "c": 3,
-            "num": 91
+            "num": 1
           },
           {
             "q": "A painful, tender, non itchy localized redness of the conjunctiva can be due to:",
@@ -2907,7 +2907,7 @@ const allSections = [
               "Senile cataract"
             ],
             "c": 1,
-            "num": 92
+            "num": 2
           },
           {
             "q": "In trachoma, the patient is infectious when there is:",
@@ -2919,7 +2919,7 @@ const allSections = [
               "Follicles and papillae in the palpebral conjunctiva"
             ],
             "c": 4,
-            "num": 93
+            "num": 3
           },
           {
             "q": "Koeppe's nodules are found in:",
@@ -2931,7 +2931,7 @@ const allSections = [
               "Retina"
             ],
             "c": 2,
-            "num": 94
+            "num": 4
           },
           {
             "q": "Which of the following is not true about the treatment of acute anterior uveitis:",
@@ -2943,7 +2943,7 @@ const allSections = [
               "It is usually not necessary to admit the patient"
             ],
             "c": 1,
-            "num": 95
+            "num": 5
           },
           {
             "q": "Phakolytic glaucoma is best treated by:",
@@ -2955,7 +2955,7 @@ const allSections = [
               "Miotics and beta-blockers"
             ],
             "c": 1,
-            "num": 96
+            "num": 6
           },
           {
             "q": "In case of buphthalmos we usually find:",
@@ -2967,7 +2967,7 @@ const allSections = [
               "Low intraocular pressure"
             ],
             "c": 1,
-            "num": 97
+            "num": 7
           },
           {
             "q": "Commonest lesion which hinders vision in diabetic retinopathy is:",
@@ -2979,7 +2979,7 @@ const allSections = [
               "Cotton wool spots"
             ],
             "c": 0,
-            "num": 98
+            "num": 8
           },
           {
             "q": "The action of inferior oblique is:",
@@ -2991,7 +2991,7 @@ const allSections = [
               "Elevation, intortion, abduction"
             ],
             "c": 3,
-            "num": 99
+            "num": 9
           },
           {
             "q": "Ciliary injection is not seen in:",
@@ -3003,7 +3003,7 @@ const allSections = [
               "Acute iridocyclitis"
             ],
             "c": 3,
-            "num": 100
+            "num": 10
           },
           {
             "q": "The common presenting symptom of intermediate and posterior uveitis is:",
@@ -3015,7 +3015,7 @@ const allSections = [
               "Fever"
             ],
             "c": 1,
-            "num": 101
+            "num": 11
           },
           {
             "q": "Fascicular ulcer occurs due to:",
@@ -3027,7 +3027,7 @@ const allSections = [
               "Gonococcal infection"
             ],
             "c": 0,
-            "num": 102
+            "num": 12
           },
           {
             "q": "(30) years old patient was subjected to face burn with strong acid, two months later he presented with watering and inability to close his left eye. The explanation of this may be:",
@@ -3039,7 +3039,7 @@ const allSections = [
               "Paralytic ptosis"
             ],
             "c": 0,
-            "num": 103
+            "num": 13
           },
           {
             "q": "All true in treatment protocol of dry eye except:",
@@ -3051,7 +3051,7 @@ const allSections = [
               "Reduce evaporation of tear"
             ],
             "c": 3,
-            "num": 104
+            "num": 14
           },
           {
             "q": "(60) years old hypertensive male presented to the ophthalmology clinic with unilateral painless red eye. The most probable diagnosis is:",
@@ -3063,7 +3063,7 @@ const allSections = [
               "Macular edema"
             ],
             "c": 0,
-            "num": 105
+            "num": 15
           },
           {
             "q": "(30) years old male presents with a history of injury to the eye with a leaf 5 days ago and pain, photophobia, and redness of the eye for 2 days. What would be the most likely pathology?",
@@ -3075,7 +3075,7 @@ const allSections = [
               "Allergic conjunctivitis"
             ],
             "c": 2,
-            "num": 106
+            "num": 16
           },
           {
             "q": "(12) years old boy receiving long term treatment for spring catarrh, developed defective vision in both eyes. The likely cause is:",
@@ -3087,7 +3087,7 @@ const allSections = [
               "Retinal hemorrhage"
             ],
             "c": 0,
-            "num": 107
+            "num": 17
           },
           {
             "q": "A patient presents with decreased visual acuity, normal intraocular pressure & large optic cupping, visual field defect in form of arcuate scotoma. The likely diagnosis is:",
@@ -3099,7 +3099,7 @@ const allSections = [
               "Optic neuritis"
             ],
             "c": 1,
-            "num": 108
+            "num": 18
           },
           {
             "q": "Corneal sensations are lost in:",
@@ -3111,7 +3111,7 @@ const allSections = [
               "Marginal keratitis"
             ],
             "c": 0,
-            "num": 109
+            "num": 19
           },
           {
             "q": "A female patient 18 years old, who is contact lens wearer since two years, is complaining of redness, lacrimation and foreign body sensation of both eyes. On examination, visual acuity was 6/6 with negative fluorescein test. The expected diagnosis can be:",
@@ -3123,7 +3123,7 @@ const allSections = [
               "Fungal corneal ulcer"
             ],
             "c": 1,
-            "num": 110
+            "num": 20
           },
           {
             "q": "A patient of old standing diabetes mellitus noticed sudden muscle violations. On examination, the red reflex was dim, with no details of fundus could be seen. He might have:",
@@ -3135,7 +3135,7 @@ const allSections = [
               "Branch retinal vein occlusion"
             ],
             "c": 3,
-            "num": 111
+            "num": 21
           },
           {
             "q": "Tranta's nodules are seen in:",
@@ -3147,7 +3147,7 @@ const allSections = [
               "Herpetic keratitis"
             ],
             "c": 1,
-            "num": 112
+            "num": 22
           },
           {
             "q": "What is the most common organism responsible for hypopyon corneal ulcer?",
@@ -3159,7 +3159,7 @@ const allSections = [
               "Herpes simplex"
             ],
             "c": 1,
-            "num": 113
+            "num": 23
           },
           {
             "q": "Band-shaped keratopathy is due to:",
@@ -3171,7 +3171,7 @@ const allSections = [
               "Acute viral keratitis"
             ],
             "c": 1,
-            "num": 114
+            "num": 24
           },
           {
             "q": "What is the treatment of choice for congenital glaucoma?",
@@ -3183,7 +3183,7 @@ const allSections = [
               "Diode laser cyclo-ablution"
             ],
             "c": 0,
-            "num": 115
+            "num": 25
           },
           {
             "q": "What is the primary treatment of choice in primary open angle glaucoma?",
@@ -3195,7 +3195,7 @@ const allSections = [
               "Topical antiglaucomatous medications"
             ],
             "c": 4,
-            "num": 116
+            "num": 26
           },
           {
             "q": "What is the common field change in pituitary adenoma?",
@@ -3207,7 +3207,7 @@ const allSections = [
               "Isolated paracentral scotoma"
             ],
             "c": 0,
-            "num": 117
+            "num": 27
           },
           {
             "q": "What is the most common intraocular tumor in children?",
@@ -3219,7 +3219,7 @@ const allSections = [
               "Optic nerve glioma"
             ],
             "c": 1,
-            "num": 118
+            "num": 28
           },
           {
             "q": "Diplopia is a characteristic feature of:",
@@ -3231,7 +3231,7 @@ const allSections = [
               "Latent squint"
             ],
             "c": 2,
-            "num": 119
+            "num": 29
           },
           {
             "q": "What is the most common type of lid carcinoma?",
@@ -3243,7 +3243,7 @@ const allSections = [
               "Diktyoma"
             ],
             "c": 2,
-            "num": 120
+            "num": 30
           },
           {
             "q": "(8) years old boy had previous failed ptosis operations and levator action is poor. What is the surgery of choice?",
@@ -3255,7 +3255,7 @@ const allSections = [
               "Fasanella-Servat operation"
             ],
             "c": 0,
-            "num": 121
+            "num": 31
           },
           {
             "q": "Epiphora occurs with:",
@@ -3267,7 +3267,7 @@ const allSections = [
               "Xerosis"
             ],
             "c": 2,
-            "num": 122
+            "num": 32
           }
         ]
       },
@@ -3284,7 +3284,7 @@ const allSections = [
               "None of the above"
             ],
             "c": 2,
-            "num": 123
+            "num": 1
           },
           {
             "q": "Causes of lagophthalmos include all of the following except:",
@@ -3296,7 +3296,7 @@ const allSections = [
               "Third cranial nerve palsy"
             ],
             "c": 4,
-            "num": 124
+            "num": 2
           },
           {
             "q": "Ptosis in Horner's syndrome, is due to paralysis of:",
@@ -3308,7 +3308,7 @@ const allSections = [
               "Orbicularis oculi muscle"
             ],
             "c": 2,
-            "num": 125
+            "num": 3
           },
           {
             "q": "Trichiasis of the lower lid is surgically treated by:",
@@ -3320,7 +3320,7 @@ const allSections = [
               "None of the above"
             ],
             "c": 1,
-            "num": 126
+            "num": 4
           },
           {
             "q": "Fold of skin extending between the upper and lower lids and covering the inner canthus is called:",
@@ -3332,7 +3332,7 @@ const allSections = [
               "Telecanthus"
             ],
             "c": 3,
-            "num": 127
+            "num": 5
           },
           {
             "q": "Ten years old boy complains of itching. On examination, there are mucoid nodules with smooth rounded surface on the limbus, and mucous white ropy mucopurulent conjunctival discharge. He most probably suffers from:",
@@ -3344,7 +3344,7 @@ const allSections = [
               "Anterior staphyloma"
             ],
             "c": 2,
-            "num": 128
+            "num": 6
           },
           {
             "q": "Ciliary injection is not seen in:",
@@ -3356,7 +3356,7 @@ const allSections = [
               "Acute iridocyclitis"
             ],
             "c": 3,
-            "num": 129
+            "num": 7
           },
           {
             "q": "Herbert's rosettes are found in:",
@@ -3368,7 +3368,7 @@ const allSections = [
               "Herpetic keratitis"
             ],
             "c": 2,
-            "num": 130
+            "num": 8
           },
           {
             "q": "Ophthalmia Neonatorum is caused by:",
@@ -3380,7 +3380,7 @@ const allSections = [
               "None of the above"
             ],
             "c": 3,
-            "num": 131
+            "num": 9
           },
           {
             "q": "Fascicular ulcer occurs due to:",
@@ -3392,7 +3392,7 @@ const allSections = [
               "Gonococcal infection"
             ],
             "c": 0,
-            "num": 132
+            "num": 10
           },
           {
             "q": "All of the following are causes of dry eye disease except:",
@@ -3404,7 +3404,7 @@ const allSections = [
               "Steven Johnson syndrome"
             ],
             "c": 1,
-            "num": 133
+            "num": 11
           },
           {
             "q": "To diagnose dry eye, the following are useful except:",
@@ -3416,7 +3416,7 @@ const allSections = [
               "Tear meniscus less than 1mm"
             ],
             "c": 3,
-            "num": 134
+            "num": 12
           },
           {
             "q": "All true in treatment protocol of dry eye except:",
@@ -3428,7 +3428,7 @@ const allSections = [
               "Reduce evaporation of tear"
             ],
             "c": 3,
-            "num": 135
+            "num": 13
           },
           {
             "q": "The sure diagnostic sign of corneal ulcer is:",
@@ -3440,7 +3440,7 @@ const allSections = [
               "High intraocular pressure"
             ],
             "c": 3,
-            "num": 136
+            "num": 14
           },
           {
             "q": "Complications of corneal ulcer include all the following except:",
@@ -3452,7 +3452,7 @@ const allSections = [
               "Secondary glaucoma"
             ],
             "c": 1,
-            "num": 137
+            "num": 15
           },
           {
             "q": "The effective treatment of dendritic ulcer of the cornea is:",
@@ -3464,7 +3464,7 @@ const allSections = [
               "All of the above"
             ],
             "c": 3,
-            "num": 138
+            "num": 16
           },
           {
             "q": "The commonest cause of hypopony corneal ulcer is:",
@@ -3476,7 +3476,7 @@ const allSections = [
               "Herpes Simplex"
             ],
             "c": 2,
-            "num": 139
+            "num": 17
           },
           {
             "q": "Keratoconus can be diagnosed by:",
@@ -3488,7 +3488,7 @@ const allSections = [
               "Fluorescein angiography"
             ],
             "c": 2,
-            "num": 140
+            "num": 18
           },
           {
             "q": "Commonest cause of posterior staphyloma is:",
@@ -3500,7 +3500,7 @@ const allSections = [
               "High myopia"
             ],
             "c": 4,
-            "num": 141
+            "num": 19
           },
           {
             "q": "The common presenting symptom of intermediate and posterior uveitis is:",
@@ -3512,7 +3512,7 @@ const allSections = [
               "Fever"
             ],
             "c": 1,
-            "num": 142
+            "num": 20
           },
           {
             "q": "Behcet disease has the following findings except:",
@@ -3524,7 +3524,7 @@ const allSections = [
               "Recurrent painful oral ulcers"
             ],
             "c": 1,
-            "num": 143
+            "num": 21
           },
           {
             "q": "Vogt- Koyanagi- Harada syndrome is associated with all of the following except:",
@@ -3536,7 +3536,7 @@ const allSections = [
               "Usually associated with tuberculosis irritis"
             ],
             "c": 4,
-            "num": 144
+            "num": 22
           },
           {
             "q": "A patient presents with decreased visual acuity, normal intraocular pressure & large optic cupping, visual field defect in form of arcuate scotoma. The likely diagnosis is:",
@@ -3548,7 +3548,7 @@ const allSections = [
               "Optic neuritis"
             ],
             "c": 1,
-            "num": 145
+            "num": 23
           },
           {
             "q": "The earliest visual field defect in POAG is:",
@@ -3560,7 +3560,7 @@ const allSections = [
               "Centrocereal scotoma"
             ],
             "c": 0,
-            "num": 146
+            "num": 24
           },
           {
             "q": "The first line of treatment in primary open angle glaucoma is:",
@@ -3572,7 +3572,7 @@ const allSections = [
               "Oral analgesics"
             ],
             "c": 3,
-            "num": 147
+            "num": 25
           },
           {
             "q": "The best line of treatment for congenital glaucoma is:",
@@ -3584,7 +3584,7 @@ const allSections = [
               "Carbonic anhydrase inhibitors"
             ],
             "c": 3,
-            "num": 148
+            "num": 26
           },
           {
             "q": "Following are features of congenital glaucoma except:",
@@ -3596,7 +3596,7 @@ const allSections = [
               "Shallow anterior chamber"
             ],
             "c": 4,
-            "num": 149
+            "num": 27
           },
           {
             "q": "Lens induced glaucoma can occur in the following conditions except:",
@@ -3608,7 +3608,7 @@ const allSections = [
               "Posterior lens dislocation"
             ],
             "c": 3,
-            "num": 150
+            "num": 28
           },
           {
             "q": "Corneal causes of secondary glaucoma include all the following except:",
@@ -3620,7 +3620,7 @@ const allSections = [
               "Corneal fistula after closure and formation of anterior synechia"
             ],
             "c": 3,
-            "num": 151
+            "num": 29
           },
           {
             "q": "Miosis is cause by all of the following except:",
@@ -3632,7 +3632,7 @@ const allSections = [
               "Pontine hemorrhage"
             ],
             "c": 2,
-            "num": 152
+            "num": 30
           },
           {
             "q": "Ptosis and mydriasis are seen in:",
@@ -3644,7 +3644,7 @@ const allSections = [
               "Sympathetic palsy"
             ],
             "c": 2,
-            "num": 153
+            "num": 31
           },
           {
             "q": "'D' shaped pupil is seen in:",
@@ -3656,7 +3656,7 @@ const allSections = [
               "Retinal detachment"
             ],
             "c": 1,
-            "num": 154
+            "num": 32
           },
           {
             "q": "As regards cataract surgery; earliest visual rehabilitation occurs with:",
@@ -3668,7 +3668,7 @@ const allSections = [
               "ECCE alone"
             ],
             "c": 1,
-            "num": 155
+            "num": 33
           },
           {
             "q": "After 48 hours of a cataract extraction operation, a patient complained of ocular pain and visual loss. On examination, this eye looked red with ciliary injection, corneal oedema and absent red reflex. The first suspicion must be:",
@@ -3680,7 +3680,7 @@ const allSections = [
               "Secondary glaucoma"
             ],
             "c": 1,
-            "num": 156
+            "num": 34
           },
           {
             "q": "Blunt trauma to child usually results in the following type of cataract:",
@@ -3692,7 +3692,7 @@ const allSections = [
               "Blue dots cataract"
             ],
             "c": 3,
-            "num": 157
+            "num": 35
           },
           {
             "q": "In a case of bilateral congenital cataract, surgery is indicated immediately in the presence of the following except:",
@@ -3704,7 +3704,7 @@ const allSections = [
               "Clear fundus details with direct ophthalmoscope"
             ],
             "c": 4,
-            "num": 158
+            "num": 36
           },
           {
             "q": "Flame shaped retinal hemorrhage occurs in:",
@@ -3716,7 +3716,7 @@ const allSections = [
               "Inner nuclear layer"
             ],
             "c": 0,
-            "num": 159
+            "num": 37
           },
           {
             "q": "Clinically significant macular edema is diagnosed if there is:",
@@ -3728,7 +3728,7 @@ const allSections = [
               "Retinal thickening or hard exudates within disc diameter from macular center"
             ],
             "c": 4,
-            "num": 160
+            "num": 38
           },
           {
             "q": "Signs of Non-proliferative diabetic retinopathy may include all the following except:",
@@ -3740,7 +3740,7 @@ const allSections = [
               "Neovascularization at the disc"
             ],
             "c": 4,
-            "num": 161
+            "num": 39
           },
           {
             "q": "Optic nerve function can be studied by:",
@@ -3752,7 +3752,7 @@ const allSections = [
               "Perimetry"
             ],
             "c": 4,
-            "num": 162
+            "num": 40
           },
           {
             "q": "What is the most common responsible organism for angular blepharoconjunctivitis?",
@@ -3764,7 +3764,7 @@ const allSections = [
               "Pubic louse"
             ],
             "c": 1,
-            "num": 163
+            "num": 41
           },
           {
             "q": "(60) years old hypertensive male presented to the ophthalmology clinic with unilateral painless red eye. The most probable diagnosis is:",
@@ -3776,7 +3776,7 @@ const allSections = [
               "Macular edema"
             ],
             "c": 0,
-            "num": 164
+            "num": 42
           },
           {
             "q": "(30) years old male presents with a history of injury to the eye with a leaf 5 days ago and pain, photophobia, and redness of the eye for 2 days. What would be the most likely pathology?",
@@ -3788,7 +3788,7 @@ const allSections = [
               "Allergic conjunctivitis"
             ],
             "c": 2,
-            "num": 165
+            "num": 43
           },
           {
             "q": "(12) years old boy receiving long term treatment for spring catarrh, developed defective vision in both eyes. The likely cause is:",
@@ -3800,7 +3800,7 @@ const allSections = [
               "Retinal hemorrhage"
             ],
             "c": 0,
-            "num": 166
+            "num": 44
           },
           {
             "q": "In acute angle closure glaucoma the pupil is:",
@@ -3812,7 +3812,7 @@ const allSections = [
               "D-shaped"
             ],
             "c": 2,
-            "num": 167
+            "num": 45
           },
           {
             "q": "Cherry red spot at the macula is seen in:",
@@ -3824,7 +3824,7 @@ const allSections = [
               "Central retinal vein occlusion"
             ],
             "c": 2,
-            "num": 168
+            "num": 46
           },
           {
             "q": "Corneal sensations are lost in:",
@@ -3836,7 +3836,7 @@ const allSections = [
               "Marginal keratitis"
             ],
             "c": 0,
-            "num": 169
+            "num": 47
           },
           {
             "q": "A female patient 18 years old, who is contact lens wearer since two years, is complaining of redness, lacrimation and foreign body sensation of both eyes. On examination, visual acuity was 6/6 with negative fluorescein test. The expected diagnosis can be:",
@@ -3848,7 +3848,7 @@ const allSections = [
               "Fungal corneal ulcer"
             ],
             "c": 1,
-            "num": 170
+            "num": 48
           },
           {
             "q": "A patient of old standing diabetes mellitus noticed sudden muscle violations. On examination, the red reflex was dim, with no details of fundus could be seen. He might have:",
@@ -3860,7 +3860,7 @@ const allSections = [
               "Branch retinal vein occlusion"
             ],
             "c": 3,
-            "num": 171
+            "num": 49
           },
           {
             "q": "Tranta's nodules are seen in:",
@@ -3872,7 +3872,7 @@ const allSections = [
               "Herpetic keratitis"
             ],
             "c": 1,
-            "num": 172
+            "num": 50
           },
           {
             "q": "What is the etiology of phlytenular conjunctivitis?",
@@ -3884,7 +3884,7 @@ const allSections = [
               "Allergy to exogenous protein"
             ],
             "c": 2,
-            "num": 173
+            "num": 51
           },
           {
             "q": "Band-shaped keratopathy is due to:",
@@ -3896,7 +3896,7 @@ const allSections = [
               "Acute viral keratitis"
             ],
             "c": 1,
-            "num": 174
+            "num": 52
           },
           {
             "q": "\"Mutton fat\" keratic precipitates are typically seen in:",
@@ -3908,7 +3908,7 @@ const allSections = [
               "Herpetic keratitis"
             ],
             "c": 1,
-            "num": 175
+            "num": 53
           },
           {
             "q": "What is the common field change in pituitary adenoma?",
@@ -3920,7 +3920,7 @@ const allSections = [
               "Isolated paracentral scotoma"
             ],
             "c": 0,
-            "num": 176
+            "num": 54
           },
           {
             "q": "What is the most common intraocular tumor in children?",
@@ -3931,7 +3931,7 @@ const allSections = [
               "Medulloepithelioma"
             ],
             "c": 1,
-            "num": 177
+            "num": 55
           },
           {
             "q": "Exophoria can be seen with:",
@@ -3943,7 +3943,7 @@ const allSections = [
               "Blue dots' cataract"
             ],
             "c": 0,
-            "num": 178
+            "num": 56
           },
           {
             "q": "Diplopia is a characteristic feature of:",
@@ -3955,7 +3955,7 @@ const allSections = [
               "Latent squint"
             ],
             "c": 2,
-            "num": 179
+            "num": 57
           },
           {
             "q": "What is the most common complication of lagophthalmos?",
@@ -3967,7 +3967,7 @@ const allSections = [
               "Madarosis"
             ],
             "c": 1,
-            "num": 180
+            "num": 58
           },
           {
             "q": "What is the most common type of lid carcinoma?",
@@ -3979,7 +3979,7 @@ const allSections = [
               "Diktyoma"
             ],
             "c": 2,
-            "num": 181
+            "num": 59
           },
           {
             "q": "Hordeolum externum is an inflammation of:",
@@ -3991,7 +3991,7 @@ const allSections = [
               "Zeis gland"
             ],
             "c": 4,
-            "num": 182
+            "num": 60
           },
           {
             "q": "(8) years old boy had previous failed ptosis operations and levator action is poor. What is the surgery of choice?",
@@ -4003,7 +4003,7 @@ const allSections = [
               "Fasanella-Servat operation"
             ],
             "c": 0,
-            "num": 183
+            "num": 61
           },
           {
             "q": "Epiphora occurs in:",
@@ -4015,7 +4015,7 @@ const allSections = [
               "Xerosis"
             ],
             "c": 2,
-            "num": 184
+            "num": 62
           },
           {
             "q": "Diphtheric conjunctivitis pathology is primarily due to:",
@@ -4027,7 +4027,7 @@ const allSections = [
               "Bacterial overgrowth"
             ],
             "c": 0,
-            "num": 185
+            "num": 63
           },
           {
             "q": "In viral epidemic kerato- conjunctivitis; characteristically there is:",
@@ -4039,7 +4039,7 @@ const allSections = [
               "Caseous discharge"
             ],
             "c": 2,
-            "num": 186
+            "num": 64
           },
           {
             "q": "Which one of the following is the most important during accommodation?",
@@ -4051,7 +4051,7 @@ const allSections = [
               "Vitreous humor"
             ],
             "c": 3,
-            "num": 187
+            "num": 65
           },
           {
             "q": "Which one of the following has highest refractive power?",
@@ -4063,7 +4063,7 @@ const allSections = [
               "Vitreous humor"
             ],
             "c": 1,
-            "num": 188
+            "num": 66
           },
           {
             "q": "Which of the following pairs are highly important for balance?",
@@ -4075,7 +4075,7 @@ const allSections = [
               "Eye and middle ear"
             ],
             "c": 2,
-            "num": 189
+            "num": 67
           },
           {
             "q": "Which of the following statement describe the fovea centralis?",
@@ -4087,7 +4087,7 @@ const allSections = [
               "Is not crossed by any major blood vessels"
             ],
             "c": 4,
-            "num": 190
+            "num": 68
           },
           {
             "q": "Which of the following events will occur during accommodation for near vision?",
@@ -4099,7 +4099,7 @@ const allSections = [
               "The visual axes of both eyes don't converge"
             ],
             "c": 2,
-            "num": 191
+            "num": 69
           },
           {
             "q": "Which one of the following is associated with shallow anterior chamber?",
@@ -4111,7 +4111,7 @@ const allSections = [
               "High myopia"
             ],
             "c": 2,
-            "num": 192
+            "num": 70
           },
           {
             "q": "What is the most effective treatment of choice in aphakia?",
@@ -4123,7 +4123,7 @@ const allSections = [
               "Posterior chamber IOL"
             ],
             "c": 4,
-            "num": 193
+            "num": 71
           },
           {
             "q": "Distant vision is recorded at a distance of:",
@@ -4135,7 +4135,7 @@ const allSections = [
               "8 meters"
             ],
             "c": 3,
-            "num": 194
+            "num": 72
           },
           {
             "q": "What is the most common organism causing ophthalmia neonatorum?",
@@ -4147,7 +4147,7 @@ const allSections = [
               "Neisseria meningitides"
             ],
             "c": 0,
-            "num": 195
+            "num": 73
           },
           {
             "q": "What is the earliest feature of anterior uveitis?",
@@ -4159,7 +4159,7 @@ const allSections = [
               "Macular edema"
             ],
             "c": 3,
-            "num": 196
+            "num": 74
           },
           {
             "q": "(65) years old female presented to the ophthalmology clinic with gradual painless diminution of vision over 3 months. What is the most common diagnosis?",
@@ -4171,7 +4171,7 @@ const allSections = [
               "Ischemic central retinal vein occlusion"
             ],
             "c": 1,
-            "num": 197
+            "num": 75
           },
           {
             "q": "(40) years old female presented to the emergency room with unilateral severe ocular pain and blurring of vision associated with sudden headache and vomiting. What is the most probable diagnosis?",
@@ -4183,7 +4183,7 @@ const allSections = [
               "Scleritis"
             ],
             "c": 0,
-            "num": 198
+            "num": 76
           },
           {
             "q": "A young child suffering from fever and sore throat began to complain of lacrimation. On examination, follicles were found in the lower palpebral conjunctiva with tender preauricular lymph nodes. The most probable diagnosis is:",
@@ -4195,7 +4195,7 @@ const allSections = [
               "Scaly blepharitis"
             ],
             "c": 2,
-            "num": 199
+            "num": 77
           },
           {
             "q": "True membranous conjunctivitis is caused by:",
@@ -4207,7 +4207,7 @@ const allSections = [
               "Staphylococci"
             ],
             "c": 3,
-            "num": 200
+            "num": 78
           },
           {
             "q": "Leucokoria is seen in:",
@@ -4219,7 +4219,7 @@ const allSections = [
               "Acute iridocyclitis"
             ],
             "c": 3,
-            "num": 201
+            "num": 79
           },
           {
             "q": "Dendritic corneal ulcer is due to:",
@@ -4231,7 +4231,7 @@ const allSections = [
               "Marginal keratitis"
             ],
             "c": 2,
-            "num": 202
+            "num": 80
           },
           {
             "q": "Which one of these muscles combinations constitutes a yoke pair?",
@@ -4243,7 +4243,7 @@ const allSections = [
               "Right lateral rectus and left lateral rectus"
             ],
             "c": 0,
-            "num": 203
+            "num": 81
           },
           {
             "q": "A painful, tender, non itchy localized redness of the conjunctiva can be due to:",
@@ -4255,7 +4255,7 @@ const allSections = [
               "Senile cataract"
             ],
             "c": 1,
-            "num": 204
+            "num": 82
           },
           {
             "q": "In trachoma, the patient is infectious when there is:",
@@ -4267,7 +4267,7 @@ const allSections = [
               "Follicles and papillae in the palpebral conjunctiva"
             ],
             "c": 4,
-            "num": 205
+            "num": 83
           },
           {
             "q": "Koeppe's nodules are found in:",
@@ -4279,7 +4279,7 @@ const allSections = [
               "Retina"
             ],
             "c": 2,
-            "num": 206
+            "num": 84
           },
           {
             "q": "Which of the following is not true about the treatment of acute anterior uveitis:",
@@ -4291,7 +4291,7 @@ const allSections = [
               "It is usually not necessary to admit the patient"
             ],
             "c": 1,
-            "num": 207
+            "num": 85
           },
           {
             "q": "Phakolytic glaucoma is best treated by:",
@@ -4303,7 +4303,7 @@ const allSections = [
               "Miotics and beta-blockers"
             ],
             "c": 1,
-            "num": 208
+            "num": 86
           },
           {
             "q": "In case of buphthalmos we usually find:",
@@ -4315,7 +4315,7 @@ const allSections = [
               "Low intraocular pressure"
             ],
             "c": 1,
-            "num": 209
+            "num": 87
           },
           {
             "q": "Commonest lesion which hinders vision in diabetic retinopathy is:",
@@ -4327,7 +4327,7 @@ const allSections = [
               "Cotton wool spots"
             ],
             "c": 0,
-            "num": 210
+            "num": 88
           },
           {
             "q": "The action of inferior oblique is:",
@@ -4339,7 +4339,7 @@ const allSections = [
               "Elevation, intortion, abduction"
             ],
             "c": 3,
-            "num": 211
+            "num": 89
           },
           {
             "q": "(30) years old patient was subjected to face burn with strong acid, two months later he presented with watering and inability to close his left eye. The explanation of this may be:",
@@ -4351,7 +4351,7 @@ const allSections = [
               "Paralytic ptosis"
             ],
             "c": 0,
-            "num": 212
+            "num": 90
           }
         ]
       }
