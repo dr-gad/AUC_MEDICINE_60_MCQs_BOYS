@@ -2,7 +2,7 @@
   "name": "AUC-MEDICINE-60 MCQ Bank - بنك أسئلة الدفعة 60",
   "short_name": "MCQ Bank 60",
   "description": "بنك أسئلة دفعة الطب AUC-60 - مراجعة مجانية شاملة لجميع التخصصات",
-  "start_url": "start_url",
+  "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#040908",
