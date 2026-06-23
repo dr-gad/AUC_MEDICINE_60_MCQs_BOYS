@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   createParticles();
   bindStaticEvents();
   bindKeyboardNavigation();
+  initSearch();
+  initVisibilityOptimization();
 });
 
 // Wire all static button event listeners (replaces inline onclick in HTML)
@@ -1169,11 +1171,14 @@ function showToast(message) {
   }, 3000);
 }
 
-// Floating Particles Effect
+// Floating Particles Effect — with device-aware count
 function createParticles() {
   const container = document.getElementById('particles');
   if (!container) return;
-  const count = 60;
+
+  // Reduce particle count on low-end devices
+  const cores = navigator.hardwareConcurrency || 2;
+  const count = cores <= 2 ? 25 : cores <= 4 ? 40 : 60;
   const colors = ['#00f5d4', '#06d6a0', '#ef476f', '#ffd166'];
 
   for (let i = 0; i < count; i++) {
@@ -1193,8 +1198,225 @@ function createParticles() {
       background: ${color};
       animation-duration: ${duration}s;
       animation-delay: ${delay}s;
+      will-change: transform, opacity;
     `;
 
     container.appendChild(particle);
+  }
+}
+
+// === Visibility API — Pause animations when tab is hidden ===
+function initVisibilityOptimization() {
+  document.addEventListener('visibilitychange', () => {
+    const particles = document.getElementById('particles');
+    const orbs = document.querySelector('.bg-orbs');
+
+    if (document.hidden) {
+      if (particles) particles.style.animationPlayState = 'paused';
+      if (orbs) orbs.style.animationPlayState = 'paused';
+      // Pause all particle and orb children
+      document.querySelectorAll('.particle, .orb').forEach(el => {
+        el.style.animationPlayState = 'paused';
+      });
+    } else {
+      if (particles) particles.style.animationPlayState = 'running';
+      if (orbs) orbs.style.animationPlayState = 'running';
+      document.querySelectorAll('.particle, .orb').forEach(el => {
+        el.style.animationPlayState = 'running';
+      });
+    }
+  });
+}
+
+// === Quick Search Feature ===
+function initSearch() {
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+  const searchClearBtn = document.getElementById('search-clear-btn');
+  if (!searchInput || !searchResults) return;
+
+  let debounceTimer = null;
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.trim();
+
+    // Show/hide clear button
+    if (searchClearBtn) {
+      searchClearBtn.style.display = query.length > 0 ? 'flex' : 'none';
+    }
+
+    clearTimeout(debounceTimer);
+    if (query.length < 2) {
+      searchResults.innerHTML = '';
+      searchResults.classList.remove('visible');
+      return;
+    }
+
+    debounceTimer = setTimeout(() => {
+      performSearch(query);
+    }, 300);
+  });
+
+  // Clear button
+  if (searchClearBtn) {
+    searchClearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchResults.innerHTML = '';
+      searchResults.classList.remove('visible');
+      searchClearBtn.style.display = 'none';
+      searchInput.focus();
+    });
+  }
+
+  // Close results when clicking outside
+  document.addEventListener('click', (e) => {
+    const container = document.getElementById('search-container');
+    if (container && !container.contains(e.target)) {
+      searchResults.classList.remove('visible');
+    }
+  });
+
+  // Reopen results on focus if there's content
+  searchInput.addEventListener('focus', () => {
+    if (searchResults.children.length > 0) {
+      searchResults.classList.add('visible');
+    }
+  });
+}
+
+function performSearch(query) {
+  const searchResults = document.getElementById('search-results');
+  if (!searchResults) return;
+
+  const lowerQuery = query.toLowerCase();
+  const results = [];
+  const MAX_RESULTS = 20;
+
+  for (const section of allSections) {
+    if (section.disabled) continue;
+    for (const exam of section.exams) {
+      for (const q of exam.questions) {
+        if (results.length >= MAX_RESULTS) break;
+
+        // Search in question text AND options
+        const matchesQuestion = q.q.toLowerCase().includes(lowerQuery);
+        const matchesOption = q.o.some(opt => opt.toLowerCase().includes(lowerQuery));
+
+        if (matchesQuestion || matchesOption) {
+          results.push({
+            question: q,
+            sectionName: section.name,
+            examName: exam.name,
+            matchType: matchesQuestion ? 'question' : 'option'
+          });
+        }
+      }
+      if (results.length >= MAX_RESULTS) break;
+    }
+    if (results.length >= MAX_RESULTS) break;
+  }
+
+  if (results.length === 0) {
+    searchResults.innerHTML = `<div class="search-no-results">لا توجد نتائج لـ "${query}"</div>`;
+    searchResults.classList.add('visible');
+    return;
+  }
+
+  searchResults.innerHTML = results.map((r, idx) => {
+    const truncatedQ = r.question.q.length > 80
+      ? r.question.q.substring(0, 80) + '...'
+      : r.question.q;
+    const highlighted = highlightMatch(truncatedQ, query);
+    const badge = r.matchType === 'option' ? '<span class="search-match-badge">في الخيارات</span>' : '';
+
+    return `
+      <div class="search-result-item" data-idx="${idx}" data-section="${r.sectionName}" data-exam="${r.examName}" data-qtext="${escapeAttr(r.question.q)}">
+        <div class="search-result-text">${highlighted} ${badge}</div>
+        <div class="search-result-meta">${r.sectionName} › ${r.examName}</div>
+      </div>
+    `;
+  }).join('');
+
+  // Add count footer
+  if (results.length >= MAX_RESULTS) {
+    searchResults.innerHTML += `<div class="search-footer">يتم عرض أول ${MAX_RESULTS} نتيجة فقط — حاول تضييق البحث</div>`;
+  }
+
+  searchResults.classList.add('visible');
+
+  // Click handlers for results
+  searchResults.querySelectorAll('.search-result-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const secName = item.dataset.section;
+      const examName = item.dataset.exam;
+      const qText = item.dataset.qtext;
+      startQuizFromSearch(secName, examName, qText);
+    });
+  });
+}
+
+function highlightMatch(text, query) {
+  const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+  return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+}
+
+function escapeAttr(str) {
+  return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function startQuizFromSearch(secName, examName, qText) {
+  // Close search
+  const searchResults = document.getElementById('search-results');
+  const searchInput = document.getElementById('search-input');
+  if (searchResults) searchResults.classList.remove('visible');
+  if (searchInput) searchInput.value = '';
+  const clearBtn = document.getElementById('search-clear-btn');
+  if (clearBtn) clearBtn.style.display = 'none';
+
+  // Find the section and exam
+  const section = allSections.find(s => s.name === secName);
+  if (!section) return;
+  const exam = section.exams.find(e => e.name === examName);
+  if (!exam) return;
+
+  // Build quiz with the full exam, starting at the matched question
+  const optionOrder = document.querySelector('input[name="optionOrder"]:checked') ? document.querySelector('input[name="optionOrder"]:checked').value : 'default';
+
+  const formattedQs = exam.questions.map(q => {
+    let options = [...q.o];
+    let correctIdx = q.c;
+
+    if (optionOrder === 'random') {
+      const indices = options.map((_, i) => i);
+      shuffleArray(indices);
+      options = indices.map(i => q.o[i]);
+      correctIdx = indices.indexOf(q.c);
+    }
+
+    return {
+      section: getSectionDisplayName(secName, examName),
+      qText: q.q,
+      num: q.num,
+      options: options,
+      correct: correctIdx,
+      originalQ: q,
+      secName: secName,
+      examName: examName
+    };
+  });
+
+  // Find the index of the searched question
+  const normalSearch = normalizeQText(qText);
+  let startIdx = formattedQs.findIndex(q => normalizeQText(q.qText) === normalSearch);
+  if (startIdx < 0) startIdx = 0;
+
+  // Start quiz at that question index
+  startQuiz(formattedQs);
+
+  // Jump to the target question
+  if (startIdx > 0) {
+    currentQuestionIdx = startIdx;
+    displayQuestion();
+    saveQuizProgress();
   }
 }
