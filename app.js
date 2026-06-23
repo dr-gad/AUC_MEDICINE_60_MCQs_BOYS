@@ -513,7 +513,7 @@ function selectOption(selectedIdx) {
       } else {
         finishQuiz();
       }
-    }, 500);
+    }, 250);
   }
 }
 
