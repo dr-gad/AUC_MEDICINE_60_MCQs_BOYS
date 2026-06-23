@@ -10,7 +10,9 @@ const STATIC_ASSETS = [
   './questions.js',
   './manifest.json',
   './icons/icon-192.svg',
-  './icons/icon-512.svg'
+  './icons/icon-512.svg',
+  './questions/dermatology.json',
+  './questions/ophthalmology.json'
 ];
 
 const FONT_CACHE = 'auc-mcq-fonts-v1';

@@ -7,6 +7,66 @@ let scoreWrong = 0;
 let answersState = []; // Tracks user answers: { selectedIdx, isCorrect }
 let timerInterval = null;
 let timeElapsed = 0; // in seconds
+let loadedSections = new Set(); // Tracks which sections have had their question data loaded
+
+// === Lazy Loading: fetch section question data on demand ===
+async function loadSectionData(sectionName) {
+  if (loadedSections.has(sectionName)) return true;
+
+  const section = allSections.find(s => s.name === sectionName);
+  if (!section || !section.dataFile) return false;
+
+  try {
+    const response = await fetch(section.dataFile);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const examsData = await response.json();
+
+    // Merge loaded questions into the section's exam objects
+    examsData.forEach(loadedExam => {
+      const exam = section.exams.find(e => e.name === loadedExam.name);
+      if (exam) {
+        exam.questions = loadedExam.questions;
+      }
+    });
+
+    loadedSections.add(sectionName);
+    return true;
+  } catch (err) {
+    console.error(`Failed to load data for ${sectionName}:`, err);
+    return false;
+  }
+}
+
+// Helper: get question count for an exam (works before and after loading)
+function getExamQuestionCount(exam) {
+  if (exam.questions && exam.questions.length > 0) return exam.questions.length;
+  return exam.questionCount || 0;
+}
+
+// Check if a section's data is loaded
+function isSectionLoaded(sectionName) {
+  return loadedSections.has(sectionName);
+}
+
+// Ensure all selected sections are loaded before starting
+async function ensureSelectedSectionsLoaded() {
+  const sectionsToLoad = new Set();
+  selectedExams.forEach(key => {
+    const secName = key.split('|')[0];
+    if (!loadedSections.has(secName)) sectionsToLoad.add(secName);
+  });
+
+  const promises = [...sectionsToLoad].map(name => loadSectionData(name));
+  await Promise.all(promises);
+}
+
+// Ensure all enabled sections are loaded in memory (e.g. for search or saved quiz review)
+async function ensureAllEnabledSectionsLoaded() {
+  const sectionsToLoad = allSections.filter(s => !s.disabled && s.dataFile && !loadedSections.has(s.name));
+  const promises = sectionsToLoad.map(s => loadSectionData(s.name));
+  await Promise.all(promises);
+}
+
 
 // Initialization
 document.addEventListener('DOMContentLoaded', () => {
@@ -127,10 +187,10 @@ function renderCategories() {
     }
     card.dataset.name = section.name;
 
-    // Calculate total questions in this category
+    // Calculate total questions in this category (using questionCount for unloaded sections)
     let totalQuestions = 0;
     section.exams.forEach(exam => {
-      totalQuestions += exam.questions.length;
+      totalQuestions += getExamQuestionCount(exam);
     });
 
     let countText = '';
@@ -163,11 +223,12 @@ function renderCategories() {
           ${section.exams.map(exam => {
       const examKey = `${section.name}|${exam.name}`;
       const isChecked = selectedExams.has(examKey);
+      const qCount = getExamQuestionCount(exam);
       return `
               <div class="exam-item ${isChecked ? 'selected' : ''}" data-key="${examKey}">
                 <div class="exam-info">
                   <span class="exam-name">${exam.name}</span>
-                  <span class="exam-count">${exam.questions.length} سؤال</span>
+                  <span class="exam-count">${qCount} سؤال</span>
                 </div>
                 <div class="checkbox-custom"></div>
               </div>
@@ -180,8 +241,16 @@ function renderCategories() {
     // Event listener for expanding/collapsing (only if not disabled)
     if (!section.disabled) {
       const mainRow = card.querySelector('.category-main-row');
-      mainRow.addEventListener('click', () => {
+      mainRow.addEventListener('click', async () => {
         card.classList.toggle('expanded');
+
+        // Lazy load section data on first expand
+        if (card.classList.contains('expanded') && !isSectionLoaded(section.name) && section.dataFile) {
+          const chevron = card.querySelector('.accordion-chevron');
+          if (chevron) chevron.innerHTML = '<span class="loading-spinner-small"></span>';
+          await loadSectionData(section.name);
+          if (chevron) chevron.innerHTML = '▼';
+        }
       });
 
       // Select All action
@@ -257,7 +326,7 @@ function updateTotalCounter() {
     const section = allSections.find(s => s.name === secName);
     if (section) {
       const exam = section.exams.find(e => e.name === examName);
-      if (exam) total += exam.questions.length;
+      if (exam) total += getExamQuestionCount(exam);
     }
   });
   document.getElementById('selected-total').innerText = total;
@@ -274,10 +343,31 @@ function shuffleArray(array) {
 }
 
 // Start Quiz
-function startQuiz(customQuestions = null) {
+async function startQuiz(customQuestions = null) {
   if (!customQuestions && selectedExams.size === 0) {
     alert('من فضلك اختر امتحاناً واحداً على الأقل للبدء.');
     return;
+  }
+
+  const startBtn = document.getElementById('start-btn');
+  const originalBtnText = startBtn ? startBtn.innerHTML : '';
+
+  if (!customQuestions) {
+    try {
+      if (startBtn) {
+        startBtn.disabled = true;
+        startBtn.innerHTML = '<span class="loading-spinner-small"></span> جاري التحميل...';
+      }
+      await ensureSelectedSectionsLoaded();
+    } catch (err) {
+      alert('حدث خطأ أثناء تحميل الأسئلة. يرجى التحقق من اتصالك بالإنترنت.');
+      return;
+    } finally {
+      if (startBtn) {
+        startBtn.disabled = false;
+        startBtn.innerHTML = originalBtnText;
+      }
+    }
   }
 
   const questionOrder = document.querySelector('input[name="questionOrder"]:checked').value;
@@ -900,34 +990,55 @@ function updateSavedCounts() {
     // Show active global counts (questions existing in active sections)
     flaggedList.forEach(flaggedQ => {
       if (!flaggedQ.qText) return;
-      const normalText = normalizeQText(flaggedQ.qText);
-      const existsInActive = allSections.some(sec => {
-        if (sec.disabled) return false;
-        return sec.exams.some(exam => exam.questions.some(q => normalizeQText(q.q) === normalText));
-      });
-      if (existsInActive) {
-        if (flaggedQ.flagType === 'very_important') veryImportantCount++;
-        if (flaggedQ.flagType === 'important') importantCount++;
+      
+      // Use metadata if secName is available to avoid loading files just for counts
+      if (flaggedQ.secName) {
+        const sec = allSections.find(s => s.name === flaggedQ.secName);
+        if (sec && !sec.disabled) {
+          if (flaggedQ.flagType === 'very_important') veryImportantCount++;
+          if (flaggedQ.flagType === 'important') importantCount++;
+        }
+      } else {
+        // Fallback for legacy format
+        const normalText = normalizeQText(flaggedQ.qText);
+        const existsInActive = allSections.some(sec => {
+          if (sec.disabled) return false;
+          return sec.exams.some(exam => exam.questions && exam.questions.some(q => normalizeQText(q.q) === normalText));
+        });
+        if (existsInActive) {
+          if (flaggedQ.flagType === 'very_important') veryImportantCount++;
+          if (flaggedQ.flagType === 'important') importantCount++;
+        }
       }
     });
   } else {
-    // Count flags whose question TEXT exists in any currently-selected exam
+    // Count flags whose question exists in any currently-selected exam
     flaggedList.forEach(flaggedQ => {
       if (!flaggedQ.qText) return;
-      const normalText = normalizeQText(flaggedQ.qText);
-      let found = false;
-      for (const section of allSections) {
-        if (found) break;
-        for (const exam of section.exams) {
-          if (found) break;
-          const examKey = `${section.name}|${exam.name}`;
-          if (!selectedExams.has(examKey)) continue;
-          if (exam.questions.some(q => normalizeQText(q.q) === normalText)) found = true;
+      
+      if (flaggedQ.secName && flaggedQ.examName) {
+        const examKey = `${flaggedQ.secName}|${flaggedQ.examName}`;
+        if (selectedExams.has(examKey)) {
+          if (flaggedQ.flagType === 'very_important') veryImportantCount++;
+          if (flaggedQ.flagType === 'important') importantCount++;
         }
-      }
-      if (found) {
-        if (flaggedQ.flagType === 'very_important') veryImportantCount++;
-        if (flaggedQ.flagType === 'important') importantCount++;
+      } else {
+        // Fallback for legacy format
+        const normalText = normalizeQText(flaggedQ.qText);
+        let found = false;
+        for (const section of allSections) {
+          if (found) break;
+          for (const exam of section.exams) {
+            if (found) break;
+            const examKey = `${section.name}|${exam.name}`;
+            if (!selectedExams.has(examKey)) continue;
+            if (exam.questions && exam.questions.some(q => normalizeQText(q.q) === normalText)) found = true;
+          }
+        }
+        if (found) {
+          if (flaggedQ.flagType === 'very_important') veryImportantCount++;
+          if (flaggedQ.flagType === 'important') importantCount++;
+        }
       }
     });
   }
@@ -955,7 +1066,31 @@ function updateSavedCounts() {
 }
 
 // Start a quiz composed of saved questions of a specific type
-function startSavedQuiz(type) {
+async function startSavedQuiz(type) {
+  let btnId = '';
+  if (type === 'very_important') btnId = 'start-saved-very-important-btn';
+  else if (type === 'important') btnId = 'start-saved-important-btn';
+  else btnId = 'start-saved-all-important-btn';
+
+  const btn = document.getElementById(btnId);
+  const originalText = btn ? btn.innerHTML : '';
+
+  try {
+    if (btn) {
+      btn.disabled = true;
+      btn.innerHTML = '<span class="loading-spinner-small"></span> جاري التحميل...';
+    }
+    await ensureAllEnabledSectionsLoaded();
+  } catch (err) {
+    alert('حدث خطأ أثناء تحميل الأسئلة. يرجى التحقق من اتصالك بالإنترنت.');
+    return;
+  } finally {
+    if (btn) {
+      btn.disabled = false;
+      btn.innerHTML = originalText;
+    }
+  }
+
   const flagged = getFlaggedQuestions();
   const flaggedList = Object.values(flagged);
 
@@ -1278,6 +1413,9 @@ function initSearch() {
 
   // Reopen results on focus if there's content
   searchInput.addEventListener('focus', () => {
+    // Lazy-load all enabled sections in the background when the user focuses on the search input
+    ensureAllEnabledSectionsLoaded();
+
     if (searchResults.children.length > 0) {
       searchResults.classList.add('visible');
     }
