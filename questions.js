@@ -2985,8 +2985,8 @@ const allSections = [
             "q": "The action of inferior oblique is:",
             "o": [
               "Depression, extorsion, abduction",
-              "Depression, extorsion, abduction",
-              "Elevation, extorsion, abduction",
+              "Depression, extorsion, adduction",
+              "Elevation, extorsion, adduction",
               "Elevation, extorsion, abduction",
               "Elevation, intortion, abduction"
             ],
