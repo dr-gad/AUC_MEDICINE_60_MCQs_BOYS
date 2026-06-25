@@ -1,7 +1,7 @@
 // Service Worker - AUC MEDICINE 60 MCQ Bank
 // Cache-First strategy for full offline support
 
-const CACHE_VERSION = 'auc-mcq-v3';
+const CACHE_VERSION = 'auc-mcq-v4';
 const STATIC_ASSETS = [
   './',
   './index.html',
@@ -11,8 +11,6 @@ const STATIC_ASSETS = [
   './manifest.json',
   './icons/icon-192.svg',
   './icons/icon-512.svg',
-  './questions/dermatology.js',
-  './questions/ophthalmology.js',
   './questions/radiology.js'
 ];
 

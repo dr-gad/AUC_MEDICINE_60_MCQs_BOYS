@@ -3,21 +3,6 @@
 
 const allSections = [
   {
-    "name": "Dermatology",
-    "disabled": true,
-    "exams": []
-  },
-  {
-    "name": "ENT",
-    "disabled": true,
-    "exams": []
-  },
-  {
-    "name": "Ophthalmology",
-    "disabled": true,
-    "exams": []
-  },
-  {
     "name": "Diagnostic {Radiology}",
     "dataFile": "questions/radiology.json",
     "groupTitle": "الأسئلة غير مكررة وعددها 102 سؤال",

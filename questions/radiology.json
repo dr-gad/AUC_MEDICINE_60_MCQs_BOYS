@@ -1,0 +1,1298 @@
+[
+  {
+    "name": "(L1) basics of x-ray and protection",
+    "questions": [
+      {
+        "q": "The following is Ionizing electromagnetic radiation:",
+        "o": [
+          "Radio waves",
+          "Microwaves",
+          "X ray",
+          "Infrared",
+          "Visible light"
+        ],
+        "c": 2,
+        "num": 1
+      },
+      {
+        "q": "A single X ray image recorded for latter evaluation is considered:",
+        "o": [
+          "Radiography.",
+          "Fluoroscopy.",
+          "CT.",
+          "MRI",
+          "ultrasound"
+        ],
+        "c": 0,
+        "num": 2
+      },
+      {
+        "q": "The criteria that must be met to allow electromagnetic radiation to be used for imaging purposes:",
+        "o": [
+          "Ability to create and focus the electromagnetic radiation.",
+          "Ability to focus and detected the electromagnetic radiation",
+          "Ability to create and detect the electromagnetic radiation",
+          "The Ability to create, focus and detect the electromagnetic radiation",
+          "Ability to create electromagnetic radiation."
+        ],
+        "c": 3,
+        "num": 3
+      },
+      {
+        "q": "The target material in the anode in the X ray generator is made of:",
+        "o": [
+          "Tungsten.",
+          "Lead",
+          "Copper.",
+          "Aluminum",
+          "Phosphorus"
+        ],
+        "c": 0,
+        "num": 4
+      },
+      {
+        "q": "The following appears high dense in x ray:",
+        "o": [
+          "Air.",
+          "Bone.",
+          "Fat",
+          "Muscle",
+          "Soft tissue organs"
+        ],
+        "c": 1,
+        "num": 5
+      },
+      {
+        "q": "Radiation exposure can be managed by:",
+        "o": [
+          "Reduce time of exposure, reduce the distance and application of shielding.",
+          "Reduce time of exposure, increase the distance and application of shielding.",
+          "Prolong the time of exposure, increase the distance and application of shielding.",
+          "Prolong the time of exposure, reduced the distance and application of shielding.",
+          "Reduce time of exposure and application of shielding."
+        ],
+        "c": 1,
+        "num": 6
+      },
+      {
+        "q": "The shielding material is mostly made of :",
+        "o": [
+          "Tungsten.",
+          "phosphorus",
+          "Lead",
+          "Aluminum.",
+          "Iron."
+        ],
+        "c": 2,
+        "num": 7
+      },
+      {
+        "q": "The full patterns of shielding in diagnostic radiology are :",
+        "o": [
+          "Personnel &Patient shielding.",
+          "X-ray tube shielding & Room shielding.",
+          "X-ray tube shielding &Patient shielding.",
+          "X-ray tube shielding, Room shielding, Personnel (staff or occupational workers) shielding &Patient shielding.",
+          "Patient shielding and Room shielding."
+        ],
+        "c": 3,
+        "num": 8
+      }
+    ]
+  },
+  {
+    "name": "(L2) Radiation hazards",
+    "questions": [
+      {
+        "q": "Which of the following devices has irradiation hazards:",
+        "o": [
+          "MRI",
+          "US",
+          "X ray machine",
+          "Doppler device",
+          "Echo device"
+        ],
+        "c": 2,
+        "num": 1
+      },
+      {
+        "q": "What percentage of radiation exposure comes from background radiation?",
+        "o": [
+          "80%",
+          "20%",
+          "50%",
+          "5%",
+          "1%"
+        ],
+        "c": 0,
+        "num": 2
+      },
+      {
+        "q": "Gamma radiation can be shielded with:",
+        "o": [
+          "Paper",
+          "Your skin",
+          "Aluminum",
+          "Lead",
+          "Platinum"
+        ],
+        "c": 3,
+        "num": 3
+      },
+      {
+        "q": "What is the effective dose limit for a non-nuclear energy worker?",
+        "o": [
+          "3 milisieverts per year",
+          "1 milisievert per year",
+          "20 milisieverts per year",
+          "5 milisievert per year",
+          "10 milisievert per year"
+        ],
+        "c": 1,
+        "num": 4
+      },
+      {
+        "q": "The three best ways to protect yourself from radiation exposures are:",
+        "o": [
+          "Time, distance, shielding",
+          "Meditate, focus, breathe",
+          "Paper, plastic, lead",
+          "Distance, ear-plugs, shielding",
+          "field of view, paper, lead"
+        ],
+        "c": 0,
+        "num": 5
+      },
+      {
+        "q": "The effects of short-term exposures to high radiation could cause:",
+        "o": [
+          "Tissue damages",
+          "Limited defect of tissue functions",
+          "Repairable tissue damages",
+          "Gonadal unrepairable damage.",
+          "CNS damage."
+        ],
+        "c": 0,
+        "num": 6
+      },
+      {
+        "q": "The three forms of ionizing radiation are:",
+        "o": [
+          "Microwave, alpha, beta",
+          "Visible light, x-ray, gamma",
+          "Gamma, alpha, beta",
+          "X-ray, laser, microwave",
+          "us. electromagnetic, laser"
+        ],
+        "c": 2,
+        "num": 7
+      }
+    ]
+  },
+  {
+    "name": "(L3) Contrast media",
+    "questions": [
+      {
+        "q": "GIT contrast media;",
+        "o": [
+          "Barium",
+          "Omnipaque .",
+          "Ultravist.",
+          "Gastrografin",
+          "Telepaque"
+        ],
+        "c": 0,
+        "num": 1
+      },
+      {
+        "q": "CT IV contrast medial",
+        "o": [
+          "Ultravist.",
+          "Gadolinium",
+          "Gastrografin",
+          "Omnipaque",
+          "Telepaque"
+        ],
+        "c": 0,
+        "num": 2
+      },
+      {
+        "q": "MRI contrast media.",
+        "o": [
+          "Barium",
+          "Gadolinium",
+          "Gastrografin.",
+          "Ultravist",
+          "Telepaque"
+        ],
+        "c": 1,
+        "num": 3
+      }
+    ]
+  },
+  {
+    "name": "(L4) Plain radiography",
+    "questions": [
+      {
+        "q": "What does blunting of the costophrenic angles suggest?",
+        "o": [
+          "Pneumothorax",
+          "Consolidation",
+          "Collapse",
+          "Pleural effusion",
+          "Atelectasis"
+        ],
+        "c": 3,
+        "num": 1
+      },
+      {
+        "q": "In a patient with tension pneumothorax, would the trachea deviate toward or away from the affected lung?",
+        "o": [
+          "Toward",
+          "Away",
+          "midline",
+          "upward",
+          "centered"
+        ],
+        "c": 1,
+        "num": 2
+      },
+      {
+        "q": "Which of the following is NOT a cause of diaphragmatic elevation?",
+        "o": [
+          "Lobectomy",
+          "Pneumothorax",
+          "Phrenic nerve palsy",
+          "Ascites",
+          "Pleural thickening"
+        ],
+        "c": 1,
+        "num": 3
+      },
+      {
+        "q": "What does an abnormally sharp costophrenic angle (deep sulcus sign) suggest?",
+        "o": [
+          "Pneumothorax",
+          "Consolidation",
+          "Collapse",
+          "Pleural effusion",
+          "Hyperinflated lung"
+        ],
+        "c": 0,
+        "num": 4
+      },
+      {
+        "q": "Pneumonic consolidation with air bronchogram seen with.",
+        "o": [
+          "Pneumonia",
+          "Pneumothorax",
+          "Mass",
+          "Pleural effusion.",
+          "Atelectasis"
+        ],
+        "c": 0,
+        "num": 5
+      },
+      {
+        "q": "What is a boot-shaped heart classically associated with?",
+        "o": [
+          "Transposition of the great arteries",
+          "Tetralogy of Fallot",
+          "Tricuspid atresia",
+          "Pericardial effusion",
+          "Aortic stenosis"
+        ],
+        "c": 1,
+        "num": 6
+      },
+      {
+        "q": "Right side double contour associated with?",
+        "o": [
+          "Right atrium enlargement.",
+          "Right ventricle enlargement.",
+          "Left atrium enlargement.",
+          "Pericardial effusion",
+          "Pulmonary hypertension"
+        ],
+        "c": 2,
+        "num": 7
+      },
+      {
+        "q": "Lateral and downward displacement of the cardiac apex associated with.",
+        "o": [
+          "Right atrium enlargement.",
+          "Right ventricle enlargement.",
+          "Left atrium enlargement.",
+          "Left ventricle enlargement.",
+          "Dilated cardiomyopathy."
+        ],
+        "c": 3,
+        "num": 8
+      },
+      {
+        "q": "Lateral and upward displacement of the cardiac apex associated with.",
+        "o": [
+          "Right atrium enlargement.",
+          "Right ventricle enlargement.",
+          "Left atrium enlargement.",
+          "Pericardial effusion.",
+          "Pectus excavatum."
+        ],
+        "c": 1,
+        "num": 9
+      },
+      {
+        "q": "Enlarged, globular heart associated with.",
+        "o": [
+          "Right atrium enlargement.",
+          "Right ventricle enlargement.",
+          "Left atrium enlargement.",
+          "Pericardial effusion.",
+          "Congestive heart failure."
+        ],
+        "c": 3,
+        "num": 10
+      }
+    ]
+  },
+  {
+    "name": "(L5) Mammography",
+    "questions": [
+      {
+        "q": "Which primary sign of breast cancer indicates the earliest possible detection",
+        "o": [
+          "cluster of microcalcification",
+          "smooth mass",
+          "Peau d'orange",
+          "vascular enlargement",
+          "lymphadenitis"
+        ],
+        "c": 0,
+        "num": 1
+      },
+      {
+        "q": "Malignant type calcification often are:",
+        "o": [
+          "bilateral, scattered",
+          "large, countable",
+          "numerous, clustered",
+          "round, linear",
+          "microlitiasis"
+        ],
+        "c": 2,
+        "num": 2
+      },
+      {
+        "q": "benign masses often are:",
+        "o": [
+          "dense",
+          "full of calcifications",
+          "indeterminate bordered",
+          "surrounded by a halo",
+          "multiple"
+        ],
+        "c": 3,
+        "num": 3
+      },
+      {
+        "q": "Benign calcifications often are",
+        "o": [
+          "clustered",
+          "irregular",
+          "numerous",
+          "wide spread, scattered",
+          "microcalcifications"
+        ],
+        "c": 3,
+        "num": 4
+      },
+      {
+        "q": "which type of tissue would result in a low attenuation mammographic image?",
+        "o": [
+          "fatty",
+          "fibro fatty",
+          "fatty connective",
+          "Glandular fatty",
+          "lymphatics"
+        ],
+        "c": 0,
+        "num": 5
+      },
+      {
+        "q": "which symptoms secondary signs of breast cancer",
+        "o": [
+          "calcification",
+          "indeterminante border",
+          "pain",
+          "peau d'orange",
+          "redness."
+        ],
+        "c": 3,
+        "num": 6
+      },
+      {
+        "q": "What is the potential cause of Peau d'Orange?",
+        "o": [
+          "Fibroadenoma",
+          "Fibrocystic Condition",
+          "Lymphatic obstruction",
+          "Mastalgia",
+          "venous obstruction."
+        ],
+        "c": 2,
+        "num": 7
+      }
+    ]
+  },
+  {
+    "name": "(L6) Ultrasonography",
+    "questions": [
+      {
+        "q": "The best initial imaging modalities for assessment of posttraumatic patient",
+        "o": [
+          "x ray and ultrasound",
+          "CT and x ray",
+          "CT and MRI",
+          "Nuclear medicine and CT",
+          "Positron emission and mammography"
+        ],
+        "c": 0,
+        "num": 1
+      },
+      {
+        "q": "The following imaging modality is operator dependant",
+        "o": [
+          "CT",
+          "Ultrasound",
+          "MRI",
+          "X ray",
+          "Mammography"
+        ],
+        "c": 1,
+        "num": 2
+      },
+      {
+        "q": "The more the frequency of the ultrasound probe",
+        "o": [
+          "the better the resolution of the ultrasound image",
+          "The less the resolution of the ultrasound image",
+          "The more the penetration of the ultrasound waves",
+          "The more the penetration of the high density object",
+          "The less the penetration of the high density object"
+        ],
+        "c": 0,
+        "num": 3
+      },
+      {
+        "q": "The more the frequency of the ultrasound probe",
+        "o": [
+          "The more the penetration of the ultrasound waves",
+          "The less the resolution of the ultrasound image",
+          "The less the penetration of the ultrasound waves",
+          "The more the penetration of the high density object",
+          "The less the penetration of the high density object"
+        ],
+        "c": 2,
+        "num": 4
+      },
+      {
+        "q": "The femur will appear at the ultrasound image",
+        "o": [
+          "Hypoechoic",
+          "Hyperechoic (echogenic )",
+          "Isoechoic",
+          "Anechoic (echo free)",
+          "Hyperdense"
+        ],
+        "c": 1,
+        "num": 5
+      },
+      {
+        "q": "Veins will appear at the ultrasound image",
+        "o": [
+          "Hypoechoic",
+          "Hyperechoic (echogenic )",
+          "Isoechoic",
+          "Hypodense",
+          "Anechoic (echo free)"
+        ],
+        "c": 4,
+        "num": 6
+      },
+      {
+        "q": "Urinary bladder will appear at he ultrasound image",
+        "o": [
+          "Hypoechoic",
+          "Hyperechoic (echogenic )",
+          "Isoechoic",
+          "Hypodense",
+          "Anechoic (echo free)"
+        ],
+        "c": 4,
+        "num": 7
+      }
+    ]
+  },
+  {
+    "name": "(L7) CT",
+    "questions": [
+      {
+        "q": "The advantages of CT over MRI is:",
+        "o": [
+          "Lack of ionizing radiation",
+          "Better soft tissue contrast resolution",
+          "Better visualization of posterior fossa lesions",
+          "Less limited by patient factors",
+          "Safe in pregnancy"
+        ],
+        "c": 3,
+        "num": 1
+      },
+      {
+        "q": "In CT , the contrast material is given in case of :",
+        "o": [
+          "Trauma",
+          "To diagnose and distinguish infarct from hemorrhage.",
+          "To diagnose neuro infection and their complication.",
+          "Suspected SAH.",
+          "CT guided aspiration."
+        ],
+        "c": 2,
+        "num": 2
+      },
+      {
+        "q": "The most sensitive imagining modality for classification of spinal fractures is",
+        "o": [
+          "X ray",
+          "CT",
+          "MRI",
+          "Isotope scan",
+          "Ultrasound"
+        ],
+        "c": 1,
+        "num": 3
+      },
+      {
+        "q": "The most sensitive imagining modality for assessment of lung fibrosis is:",
+        "o": [
+          "X ray",
+          "MRI",
+          "CT",
+          "Isotope scan",
+          "Ultrasound"
+        ],
+        "c": 2,
+        "num": 4
+      },
+      {
+        "q": "The most sensitive imagining modality for assessment of kidney stone is:",
+        "o": [
+          "X ray",
+          "MRI",
+          "Isotope scan",
+          "Ultrasound",
+          "CT"
+        ],
+        "c": 4,
+        "num": 5
+      },
+      {
+        "q": "The absolute contraindication for CT imaging is:",
+        "o": [
+          "Pregnant, particularly in the first trimester.",
+          "Cochlear implant.",
+          "External pace maker.",
+          "Clips for intra cranial aneurysm.",
+          "Young children"
+        ],
+        "c": 0,
+        "num": 6
+      },
+      {
+        "q": "Contraindications for contrast media used in CT scans is:",
+        "o": [
+          "Cochlear implant.",
+          "External pace maker.",
+          "Clips for intra cranial aneurysm.",
+          "Renal impairment",
+          "Young children"
+        ],
+        "c": 3,
+        "num": 7
+      },
+      {
+        "q": "Contraindications for contrast media used in CT scans of the head and neck is:",
+        "o": [
+          "Hyperthyroidism",
+          "Nasopharyngeal adenoid.",
+          "Tonsillar abscess.",
+          "Laryngeal cancer.",
+          "Cervical lymphadenopathy"
+        ],
+        "c": 0,
+        "num": 8
+      }
+    ]
+  },
+  {
+    "name": "(L8) MRI",
+    "questions": [
+      {
+        "q": "A major advantage of MRI is:",
+        "o": [
+          "the ease with which equipment is updated or replaced.",
+          "its relatively low cost, compared to CT scans.",
+          "dose not require specialized room",
+          "the ability to reposition the 'cross-section' through the body without repositioning the patient.",
+          "The availability"
+        ],
+        "c": 3,
+        "num": 1
+      },
+      {
+        "q": "A growing application of MRI is \"MRA\", which stands for:",
+        "o": [
+          "Magnetic Resonance Amplication",
+          "Magnetic Resonance Angiography",
+          "Minimal Radiology Applications",
+          "Medical Research Assistance",
+          "Magnetic Resonance Application"
+        ],
+        "c": 1,
+        "num": 2
+      },
+      {
+        "q": "What does \"MRI\" stand for?",
+        "o": [
+          "Magneto-Ray Iodometry",
+          "Medical Radiometry Instrument",
+          "Magnetic Resonance Imaging",
+          "Maximal Radiology Imaging",
+          "Magneitic Resonance Angiography"
+        ],
+        "c": 2,
+        "num": 3
+      },
+      {
+        "q": "Compare MRI to CT (\"CAT scans\"). Which is true?",
+        "o": [
+          "Both methods use X-rays, but exposure is higher with CT.",
+          "CT reveals soft structures, while MRI is better at dense material, such as bone.",
+          "Both methods produce cross-sectional images at a specified plane through the body.",
+          "Both methods produce ionizing radiation.",
+          "MRI freveales soft tissue structures , while CT is better at dense materials , such as bones."
+        ],
+        "c": 4,
+        "num": 4
+      },
+      {
+        "q": "Select one of the following objects that you think would alwasy contraindicated in the MRI suite.",
+        "o": [
+          "wheelchair",
+          "A blanket",
+          "Silicon",
+          "Surgical sutures",
+          "Ear plugss"
+        ],
+        "c": 0,
+        "num": 5
+      },
+      {
+        "q": "What is the commonly used strength of magnet approved for medical imaging of patient?",
+        "o": [
+          "7.0 T",
+          "1.5 T",
+          "5.0 T",
+          "3.0 T",
+          "2.0 T"
+        ],
+        "c": 1,
+        "num": 6
+      },
+      {
+        "q": "The cooling agent for the MRI magnet is _______",
+        "o": [
+          "Helium",
+          "Neon",
+          "Argon",
+          "Xenon",
+          "Hydrogen."
+        ],
+        "c": 0,
+        "num": 7
+      }
+    ]
+  },
+  {
+    "name": "(L9) Isotope scanning, PET/CT and PET MRI",
+    "questions": [
+      {
+        "q": "Bone scans are used for.",
+        "o": [
+          "Osseous metastasis .",
+          "Chest infection .",
+          "Lung nodules",
+          "Muscle strain.",
+          "Anemia."
+        ],
+        "c": 0,
+        "num": 1
+      },
+      {
+        "q": "PET CT Material is",
+        "o": [
+          "a simple sugar (like glucose) called FDG, which stands for *fluorodeoxyglucose.",
+          "Magnifist.",
+          "Gastrografin.",
+          "Barium sulfate.",
+          "Iodine solution."
+        ],
+        "c": 0,
+        "num": 2
+      }
+    ]
+  },
+  {
+    "name": "(L10) Radiological anatomy of lung and mediastinum",
+    "questions": [
+      {
+        "q": "What is false about the advantages of x-ray modality:",
+        "o": [
+          "Rapid.",
+          "Portable.",
+          "Low dose.",
+          "Need long time.",
+          "High risk of infection"
+        ],
+        "c": 3,
+        "num": 1
+      },
+      {
+        "q": "Which of the following are among the Hidden areas of the posteroanterior chest radiograph:",
+        "o": [
+          "Apical zones",
+          "Ribs",
+          "Spine.",
+          "Trachea.",
+          "Costophrenic angle"
+        ],
+        "c": 0,
+        "num": 2
+      },
+      {
+        "q": "Which of the following are common pathology usually noted in x-ray of the chest:",
+        "o": [
+          "pneumobilia.",
+          "Thrombus.",
+          "Consolidation.",
+          "Calcifications.",
+          "Mediastinal shift"
+        ],
+        "c": 2,
+        "num": 3
+      },
+      {
+        "q": "Pleural effusion in x-ray of the chest can cause:",
+        "o": [
+          "Radiolucent opacity.",
+          "Relaxation atelectasis.",
+          "pneumothorax.",
+          "Resorption collapse.",
+          "Widened mediastinum"
+        ],
+        "c": 1,
+        "num": 4
+      },
+      {
+        "q": "Positron emission tomography is best used in:",
+        "o": [
+          "Rib fracture.",
+          "Pneumothorax.",
+          "Emphysema.",
+          "Oncology.",
+          "Bone density measurement"
+        ],
+        "c": 3,
+        "num": 5
+      }
+    ]
+  },
+  {
+    "name": "(L11) Radiological anatomy of the abdomen",
+    "questions": [
+      {
+        "q": "The main projection for assessment of acute abdomen is ;",
+        "o": [
+          "AP supine view",
+          "PA erect view",
+          "KUB veiw",
+          "Lateral decupitus view",
+          "Oblique view"
+        ],
+        "c": 1,
+        "num": 1
+      },
+      {
+        "q": "The main projection for assessment of urinary tract is ;",
+        "o": [
+          "Dorsal decupitus view",
+          "PA erect view",
+          "KUB view",
+          "Lateral decupitus view",
+          "Lateral view"
+        ],
+        "c": 2,
+        "num": 2
+      },
+      {
+        "q": "The following items are aimed to be examined in abdominal plain film;",
+        "o": [
+          "Detailed intracranial soft tissue structures",
+          "Detailed neck soft tissue structures",
+          "Gas distribution,soft tissue masses,calcifications,forign body",
+          "Renal and liver functions",
+          "Evaluate cardiac silhouette"
+        ],
+        "c": 2,
+        "num": 3
+      },
+      {
+        "q": "The following is normal bowel gas distribution;",
+        "o": [
+          "Presence of > 3 air fluid levels in small bowel",
+          "Presence of one air fluid level in large bowel",
+          "Presence of air is always seen in the stomach",
+          "Presence of extraluminal air",
+          "Gas in the biliary tree"
+        ],
+        "c": 2,
+        "num": 4
+      },
+      {
+        "q": "The following is abnormal bowel gas distribution;",
+        "o": [
+          "Presence of air in the stomach",
+          "Presence of air in rectum and sigmoid",
+          "Presence of > 3 air fluid levels in small bowel",
+          "Presence of air in two nondilated small bowel loops",
+          "Presence of Gas in the stomach only"
+        ],
+        "c": 2,
+        "num": 5
+      },
+      {
+        "q": "The following is contraindication for plain abdominal radiograph ;",
+        "o": [
+          "Acute abdomen",
+          "Intracranial heamorrhage",
+          "Pregnant female",
+          "Chest infection",
+          "Previous abdominal surgery"
+        ],
+        "c": 2,
+        "num": 6
+      },
+      {
+        "q": "The following is indication for plain abdominal radiograph ;",
+        "o": [
+          "Neck swelling",
+          "Intracranial heamorrhage",
+          "acute abdomen",
+          "Chest infection",
+          "Pnuemonia"
+        ],
+        "c": 2,
+        "num": 7
+      }
+    ]
+  },
+  {
+    "name": "(T3) Imaging modalities used in chest",
+    "questions": [
+      {
+        "q": "The imaging modality of the choice used in screening of endemic chest disease like TB is:",
+        "o": [
+          "X ray",
+          "CT",
+          "MRI",
+          "Ultrasound",
+          "Fluoroscopy"
+        ],
+        "c": 0,
+        "num": 1
+      },
+      {
+        "q": "The standard chest x ray view is:",
+        "o": [
+          "Anterioposterior view",
+          "Posterioanterior view",
+          "Lateral view",
+          "Lordotic view",
+          "Axillary view."
+        ],
+        "c": 1,
+        "num": 2
+      },
+      {
+        "q": "The best diagnostic imaging modality in assessment of chest wall soft tissue lesion is:",
+        "o": [
+          "Doppler Ultrasound",
+          "CT",
+          "MRI",
+          "X ray",
+          "Isotope scan."
+        ],
+        "c": 2,
+        "num": 3
+      },
+      {
+        "q": "Which imaging modality is the best choice in diagnosis of post traumatic hemothorax in pregnant women:",
+        "o": [
+          "MRI",
+          "Ultrasound",
+          "CT",
+          "Fluoroscopy",
+          "X ray"
+        ],
+        "c": 1,
+        "num": 4
+      },
+      {
+        "q": "The most specific imaging modality in diagnosis of viral pneumonia (COVID) is:",
+        "o": [
+          "Ultrasound",
+          "CT",
+          "MRI",
+          "X ray",
+          "PET MRI"
+        ],
+        "c": 1,
+        "num": 5
+      },
+      {
+        "q": "Which of the following is true about tension pneumothorax at x ray image.",
+        "o": [
+          "Radiopaque hemi thorax",
+          "Jet black hemi thorax with mediastinal shift.",
+          "Jet black hemi thorax without mediastinal shift.",
+          "Hyper inflated lung.",
+          "Radio opaque lung patch."
+        ],
+        "c": 1,
+        "num": 6
+      },
+      {
+        "q": "Which imaging modality has no radiation hazards and can be used in pregnancy for pleural effusion:",
+        "o": [
+          "CT",
+          "Fluoroscopy",
+          "Ultrasound",
+          "x ray",
+          "PET CT"
+        ],
+        "c": 2,
+        "num": 7
+      }
+    ]
+  },
+  {
+    "name": "(T4) Imaging modalities used in abdomen",
+    "questions": [
+      {
+        "q": "The imaging modality of the choice used in abdomen and pelvis checkup:",
+        "o": [
+          "X ray",
+          "CT",
+          "MRI",
+          "Ultrasound",
+          "Fluoroscopy"
+        ],
+        "c": 3,
+        "num": 1
+      },
+      {
+        "q": "Abdominal x ray (elect / standing view) is helpful in diagnosis of:",
+        "o": [
+          "Organomegaly",
+          "Intestinal obstruction",
+          "Perforated viscus",
+          "Gall bladder stones",
+          "B & C"
+        ],
+        "c": 4,
+        "num": 2
+      },
+      {
+        "q": "The best diagnostic imaging modality in assessment of gall bladder is:",
+        "o": [
+          "CT",
+          "Ultrasound",
+          "MRI",
+          "X ray",
+          "Isotope scan."
+        ],
+        "c": 1,
+        "num": 3
+      },
+      {
+        "q": "Which imaging modality is the best choice in diagnosis of intraperitoneal hemorrhage in post-traumatic patient:",
+        "o": [
+          "MRI",
+          "Ultrasound",
+          "CT",
+          "Fluoroscopy",
+          "X ray"
+        ],
+        "c": 1,
+        "num": 4
+      },
+      {
+        "q": "which imaging has no radiation hazards:",
+        "o": [
+          "Ultrasound",
+          "CT",
+          "MRI",
+          "X ray",
+          "A & C"
+        ],
+        "c": 4,
+        "num": 5
+      }
+    ]
+  },
+  {
+    "name": "(P1) FAST",
+    "questions": [
+      {
+        "q": "Advantages of FAST scan includes:",
+        "o": [
+          "Ultrasound is highly available.",
+          "Low dose of ionizing radiation.",
+          "Very sensitive for retroperitoneal fluid collection.",
+          "Can detect bone fractures.",
+          "Detects brain abnormalities"
+        ],
+        "c": 0,
+        "num": 1
+      },
+      {
+        "q": "Fast scan can detect free fluid in:",
+        "o": [
+          "Intraperitoneal space",
+          "Pleural sacs.",
+          "Pericardium",
+          "All the above",
+          "Synovial joints"
+        ],
+        "c": 3,
+        "num": 2
+      },
+      {
+        "q": "Ultrasound introducer used in FAST scan is:",
+        "o": [
+          "Endo cavitary",
+          "Curvilinear (convex)",
+          "Straight",
+          "Phased array",
+          "Thermal imaging camera."
+        ],
+        "c": 1,
+        "num": 3
+      },
+      {
+        "q": "The second step for polytraumatic unstable patient that revealed no abnormality in FAST scan is:",
+        "o": [
+          "MRI",
+          "Exploration",
+          "CT scan",
+          "Follow up.",
+          "Prescribe medication"
+        ],
+        "c": 2,
+        "num": 4
+      },
+      {
+        "q": "The second step for polytraumatic unstable patient that revealed moderate amount of free intraperitoneal fluid in FAST scan is:",
+        "o": [
+          "MRI",
+          "Exploration.",
+          "CT scan.",
+          "Follow up.",
+          "Immediate discharge."
+        ],
+        "c": 1,
+        "num": 5
+      }
+    ]
+  },
+  {
+    "name": "(P2) Mammography",
+    "questions": [
+      {
+        "q": "Mammography is radiographic modality to detect :",
+        "o": [
+          "Chest pathology.",
+          "Cardiac pathology.",
+          "Lung pathology.",
+          "Breast pathology .",
+          "Bone fractures"
+        ],
+        "c": 3,
+        "num": 1
+      },
+      {
+        "q": "Contraindication of mammography is :",
+        "o": [
+          "Swelling",
+          "Breast implant",
+          "Calcifications",
+          "Lymph node enlargement",
+          "Male gender."
+        ],
+        "c": 1,
+        "num": 2
+      },
+      {
+        "q": "Screening mammography protocol usually Cranio-Caudad (CC) view and :",
+        "o": [
+          "Lateral view",
+          "Magnification view",
+          "Latero-medial oblique.",
+          "Medial lateral Oblique (MLO)",
+          "Anteroposterior (AP) view"
+        ],
+        "c": 3,
+        "num": 3
+      }
+    ]
+  },
+  {
+    "name": "(P3) plain x-ray chest(cxr)",
+    "questions": [
+      {
+        "q": "Which one of the following considered the most widely used position for chest x ray",
+        "o": [
+          "Antero-posterior view",
+          "Posterior-anterior view",
+          "Lateral view",
+          "Lateral decubitus view",
+          "Supine view"
+        ],
+        "c": 1,
+        "num": 1
+      },
+      {
+        "q": "One of the following not considered normal finding in chest x-ray",
+        "o": [
+          "Clear costo-phrenic angles",
+          "Cardiothoracic ratio more than 50%",
+          "The right diaphragm appear more high in position than left one",
+          "Equal sternoclavicular distance in both sides",
+          "Symmetrical lung fields."
+        ],
+        "c": 1,
+        "num": 2
+      },
+      {
+        "q": "The most characteristic findings for hydro-pneumothorax is",
+        "o": [
+          "Obliterated costo-phrenic angle",
+          "Air fluid level appearance",
+          "Increased cardiothoracic ratio",
+          "Increased lung markings",
+          "Hilar enlargement"
+        ],
+        "c": 1,
+        "num": 3
+      },
+      {
+        "q": "Which one of the following considered true about normal chest x ray",
+        "o": [
+          "Left hilum higher than right hilum in PA view",
+          "Right diaphragm lower than left diaphragm",
+          "Trachea shifted to right side",
+          "Heart shadow about 60% of chest diameter"
+        ],
+        "c": 0,
+        "num": 4
+      },
+      {
+        "q": "Regarding pleural effusion one of the following not considered diagnostic landmark",
+        "o": [
+          "Costo phaernic angle obliteration",
+          "Opacity in the affected site",
+          "Straight upper border of the effusion",
+          "Rasing toward axilla (concave ) upper border of the effusion"
+        ],
+        "c": 2,
+        "num": 5
+      },
+      {
+        "q": "Which one of the following characteristic of tension pneumothorax",
+        "o": [
+          "Increased cardiothoracic ratio",
+          "Mediastinal structure's shift to opposite side",
+          "Costo phaernic angle obliteration",
+          "Hemithorax increased density (whiteness)"
+        ],
+        "c": 2,
+        "num": 6
+      },
+      {
+        "q": "One of the following not considered lung consolidative changes",
+        "o": [
+          "Pneumonia",
+          "Pulmonary edema",
+          "Alveolar hemorrhage",
+          "Pneumothorax"
+        ],
+        "c": 3,
+        "num": 7
+      },
+      {
+        "q": "Which of the following marks considered for detection of right and left side of the chest in PA view",
+        "o": [
+          "Clavicles",
+          "Diaphragm copula",
+          "Gastric bubbles",
+          "Lung shape"
+        ],
+        "c": 2,
+        "num": 8
+      },
+      {
+        "q": "Cardiomegaly considers when it appears as :",
+        "o": [
+          "Diameter cardiac size >1/4 thoracic diameter",
+          "Diameter cardiac size >1/3 thoracic diameter",
+          "Diameter cardiac size >1/2 thoracic diameter",
+          "Diameter cardiac size >1/5 thoracic diameter"
+        ],
+        "c": 2,
+        "num": 9
+      },
+      {
+        "q": "Different tissues in our body absorb X-rays at different extents, bone appears on x-ray",
+        "o": [
+          "somewhere in the middle absorption (grey)",
+          "high absorption (white)",
+          "low absorption (black)",
+          "no absorption black"
+        ],
+        "c": 1,
+        "num": 10
+      },
+      {
+        "q": "RIGHT lung has 3 lobes while left lobe has :",
+        "o": [
+          "4 lobes",
+          "2lobes",
+          "3 lobes",
+          "1 lobe"
+        ],
+        "c": 1,
+        "num": 11
+      }
+    ]
+  }
+]

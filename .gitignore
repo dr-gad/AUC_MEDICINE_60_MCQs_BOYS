@@ -1,4 +1,6 @@
 node_modules/
 .DS_Store
 *.log
-questions/
+questions/*
+!questions/radiology.js
+!questions/radiology.json
