@@ -27,7 +27,8 @@ async function loadSectionData(sectionName) {
       document.head.appendChild(script);
     });
 
-    const varName = `${sectionName.toLowerCase()}Questions`;
+    const cleanName = sectionName.replace(/[^a-zA-Z]/g, ' ').trim().split(/\s+/).pop().toLowerCase();
+    const varName = `${cleanName}Questions`;
     const examsData = window[varName];
     if (!examsData) throw new Error(`Global variable ${varName} not found`);
 
