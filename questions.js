@@ -29,13 +29,8 @@ const allSections = [
   },
   {
     "name": "Ophthalmology",
-    "dataFile": "questions/ophthalmology.json",
-    "exams": [
-      { "name": "End of Module Exam (25/4/2021)", "questionCount": 40, "questions": [] },
-      { "name": "End of Semester Exam (11/7/2021)", "questionCount": 50, "questions": [] },
-      { "name": "MCQ of rest written exam 13/9/2021", "questionCount": 32, "questions": [] },
-      { "name": "الأسئلة غير المكررة (90 سؤال)", "questionCount": 90, "questions": [] }
-    ]
+    "disabled": true,
+    "exams": []
   },
   {
     "name": "Diagnostic {Radiology}",
