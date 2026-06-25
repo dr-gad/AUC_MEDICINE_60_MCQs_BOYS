@@ -68,7 +68,10 @@ async function ensureSelectedSectionsLoaded() {
   });
 
   const promises = [...sectionsToLoad].map(name => loadSectionData(name));
-  await Promise.all(promises);
+  const results = await Promise.all(promises);
+  if (results.includes(false)) {
+    throw new Error('Failed to load some sections');
+  }
 }
 
 // Ensure all enabled sections are loaded in memory (e.g. for search or saved quiz review)
@@ -375,7 +378,7 @@ async function startQuiz(customQuestions = null) {
       }
       await ensureSelectedSectionsLoaded();
     } catch (err) {
-      alert('حدث خطأ أثناء تحميل الأسئلة. يرجى التحقق من اتصالك بالإنترنت.');
+      alert('فشل تحميل الأسئلة. إذا كنت تستخدم النسخة المرفوعة (أونلاين)، يرجى العلم أن الأسئلة تم حذفها من السيرفر بناءً على طلبك لتعمل محلياً فقط. لتشغيل الاختبار، افتح ملف index.html محلياً على جهازك.');
       return;
     } finally {
       if (startBtn) {
@@ -427,6 +430,11 @@ async function startQuiz(customQuestions = null) {
     if (questionOrder === 'random') {
       shuffleArray(quizQuestions);
     }
+  }
+
+  if (quizQuestions.length === 0) {
+    alert('فشل تحميل الأسئلة. إذا كنت تستخدم النسخة المرفوعة (أونلاين)، يرجى العلم أن الأسئلة تم حذفها من السيرفر بناءً على طلبك لتعمل محلياً فقط. لتشغيل الاختبار، افتح ملف index.html محلياً على جهازك.');
+    return;
   }
 
   // Reset Quiz State
