@@ -20,7 +20,7 @@ const allSections = [
   {
     "name": "Diagnostic {Radiology}",
     "dataFile": "questions/radiology.json",
-    "groupTitle": "الأسئلة غير المكررة (102 سؤال)",
+    "groupTitle": "الأسئلة غير مكررة وعددها 102 سؤال",
     "exams": [
       { "name": "(L1) basics of x-ray and protection", "questionCount": 8, "questions": [] },
       { "name": "(L2) Radiation hazards", "questionCount": 7, "questions": [] },
