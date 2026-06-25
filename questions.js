@@ -36,5 +36,11 @@ const allSections = [
       { "name": "MCQ of rest written exam 13/9/2021", "questionCount": 32, "questions": [] },
       { "name": "الأسئلة غير المكررة (90 سؤال)", "questionCount": 90, "questions": [] }
     ]
+  },
+  {
+    "name": "Diagnostic {Radiology}",
+    "disabled": true,
+    "soon": true,
+    "exams": []
   }
 ];
