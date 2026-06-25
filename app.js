@@ -9,17 +9,27 @@ let timerInterval = null;
 let timeElapsed = 0; // in seconds
 let loadedSections = new Set(); // Tracks which sections have had their question data loaded
 
-// === Lazy Loading: fetch section question data on demand ===
+// === Lazy Loading: dynamically load section script on demand (Offline & file:// CORS friendly) ===
 async function loadSectionData(sectionName) {
   if (loadedSections.has(sectionName)) return true;
 
   const section = allSections.find(s => s.name === sectionName);
   if (!section || !section.dataFile) return false;
 
+  const scriptSrc = section.dataFile.replace('.json', '.js');
+
   try {
-    const response = await fetch(section.dataFile);
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const examsData = await response.json();
+    await new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = scriptSrc;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+
+    const varName = `${sectionName.toLowerCase()}Questions`;
+    const examsData = window[varName];
+    if (!examsData) throw new Error(`Global variable ${varName} not found`);
 
     // Merge loaded questions into the section's exam objects
     examsData.forEach(loadedExam => {
@@ -73,11 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
   renderCategories();
   updateSavedCounts();
   restoreQuizProgress();
-  createParticles();
   bindStaticEvents();
   bindKeyboardNavigation();
   initSearch();
-  initVisibilityOptimization();
 });
 
 // Wire all static button event listeners (replaces inline onclick in HTML)
@@ -1306,62 +1314,7 @@ function showToast(message) {
   }, 3000);
 }
 
-// Floating Particles Effect — with device-aware count
-function createParticles() {
-  const container = document.getElementById('particles');
-  if (!container) return;
 
-  // Reduce particle count on low-end devices
-  const cores = navigator.hardwareConcurrency || 2;
-  const count = cores <= 2 ? 25 : cores <= 4 ? 40 : 60;
-  const colors = ['#00f5d4', '#06d6a0', '#ef476f', '#ffd166'];
-
-  for (let i = 0; i < count; i++) {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
-
-    const size = Math.random() * 3 + 1;
-    const left = Math.random() * 100;
-    const duration = Math.random() * 20 + 12;
-    const delay = Math.random() * 15;
-    const color = colors[Math.floor(Math.random() * colors.length)];
-
-    particle.style.cssText = `
-      width: ${size}px;
-      height: ${size}px;
-      left: ${left}%;
-      background: ${color};
-      animation-duration: ${duration}s;
-      animation-delay: ${delay}s;
-      will-change: transform, opacity;
-    `;
-
-    container.appendChild(particle);
-  }
-}
-
-// === Visibility API — Pause animations when tab is hidden ===
-function initVisibilityOptimization() {
-  document.addEventListener('visibilitychange', () => {
-    const particles = document.getElementById('particles');
-    const orbs = document.querySelector('.bg-orbs');
-
-    if (document.hidden) {
-      if (particles) particles.style.animationPlayState = 'paused';
-      if (orbs) orbs.style.animationPlayState = 'paused';
-      // Pause all particle and orb children
-      document.querySelectorAll('.particle, .orb').forEach(el => {
-        el.style.animationPlayState = 'paused';
-      });
-    } else {
-      if (particles) particles.style.animationPlayState = 'running';
-      if (orbs) orbs.style.animationPlayState = 'running';
-      document.querySelectorAll('.particle, .orb').forEach(el => {
-        el.style.animationPlayState = 'running';
-      });
-    }
-  });
-}
 
 // === Quick Search Feature ===
 function initSearch() {

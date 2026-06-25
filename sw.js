@@ -11,8 +11,8 @@ const STATIC_ASSETS = [
   './manifest.json',
   './icons/icon-192.svg',
   './icons/icon-512.svg',
-  './questions/dermatology.json',
-  './questions/ophthalmology.json'
+  './questions/dermatology.js',
+  './questions/ophthalmology.js'
 ];
 
 const FONT_CACHE = 'auc-mcq-fonts-v1';
