@@ -350,7 +350,7 @@ window.radiologyQuestions = [
           "Pericardial effusion.",
           "Congestive heart failure."
         ],
-        "c": 3,
+        "c": 0,
         "num": 10
       }
     ]

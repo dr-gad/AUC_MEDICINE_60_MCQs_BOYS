@@ -1,7 +1,7 @@
 // Service Worker - AUC MEDICINE 60 MCQ Bank
 // Cache-First strategy for full offline support
 
-const CACHE_VERSION = 'auc-mcq-v4';
+const CACHE_VERSION = 'auc-mcq-v5';
 const STATIC_ASSETS = [
   './',
   './index.html',
