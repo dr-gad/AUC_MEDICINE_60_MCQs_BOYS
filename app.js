@@ -265,6 +265,41 @@ function bindStaticEvents() {
     .addEventListener('click', () => reviewCurrentQuizFlagged('all'));
   document.getElementById('btn-reset-app')
     .addEventListener('click', () => resetApp());
+
+  // Study Mode events
+  const studyBtn = document.getElementById('study-btn');
+  if (studyBtn) {
+    studyBtn.addEventListener('click', () => startStudyMode());
+  }
+  const backSetupBtn = document.getElementById('btn-back-setup');
+  if (backSetupBtn) {
+    backSetupBtn.addEventListener('click', () => backToSetupFromStudy());
+  }
+  const studySearchInput = document.getElementById('study-search-input');
+  if (studySearchInput) {
+    studySearchInput.addEventListener('input', () => filterStudyQuestions());
+  }
+  const studySearchClear = document.getElementById('study-search-clear');
+  if (studySearchClear) {
+    studySearchClear.addEventListener('click', () => {
+      studySearchInput.value = '';
+      studySearchClear.style.display = 'none';
+      filterStudyQuestions();
+      studySearchInput.focus();
+    });
+  }
+  const studyJumpBtn = document.getElementById('study-jump-btn');
+  if (studyJumpBtn) {
+    studyJumpBtn.addEventListener('click', () => jumpToStudyQuestion());
+  }
+  const studyJumpInput = document.getElementById('study-jump-input');
+  if (studyJumpInput) {
+    studyJumpInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        jumpToStudyQuestion();
+      }
+    });
+  }
 }
 
 // Keyboard Navigation — only active when quiz screen is visible
@@ -1780,4 +1815,177 @@ function startQuizFromSearch(secName, examName, qText) {
     displayQuestion();
     saveQuizProgress();
   }
+}
+
+// === Study Mode Logic ===
+let studyQuestions = [];
+
+async function startStudyMode() {
+  if (selectedExams.size === 0) {
+    alert("الرجاء اختيار قسم واحد على الأقل للمراجعة.");
+    return;
+  }
+
+  // Show a loading spinner
+  const studyBtn = document.getElementById('study-btn');
+  const originalText = studyBtn.innerHTML;
+  studyBtn.innerHTML = '<span class="loading-spinner-small"></span> جاري التحميل...';
+  studyBtn.disabled = true;
+
+  try {
+    // 1. Ensure all selected sections are fully loaded
+    const success = await ensureSelectedSectionsLoaded();
+    if (!success) {
+      alert("حدث خطأ أثناء تحميل بيانات الأسئلة. يرجى المحاولة مرة أخرى.");
+      studyBtn.innerHTML = originalText;
+      studyBtn.disabled = false;
+      return;
+    }
+
+    // 2. Collect all questions from the selected exams
+    studyQuestions = [];
+    selectedExams.forEach(key => {
+      const [secName, examName] = key.split('|');
+      const section = allSections.find(s => s.name === secName);
+      if (!section) return;
+      const exam = section.exams.find(e => e.name === examName);
+      if (!exam || !exam.questions) return;
+
+      exam.questions.forEach(q => {
+        studyQuestions.push({
+          q: q.q,
+          o: q.o,
+          c: q.c,
+          num: q.num,
+          secName: secName,
+          examName: examName
+        });
+      });
+    });
+
+    // 3. Render questions in the list
+    renderStudyQuestions();
+
+    // 4. Switch Screen
+    switchScreen('setup-screen', 'study-screen');
+  } catch (err) {
+    console.error("Error starting study mode:", err);
+  } finally {
+    studyBtn.innerHTML = originalText;
+    studyBtn.disabled = false;
+  }
+}
+
+function renderStudyQuestions() {
+  const container = document.getElementById('study-questions-list');
+  const totalCountEl = document.getElementById('study-total-count');
+  const matchCountEl = document.getElementById('study-match-count');
+  if (!container) return;
+
+  container.innerHTML = '';
+  totalCountEl.textContent = studyQuestions.length;
+  matchCountEl.textContent = studyQuestions.length;
+
+  if (studyQuestions.length === 0) {
+    container.innerHTML = '<div style="text-align:center; padding:40px; color:var(--text-muted);">لا توجد أسئلة لعرضها.</div>';
+    return;
+  }
+
+  studyQuestions.forEach((q, idx) => {
+    const card = document.createElement('div');
+    card.className = 'study-q-card';
+    card.dataset.index = idx + 1; // 1-based display index
+    card.id = `study-q-${idx + 1}`;
+
+    const metaText = `${q.secName} › ${q.examName}`;
+
+    card.innerHTML = `
+      <div class="study-q-header">
+        <span class="study-q-meta">${metaText}</span>
+        <span class="study-q-badge">سؤال ${idx + 1}</span>
+      </div>
+      <div class="study-q-text">${escapeAttr(q.q)}</div>
+      <div class="study-options-container">
+        ${q.o.map((opt, oIdx) => {
+          const isCorrect = oIdx === q.c;
+          const letter = String.fromCharCode(65 + oIdx);
+          return `
+            <div class="study-option ${isCorrect ? 'correct' : ''}">
+              <div class="study-option-letter">${letter}</div>
+              <div class="study-option-text">${escapeAttr(opt)}</div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+function filterStudyQuestions() {
+  const input = document.getElementById('study-search-input');
+  const clearBtn = document.getElementById('study-search-clear');
+  const cards = document.querySelectorAll('.study-q-card');
+  const matchCountEl = document.getElementById('study-match-count');
+  if (!input) return;
+
+  const query = input.value.trim().toLowerCase();
+  clearBtn.style.display = query.length > 0 ? 'flex' : 'none';
+
+  let visibleCount = 0;
+
+  cards.forEach(card => {
+    const qText = card.querySelector('.study-q-text').textContent.toLowerCase();
+    const options = Array.from(card.querySelectorAll('.study-option-text')).map(el => el.textContent.toLowerCase());
+    const isMatch = qText.includes(query) || options.some(opt => opt.includes(query));
+
+    if (isMatch) {
+      card.classList.remove('hidden');
+      visibleCount++;
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+
+  matchCountEl.textContent = visibleCount;
+}
+
+function jumpToStudyQuestion() {
+  const input = document.getElementById('study-jump-input');
+  if (!input) return;
+
+  const qNum = parseInt(input.value.trim());
+  if (isNaN(qNum) || qNum < 1 || qNum > studyQuestions.length) {
+    alert(`الرجاء إدخال رقم سؤال صحيح بين 1 و ${studyQuestions.length}`);
+    return;
+  }
+
+  const targetCard = document.getElementById(`study-q-${qNum}`);
+  if (targetCard) {
+    if (targetCard.classList.contains('hidden')) {
+      const searchInput = document.getElementById('study-search-input');
+      if (searchInput) searchInput.value = '';
+      const clearBtn = document.getElementById('study-search-clear');
+      if (clearBtn) clearBtn.style.display = 'none';
+      filterStudyQuestions();
+    }
+
+    targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    
+    targetCard.classList.remove('highlight-pulse');
+    void targetCard.offsetWidth;
+    targetCard.classList.add('highlight-pulse');
+  }
+}
+
+function backToSetupFromStudy() {
+  const searchInput = document.getElementById('study-search-input');
+  if (searchInput) searchInput.value = '';
+  const clearBtn = document.getElementById('study-search-clear');
+  if (clearBtn) clearBtn.style.display = 'none';
+  const jumpInput = document.getElementById('study-jump-input');
+  if (jumpInput) jumpInput.value = '';
+
+  switchScreen('study-screen', 'setup-screen');
 }
