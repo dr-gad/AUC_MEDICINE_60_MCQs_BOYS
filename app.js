@@ -1834,13 +1834,7 @@ async function startStudyMode() {
 
   try {
     // 1. Ensure all selected sections are fully loaded
-    const success = await ensureSelectedSectionsLoaded();
-    if (!success) {
-      alert("حدث خطأ أثناء تحميل بيانات الأسئلة. يرجى المحاولة مرة أخرى.");
-      studyBtn.innerHTML = originalText;
-      studyBtn.disabled = false;
-      return;
-    }
+    await ensureSelectedSectionsLoaded();
 
     // 2. Collect all questions from the selected exams
     studyQuestions = [];
@@ -1870,6 +1864,7 @@ async function startStudyMode() {
     switchScreen('setup-screen', 'study-screen');
   } catch (err) {
     console.error("Error starting study mode:", err);
+    alert("حدث خطأ أثناء تحميل بيانات الأسئلة. يرجى المحاولة مرة أخرى.");
   } finally {
     studyBtn.innerHTML = originalText;
     studyBtn.disabled = false;
