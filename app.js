@@ -1822,14 +1822,14 @@ let studyQuestions = [];
 
 async function startStudyMode() {
   if (selectedExams.size === 0) {
-    alert("الرجاء اختيار قسم واحد على الأقل للمراجعة.");
+    alert("Please select at least one section for review.");
     return;
   }
 
   // Show a loading spinner
   const studyBtn = document.getElementById('study-btn');
   const originalText = studyBtn.innerHTML;
-  studyBtn.innerHTML = '<span class="loading-spinner-small"></span> جاري التحميل...';
+  studyBtn.innerHTML = '<span class="loading-spinner-small"></span> Loading...';
   studyBtn.disabled = true;
 
   try {
@@ -1864,7 +1864,7 @@ async function startStudyMode() {
     switchScreen('setup-screen', 'study-screen');
   } catch (err) {
     console.error("Error starting study mode:", err);
-    alert("حدث خطأ أثناء تحميل بيانات الأسئلة. يرجى المحاولة مرة أخرى.");
+    alert("An error occurred while loading question data. Please try again.");
   } finally {
     studyBtn.innerHTML = originalText;
     studyBtn.disabled = false;
@@ -1882,7 +1882,7 @@ function renderStudyQuestions() {
   matchCountEl.textContent = studyQuestions.length;
 
   if (studyQuestions.length === 0) {
-    container.innerHTML = '<div style="text-align:center; padding:40px; color:var(--text-muted);">لا توجد أسئلة لعرضها.</div>';
+    container.innerHTML = '<div style="text-align:center; padding:40px; color:var(--text-muted);">No questions to display.</div>';
     return;
   }
 
@@ -1897,7 +1897,7 @@ function renderStudyQuestions() {
     card.innerHTML = `
       <div class="study-q-header">
         <span class="study-q-meta">${metaText}</span>
-        <span class="study-q-badge">سؤال ${idx + 1}</span>
+        <span class="study-q-badge">Q ${idx + 1}</span>
       </div>
       <div class="study-q-text">${escapeAttr(q.q)}</div>
       <div class="study-options-container">
@@ -1952,7 +1952,7 @@ function jumpToStudyQuestion() {
 
   const qNum = parseInt(input.value.trim());
   if (isNaN(qNum) || qNum < 1 || qNum > studyQuestions.length) {
-    alert(`الرجاء إدخال رقم سؤال صحيح بين 1 و ${studyQuestions.length}`);
+    alert(`Please enter a valid question number between 1 and ${studyQuestions.length}`);
     return;
   }
 

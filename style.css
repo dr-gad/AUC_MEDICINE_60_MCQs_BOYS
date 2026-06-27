@@ -2666,7 +2666,7 @@ body.quiz-active #quiz-screen .quiz-nav {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
-  padding: 12px 16px 12px 42px;
+  padding: 12px 42px 12px 42px; /* 42px on both sides for icon and clear button */
   color: var(--text-primary);
   font-size: 0.95rem;
   outline: none;
@@ -2677,6 +2677,16 @@ body.quiz-active #quiz-screen .quiz-nav {
   background: rgba(255, 255, 255, 0.05);
   border-color: var(--color-blue);
   box-shadow: 0 0 0 2px rgba(0, 230, 118, 0.15);
+}
+
+.study-search-wrapper .search-icon {
+  left: 16px;
+  right: auto;
+}
+
+.study-search-wrapper .search-clear-btn {
+  right: 12px;
+  left: auto;
 }
 
 .study-jump-wrapper {
