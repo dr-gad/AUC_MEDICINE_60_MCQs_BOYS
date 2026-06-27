@@ -1987,12 +1987,12 @@ body.quiz-active #quiz-screen .quiz-nav {
     }
 
     body.quiz-active #quiz-screen .btn-finish {
+        background: transparent !important;
+        border: none !important;
         padding: 8px 14px !important;
-        font-size: 0.85rem !important;
-        background: rgba(255, 255, 255, 0.03) !important;
-        border: 1px solid rgba(255, 255, 255, 0.08) !important;
-        border-radius: 8px !important;
+        font-size: 0.9rem !important;
         color: var(--color-wrong) !important;
+        font-weight: 700 !important;
     }
 
     body.quiz-active #quiz-screen .no-answer-badge {
