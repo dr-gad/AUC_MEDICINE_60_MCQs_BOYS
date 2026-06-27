@@ -765,10 +765,11 @@ function selectOption(selectedIdx) {
       btn.classList.add('wrong');
       if (!isCorrect) {
         btn.classList.add('shake');
-        if (questionContainer) {
-          questionContainer.classList.add('shake');
+        const scrollContent = document.querySelector('.quiz-scroll-content');
+        if (scrollContent) {
+          scrollContent.classList.add('shake');
           setTimeout(() => {
-            questionContainer.classList.remove('shake');
+            scrollContent.classList.remove('shake');
           }, 400);
         }
       }
