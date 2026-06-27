@@ -1891,6 +1891,7 @@ body.quiz-active #quiz-screen .quiz-nav {
 
     body.quiz-active #quiz-screen {
         padding: 6px 6px 76px 6px; /* 76px to leave space for the fixed bottom bar */
+        transform: none !important;
     }
 
     body.quiz-active #quiz-screen .container.quiz-container {

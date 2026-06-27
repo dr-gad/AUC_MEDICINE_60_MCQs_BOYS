@@ -3,7 +3,7 @@
 
 const allSections = [
   {
-    "name": "Diagnostic {Radiology}",
+    "name": "Radiology",
     "dataFile": "questions/radiology.json",
     "groupTitle": "الأسئلة غير مكررة وعددها 102 سؤال",
     "group": "Diagnostic Medicine",
@@ -27,7 +27,7 @@ const allSections = [
     ]
   },
   {
-    "name": "Clinical {Pathology}",
+    "name": "Clinical Pathology",
     "dataFile": "questions/clinical_pathology.json",
     "groupTitle": "الأسئلة غير مكررة وعددها 153 سؤال",
     "group": "Diagnostic Medicine",
