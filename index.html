@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="بنك أسئلة دفعة الطب AUC-60 - مراجعة مجانية شاملة">
     <meta name="theme-color" content="#040908">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="icons/icon-192.svg">
     <title>AUC-MEDICINE-60 MCQ Bank</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -342,13 +338,22 @@
     <script src="turso-client.js"></script>
     <script src="app.js"></script>
 
-    <!-- Unregister Service Worker -->
+    <!-- Unregister Service Worker & Clear PWA Caches -->
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.getRegistrations().then((registrations) => {
           for (let registration of registrations) {
             registration.unregister().then((success) => {
               if (success) console.log('SW unregistered successfully.');
+            });
+          }
+        });
+      }
+      if ('caches' in window) {
+        caches.keys().then((names) => {
+          for (let name of names) {
+            caches.delete(name).then(() => {
+              console.log('Cache deleted:', name);
             });
           }
         });
