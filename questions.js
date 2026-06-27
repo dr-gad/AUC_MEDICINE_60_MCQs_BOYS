@@ -6,6 +6,7 @@ const allSections = [
     "name": "Diagnostic {Radiology}",
     "dataFile": "questions/radiology.json",
     "groupTitle": "الأسئلة غير مكررة وعددها 102 سؤال",
+    "group": "Diagnostic Medicine",
     "exams": [
       { "name": "(L1) basics of x-ray and protection", "questionCount": 8, "questions": [] },
       { "name": "(L2) Radiation hazards", "questionCount": 7, "questions": [] },
@@ -24,5 +25,15 @@ const allSections = [
       { "name": "(P2) Mammography", "questionCount": 3, "questions": [] },
       { "name": "(P3) plain x-ray chest(cxr)", "questionCount": 11, "questions": [] }
     ]
+  },
+  {
+    "name": "Clinical {Pathology}",
+    "dataFile": "questions/clinical_pathology.json",
+    "groupTitle": "الأسئلة غير مكررة وعددها 153 سؤال",
+    "group": "Diagnostic Medicine",
+    "exams": [
+      { "name": "Clinical Pathology", "questionCount": 153, "questions": [] }
+    ]
   }
 ];
+

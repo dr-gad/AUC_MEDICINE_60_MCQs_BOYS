@@ -320,7 +320,39 @@ function renderCategories() {
   const sectionsList = document.getElementById('sections-list');
   sectionsList.innerHTML = '';
 
+  // Group sections by their 'group' property
+  const groups = {};
+  const ungrouped = [];
   allSections.forEach(section => {
+    if (section.group) {
+      if (!groups[section.group]) groups[section.group] = [];
+      groups[section.group].push(section);
+    } else {
+      ungrouped.push(section);
+    }
+  });
+
+  // Render grouped sections
+  Object.keys(groups).forEach(groupName => {
+    const groupHeader = document.createElement('div');
+    groupHeader.className = 'group-header';
+    groupHeader.innerHTML = `<span class="group-header-icon">🏥</span><span class="group-header-title">${groupName}</span>`;
+    sectionsList.appendChild(groupHeader);
+
+    groups[groupName].forEach(section => {
+      renderSectionCard(section, sectionsList);
+    });
+  });
+
+  // Render ungrouped sections
+  ungrouped.forEach(section => {
+    renderSectionCard(section, sectionsList);
+  });
+
+  updateTotalCounter();
+}
+
+function renderSectionCard(section, container) {
     const card = document.createElement('div');
     card.className = 'category-card';
     if (section.disabled) {
@@ -431,10 +463,7 @@ function renderCategories() {
       });
     }
 
-    sectionsList.appendChild(card);
-  });
-
-  updateTotalCounter();
+    container.appendChild(card);
 }
 
 // Select All exams in a category

@@ -4,5 +4,7 @@ node_modules/
 questions/*
 !questions/radiology.js
 !questions/radiology.json
+!questions/clinical_pathology.js
+!questions/clinical_pathology.json
 code_analysis_report.md
 .env

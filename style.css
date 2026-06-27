@@ -508,6 +508,31 @@ body {
   gap: 14px;
 }
 
+/* GROUP HEADER (e.g. Diagnostic Medicine) */
+.group-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  margin-top: 6px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(0, 230, 118, 0.06) 0%, rgba(6, 214, 160, 0.04) 100%);
+  border: 1px solid rgba(0, 230, 118, 0.12);
+}
+
+.group-header-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.group-header-title {
+  font-family: var(--font-english);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-blue);
+  letter-spacing: 0.02em;
+}
+
 .category-card {
   display: flex;
   flex-direction: column;
