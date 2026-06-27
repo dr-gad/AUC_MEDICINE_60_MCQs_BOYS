@@ -1,11 +1,12 @@
 // Service Worker - AUC MEDICINE 60 MCQ Bank
 // Cache-First strategy for full offline support
 
-const CACHE_VERSION = 'auc-mcq-v5';
+const CACHE_VERSION = 'auc-mcq-v7';
 const STATIC_ASSETS = [
   './',
   './index.html',
   './style.css',
+  './turso-client.js',
   './app.js',
   './questions.js',
   './manifest.json',
@@ -46,6 +47,9 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET') return;
 
   const url = new URL(request.url);
+
+  // Skip API requests — always go to network (Turso serverless function)
+  if (url.pathname.startsWith('/api/')) return;
 
   // Google Fonts — Stale-While-Revalidate (cache fonts separately)
   if (url.hostname === 'fonts.googleapis.com' || url.hostname === 'fonts.gstatic.com') {

@@ -4,3 +4,4 @@ node_modules/
 questions/*
 !questions/radiology.js
 !questions/radiology.json
+code_analysis_report.md

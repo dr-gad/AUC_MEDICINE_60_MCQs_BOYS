@@ -8,6 +8,7 @@ let answersState = []; // Tracks user answers: { selectedIdx, isCorrect }
 let timerInterval = null;
 let timeElapsed = 0; // in seconds
 let loadedSections = new Set(); // Tracks which sections have had their question data loaded
+let flagsCache = {}; // In-memory cache for flagged questions (loaded from Turso on startup)
 
 // === Lazy Loading: dynamically load section script on demand (Offline & file:// CORS friendly) ===
 async function loadSectionData(sectionName) {
@@ -83,13 +84,18 @@ async function ensureAllEnabledSectionsLoaded() {
 
 
 // Initialization
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   renderCategories();
-  updateSavedCounts();
-  restoreQuizProgress();
   bindStaticEvents();
   bindKeyboardNavigation();
   initSearch();
+
+  // Load flagged questions from Turso server
+  await loadFlagsFromTurso();
+  updateSavedCounts();
+
+  // Restore quiz progress (may need flags for display)
+  await restoreQuizProgress();
 });
 
 // Wire all static button event listeners (replaces inline onclick in HTML)
@@ -852,25 +858,67 @@ function normalizeQText(text) {
   return (text || '').trim().replace(/\s+/g, ' ');
 }
 
-// FNV-1a 32-bit hash → compact base-36 key (e.g. "qt_2k4f9m")
-// Same text always produces the same key — works across exams with different num values
+// cyrb53 hash — 53-bit, character-sensitive (no whitespace normalization)
+// Even a single character difference produces a completely different key
+// Collision probability for 10,000 questions ≈ 1 in 1.8 × 10^15
 function hashQText(text) {
-  let h = 0x811c9dc5;
-  const s = normalizeQText(text);
+  const s = (text || '').trim(); // Only trim — preserve exact text
+  let h1 = 0xdeadbeef, h2 = 0x41c6ce57;
   for (let i = 0; i < s.length; i++) {
-    h ^= s.charCodeAt(i);
-    h = Math.imul(h, 0x01000193) >>> 0;
+    const ch = s.charCodeAt(i);
+    h1 = Math.imul(h1 ^ ch, 2654435761);
+    h2 = Math.imul(h2 ^ ch, 1597334677);
   }
-  return 'qt_' + h.toString(36);
+  h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507);
+  h1 ^= Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+  h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507);
+  h2 ^= Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+  const hash = (4294967296 * (2097151 & h2) + (h1 >>> 0));
+  return 'qt_' + hash.toString(36);
 }
 
-// Get flagged questions from localStorage (with full auto-migration chain)
+// Get flagged questions from in-memory cache (sync — cache is populated from Turso on startup)
 function getFlaggedQuestions() {
-  try {
-    const raw = JSON.parse(localStorage.getItem('auc_mcq_flagged_questions') || '{}');
-    let didMigrate = false;
-    const result = {};
+  return flagsCache;
+}
 
+// Load flags from Turso server into cache (called once on startup)
+async function loadFlagsFromTurso() {
+  try {
+    flagsCache = await tursoGetFlags();
+
+    // One-time migration from localStorage (if any old data exists)
+    const localRaw = localStorage.getItem('auc_mcq_flagged_questions');
+    if (localRaw) {
+      const localFlags = _migrateLocalStorageFlags(JSON.parse(localRaw));
+      let migratedCount = 0;
+      for (const [key, value] of Object.entries(localFlags)) {
+        if (!flagsCache[key]) {
+          flagsCache[key] = value;
+          try {
+            await tursoSaveFlag(key, value);
+            migratedCount++;
+          } catch (e) {
+            console.error('Migration error for', key, e);
+          }
+        }
+      }
+      // Remove old localStorage data after migration
+      localStorage.removeItem('auc_mcq_flagged_questions');
+      if (migratedCount > 0) {
+        console.log(`Migrated ${migratedCount} flags from localStorage to Turso`);
+      }
+    }
+  } catch (e) {
+    console.error('Failed to load flags from Turso:', e);
+    flagsCache = {};
+  }
+}
+
+// Helper: migrate old localStorage flag formats (for one-time migration)
+function _migrateLocalStorageFlags(raw) {
+  const result = {};
+  try {
     Object.entries(raw).forEach(([key, value]) => {
       // Format 1 (oldest): "secName|examName|||qText"
       if (key.includes('|||')) {
@@ -878,12 +926,10 @@ function getFlaggedQuestions() {
         if (qText) {
           const newKey = hashQText(qText);
           result[newKey] = { ...value, key: newKey, qText: normalizeQText(qText) };
-          didMigrate = true;
         }
       }
       // Format 2 (old): "q_NUM"
       else if (/^q_\d+$/.test(key)) {
-        // Try to get qText from stored value or look up by num (historically only in Dermatology)
         let qText = value.qText || null;
         if (!qText) {
           const dermatology = allSections.find(s => s.name === 'Dermatology');
@@ -897,34 +943,24 @@ function getFlaggedQuestions() {
         if (qText) {
           const newKey = hashQText(qText);
           result[newKey] = { ...value, key: newKey, qText: normalizeQText(qText) };
-          didMigrate = true;
+        } else {
+          result[key] = value;
         }
-        // If we can't find the text, keep old key (can't migrate)
-        else { result[key] = value; }
       }
-      // Format 3 (current): "qt_HASH" — keep as-is
+      // Format 3 (current): "qt_HASH" — re-hash with new function if qText available
       else {
-        result[key] = value;
+        if (value.qText) {
+          const newKey = hashQText(value.qText);
+          result[newKey] = { ...value, key: newKey };
+        } else {
+          result[key] = value;
+        }
       }
     });
-
-    if (didMigrate) {
-      localStorage.setItem('auc_mcq_flagged_questions', JSON.stringify(result));
-    }
-    return result;
   } catch (e) {
-    console.error("Error reading flagged questions from localStorage", e);
-    return {};
+    console.error('Error migrating localStorage flags:', e);
   }
-}
-
-// Save flagged questions to localStorage
-function saveFlaggedQuestions(flagged) {
-  try {
-    localStorage.setItem('auc_mcq_flagged_questions', JSON.stringify(flagged));
-  } catch (e) {
-    console.error("Error saving flagged questions to localStorage", e);
-  }
+  return result;
 }
 
 // Get section display name (omits prefix if only one section is active/unlocked)
@@ -943,20 +979,25 @@ function getQuestionKey(q) {
 }
 
 // Toggle a flag of a specific type for the current question
-function toggleFlagCurrentQuestion(type, btn) {
+// Updates in-memory cache immediately, then persists to Turso in the background
+async function toggleFlagCurrentQuestion(type, btn) {
   if (btn) btn.blur();
   const currentQ = quizQuestions[currentQuestionIdx];
   if (!currentQ) return;
 
-  const flagged = getFlaggedQuestions();
   const qKey = getQuestionKey(currentQ);
 
-  if (flagged[qKey] && flagged[qKey].flagType === type) {
+  if (flagsCache[qKey] && flagsCache[qKey].flagType === type) {
     // Remove flag if already same type
-    delete flagged[qKey];
+    delete flagsCache[qKey];
+    // Persist deletion to Turso (fire-and-forget)
+    tursoDeleteFlag(qKey).catch(e => {
+      console.error('Failed to delete flag from Turso:', e);
+      showToast('⚠️ فشل حذف العلامة من السيرفر');
+    });
   } else {
-    // Store qText (normalized) — critical for cross-exam text-based lookup
-    flagged[qKey] = {
+    // Add/update flag in cache
+    const flagData = {
       key: qKey,
       qText: normalizeQText(currentQ.qText),
       num: currentQ.num,
@@ -966,13 +1007,16 @@ function toggleFlagCurrentQuestion(type, btn) {
       flagType: type,
       flaggedAt: Date.now()
     };
+    flagsCache[qKey] = flagData;
+    // Persist to Turso (fire-and-forget)
+    tursoSaveFlag(qKey, flagData).catch(e => {
+      console.error('Failed to save flag to Turso:', e);
+      showToast('⚠️ فشل حفظ العلامة على السيرفر');
+    });
   }
 
-  saveFlaggedQuestions(flagged);
-
   // Instantly update UI toggles state
-  const updatedFlagged = getFlaggedQuestions();
-  const savedFlag = updatedFlagged[qKey];
+  const savedFlag = flagsCache[qKey];
   const isVeryImportant = savedFlag && savedFlag.flagType === 'very_important';
   const isImportant = savedFlag && savedFlag.flagType === 'important';
 
@@ -990,12 +1034,18 @@ function toggleFlagCurrentQuestion(type, btn) {
       else vimpBtn.classList.remove('active');
     }
   }
+
+  updateSavedCounts();
 }
 
-// Clear all flagged questions from localStorage
+// Clear all flagged questions (from Turso)
 function clearAllFlags() {
   if (confirm('هل أنت متأكد من مسح جميع الأسئلة المحفوظة للمراجعة؟')) {
-    localStorage.removeItem('auc_mcq_flagged_questions');
+    flagsCache = {};
+    tursoClearAllFlags().catch(e => {
+      console.error('Failed to clear flags from Turso:', e);
+      showToast('⚠️ فشل مسح العلامات من السيرفر');
+    });
     updateSavedCounts();
     showToast('تم مسح جميع الأسئلة المحفوظة بنجاح 🧹');
   }
@@ -1234,8 +1284,17 @@ function saveQuizProgress() {
   const questionOrder = document.querySelector('input[name="questionOrder"]:checked') ? document.querySelector('input[name="questionOrder"]:checked').value : 'default';
   const optionOrder = document.querySelector('input[name="optionOrder"]:checked') ? document.querySelector('input[name="optionOrder"]:checked').value : 'default';
 
+  // Save only lightweight references instead of full question data
+  const questionRefs = quizQuestions.map(q => ({
+    s: q.secName,       // section name
+    e: q.examName,      // exam name
+    n: q.num,           // question number (unique id within exam)
+    c: q.correct,       // correct answer index (may differ from original if shuffled)
+    oo: q.options       // option order (needed to preserve shuffle state)
+  }));
+
   const state = {
-    quizQuestions,
+    questionRefs,
     currentQuestionIdx,
     scoreCorrect,
     scoreWrong,
@@ -1259,15 +1318,50 @@ function clearQuizProgress() {
   }
 }
 
-function restoreQuizProgress() {
+async function restoreQuizProgress() {
   try {
     const saved = localStorage.getItem('auc_mcq_active_quiz_state');
     if (!saved) return;
 
     const state = JSON.parse(saved);
-    if (!state || !state.quizQuestions || state.quizQuestions.length === 0) return;
 
-    quizQuestions = state.quizQuestions;
+    // Support new lightweight format (questionRefs) and legacy format (quizQuestions)
+    if (state.questionRefs && state.questionRefs.length > 0) {
+      // New format: rebuild questions from source data
+      const sectionsToLoad = new Set(state.questionRefs.map(r => r.s));
+      for (const secName of sectionsToLoad) {
+        await loadSectionData(secName);
+      }
+
+      quizQuestions = [];
+      for (const ref of state.questionRefs) {
+        const section = allSections.find(s => s.name === ref.s);
+        if (!section) continue;
+        const exam = section.exams.find(e => e.name === ref.e);
+        if (!exam || !exam.questions) continue;
+        const originalQ = exam.questions.find(q => q.num === ref.n);
+        if (!originalQ) continue;
+
+        quizQuestions.push({
+          section: getSectionDisplayName(ref.s, ref.e),
+          qText: originalQ.q,
+          num: originalQ.num,
+          options: ref.oo || [...originalQ.o],   // use saved option order (preserves shuffle)
+          correct: ref.c,                        // use saved correct index
+          originalQ: originalQ,
+          secName: ref.s,
+          examName: ref.e
+        });
+      }
+    } else if (state.quizQuestions && state.quizQuestions.length > 0) {
+      // Legacy format: use stored questions directly (backward compatible)
+      quizQuestions = state.quizQuestions;
+    } else {
+      return;
+    }
+
+    if (quizQuestions.length === 0) return;
+
     currentQuestionIdx = state.currentQuestionIdx || 0;
     scoreCorrect = state.scoreCorrect || 0;
     scoreWrong = state.scoreWrong || 0;
@@ -1298,7 +1392,10 @@ function restoreQuizProgress() {
     timerInterval = setInterval(() => {
       timeElapsed++;
       updateTimerDisplay();
-      saveQuizProgress();
+      // Save every 30s to avoid hammering localStorage every second
+      if (timeElapsed % 30 === 0) {
+        saveQuizProgress();
+      }
     }, 1000);
 
     // Switch screen to quiz-screen
@@ -1423,7 +1520,7 @@ function performSearch(query) {
   }
 
   if (results.length === 0) {
-    searchResults.innerHTML = `<div class="search-no-results">لا توجد نتائج لـ "${query}"</div>`;
+    searchResults.innerHTML = `<div class="search-no-results">لا توجد نتائج لـ "${escapeAttr(query)}"</div>`;
     searchResults.classList.add('visible');
     return;
   }
@@ -1445,7 +1542,10 @@ function performSearch(query) {
 
   // Add count footer
   if (results.length >= MAX_RESULTS) {
-    searchResults.innerHTML += `<div class="search-footer">يتم عرض أول ${MAX_RESULTS} نتيجة فقط — حاول تضييق البحث</div>`;
+    const footerDiv = document.createElement('div');
+    footerDiv.className = 'search-footer';
+    footerDiv.textContent = `يتم عرض أول ${MAX_RESULTS} نتيجة فقط — حاول تضييق البحث`;
+    searchResults.appendChild(footerDiv);
   }
 
   searchResults.classList.add('visible');
@@ -1462,8 +1562,10 @@ function performSearch(query) {
 }
 
 function highlightMatch(text, query) {
-  const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-  return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+  const escapedText = escapeAttr(text);
+  const escapedQuery = escapeAttr(query);
+  const regex = new RegExp(`(${escapedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+  return escapedText.replace(regex, '<mark class="search-highlight">$1</mark>');
 }
 
 function escapeAttr(str) {
