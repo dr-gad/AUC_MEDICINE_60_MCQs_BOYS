@@ -2561,16 +2561,4 @@ body.quiz-active #quiz-screen .quiz-nav {
   border-color: rgba(255, 255, 255, 0.15);
 }
 
-.user-badge-change {
-  color: var(--color-blue);
-  cursor: pointer;
-  font-weight: 600;
-  margin-right: 4px;
-  text-decoration: underline;
-}
-
-.user-badge-change:hover {
-  color: #fff;
-}
-
 

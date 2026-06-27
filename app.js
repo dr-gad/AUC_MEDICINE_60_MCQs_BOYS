@@ -206,24 +206,9 @@ function updateUserBadge(username) {
     container.innerHTML = `
       <div class="user-badge">
         👤 الطالب: <strong>${escapeAttr(username)}</strong>
-        <span class="user-badge-change" onclick="changeUsername()">(تغيير الاسم)</span>
       </div>
     `;
     container.style.display = 'block';
-  }
-}
-
-function changeUsername() {
-  if (confirm('تنبيه: إذا قمت بتغيير الاسم، سيتم الانتقال لحساب الطالب الجديد. يمكنك العودة لاسمك القديم في أي وقت لاستعادة أسئلتك. هل تريد المتابعة؟')) {
-    localStorage.removeItem('auc_mcq_username');
-    // Also clear cached flags so they don't leak
-    flagsCache = {};
-    updateSavedCounts();
-    // Hide badge
-    const container = document.getElementById('user-badge-container');
-    if (container) container.style.display = 'none';
-    // Show modal
-    showUsernameModal();
   }
 }
 
