@@ -806,7 +806,7 @@
         "num": 70
       },
       {
-        "q": "The in ability to distinguish between self cells and non-self cells may lead to",
+        "q": "The inability to distinguish between self cells and non-self cells may lead to",
         "o": [
           "Hypersensitive",
           "Auto – immune diseases",
@@ -889,7 +889,7 @@
         "num": 77
       },
       {
-        "q": "The chemical composition of HDL-cholesterol correspond to? (TG Cholesterol Protein)",
+        "q": "The chemical composition of HDL-cholesterol correspond to? (TG / Cholesterol / Protein)",
         "o": [
           "60% 15% 10%",
           "10% 45% 25%",
