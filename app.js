@@ -83,19 +83,157 @@ async function ensureAllEnabledSectionsLoaded() {
 }
 
 
-// Initialization
-document.addEventListener('DOMContentLoaded', async () => {
-  renderCategories();
-  bindStaticEvents();
-  bindKeyboardNavigation();
-  initSearch();
+// User flow management
+function initUsernameFlow() {
+  const username = localStorage.getItem('auc_mcq_username');
+  if (!username) {
+    showUsernameModal();
+  } else {
+    updateUserBadge(username);
+    completeInitialization();
+  }
+}
 
+async function completeInitialization() {
   // Load flagged questions from Turso server
   await loadFlagsFromTurso();
   updateSavedCounts();
 
   // Restore quiz progress (may need flags for display)
   await restoreQuizProgress();
+}
+
+function showUsernameModal() {
+  const modal = document.getElementById('username-modal');
+  if (!modal) return;
+  modal.classList.add('active');
+
+  const input = document.getElementById('username-input');
+  const errorEl = document.getElementById('username-error');
+  const submitBtn = document.getElementById('username-submit-btn');
+  const normalActions = document.getElementById('username-normal-actions');
+  const conflictActions = document.getElementById('username-conflict-actions');
+  const restoreBtn = document.getElementById('username-restore-btn');
+  const retryBtn = document.getElementById('username-retry-btn');
+
+  if (input) {
+    input.value = '';
+    input.focus();
+  }
+  if (errorEl) errorEl.style.display = 'none';
+  if (normalActions) normalActions.style.display = 'block';
+  if (conflictActions) conflictActions.style.display = 'none';
+
+  // Helper to handle name checking
+  const handleNameSubmit = async () => {
+    const rawVal = input.value || '';
+    const name = rawVal.trim();
+    if (name.length < 3) {
+      showModalError('يرجى إدخال اسم ثلاثي أو ثنائي واضح (3 أحرف على الأقل)');
+      return;
+    }
+
+    // Alphanumeric, spaces, Arabic letters, underscores, hyphens
+    const nameRegex = /^[\u0600-\u06FFa-zA-Z0-9_\-\s]+$/;
+    if (!nameRegex.test(name)) {
+      showModalError('الاسم يحتوي على رموز غير مسموح بها. استخدم الحروف والأرقام والمسافات فقط.');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="loading-spinner-small"></span> جاري التحقق...';
+
+    try {
+      // Check if this username already has flags in Turso
+      const tempUserFlags = await fetch(`/api/flags?userId=${encodeURIComponent(name)}`).then(r => r.json());
+      if (tempUserFlags && tempUserFlags.flags && tempUserFlags.flags.length > 0) {
+        // Name already has flags — conflict!
+        normalActions.style.display = 'none';
+        conflictActions.style.display = 'block';
+        if (errorEl) errorEl.style.display = 'none';
+      } else {
+        // Name is free — register it
+        setTursoUsername(name);
+        modal.classList.remove('active');
+        updateUserBadge(name);
+        await completeInitialization();
+        showToast(`أهلاً بك يا ${name}! تم التسجيل بنجاح 🎓`);
+      }
+    } catch (e) {
+      console.error(e);
+      showModalError('حدث خطأ أثناء الاتصال بالسيرفر. يرجى المحاولة مرة أخرى.');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = 'بدء الدراسة 🚀';
+    }
+  };
+
+  submitBtn.onclick = handleNameSubmit;
+  input.onkeydown = (e) => {
+    if (e.key === 'Enter' && normalActions.style.display !== 'none') {
+      handleNameSubmit();
+    }
+  };
+
+  restoreBtn.onclick = async () => {
+    const name = input.value.trim();
+    setTursoUsername(name);
+    modal.classList.remove('active');
+    updateUserBadge(name);
+    await completeInitialization();
+    showToast(`تم استرجاع أسئلتك المحفوظة بنجاح يا ${name}! 📥`);
+  };
+
+  retryBtn.onclick = () => {
+    normalActions.style.display = 'block';
+    conflictActions.style.display = 'none';
+    input.value = '';
+    input.focus();
+  };
+}
+
+function showModalError(msg) {
+  const errorEl = document.getElementById('username-error');
+  if (errorEl) {
+    errorEl.textContent = msg;
+    errorEl.style.display = 'block';
+  }
+}
+
+function updateUserBadge(username) {
+  const container = document.getElementById('user-badge-container');
+  if (container) {
+    container.innerHTML = `
+      <div class="user-badge">
+        👤 الطالب: <strong>${escapeAttr(username)}</strong>
+        <span class="user-badge-change" onclick="changeUsername()">(تغيير الاسم)</span>
+      </div>
+    `;
+    container.style.display = 'block';
+  }
+}
+
+function changeUsername() {
+  if (confirm('تنبيه: إذا قمت بتغيير الاسم، سيتم الانتقال لحساب الطالب الجديد. يمكنك العودة لاسمك القديم في أي وقت لاستعادة أسئلتك. هل تريد المتابعة؟')) {
+    localStorage.removeItem('auc_mcq_username');
+    // Also clear cached flags so they don't leak
+    flagsCache = {};
+    updateSavedCounts();
+    // Hide badge
+    const container = document.getElementById('user-badge-container');
+    if (container) container.style.display = 'none';
+    // Show modal
+    showUsernameModal();
+  }
+}
+
+// Initialization
+document.addEventListener('DOMContentLoaded', async () => {
+  renderCategories();
+  bindStaticEvents();
+  bindKeyboardNavigation();
+  initSearch();
+  initUsernameFlow();
 });
 
 // Wire all static button event listeners (replaces inline onclick in HTML)

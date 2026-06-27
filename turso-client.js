@@ -5,15 +5,14 @@
 
 // Anonymous user identification — generated once per browser
 // Each student automatically gets their own unique ID without any input
-const TURSO_USER_KEY = 'auc_mcq_user_id';
+const TURSO_USER_KEY = 'auc_mcq_username';
 
 function getTursoUserId() {
-  let userId = localStorage.getItem(TURSO_USER_KEY);
-  if (!userId) {
-    userId = 'u_' + crypto.randomUUID();
-    localStorage.setItem(TURSO_USER_KEY, userId);
-  }
-  return userId;
+  return localStorage.getItem(TURSO_USER_KEY) || 'guest';
+}
+
+function setTursoUsername(username) {
+  localStorage.setItem(TURSO_USER_KEY, username.trim());
 }
 
 // API endpoint (same origin — works on Vercel)

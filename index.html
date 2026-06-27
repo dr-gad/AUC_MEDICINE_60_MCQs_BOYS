@@ -33,7 +33,10 @@
     <!-- ===== SETUP SCREEN ===== -->
     <div id="setup-screen" class="screen active">
         <div class="container" style="text-align: center;">
-            <div class="hero-badge" style="margin-bottom: 24px;"><span class="pulse-dot"></span>🎓 AUC-MEDICINE-60 MCQs</div>
+            <div class="hero-badge" style="margin-bottom: 12px;"><span class="pulse-dot"></span>🎓 AUC-MEDICINE-60 MCQs</div>
+            
+            <!-- User Badge Container -->
+            <div id="user-badge-container" style="margin-bottom: 24px; display: none;"></div>
 
             <!-- Search Bar -->
             <div class="search-container" id="search-container">
@@ -294,6 +297,35 @@
                 <button class="btn-action-secondary" id="btn-reset-app">
                     🏠 العودة للرئيسية
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome / Username Modal -->
+    <div id="username-modal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header-icon">👤</div>
+            <h3 class="modal-title">مرحباً بك في بنك الأسئلة</h3>
+            <p class="modal-desc">
+                يرجى إدخال اسمك لحفظ علامات الأسئلة المهمة الخاصة بك في قاعدة البيانات.
+            </p>
+            <div class="modal-input-wrapper">
+                <input type="text" id="username-input" class="modal-input" placeholder="اكتب اسمك هنا (مثال: أحمد محمد)..." autocomplete="off" maxlength="30">
+            </div>
+            <p class="modal-hint">
+                ⚠️ يُستخدم هذا الاسم لحفظ وتأمين أسئلتك المحددة بـ (⭐️ Important / 🔥 V. Important) في السيرفر لتتمكن من استعادتها في أي وقت ومن أي جهاز.
+            </p>
+            <div id="username-error" class="modal-error" style="display: none;"></div>
+            
+            <!-- Actions -->
+            <div id="username-normal-actions">
+                <button id="username-submit-btn" class="modal-btn">بدء الدراسة 🚀</button>
+            </div>
+            <div id="username-conflict-actions" style="display: none;">
+                <div class="conflict-buttons">
+                    <button id="username-restore-btn" class="modal-btn btn-secondary">استرجاع أسئلتي المحفوظة 📥</button>
+                    <button id="username-retry-btn" class="modal-btn btn-danger">اختيار اسم آخر ✏️</button>
+                </div>
             </div>
         </div>
     </div>
