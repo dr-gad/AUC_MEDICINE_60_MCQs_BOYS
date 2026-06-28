@@ -150,16 +150,18 @@ body {
 .screen {
   display: none;
   opacity: 0;
-  transform: translateY(12px);
+  transform: translate3d(0, 12px, 0);
+  will-change: transform, opacity;
   transition: var(--transition-medium);
   min-height: calc(100vh - 44px);
   padding: 30px 16px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .screen.active {
   display: block;
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .container {
@@ -2053,6 +2055,11 @@ body.quiz-active #quiz-screen .quiz-nav {
         from { opacity: 0; }
         to { opacity: 1; }
     }
+
+    /* Disable transitions on touch interactions on mobile to make responses instant */
+    .category-card, .exam-item, .option-btn, .btn-nav, .btn-finish, .btn-start, .btn-study, .study-option, .study-q-card {
+        transition: none !important;
+    }
 }
 
 /* =================================================================
@@ -2809,6 +2816,8 @@ body.quiz-active #quiz-screen .quiz-nav {
   box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
   scroll-margin-top: 100px;
+  content-visibility: auto;
+  contain-intrinsic-size: 150px;
 }
 
 .study-q-card.hidden {
