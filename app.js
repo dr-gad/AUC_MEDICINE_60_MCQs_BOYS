@@ -585,7 +585,34 @@ async function startQuiz(customQuestions = null) {
   const optionOrder = document.querySelector('input[name="optionOrder"]:checked').value;
 
   if (customQuestions) {
-    quizQuestions = customQuestions;
+    quizQuestions = customQuestions.map(q => {
+      const origQ = q.originalQ;
+      if (!origQ) return q;
+
+      let options = [...origQ.o];
+      let correctIdx = origQ.c;
+      if (optionOrder === 'random') {
+        const indices = options.map((_, i) => i);
+        shuffleArray(indices);
+        options = indices.map(i => origQ.o[i]);
+        correctIdx = indices.indexOf(origQ.c);
+      }
+      return {
+        ...q,
+        options: options,
+        correct: correctIdx
+      };
+    });
+
+    if (questionOrder === 'random') {
+      shuffleArray(quizQuestions);
+    } else {
+      quizQuestions.sort((a, b) => {
+        if (a.secName !== b.secName) return a.secName.localeCompare(b.secName);
+        if (a.examName !== b.examName) return a.examName.localeCompare(b.examName);
+        return (a.num || 0) - (b.num || 0);
+      });
+    }
   } else {
     quizQuestions = [];
     selectedExams.forEach(key => {
@@ -1417,7 +1444,6 @@ async function startSavedQuiz(type) {
 
   if (questionsToQuiz.length === 0) return;
 
-  const optionOrder = document.querySelector('input[name="optionOrder"]:checked').value;
   const formattedQs = questionsToQuiz.map(q => {
     // Look up question by TEXT match — finds correct instance even if num differs across exams
     const sec = allSections.find(s => s.name === q.secName);
@@ -1426,30 +1452,17 @@ async function startSavedQuiz(type) {
     const origQ = exam && exam.questions.find(question => normalizeQText(question.q) === normalText);
     if (!origQ) return null;
 
-    let options = [...origQ.o];
-    let correctIdx = origQ.c;
-    if (optionOrder === 'random') {
-      const indices = options.map((_, i) => i);
-      shuffleArray(indices);
-      options = indices.map(i => origQ.o[i]);
-      correctIdx = indices.indexOf(origQ.c);
-    }
     return {
       section: q.section,
       qText: origQ.q,
       num: origQ.num,
-      options: options,
-      correct: correctIdx,
+      options: [...origQ.o],
+      correct: origQ.c,
       originalQ: origQ,
       secName: q.secName,
       examName: q.examName
     };
   }).filter(Boolean);
-
-  const questionOrder = document.querySelector('input[name="questionOrder"]:checked').value;
-  if (questionOrder === 'random') {
-    shuffleArray(formattedQs);
-  }
 
   startQuiz(formattedQs);
 }
