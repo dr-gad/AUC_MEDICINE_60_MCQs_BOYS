@@ -1208,17 +1208,6 @@
         "num": 106
       },
       {
-        "q": "Common variable immunodeficiency (CVID) is characterized by low levels of (مكرر):",
-        "o": [
-          "IgG",
-          "IgA",
-          "IgM",
-          "All of the above"
-        ],
-        "c": 3,
-        "num": 107
-      },
-      {
         "q": "An immune complex is an aggregate of which of the following?",
         "o": [
           "Antibody molecules",
