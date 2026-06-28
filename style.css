@@ -2583,15 +2583,22 @@ body.quiz-active #quiz-screen .quiz-nav {
 }
 
 .btn-study {
-  background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: rgba(0, 230, 118, 0.03) !important;
+  border: 1px solid rgba(0, 230, 118, 0.25) !important;
   color: var(--text-primary) !important;
-  box-shadow: none !important;
+  box-shadow: 0 4px 15px rgba(0, 230, 118, 0.02) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .btn-study:hover {
-  background: rgba(255, 255, 255, 0.06) !important;
-  border-color: rgba(255, 255, 255, 0.15) !important;
+  background: rgba(0, 230, 118, 0.08) !important;
+  border-color: rgba(0, 230, 118, 0.45) !important;
+  box-shadow: 0 6px 20px rgba(0, 230, 118, 0.12) !important;
+  transform: translateY(-1.5px);
+}
+
+.btn-study:active {
+  transform: translateY(0);
 }
 
 .study-header {
