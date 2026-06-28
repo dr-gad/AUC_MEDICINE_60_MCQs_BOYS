@@ -394,7 +394,7 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px 14px;
+    padding: 8px 12px;
     background: rgba(8, 20, 16, 0.4);
     border-radius: var(--radius-sm);
     border: 1px solid transparent;
@@ -484,9 +484,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-  padding: 10px 16px;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 8px 12px;
   background: rgba(0, 230, 118, 0.04);
   border: 1px solid rgba(0, 230, 118, 0.15);
   border-radius: var(--radius-md);
@@ -565,7 +565,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 22px;
+  padding: 12px 16px;
   cursor: pointer;
   z-index: 2;
 }
@@ -768,11 +768,11 @@ body {
 .settings-card {
   background: var(--glass-bg);
   border: var(--glass-border);
-  padding: 22px;
+  padding: 14px 18px;
   border-radius: var(--radius-md);
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
   box-shadow: var(--shadow-sm);
@@ -789,7 +789,7 @@ body {
 .total-counter {
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.04) 0%, rgba(139, 92, 246, 0.04) 100%);
   border: 1px solid rgba(59, 130, 246, 0.2);
-  padding: 18px 24px;
+  padding: 12px 18px;
   border-radius: var(--radius-md);
   display: flex;
   justify-content: space-between;
@@ -2636,17 +2636,19 @@ body.quiz-active #quiz-screen .quiz-nav {
 }
 
 .btn-study {
-  background: rgba(0, 230, 118, 0.03) !important;
-  border: 1px solid rgba(0, 230, 118, 0.25) !important;
-  color: var(--text-primary) !important;
-  box-shadow: 0 4px 15px rgba(0, 230, 118, 0.02) !important;
+  border: 1px solid transparent !important;
+  background: linear-gradient(rgba(4, 9, 8, 0.65), rgba(4, 9, 8, 0.65)) padding-box, 
+              linear-gradient(135deg, #00f5d4, #00e676) border-box !important;
+  color: #00f5d4 !important;
+  box-shadow: 0 4px 15px rgba(0, 245, 212, 0.04) !important;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .btn-study:hover {
-  background: rgba(0, 230, 118, 0.08) !important;
-  border-color: rgba(0, 230, 118, 0.45) !important;
-  box-shadow: 0 6px 20px rgba(0, 230, 118, 0.12) !important;
+  background: linear-gradient(rgba(0, 245, 212, 0.08), rgba(0, 245, 212, 0.08)) padding-box, 
+              linear-gradient(135deg, #00f5d4, #00e676) border-box !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 6px 20px rgba(0, 245, 212, 0.2) !important;
   transform: translateY(-1.5px);
 }
 
@@ -2932,16 +2934,39 @@ body.quiz-active #quiz-screen .quiz-nav {
     font-size: 1.3rem;
   }
   .study-controls {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     gap: 8px;
-    padding: 8px 0;
-    margin-bottom: 16px;
+    padding: 6px 0;
+    margin-bottom: 12px;
+  }
+  .study-search-wrapper {
+    flex: 1.3;
+  }
+  .study-search-input {
+    padding: 6px 30px 6px 30px;
+    font-size: 0.82rem;
+    height: 34px;
+    border-radius: 8px;
   }
   .study-jump-wrapper {
-    width: 100%;
+    flex: 1;
+    width: auto;
+    gap: 4px;
   }
   .study-jump-input {
-    flex: 1;
+    width: 50px;
+    flex: none;
+    padding: 6px;
+    font-size: 0.82rem;
+    height: 34px;
+    border-radius: 8px;
+  }
+  .study-jump-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    height: 34px;
+    border-radius: 8px;
   }
   .study-q-card {
     padding: 16px;
