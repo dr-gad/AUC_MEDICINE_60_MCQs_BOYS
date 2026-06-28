@@ -2649,11 +2649,11 @@ body.quiz-active #quiz-screen .quiz-nav {
   display: flex;
   gap: 16px;
   margin-bottom: 28px;
-  background: rgba(4, 9, 8, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   padding: 12px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: none;
 }
 
 .study-search-wrapper {
@@ -2666,9 +2666,9 @@ body.quiz-active #quiz-screen .quiz-nav {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
-  padding: 12px 42px 12px 42px; /* 42px on both sides for icon and clear button */
+  padding: 8px 36px 8px 36px;
   color: var(--text-primary);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   outline: none;
   transition: all 0.25s ease;
 }
@@ -2680,13 +2680,19 @@ body.quiz-active #quiz-screen .quiz-nav {
 }
 
 .study-search-wrapper .search-icon {
-  left: 16px;
+  left: 12px;
   right: auto;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .study-search-wrapper .search-clear-btn {
-  right: 12px;
+  right: 8px;
   left: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
 }
 
 .study-jump-wrapper {
@@ -2700,9 +2706,9 @@ body.quiz-active #quiz-screen .quiz-nav {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
-  padding: 12px;
+  padding: 8px;
   color: var(--text-primary);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   outline: none;
   text-align: center;
   transition: all 0.25s ease;
@@ -2726,7 +2732,7 @@ body.quiz-active #quiz-screen .quiz-nav {
   font-weight: 700;
   border-radius: var(--radius-md);
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: all 0.25s ease;
 }
 
