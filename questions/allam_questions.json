@@ -1,0 +1,2332 @@
+[
+  {
+    "name": "Cardiology",
+    "questions": [
+      {
+        "q": "Unstable angina is:",
+        "o": [
+          "Chest pain typically occurs with effort and relieved by rest",
+          "Chest pain increase with deep inspiration stitching in character.",
+          "Severe chest pain occurs at rest not relieved by rest or sublingual nitrates.",
+          "Doesn't need immediate admission to ICU",
+          "All of the above"
+        ],
+        "c": 2,
+        "num": 1
+      },
+      {
+        "q": "A 69-year-old man with stable angina is given nitroglycerine. Which of the following is the most likely effect of this medication?",
+        "o": [
+          "Dilated coronary arteries",
+          "Increasing cardiac venous return",
+          "Increasing cardiac output",
+          "Constricting peripheral veins and capillaries",
+          "Decreasing cardiac work"
+        ],
+        "c": 4,
+        "num": 2
+      },
+      {
+        "q": "Pain of myocardial ischemia:",
+        "o": [
+          "Radiated to the neck and jaw but not to the back",
+          "Is typically induced by exercise and relieved by rest",
+          "Rarely lasts longer than 10 seconds after resting",
+          "Is easily distinguished from esophageal pain",
+          "Always disappears as exercise continues"
+        ],
+        "c": 1,
+        "num": 3
+      },
+      {
+        "q": "Pulsus alternates is produced by:",
+        "o": [
+          "Pericardial effusion",
+          "Lt HF",
+          "COPD",
+          "pulmonary embolism"
+        ],
+        "c": 1,
+        "num": 4
+      },
+      {
+        "q": "The 1st symptom of digitalis toxicity:",
+        "o": [
+          "Yellow vision",
+          "Extra systole",
+          "Gynecomastia",
+          "anorexia"
+        ],
+        "c": 3,
+        "num": 5
+      },
+      {
+        "q": "As regard heart failure which of the following is true:",
+        "o": [
+          "High systolic blood pressure excludes diagnosis of heart failure",
+          "Rapid pulse is common due to increased sympathetic activity",
+          "Warm peripheries are a common finding",
+          "Red frothy sputum is a common finding"
+        ],
+        "c": 1,
+        "num": 6
+      },
+      {
+        "q": "A 60-year-old woman with heart failure on furosemide (Lasix) 80 mg/day. A few weeks later she is feeling unwell because weakness of fatigue, and muscle absolute constipation with no audible-intestinal sounds, which of the following is the most likely explanation:",
+        "o": [
+          "Hyponatremia",
+          "Hypernatremia",
+          "Hypokalemia",
+          "Hyperkalemia",
+          "Anemia"
+        ],
+        "c": 2,
+        "num": 7
+      },
+      {
+        "q": "hypertension with diabetes is best treated by:",
+        "o": [
+          "B-blocker",
+          "Thiazide",
+          "ACE inhibitor",
+          "calcium channel blockers"
+        ],
+        "c": 2,
+        "num": 8
+      },
+      {
+        "q": "To diagnose hypertension, you need:",
+        "o": [
+          "One measure above 150/90",
+          "3 measures the same clinical visit above 150/90",
+          "3 measures in 3 visits above 150/90",
+          "3 measures in 3 visits above 140/90 in complete mental and physical rest"
+        ],
+        "c": 3,
+        "num": 9
+      },
+      {
+        "q": "A 23-year-old student presents to her general practitioner (GP) complaining of shortness of breath on exertion. This has developed over the past 10 days... What is the most likely diagnosis? (تم اختصار الحالة للطول)",
+        "o": [
+          "dilated cardiomyopathy",
+          "pericardial effusion",
+          "Myocarditis"
+        ],
+        "c": 2,
+        "num": 10
+      },
+      {
+        "q": "Bilateral fine basal crepitations can be audible in case of:",
+        "o": [
+          "Right side HF",
+          "Left side HF",
+          "Pulmonary hypertention",
+          "Apical pneumonia",
+          "COPD"
+        ],
+        "c": 1,
+        "num": 11
+      },
+      {
+        "q": "The recent biomarker for early detection of HF is:",
+        "o": [
+          "Troponin I",
+          "Myoglopin",
+          "CKMB",
+          "LDH",
+          "ANP"
+        ],
+        "c": 4,
+        "num": 12
+      },
+      {
+        "q": "The most important example for hypertension related to increased catecholamine production is :-",
+        "o": [
+          "Primary hypertension",
+          "Renovascular hypertension",
+          "Pheochromocytoma",
+          "Cushing syndrome",
+          "Primary hyperaldosteronism"
+        ],
+        "c": 2,
+        "num": 13
+      },
+      {
+        "q": "One of the most reliable markers for renal injury and cardiovascular disease is:",
+        "o": [
+          "Urea level",
+          "abnormal albumin excretion (albumin/creat ratio)",
+          "K+ level",
+          "Abnormal ECG",
+          "Hematuria"
+        ],
+        "c": 1,
+        "num": 14
+      },
+      {
+        "q": "Most common cause of myocarditis is:",
+        "o": [
+          "Viral infection",
+          "Drug induced",
+          "Autoimmune",
+          "Fungal infection"
+        ],
+        "c": 0,
+        "num": 15
+      },
+      {
+        "q": "The following is one of the causes of myocardial enzyme elevation:-",
+        "o": [
+          "Stable angina",
+          "Mitral stenosis",
+          "Tricuspid regurgitation",
+          "Myocarditis"
+        ],
+        "c": 3,
+        "num": 16
+      },
+      {
+        "q": "68 years old male presented to ER by severe central chest pain referred to the back, on examination there was unequal pulse volume. What is the most appropriate possible diagnosis:-",
+        "o": [
+          "Myocardial infarction",
+          "Aortic dissecting aneurysm",
+          "Bacterial pneumonia",
+          "Pleuritic chest pain",
+          "Cardiomegaly"
+        ],
+        "c": 1,
+        "num": 17
+      },
+      {
+        "q": "One of the following is true about orthostatic hypotension:",
+        "o": [
+          "diabetes is a common cause",
+          "can be treated by antiadrenergics",
+          "normal systolic pressure",
+          "associated with hypervolemia"
+        ],
+        "c": 0,
+        "num": 18
+      }
+    ]
+  },
+  {
+    "name": "Chest",
+    "questions": [
+      {
+        "q": "Which of the following is not a sign of chronic obstructive lung disease ?",
+        "o": [
+          "Expiratory wheezing",
+          "Bitemporal wasting",
+          "Clubbing of the digits",
+          "Right heart failure"
+        ],
+        "c": 2,
+        "num": 1
+      },
+      {
+        "q": "Which of the following is included in the category of obstructive lung diseases ?",
+        "o": [
+          "Asthma",
+          "Bronchiectasis",
+          "Bronchiolitis",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 2
+      },
+      {
+        "q": "Which of the following statements about Interstitial lung disease is false ?",
+        "o": [
+          "Non-malignant disorders",
+          "Not caused by identified infectious agents",
+          "May have granulomatous or inflammatory/fibrosis pattern",
+          "None of the above"
+        ],
+        "c": 3,
+        "num": 3
+      },
+      {
+        "q": "Which is not possible cause of hemoptysis?",
+        "o": [
+          "Pulmonary edema",
+          "Mitral stenosis",
+          "Pneumonia",
+          "Aortic stenosis",
+          "Neoplasm"
+        ],
+        "c": 3,
+        "num": 4
+      },
+      {
+        "q": "Cor pulmonale:",
+        "o": [
+          "Is always acute",
+          "The last physical sign is raised JVP",
+          "The usual end result of many chronic debilitating lung diseases",
+          "It is defined as right sided heart failure"
+        ],
+        "c": 2,
+        "num": 5
+      },
+      {
+        "q": "Which of the following is a feature of pulmonary embolism on chest X-Ray ?",
+        "o": [
+          "Westermark’s sign",
+          "Hampton’s hump",
+          "Palla’s sign",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 6
+      },
+      {
+        "q": "Which one of the following pulmonary function tests in the most useful at bed side?",
+        "o": [
+          "Peak expiratory flow rate \"PEFR\"",
+          "Forced expiratory volume in \"FEV1\"",
+          "Forced vital capacity \"FVC\"",
+          "Arterial blood gas",
+          "Total lung capacity"
+        ],
+        "c": 3,
+        "num": 7
+      },
+      {
+        "q": "Impairment of diffusion is seen in all except:",
+        "o": [
+          "Sarcoidosis",
+          "Pleural mesothelioma",
+          "Emphysema",
+          "Anaemia"
+        ],
+        "c": 1,
+        "num": 8
+      },
+      {
+        "q": "Which one of the following cause bilateral hilar adenopathy?",
+        "o": [
+          "Hamman-Rich syndrome",
+          "Pneumonia",
+          "Sarcoidosis",
+          "Eagassosis",
+          "Loeffler's syndrome"
+        ],
+        "c": 2,
+        "num": 9
+      },
+      {
+        "q": "A 30-year-old man presented to you complaining of anorexia, nausea, body aches and red eye., His serum calcium was 12.5 mg/dl normal intact parathyroid hormone and raised 1,25 dihydroxy vitamin D level. The most probable diagnosis is:",
+        "o": [
+          "Primary hyperparathyroidism",
+          "Secondary hyperparathyroidism",
+          "Tumor lysis syndrome",
+          "Sarcoidosis"
+        ],
+        "c": 3,
+        "num": 10
+      },
+      {
+        "q": "One of the following is a cause of dyspnea of sudden onset:-",
+        "o": [
+          "Chronic heart failure",
+          "Pulmonary Embolism",
+          "Interstitial lung fibrosis",
+          "Morbid obesity",
+          "Anemia"
+        ],
+        "c": 1,
+        "num": 11
+      }
+    ]
+  },
+  {
+    "name": "GIT",
+    "questions": []
+  },
+  {
+    "name": "Hepatology",
+    "questions": []
+  },
+  {
+    "name": "Blood",
+    "questions": [
+      {
+        "q": "Anemia of liver cell failure is",
+        "o": [
+          "microcytic hypochromic anemia",
+          "normocytic normochromic anemia",
+          "macrocytic",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 1
+      },
+      {
+        "q": "Auto-immune hemolytic anemia is characterized by all the following except",
+        "o": [
+          "positive comb's test (direct-indirect)",
+          "abnormal hemoglobin electrophoresis",
+          "splenomegaly",
+          "increased retics"
+        ],
+        "c": 1,
+        "num": 2
+      },
+      {
+        "q": "Iron deficiency anemia may be caused by all the following except",
+        "o": [
+          "decrease intake",
+          "chronic blood loss",
+          "decrease folate",
+          "pregnancy"
+        ],
+        "c": 2,
+        "num": 3
+      },
+      {
+        "q": "Iron transport protein:",
+        "o": [
+          "Haptoglobin",
+          "Ferritin",
+          "Transcobalamine2",
+          "Transferrin"
+        ],
+        "c": 3,
+        "num": 4
+      },
+      {
+        "q": "Which of the following is not a cause of folic acid deficiency?",
+        "o": [
+          "Vegetarian diet.",
+          "Gluten enteropathy.",
+          "Pregnancy.",
+          "Hemolytic anemia"
+        ],
+        "c": 0,
+        "num": 5
+      },
+      {
+        "q": "Causes of bleeding include:",
+        "o": [
+          "Hemolytic anemia.",
+          "Pernicious anemia.",
+          "Polycythemia.",
+          "Aplastic anemia.",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 6
+      },
+      {
+        "q": "In chronic iron deficiency anemia there is",
+        "o": [
+          "reticulocytosis",
+          "high total iron binding capacity",
+          "high serum ferritin"
+        ],
+        "c": 1,
+        "num": 7
+      },
+      {
+        "q": "Which of the following is X- linked disease",
+        "o": [
+          "G6PD deficiency",
+          "pyruvate kinase deficiency",
+          "sickle cell anemia",
+          "spherocytosis"
+        ],
+        "c": 0,
+        "num": 8
+      },
+      {
+        "q": "Aplastic anemia is characterized by all except",
+        "o": [
+          "microcytic hypochromic anemia",
+          "low reticulocyte count",
+          "thrombocytopenia",
+          "leukopenia"
+        ],
+        "c": 0,
+        "num": 9
+      },
+      {
+        "q": "All the following statements hereditary considered spherocytosis are regarding correct except",
+        "o": [
+          "It is an autosomal dominant disease.",
+          "RBCs osmotic fragility is decreased.",
+          "Splenectomy improves the condition.",
+          "Gall bladder stones may be found.",
+          "Megaloblastic anemia may develop."
+        ],
+        "c": 1,
+        "num": 10
+      },
+      {
+        "q": "The Coomb's antiglobulin test is characteristically positive in hemolytic anemia associated with all of the following except",
+        "o": [
+          "Chronic lymphocytic leukemia.",
+          "Thalassemia.",
+          "Systemic erythematosus",
+          "Methyldopa therapy."
+        ],
+        "c": 1,
+        "num": 11
+      },
+      {
+        "q": "Drugs that may cause hemolysis include:",
+        "o": [
+          "Nitrates.",
+          "Ribavirin for treatment of HCV infection.",
+          "Antimalarial therapy.",
+          "Sulphonamides",
+          "All of the above."
+        ],
+        "c": 4,
+        "num": 12
+      },
+      {
+        "q": "In intravascular hemolysis all the following are present except",
+        "o": [
+          "Increased urobilinogen.",
+          "Reticulocytosis.",
+          "Increased urinary hemosiderin.",
+          "Increased plasma hemopexin"
+        ],
+        "c": 3,
+        "num": 13
+      },
+      {
+        "q": "Splenectomy is indicated in the following except",
+        "o": [
+          "hypersplenism",
+          "spherocytosis",
+          "sickle cell anemia",
+          "immune thrombocytopenic purpura"
+        ],
+        "c": 2,
+        "num": 14
+      },
+      {
+        "q": "All of the following is pancytopenia causes except",
+        "o": [
+          "megaloblastic",
+          "aplastic",
+          "hypersplenism",
+          "sideroblastic anemia"
+        ],
+        "c": 3,
+        "num": 15
+      },
+      {
+        "q": "Serum ferritin is low in:",
+        "o": [
+          "Thalassemia.",
+          "Sideroblastic anemia",
+          "Iron deficiency anemia.",
+          "Renal diseases"
+        ],
+        "c": 2,
+        "num": 16
+      },
+      {
+        "q": "Which of the following is true. concerning treatment of iron. deficiency anemia?",
+        "o": [
+          "Folic acid should also be given if the anemia is severe",
+          "Treatment is stopped as soon as hemoglobin normalizes,",
+          "Hemoglobin should rise by 1g/L every 7days",
+          "Healthy diet is sufficiently for treatment",
+          "oral iron is effective as parenteral iron"
+        ],
+        "c": 0,
+        "num": 17
+      },
+      {
+        "q": "Heinz bodies in red blood cells in hemolytic anemia is present :",
+        "o": [
+          "Paroxysmal nocturnal hemoglobinuria.",
+          "Glucose-6-phosphate-dehydrogenase deficiency.",
+          "Post splenectomy.",
+          "Cold agglutinin disease.",
+          "Clostridium welchii septicemia."
+        ],
+        "c": 1,
+        "num": 18
+      },
+      {
+        "q": "All of the following produce microcytic anemia except",
+        "o": [
+          "Sideroblastic anemia.",
+          "Thalassemia.",
+          "Pernicious anemia.",
+          "Lead poisoning."
+        ],
+        "c": 2,
+        "num": 19
+      },
+      {
+        "q": "All the following are suggestive of iron deficiency anemia except",
+        "o": [
+          "Koilonychia.",
+          "Pica.",
+          "Decreased serum ferritin.",
+          "Decreased total iron binding capacity (TIBC).",
+          "Low reticulocyte response"
+        ],
+        "c": 3,
+        "num": 20
+      },
+      {
+        "q": "In pernicious anemia there is",
+        "o": [
+          "deficient intrinsic factor",
+          "high vitamin b12",
+          "abnormal bone marrow picture",
+          "all of the above",
+          "none of the above"
+        ],
+        "c": 0,
+        "num": 21
+      },
+      {
+        "q": "Senile neutrophil < segmental > are commonly seen in",
+        "o": [
+          "spherocytosis",
+          "megaloblastic",
+          "Lymphoma",
+          "acute appendicitis"
+        ],
+        "c": 1,
+        "num": 22
+      },
+      {
+        "q": "Patients with pernicious anemia",
+        "o": [
+          "Need oral supplement of B12 medication for life",
+          "Need high intake of meet egg and milk",
+          "Are vegetarian.",
+          "Need intramuscular supplement of B12 for life.",
+          "Their complete blood picture shows sever microcytosis."
+        ],
+        "c": 3,
+        "num": 23
+      },
+      {
+        "q": "In the anemia of chronic infection:",
+        "o": [
+          "The hemoglobin is usually <8g/dl.",
+          "The TIBC is raised",
+          "Anemia is usually normocytic.",
+          "Iron supplements are indicated"
+        ],
+        "c": 2,
+        "num": 24
+      },
+      {
+        "q": "Thrombocytopenia is a feature of:",
+        "o": [
+          "Pernicious anemia.",
+          "Iron deficiency anemia.",
+          "Hemophilia A",
+          "Hemophilia B."
+        ],
+        "c": 0,
+        "num": 25
+      },
+      {
+        "q": "In pernicious anemia which of the following is not true:",
+        "o": [
+          "Hyperchlorhydria.",
+          "Premature graying of hair",
+          "Anti- intrinsic factor antibody in 60& patients.",
+          "Gastric polyp may be present"
+        ],
+        "c": 0,
+        "num": 26
+      },
+      {
+        "q": "In which of the following circumstances would the treatment of anemia with erythropoietin still be expected to be effective:",
+        "o": [
+          "Iron deficiency.",
+          "Folate deficiency.",
+          "Chronic renal failure.",
+          "Infection."
+        ],
+        "c": 2,
+        "num": 27
+      },
+      {
+        "q": "Splenomegaly is a feature of anemia associated with:",
+        "o": [
+          "Hereditary spherocytosis.",
+          "Aplastic anemia.",
+          "Sickle cell anemia.",
+          "Chronic renal failure."
+        ],
+        "c": 0,
+        "num": 28
+      },
+      {
+        "q": "microcytic anemia is seen in the following conditions except:",
+        "o": [
+          "Chronic use of NSAIDs",
+          "Sideroblastic anemia.",
+          "Iron deficiency.",
+          "Thalassemia.",
+          "Gastric intrinsic factor deficiency"
+        ],
+        "c": 4,
+        "num": 29
+      },
+      {
+        "q": "In TTT of megaloblastic anemia",
+        "o": [
+          "folic acid should be given before vitamin b",
+          "vitamin b 12 should be given before folic acid",
+          "given together",
+          "oral iron should be given at first"
+        ],
+        "c": 1,
+        "num": 30
+      },
+      {
+        "q": "Ham's test used in diagnosis of",
+        "o": [
+          "spherocytosis",
+          "paroxysmal nocturnal hemoglobinuria",
+          "anemia with chronic disease",
+          "lymphoma"
+        ],
+        "c": 1,
+        "num": 31
+      },
+      {
+        "q": "Hemoglobin A2 is high in",
+        "o": [
+          "thalassemia",
+          "vitamin b12 deficiency",
+          "sideroblastic anemia",
+          "iron deficiency anemia"
+        ],
+        "c": 0,
+        "num": 32
+      },
+      {
+        "q": "Which one statement is true. regarding the treatment of iron deficiency anemia?",
+        "o": [
+          "Iron is absorbed in the distal jejunum",
+          "Iron is absorbed in distal ilium",
+          "Absorption of iron is increased by ascorbic acid",
+          "Sustained release iron is a useful way of giving larger dose"
+        ],
+        "c": 2,
+        "num": 33
+      },
+      {
+        "q": "Which one of the following is the most likely to give rise to resistant to erythropoietin treatment of anemia?",
+        "o": [
+          "Iron deficiency.",
+          "ACE inhibitor.",
+          "Hypoparathyroidism.",
+          "Erythropoietin antibodies.",
+          "Hypokalemia."
+        ],
+        "c": 0,
+        "num": 34
+      },
+      {
+        "q": "A 25-year-old man with history of duodenal ulcer is noted to have a hemoglobin level of 10 g/dl which of the following most likely to be seen on laboratory investigation:",
+        "o": [
+          "Reticulocyte count of 4%",
+          "Elevated total iron binding capacity.",
+          "Normal serum ferritin",
+          "Mean corpuscular volume of 105 FL"
+        ],
+        "c": 1,
+        "num": 35
+      },
+      {
+        "q": "Iron deficiency anemia is not associated with:",
+        "o": [
+          "Koilonychia.",
+          "Pallor",
+          "Dysphagia.",
+          "Splinter hemorrhage.",
+          "Glazed tongue."
+        ],
+        "c": 3,
+        "num": 36
+      },
+      {
+        "q": "Iron transport protein is",
+        "o": [
+          "Ferritin.",
+          "Transferrin.",
+          "Transcobalamine2.",
+          "Haptoglobin.",
+          "Ceruloplasmin"
+        ],
+        "c": 1,
+        "num": 37
+      },
+      {
+        "q": "Thalassemia major is inheritant as",
+        "o": [
+          "autosomal recessive",
+          "autosomal co-dominant",
+          "x-linked",
+          "mitochondrial inheritance"
+        ],
+        "c": 1,
+        "num": 38
+      },
+      {
+        "q": "Which of the following typically causes a megaloblastic anemia:",
+        "o": [
+          "Blind loop syndrome.",
+          "Iron deficiency.",
+          "Thalassemia.",
+          "Chronic inflammation.",
+          "Sideroblastic anemia."
+        ],
+        "c": 0,
+        "num": 39
+      },
+      {
+        "q": "Regarding megaloblastic anemia which statement is considered incorrect:",
+        "o": [
+          "It is usually associated with is decreased serum direct bilirubin.",
+          "It is usually associated with increased serum LDL level",
+          "It is usually associated with increased blood reticulocytes with ttt.",
+          "It is usually associated with increased MCV",
+          "It is sometimes associated with proteinuria."
+        ],
+        "c": 0,
+        "num": 40
+      },
+      {
+        "q": "Thalassemia major may be associated with all except:",
+        "o": [
+          "cardiac arrhythmia",
+          "cardiac tamponade",
+          "congestive heart failure",
+          "cardiomegaly"
+        ],
+        "c": 1,
+        "num": 41
+      },
+      {
+        "q": "All of the following are seen in intravascular hemolysis except",
+        "o": [
+          "high urinary urobilinogen",
+          "reticulocytosis",
+          "high plasma stercobilinogen",
+          "high urinary hemosidrin"
+        ],
+        "c": 2,
+        "num": 42
+      },
+      {
+        "q": "All of the following is produce microcytic anemia except",
+        "o": [
+          "sideroblastic anemia",
+          "pernicious anemia",
+          "lead poisiong",
+          "iron deficiency anemia"
+        ],
+        "c": 1,
+        "num": 43
+      },
+      {
+        "q": "Which is not seen in hemolytic uraemic syndrome:",
+        "o": [
+          "Positive Coomb's test",
+          "Thrombocytopenia.",
+          "High creatinine level.",
+          "Hypo fibrinogenemia."
+        ],
+        "c": 0,
+        "num": 44
+      },
+      {
+        "q": "A 66 year old man presents with fatigue and tea colored urine. Physical examination reveals icteric sclera but is otherwise unremarkable. Which of the following conditions is least likely to account for this findings:",
+        "o": [
+          "Pancreatic cancer.",
+          "Gallbladder cancer.",
+          "Primary biliary cirrhosis.",
+          "Autoimmune anemia.",
+          "Viral hepatitis."
+        ],
+        "c": 3,
+        "num": 45
+      },
+      {
+        "q": "All of the following cause microangiopathic hemolytic anemia except:",
+        "o": [
+          "Thrombotic thrombocytopenic purpura",
+          "Hemolytic uremic syndrome",
+          "Vasculitis",
+          "Autoimmune hemolytic anemia",
+          "Disseminated intravascular coagulopathy"
+        ],
+        "c": 3,
+        "num": 46
+      },
+      {
+        "q": "In hereditary spherocytosis all of the following are characteristic except:",
+        "o": [
+          "It is autosomal dominant trait",
+          "There is loss of red cell membrane surface without reduction of cell volume necessitating spherical shape in order to accommodate its content",
+          "Spherocytes are more likely to rupture than normal cells when suspended in hypotonic solution",
+          "The MCV is increased & the MCHC is decreased",
+          "Clinical severity tend to be relatively consistent within families although it varies widely from family to family"
+        ],
+        "c": 3,
+        "num": 47
+      },
+      {
+        "q": "Splenectomy is virtually curative in:",
+        "o": [
+          "Hereditary spherocytosis.",
+          "G6PD deficiency.",
+          "Idiopathic thrombocytopenic purpura",
+          "Thalassemia",
+          "pernicious anemia"
+        ],
+        "c": 0,
+        "num": 48
+      },
+      {
+        "q": "RBCs osmotic fragility is increased in",
+        "o": [
+          "Hereditary spherocytosis.",
+          "Thalassemia major",
+          "Hb C disease.",
+          "G6PD deficiency.",
+          "Iron deficiency anemia."
+        ],
+        "c": 0,
+        "num": 49
+      },
+      {
+        "q": "Autoimmune hemolytic anemia is associated with:",
+        "o": [
+          "Acute lymphoblastic leukemia.",
+          "Chronic lymphocytic leukemia.",
+          "Acute megaloblastic leukemia.",
+          "Chronic myelocytic leukemia.",
+          "Myeloproliferative disorders"
+        ],
+        "c": 1,
+        "num": 50
+      },
+      {
+        "q": "Which of the following is a characteristic feature of primary aplastic anemia:",
+        "o": [
+          "Peak incidence about of 60 years e age",
+          "Normocytic normochromic anemia thrombocytopenia.",
+          "Bone marrow trephine is required to confirm the diagnosis",
+          "Splenomegaly indicating extramedullary erythropoiesis.",
+          "Very high reticulocytic count"
+        ],
+        "c": 2,
+        "num": 51
+      },
+      {
+        "q": "The following are clinical manifestations of primary aplastic anemia except:",
+        "o": [
+          "Splenomegaly.",
+          "Ecchymosis",
+          "Pallor",
+          "Sore throat"
+        ],
+        "c": 0,
+        "num": 52
+      },
+      {
+        "q": "A middle aged man presents with shortness in breath and has signs of heart failure and jaundice. He is anemic with hemoglobin 5h/dl an MCV 90 FL He has spherocytosis in his blood film. Which of the following is the most likely diagnosis:",
+        "o": [
+          "Iron deficiency anemia.",
+          "Autoimmune hemolytic anemia.",
+          "Vitamin B12 deficiency.",
+          "Acute leukemia."
+        ],
+        "c": 1,
+        "num": 53
+      },
+      {
+        "q": "The following is true of aplastic anemia:",
+        "o": [
+          "Congenital aplastic anemia is more common than acquired form",
+          "Fanconi's anemia is commonest cause the",
+          "Age related anemia is prerequisite for the diagnosis to be confirmed",
+          "Erythropoietin is an effective treatment in the majority of cases",
+          "Allogeneic bone marrow transplantation is recognized treatment option"
+        ],
+        "c": 4,
+        "num": 54
+      },
+      {
+        "q": "A 20-year-old male with sickle cell anemia (SS homozygote) the least likely physical finding in this patient is:",
+        "o": [
+          "Scleral icterus",
+          "Systolic murmur",
+          "Splenomegaly.",
+          "Ankle ulcers.",
+          "Painful bone crisis."
+        ],
+        "c": 2,
+        "num": 55
+      },
+      {
+        "q": "Administration of pneumococcal and H.influenza vaccine is considered to be of great help for patient suffering from:",
+        "o": [
+          "G6PD deficiency.",
+          "Hereditary spherocytosis.",
+          "Sickle cell anemia.",
+          "Beta thalassemia anemia.",
+          "Alpha thalassemia anemia"
+        ],
+        "c": 2,
+        "num": 56
+      },
+      {
+        "q": "The following is associated with beta thalassemia except:",
+        "o": [
+          "Bone marrow expansion.",
+          "Splenomegaly.",
+          "Persistence of HbF",
+          "Iron overload.",
+          "Macrocytosis"
+        ],
+        "c": 4,
+        "num": 57
+      },
+      {
+        "q": "All of the following is considered a feature of thalassemia except:",
+        "o": [
+          "Jaundice",
+          "Mongoloid features.",
+          "Auto splenectomy",
+          "Hepatomegaly"
+        ],
+        "c": 2,
+        "num": 58
+      },
+      {
+        "q": "Commonest cause of jaundice in thalassemia is:",
+        "o": [
+          "HBV",
+          "HCV.",
+          "Hemolysis",
+          "Iron deposition in liver"
+        ],
+        "c": 2,
+        "num": 59
+      },
+      {
+        "q": "In a patient with anemia describe as microcytic hypochromic with normal serum iron and total iron binding capacity. The most likely diagnosis is:",
+        "o": [
+          "Iron deficiency anemia.",
+          "Thalassemia.",
+          "Folate deficiency anemia.",
+          "B12 deficiency anemia."
+        ],
+        "c": 1,
+        "num": 60
+      },
+      {
+        "q": "Which of the following is true concerning platelets:",
+        "o": [
+          "Have a circulation life span of 10 hours in healthy subjects",
+          "Are produced and regulated under the control of erythropoietin.",
+          "Contain small nuclear remnants called Howell jolly bodies.",
+          "Decreased in number in response to aspirin therapy.",
+          "Release serotonins and von Willebrand factor."
+        ],
+        "c": 4,
+        "num": 61
+      },
+      {
+        "q": "Which is not vit K dependent factor:",
+        "o": [
+          "VIII",
+          "VII",
+          "X",
+          "Il"
+        ],
+        "c": 0,
+        "num": 62
+      },
+      {
+        "q": "Vit K dependent coagulation factors may include all except:",
+        "o": [
+          "Factor",
+          "factor",
+          "Factor 9.",
+          "Factor"
+        ],
+        "c": 3,
+        "num": 63
+      },
+      {
+        "q": "Which of the following is associated with a prolonged APTT:",
+        "o": [
+          "Factor VIl deficiency.",
+          "Factor XIII deficiency.",
+          "Factor C deficiency.",
+          "Factor S deficiency",
+          "Disorders of the intrinsic pathway"
+        ],
+        "c": 4,
+        "num": 64
+      },
+      {
+        "q": "Splenectomy is indicated in all except:",
+        "o": [
+          "hypersplenism",
+          "spherocytosis",
+          "sickle cell anemia",
+          "Immune thrombocytopenic purpura"
+        ],
+        "c": 2,
+        "num": 65
+      },
+      {
+        "q": "Which one of the following is false in hemophilia:",
+        "o": [
+          "normal prothrombin time",
+          "decrease factor VIII Ag antigen level",
+          "high partial thromboplastin time",
+          "absent factor VIII activity"
+        ],
+        "c": 1,
+        "num": 66
+      },
+      {
+        "q": "Gum bleeding is charactrestic of all except:",
+        "o": [
+          "aplastic anemia",
+          "scurvy",
+          "chronic phynotin therapy",
+          "hemophilia"
+        ],
+        "c": 2,
+        "num": 67
+      },
+      {
+        "q": "Which is not Vitamin K dependenat factor:",
+        "o": [
+          "factor",
+          "factor",
+          "factor",
+          "factor"
+        ],
+        "c": 0,
+        "num": 68
+      },
+      {
+        "q": "erythrocyte sedemintation rate decrease in:",
+        "o": [
+          "Collagenosis",
+          "Infection",
+          "Polycythemia"
+        ],
+        "c": 2,
+        "num": 69
+      },
+      {
+        "q": "All of the following are seen in intravascular haemolysis except :",
+        "o": [
+          "High urinarymobilinogen",
+          "Reticulocytosis",
+          "High plasma haemopexin",
+          "High urinary haemosiderin"
+        ],
+        "c": 2,
+        "num": 70
+      },
+      {
+        "q": "Which of the following is associated with prolonged PT:",
+        "o": [
+          "Factor XI deficiency.",
+          "Factor IX deficiency.",
+          "Factor VIII deficiency.",
+          "Factor VIl deficiency.",
+          "Factor XIl deficiency"
+        ],
+        "c": 3,
+        "num": 71
+      },
+      {
+        "q": "Which of the following is seen in ITP:",
+        "o": [
+          "Thrombocytosis",
+          "Increased bleeding time",
+          "Increased clotting time.",
+          "Increased prothrombin time"
+        ],
+        "c": 1,
+        "num": 72
+      },
+      {
+        "q": "All of the following about low molecular weight heparin is true except:",
+        "o": [
+          "Testing of coagulation file profile is not necessary.",
+          "Less risk of osteoporosis is compared to unfunctionated heparin",
+          "Higher bioavailability and longer half-life as compared to unfractionated heparin.",
+          "Higher risk of heparin included thrombocytopenia is compared to unfunctionated heparin.",
+          "Clearance is dose dependent."
+        ],
+        "c": 3,
+        "num": 73
+      },
+      {
+        "q": "False statement regarding disseminated intravascular coagulation is :",
+        "o": [
+          "Thrombocytopenia",
+          "Decreased fibrinogen",
+          "Decreased partial thromboplastin time",
+          "Increased Prothrombin time"
+        ],
+        "c": 2,
+        "num": 74
+      },
+      {
+        "q": "Haemolytic-uraemic syndrome (HUS) is not characterised by :",
+        "o": [
+          "Haematuria",
+          "Thrombocytosis",
+          "Segmented RBCs in peripheral smear",
+          "Uraemia"
+        ],
+        "c": 1,
+        "num": 75
+      },
+      {
+        "q": "Patient on aspirin will have :",
+        "o": [
+          "Prolonged bleeding time",
+          "Prolonged activated partial thromboplastin time",
+          "Prolonged prothrombin time",
+          "Prolonged clotting time"
+        ],
+        "c": 0,
+        "num": 76
+      },
+      {
+        "q": "Bone marrow examination is essential in:",
+        "o": [
+          "Hairy cell leukaemia",
+          "Thalassemia",
+          "Megaloblastic anaemia",
+          "Acute lymphoblastic leukemia"
+        ],
+        "c": 0,
+        "num": 77
+      },
+      {
+        "q": "Immune-mediated thrombocytopenia (ITP2) in children usually follows which of the following?",
+        "o": [
+          "Bacterial infection",
+          "Viral infection",
+          "Drug ingestion",
+          "Any of the above"
+        ],
+        "c": 1,
+        "num": 78
+      },
+      {
+        "q": "Which of the following does not produce iron-overload in body ?",
+        "o": [
+          "Chronic haemodialysis",
+          "Pernicious anaemia",
+          "Alcoholic liver disease",
+          "Sideroblastic anaemia"
+        ],
+        "c": 1,
+        "num": 79
+      },
+      {
+        "q": "All of the following may cause pain abdomen in thalassaemia major except:",
+        "o": [
+          "vasculitis",
+          "Splenic infarction",
+          "Dragging pain due to huge splenomegaly",
+          "Pigment stone-induced biliary colic"
+        ],
+        "c": 0,
+        "num": 80
+      },
+      {
+        "q": "increased Fe and normal TIBC are found in :",
+        "o": [
+          "Thalassaemia major",
+          "Haemosiderosis",
+          "Rheumatoid arthritis",
+          "Disseminated malignancy"
+        ],
+        "c": 0,
+        "num": 81
+      },
+      {
+        "q": "Which of the following is not true in thrombasthenia?",
+        "o": [
+          "Prolonged bleeding time",
+          "Normal platelet count",
+          "Platelet aggregation defect",
+          "Prolonged clotting time"
+        ],
+        "c": 3,
+        "num": 82
+      },
+      {
+        "q": "Features of thalassemia include all except?",
+        "o": [
+          "Hypopituitarism",
+          "Hypogonadism",
+          "Hypoparathyroidism",
+          "Diabetes insipidus"
+        ],
+        "c": 3,
+        "num": 83
+      },
+      {
+        "q": "The following statements about warfarin are true:",
+        "o": [
+          "Follow up by PTT",
+          "His action starts immediately with swallow of tablet",
+          "Anti-thrombin 3 required for its action.",
+          "It's antidote is vitamin K",
+          "Long term use may cause thrombocytopenia."
+        ],
+        "c": 3,
+        "num": 84
+      },
+      {
+        "q": "Treatment of over anticoagulation by warfarin include all the following except:",
+        "o": [
+          "Stop warfarin.",
+          "Fresh frozen plasma.",
+          "Vitamin K infusion",
+          "protamine sulphat"
+        ],
+        "c": 3,
+        "num": 85
+      },
+      {
+        "q": "Which of the following are typical features of idiopathic thrombocytopenia:",
+        "o": [
+          "IgG mediated thrombocytopenia.",
+          "Marked splenomegaly.",
+          "Normal bleeding time",
+          "Peak prevalence aged >60 year.",
+          "Associated with decrease in megakaryocytes in bone marrow."
+        ],
+        "c": 0,
+        "num": 86
+      },
+      {
+        "q": "Idiopathic thrombocytopenic purpura is characterized by prolonged bleeding time and:",
+        "o": [
+          "Hypofibrinogenemia",
+          "Increase megakaryocytes in BM",
+          "Negative tourniquet test",
+          "Normal platelet count."
+        ],
+        "c": 1,
+        "num": 87
+      },
+      {
+        "q": "The Prothrombin time is not prolonged in:",
+        "o": [
+          "Disorders of the extrinsic pathway",
+          "Factor X deficiency",
+          "Factor VII deficiency",
+          "Factor V deficiency",
+          "Factor XII deficiency"
+        ],
+        "c": 4,
+        "num": 88
+      },
+      {
+        "q": "The activated partial thromboplastin time is typically prolonged in:",
+        "o": [
+          "Disorders of the extrinsic pathway",
+          "Factor VII deficiency Leiden.",
+          "Homozygous factor V",
+          "Factor XIII deficiency",
+          "Factor IX, XI or XII deficiency"
+        ],
+        "c": 4,
+        "num": 89
+      },
+      {
+        "q": "Coumadin induced skin necrosis is occasionally associated with the institution of oral anticoagulants in patient with:",
+        "o": [
+          "Antithrombin III deficiency",
+          "B. Protein C deficiency",
+          "Factor VIll deficiency",
+          "Plasminogen deficiency",
+          "Dysfibrinogenemia"
+        ],
+        "c": 1,
+        "num": 90
+      },
+      {
+        "q": "Which of the following is normal or increased in thalassemia?",
+        "o": [
+          "Serum iron level",
+          "Transferrin saturation",
+          "Serum ferritin level",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 91
+      },
+      {
+        "q": "Which among the following indicates secondary cause for polycythemia:",
+        "o": [
+          "Cyanosis",
+          "Splenomegaly",
+          "Pruritis",
+          "Easy brusing"
+        ],
+        "c": 0,
+        "num": 92
+      },
+      {
+        "q": "Prothrombin time is prolonged in :",
+        "o": [
+          "Factor X deficiency",
+          "Factor IX deficiency",
+          "Factor H deficiency",
+          "Lupus anticoagulant"
+        ],
+        "c": 0,
+        "num": 93
+      },
+      {
+        "q": "True about Haemophilia A are all except:",
+        "o": [
+          "partial thromboplastin time increased",
+          "Prothrombin time increased",
+          "Clotting time is increased.",
+          "Serum levels of factor VIII are decreased."
+        ],
+        "c": 1,
+        "num": 94
+      },
+      {
+        "q": "In a patient of Hemophilia to be taken for dental extraction true is all, except:",
+        "o": [
+          "All patients should be screened for human immuno deficiency virus",
+          "Extraction should be done under general anaesthesia and skilled anaesthetic care",
+          "Factor VIII or cryoprecipitate can be needed",
+          "Dose of Lignocaine required for anaesthesia is same as that for normal individuals"
+        ],
+        "c": 1,
+        "num": 95
+      },
+      {
+        "q": "True about Von Willebrand’s disease is all except:",
+        "o": [
+          "Increased bleeding time",
+          "Factor VIII c levels are decreased in circulation.",
+          "Increased platelet aggregation in response to Ristocetin",
+          "activated partial thromboplastin time is increased"
+        ],
+        "c": 2,
+        "num": 96
+      },
+      {
+        "q": "Palpable purpura could occur in the following conditions, except :",
+        "o": [
+          "Thrombocytopenia.",
+          "Small-vessel vasculitis.",
+          "Disseminated gonococcal infection.",
+          "Acute meningococcemia"
+        ],
+        "c": 0,
+        "num": 97
+      },
+      {
+        "q": "The following laboratory determinants is abnormally prolonged in Immune thrombocytpenic purpura:",
+        "o": [
+          "activated partial thromboplastin time",
+          "Prothrombin time",
+          "Bleeding time",
+          "Clotting time"
+        ],
+        "c": 2,
+        "num": 98
+      },
+      {
+        "q": "Causes of disseminated intravascular coagulation include :",
+        "o": [
+          "Lymphoma",
+          "Leukemia",
+          "Adenocarcinoma prostate",
+          "Snake venom",
+          "All of the above"
+        ],
+        "c": 4,
+        "num": 99
+      },
+      {
+        "q": "Which of the following is not a feature of thrombotic thrombocytopenic purpura ?",
+        "o": [
+          "Microangiopathic hemolytic anemia",
+          "Renal failure",
+          "Hepatic failure",
+          "Neurologic dysfunction"
+        ],
+        "c": 2,
+        "num": 100
+      },
+      {
+        "q": "palpable purpura is seen in:",
+        "o": [
+          "Idiopathic thrombocytopenic purpura.",
+          "Quinine therapy",
+          "Heparin associated thrombocytopenia.",
+          "Leucocytoclastic vasculitis.",
+          "Thrombotic thrombocytopenic purpura."
+        ],
+        "c": 3,
+        "num": 101
+      },
+      {
+        "q": "Which of the following is the most common presentation of hemophilia A:",
+        "o": [
+          "Hematuria.",
+          "Melena",
+          "Hemo-arthrosis.",
+          "Peripheral neuropathy.",
+          "Intra-cerebral hemorrhage"
+        ],
+        "c": 2,
+        "num": 102
+      },
+      {
+        "q": "Recurrent thrombosis in a female patient may be due to all of the following except:",
+        "o": [
+          "Protein C deficiency.",
+          "Use of oral contraceptive pills",
+          "Anti-phospholipid syndrome.",
+          "Prothrombin gene mutation.",
+          "Frequent intake of aspirin."
+        ],
+        "c": 4,
+        "num": 103
+      },
+      {
+        "q": "Which of the following statements is true concerning von Willebrand disease:",
+        "o": [
+          "The disorder is inherited in X linked recessive mode",
+          "The von Willebrand factor is synthesized by both platelets and endothelial cells",
+          "It is characterized by prolonged PT.",
+          "Deficiency of VWF is treated by platelet transfusion.",
+          "The half-life of VWF is 3 days"
+        ],
+        "c": 1,
+        "num": 104
+      },
+      {
+        "q": "An 18-year-old develops excessive bleeding 2 hours after tooth extraction. He has a history of easy bruising after playing sports... What is the diagnosis:",
+        "o": [
+          "Von Willebrand disease.",
+          "Hemophilia A",
+          "Hemophilia B",
+          "Thrombotic thrombocytopenic purpur"
+        ],
+        "c": 1,
+        "num": 105
+      },
+      {
+        "q": "A 22 year old woman has had four episodes of deep venous thrombosis. Laboratory studies should include each of the following except:",
+        "o": [
+          "Protein S",
+          "Protein C",
+          "A2 macroglobulin",
+          "Anti-thrombin 3 Lupus anticoagulant"
+        ],
+        "c": 2,
+        "num": 106
+      },
+      {
+        "q": "A 25-year-old female patient presented with left brachial artery thrombus and she gave past history of recurrent DVT... she is mostly likely to suffer from:",
+        "o": [
+          "Anti-thrombin 3 deficiency",
+          "Protein C and S deficiency.",
+          "Factor 2 Leiden disease.",
+          "Factor 5 Leiden disease.",
+          "Hidden malignancy."
+        ],
+        "c": 0,
+        "num": 107
+      },
+      {
+        "q": "In pediatric patients, which of the following is the most common presentation in Henoch shoneline purpura?",
+        "o": [
+          "Palpable purpura",
+          "Gastrointestinal involvement",
+          "Glomerulonephritis",
+          "Arthritis"
+        ],
+        "c": 0,
+        "num": 108
+      },
+      {
+        "q": "Which of the following is associated with prolonged bleeding time?",
+        "o": [
+          "Polycythaemia vera",
+          "von Willebrand's disease",
+          "Antiphospholipid syndrome",
+          "Haemophilia"
+        ],
+        "c": 1,
+        "num": 109
+      },
+      {
+        "q": "Peripheral blood picture is the most useful diagnostic aid in:",
+        "o": [
+          "Non-Hodgkin's lymphoma",
+          "Multiple myeloma",
+          "Myelodysplastic syndrome",
+          "Chronic myeloid leukaemia"
+        ],
+        "c": 3,
+        "num": 110
+      },
+      {
+        "q": "The most sensitive test for disseminated intravascular coagulation is?",
+        "o": [
+          "Prolongation of prothrombin time and / or activated partial thromboplasin time.",
+          "Platelet counts < 100,000 / mm3.",
+          "Elevated levels of d.dimer",
+          "Presence of schistocytes."
+        ],
+        "c": 2,
+        "num": 111
+      },
+      {
+        "q": "Bleeding time is increased in all except:",
+        "o": [
+          "Thrombocytopenia",
+          "Thrombasthenia",
+          "Renal failure",
+          "Acquired hemophilia"
+        ],
+        "c": 3,
+        "num": 112
+      },
+      {
+        "q": "Von Willebrand’s disease is usually inherited as:",
+        "o": [
+          "Autosomal dominant",
+          "Autosomal recessive",
+          "X-linked recessive",
+          "Multicentric"
+        ],
+        "c": 0,
+        "num": 113
+      },
+      {
+        "q": "Plasmapheresis is indicated in each of the following except:",
+        "o": [
+          "Hemolytic- uremic syndrome",
+          "Good Pasteur's syndrome",
+          "Polycythemia vera",
+          "Landry -Guillain Barre syndrome"
+        ],
+        "c": 2,
+        "num": 114
+      },
+      {
+        "q": "Paroxysmal nocturnal hemoglobinuria is associated with all of the following condition, except:",
+        "o": [
+          "Aplastic anemia",
+          "Increased LAP scores",
+          "Venous thrombosis",
+          "Iron deficiency anemia"
+        ],
+        "c": 1,
+        "num": 115
+      },
+      {
+        "q": "The type of acute myeloid leukemia more likely to be associated with DIC is:",
+        "o": [
+          "M1 undifferentiated type",
+          "M3 promyelocytic type",
+          "M5 monoblastic type",
+          "M7 megakaryocytic type",
+          "M4 myelomonocytic type"
+        ],
+        "c": 1,
+        "num": 116
+      },
+      {
+        "q": "A 32 year old man with acute myelogenous leukemia is undergoing chemotherapy. He was hospitalized 7 days ago for fever to 38.9 c... which of the following is the best next step:",
+        "o": [
+          "Continue present therapy",
+          "Stop all antibiotics because he likely has drug fever",
+          "Add aminoglycosides antibiotic.",
+          "Add an antifungal agent"
+        ],
+        "c": 3,
+        "num": 117
+      },
+      {
+        "q": "A young man has fever and white cell count of 35 x 10⁹ /L with anemia and low platelet count. Which of the following is the least likely diagnosis:",
+        "o": [
+          "Aplastic anemia.",
+          "Acute leukemia lymphoblastic",
+          "Acute myeloid leukemia.",
+          "Chronic myeloid leukemia."
+        ],
+        "c": 0,
+        "num": 118
+      },
+      {
+        "q": "Which of these is not a common presenting symptom of acute lymphoblastic leukemia:",
+        "o": [
+          "Bone and joint pain.",
+          "Lymphadenopathy.",
+          "Mediastinal masses",
+          "Gum hypertrophy.",
+          "Testicular swelling."
+        ],
+        "c": 0,
+        "num": 119
+      },
+      {
+        "q": "Which of the following is characteristic of acute lymphoblastic leukemia:",
+        "o": [
+          "Has peak prevalence in patients aged 20-30 years",
+          "Typically produce cytoplasmic Auer rods in blast cells.",
+          "Has a median survival of months in chemotherapy.",
+          "Is the most common of all acute leukemia",
+          "Is a typical complication of multiple myeloma"
+        ],
+        "c": 3,
+        "num": 120
+      },
+      {
+        "q": "Causes of leukocytosis include all the following except",
+        "o": [
+          "acute myeloid leukemia",
+          "acute bacterial infection",
+          "hypersplenism",
+          "cushing syndrome"
+        ],
+        "c": 2,
+        "num": 121
+      },
+      {
+        "q": "Feature of Chronic myeloid leukemia include all the following except",
+        "o": [
+          "huge spleen",
+          "hyperurecemia",
+          "thrombocytopenia",
+          "increase lymphocyte in BM"
+        ],
+        "c": 3,
+        "num": 122
+      },
+      {
+        "q": "Chronic myeloid leukemia the following are seen except",
+        "o": [
+          "huge splenomegaly",
+          "leukocytosis",
+          "leukostasis",
+          "normal bone marrow"
+        ],
+        "c": 3,
+        "num": 123
+      },
+      {
+        "q": "Chronic lymphatic leukemia is characterized by",
+        "o": [
+          "sever anemia",
+          "young age onest",
+          "generalized lymphadenopathy",
+          "rapidly progressive course"
+        ],
+        "c": 2,
+        "num": 124
+      },
+      {
+        "q": "Which is not true in polycythemia rubra vera",
+        "o": [
+          "incraese red cell mass",
+          "thrombocytopenia",
+          "marked hyper cellular bone marrow",
+          "basophilia"
+        ],
+        "c": 1,
+        "num": 125
+      },
+      {
+        "q": "In polycythemia Vera which is not true:",
+        "o": [
+          "High level of erythropoietin.",
+          "Massive splenomegaly.",
+          "Hyper viscosity",
+          "Normal arterial saturation."
+        ],
+        "c": 0,
+        "num": 126
+      },
+      {
+        "q": "In polycythemia Vera, which is not true:",
+        "o": [
+          "Low level of erythropoietin.",
+          "High ESR",
+          "Increased leucocyte alkaline phosphatase score.",
+          "High serum vit B 12 level"
+        ],
+        "c": 1,
+        "num": 127
+      },
+      {
+        "q": "The most effective treatment of polycythemia Vera is",
+        "o": [
+          "Fresh frozen plasma.",
+          "Phlebotomy",
+          "Splenectomy.",
+          "Exchange transfusion."
+        ],
+        "c": 1,
+        "num": 128
+      },
+      {
+        "q": "Which of the following features is typical of polycythemia Vera:",
+        "o": [
+          "Peak prevalence in female at age 20 years",
+          "Associated with COPD",
+          "leucopenia and thrombocytopenia",
+          "Decreased blood viscosity.",
+          "Some patients presents with peripheral vascular disease or cerebrovascular accident."
+        ],
+        "c": 4,
+        "num": 129
+      },
+      {
+        "q": "A 33-year-old woman's blood picture is as follows: Hb 9g/dl. reticulocyte count 5% .the following explain this blood picture except:",
+        "o": [
+          "Polycythemia.",
+          "Hemorrhage.",
+          "Hemolysis.",
+          "Treatment with iron."
+        ],
+        "c": 0,
+        "num": 130
+      },
+      {
+        "q": "Recognized clinical features of multiple myeloma include all of the following except:",
+        "o": [
+          "Peak incidence between the age 60 and 70 years",
+          "Amyloidosis with Benze Jones proteinuria.",
+          "Recurrent infections and pancytopenia.",
+          "Decreased serum calcium, urate and blood viscosity"
+        ],
+        "c": 3,
+        "num": 131
+      },
+      {
+        "q": "The presence lymphadenopathy splenomegaly is typical in:",
+        "o": [
+          "Multiple myeloma.",
+          "Chronic lymphatic leukemia",
+          "Chronic myeloid leukemia.",
+          "Myelofibrosis"
+        ],
+        "c": 1,
+        "num": 132
+      },
+      {
+        "q": "Which one of the following is a typical feature of chronic lymphatic leukemia:",
+        "o": [
+          "Onset in a younger patient than in chronic myeloid leukemia.",
+          "Presentation with massive hepatosplenomegaly.",
+          "Transformation to acute leukemia is more common than in chronic myeloid leukemia",
+          "Hypogammaglobulinemia",
+          "Hyperuricemia"
+        ],
+        "c": 3,
+        "num": 133
+      },
+      {
+        "q": "A 70 year old woman presents with a 4 week history of low back pain, generalized weakness, and a 15 lb weight loss over the last 2 months... Which of the following is the most likely with diagnosis:",
+        "o": [
+          "Osteoporosis compression fracture.",
+          "Renal failure osteodystrophy.",
+          "Multiple myeloma.",
+          "Lumbar strain"
+        ],
+        "c": 2,
+        "num": 134
+      },
+      {
+        "q": "Investigation of choice for diagnosis of lymphoma",
+        "o": [
+          "complete blood count",
+          "blood film",
+          "LN biopsy",
+          "bone marrow biopsy"
+        ],
+        "c": 2,
+        "num": 135
+      },
+      {
+        "q": "Which of the following is false regarding Philadelphia chromosome ?",
+        "o": [
+          "Shortening of long arm of chromosome G22",
+          "Philadelphia -ve cases have bad prognosis",
+          "Diagnostic of Chronic myeloid leukaemia",
+          "Found in lymphocytes"
+        ],
+        "c": 3,
+        "num": 136
+      },
+      {
+        "q": "Which of the following is a feature of chronic myeloid leukemia:",
+        "o": [
+          "Generalized lymphadenopathy.",
+          "90% of patients have translocation chromosome 22 and 9 between",
+          "Mean survival of 15 years with chemotherapy.",
+          "Increased neutrophil leucocyte alkaline phosphatase score",
+          "The natural history of the disease is chronic phase and accelerated phase"
+        ],
+        "c": 1,
+        "num": 137
+      },
+      {
+        "q": "All are typical lab findings chronic myeloid leukemia except:",
+        "o": [
+          "Leucoerythroblastic anemia and thrombocytosis",
+          "Peripheral blood neutrophilia, eosinophilia and basophilia",
+          "Chromosomal translocation",
+          "Increased neutrophil alkaline phosphatase score Translocation to acute leukemia"
+        ],
+        "c": 3,
+        "num": 138
+      },
+      {
+        "q": "Leucocyte alkaline phosphatase (LAP) score is diminished in :",
+        "o": [
+          "Sickle cell anaemia",
+          "Lymphoma",
+          "Paroxysmal nocturnal haemoglobinuria (PNH)",
+          "Thalassaemia major"
+        ],
+        "c": 2,
+        "num": 139
+      },
+      {
+        "q": "Which of the following is not a myelo-proliferative disorder?",
+        "o": [
+          "Chronic myeloid leukaemia",
+          "Polycythaemia vera",
+          "Essential thrombocytopenia",
+          "Myeloid metaplasia"
+        ],
+        "c": 2,
+        "num": 140
+      },
+      {
+        "q": "Which of the following is suggesting an acute hemolytic transfusion reaction:",
+        "o": [
+          "Onset after one day starting transfusion.",
+          "Sudden loss of consciousness.",
+          "Rise of blood pressure during transfusion.",
+          "Subnormal temperature during transfusion.",
+          "Chest Pain and lumbar pain during transfusion"
+        ],
+        "c": 4,
+        "num": 141
+      },
+      {
+        "q": "Complication of blood transfusion include all of the following except:",
+        "o": [
+          "Hypothermia.",
+          "Hyperkalemia (stored blood)",
+          "hypocalcemia.",
+          "Hepatitis A transmission.",
+          "Acute left ventricular failure."
+        ],
+        "c": 3,
+        "num": 142
+      },
+      {
+        "q": "Blood transfusion can transmit all of the following except:",
+        "o": [
+          "HCV&HBV",
+          "HAV.",
+          "Syphilis",
+          "HIV"
+        ],
+        "c": 1,
+        "num": 143
+      },
+      {
+        "q": "Hazards of blood transfusion does not include:",
+        "o": [
+          "Hemosiderosis",
+          "Circulatory failure",
+          "Hypokalemia",
+          "DIC",
+          "Cytomegalovirus infection"
+        ],
+        "c": 2,
+        "num": 144
+      },
+      {
+        "q": "A 57 year old man has prosthetic aortic valve for which he takes warfarin 10 mg/d .be is noted to have an international normalized ratio (INR) of 7.0...",
+        "o": [
+          "Administer vit C",
+          "transfuse with fresh frozen plasma",
+          "Administer intravenous immunoglobulin.",
+          "Discontinue the warfarin observe"
+        ],
+        "c": 1,
+        "num": 145
+      },
+      {
+        "q": "A 32 year old man is brought to emergency room after a motor vehicle accident. He is in hypovolemic shock... Which of the following is the most appropriate type of blood to be transfused:",
+        "o": [
+          "Give AB positive blood, uncross-matched",
+          "Wait cross positive blood matched A",
+          "Give type specific A positive, uncross matched",
+          "Give negative blood uncross matched"
+        ],
+        "c": 3,
+        "num": 146
+      },
+      {
+        "q": "A 42-year-old patient is actively bleeding and is in circulatory shock. He requires blood immediately. Select the best option:",
+        "o": [
+          "Fully cross matched blood",
+          "Blog of the same ABO group",
+          "Blood of the same RhD group",
+          "Group O RhD negative blood.",
+          "Fresh frozen plasma"
+        ],
+        "c": 0,
+        "num": 147
+      },
+      {
+        "q": "Which one of the following is not commonly seen in polycythemia vera?",
+        "o": [
+          "Thrombosis",
+          "Hyperuricemia",
+          "Prone for acute leukemia",
+          "Spontaneous severe infection"
+        ],
+        "c": 3,
+        "num": 148
+      },
+      {
+        "q": "Stem cell transplantation is considered in the treatment of",
+        "o": [
+          "Acute myeloid leukemia.",
+          "Sickle cell anemia.",
+          "Plasma cell myeloma.",
+          "Acute lymphoblastic leukemia.",
+          "All of the above"
+        ],
+        "c": 4,
+        "num": 149
+      },
+      {
+        "q": "In chronic myelogenous leukaemia, the serum vitamin B12 levels are:",
+        "o": [
+          "Normal",
+          "Elevated",
+          "Slightly decreased",
+          "Markedly decreased"
+        ],
+        "c": 1,
+        "num": 150
+      },
+      {
+        "q": "all of the following are the good prognostic features Hodgkin’s diseases except:",
+        "o": [
+          "Haemoglobin > 10 gm/dl",
+          "WBC count < 15000/mm3",
+          "Absolute lymphocyte count < 600/ul",
+          "Age < 45 yrs"
+        ],
+        "c": 2,
+        "num": 151
+      },
+      {
+        "q": "all of the following are the poor prognostic factors for Hodgkin’s diseases except:",
+        "o": [
+          "Younger age",
+          "Systemic manifestations",
+          "Lymphocyte depletion",
+          "Mediastinal disease",
+          "Stomach involvement"
+        ],
+        "c": 0,
+        "num": 152
+      },
+      {
+        "q": "Which of the following is characteristic of Hodgkin's disease:",
+        "o": [
+          "Splenic involvement is rare",
+          "Frequent involvement of the CNS.",
+          "Anemia.",
+          "Painless cervical lymphadenopathy.",
+          "Isolated involvement of gastric mucosa associated with H pylori infection."
+        ],
+        "c": 3,
+        "num": 153
+      },
+      {
+        "q": "Eosinophilia is a feature of:",
+        "o": [
+          "Hemophilia.",
+          "Non-Hodgkin's lymphoma.",
+          "Sickle cell anemia.",
+          "Hodgkin's disease."
+        ],
+        "c": 3,
+        "num": 154
+      },
+      {
+        "q": "A 22-year-old male presents with fever, sweating particularly at night, pruritus, and weight loss. On examination he has palpable lymph nodes... The most appropriate investigation would be:",
+        "o": [
+          "Full blood count.",
+          "Lymph node biopsy.",
+          "Chest x ray",
+          "CT scan on neck and mediastinum",
+          "Mantoux test"
+        ],
+        "c": 1,
+        "num": 155
+      },
+      {
+        "q": "A 69 year old man has chronic lymphatic leukemia. He is most likely susceptible to infection by which one of the following:",
+        "o": [
+          "Cytomegalovirus.",
+          "Aspergillus spp",
+          "Candida spp.",
+          "Hemophilus influenza.",
+          "Mycobacterium cvim intracellulaire"
+        ],
+        "c": 3,
+        "num": 156
+      },
+      {
+        "q": "All of the following may be associated with chronic lymphocytic leukemia except:",
+        "o": [
+          "Obstructive jaundice.",
+          "Autoimmune hemolytic anemia.",
+          "Low liability for infection due to persistence lymphocytosis.",
+          "Early stage are managed by close follow up",
+          "Patient who develop the disease are usually of old age"
+        ],
+        "c": 2,
+        "num": 157
+      },
+      {
+        "q": "B cell CLL:",
+        "o": [
+          "Thrombocytopenia often autoimmune.",
+          "Reduced immunoglobulins a risk of recurrent viral infections",
+          "Stage A disease should be treated with chemotherapy.",
+          "Late transformation to all occurs in the majority of the patients",
+          "Diffuse infiltration of bone marrow indicates good prognosis"
+        ],
+        "c": 0,
+        "num": 158
+      },
+      {
+        "q": "Which of the following group of cells are not phagocytic cells:",
+        "o": [
+          "Polymorphonuclear leucocytes",
+          "B lymphocytes",
+          "Macrophages",
+          "Kupffer cells"
+        ],
+        "c": 1,
+        "num": 159
+      },
+      {
+        "q": "Decreased serum iron and decreased iron binding capacity is present in:",
+        "o": [
+          "Recurrent Gl hemorrhage",
+          "Chronic infection.",
+          "Intestinal resection.",
+          "Bleeding per rectum"
+        ],
+        "c": 1,
+        "num": 160
+      },
+      {
+        "q": "A palpable spleen is always present in all of the following except",
+        "o": [
+          "Myelofibrosis.",
+          "Chronic myeloid leukemia.",
+          "Congenital spherocytosis.",
+          "Leshimania donovani",
+          "Sickle cell anemia"
+        ],
+        "c": 4,
+        "num": 161
+      },
+      {
+        "q": "Which of the following values is increased during pregnancy:",
+        "o": [
+          "Iron binding capacity.",
+          "Serum ferritin.",
+          "Serum iron.",
+          "Serum transferring",
+          "Pressure ulcer"
+        ],
+        "c": 0,
+        "num": 162
+      },
+      {
+        "q": "Erythropoietin Therapy may cause",
+        "o": [
+          "Benign hypertension.",
+          "Myositis",
+          "hypotension",
+          "Seizures.",
+          "Osteoporosis"
+        ],
+        "c": 3,
+        "num": 163
+      },
+      {
+        "q": "A 56 year old female presents at the general practitioner with weakness. A full blood count reveals a hemoglobin concentration of 10.5 g/dl and a mean cell volume of 104fl...",
+        "o": [
+          "Hormone therapy.",
+          "Thyrotoxicosis.",
+          "Ulcerative colitis.",
+          "Zollinger-Ellison syndrome.",
+          "Scurvy"
+        ],
+        "c": 2,
+        "num": 164
+      },
+      {
+        "q": "Primary immune thrombocytopenic purpura is characterized by:",
+        "o": [
+          "Inherited as an autosomal dominant",
+          "Prolonged PT & PTT",
+          "Platelet count is normal",
+          "Steroids are not used in treatment.",
+          "Splenectomy may beneficial"
+        ],
+        "c": 4,
+        "num": 165
+      },
+      {
+        "q": "Presenting features of paroxysmal nocturnal hemoglobinuria include all of the following except:",
+        "o": [
+          "Chronic hemolysis",
+          "Musculoskeletal pain",
+          "Leukocytosis",
+          "Budd-chiari syndrome",
+          "iron deficiency anemia"
+        ],
+        "c": 2,
+        "num": 166
+      },
+      {
+        "q": "Treatment with warfarin is best monitored by:",
+        "o": [
+          "Prothrombin time and INR.",
+          "D-dimer.",
+          "Clotting time.",
+          "Activated partial thromboplastin.",
+          "Fibrin degradation products."
+        ],
+        "c": 0,
+        "num": 167
+      },
+      {
+        "q": "In normal adult hematopoiesis.",
+        "o": [
+          "Is present in the marrow of every bone",
+          "Partially occurs in the liver",
+          "Occurs in the spleen",
+          "is confined to the central skeleton and the proximal ends of long bones.",
+          "Occurs in the lymph nodes"
+        ],
+        "c": 3,
+        "num": 168
+      },
+      {
+        "q": "A 31 years old woman with history of easy bruising and epistaxis. O/E, there purpuric eruptions, was CBC showed, Hb 13g/dl, WBCs 6500 /dl. with normal differential count,platelets 45000/dl, what is the most likely first line of treatment:",
+        "o": [
+          "Cryoprecipitate",
+          "Prednisolone.",
+          "Vasopressin.",
+          "Recombinant factor 9.",
+          "Factor"
+        ],
+        "c": 1,
+        "num": 169
+      },
+      {
+        "q": "116.A 60 years old woman has Hb 6.6 g/dl. her MCV was 63 FL ,which one of the following is least likely to be her diagnosis:",
+        "o": [
+          "Pernicious anemia",
+          "Regular NSAID use for arthritis.",
+          "Vegetarian diet",
+          "Beta thalassemia trait",
+          "elevated TSH"
+        ],
+        "c": 0,
+        "num": 170
+      },
+      {
+        "q": "Iron deficiency anemia may be caused by:-",
+        "o": [
+          "chronic blood loss",
+          "folic acid deficiency",
+          "Vit B12 deficiency",
+          "Auto-anti-bodies",
+          "Hemoglobin abnormalities"
+        ],
+        "c": 0,
+        "num": 171
+      },
+      {
+        "q": "Which of the following Is associated with splenomegaly:-",
+        "o": [
+          "chronic renal failure",
+          "aplastic anemia",
+          "hereditary spherocytosis",
+          "sickle cell anemia",
+          "↓Fe anemia"
+        ],
+        "c": 2,
+        "num": 172
+      }
+    ]
+  },
+  {
+    "name": "Neuro",
+    "questions": [
+      {
+        "q": "syncope most often occurs secondary to:",
+        "o": [
+          "temporary cerebral ischemia",
+          "increased intracranial tension",
+          "heart attack",
+          "stroke",
+          "hypervolemia"
+        ],
+        "c": 0,
+        "num": 1
+      }
+    ]
+  }
+]

@@ -1,0 +1,2324 @@
+[
+  {
+    "name": "Cardiology",
+    "questions": [
+      {
+        "q": "Which is false regarding edema in congestive heart failure?",
+        "o": [
+          "Initially noticed in the morning",
+          "Starts in the dependent part",
+          "Pitting edema",
+          "Sacral edema in non-ambulatory patients"
+        ],
+        "c": 0,
+        "num": 1
+      },
+      {
+        "q": "Recent drugs are used in treatment of congestive heart failure except:",
+        "o": [
+          "Digoxin",
+          "Angiotensin converting enzyme inhibitor",
+          "Beta blockers",
+          "Diuretics"
+        ],
+        "c": 0,
+        "num": 2
+      },
+      {
+        "q": "Signs of Left ventricle hypertrophy.",
+        "o": [
+          "Heaving apex",
+          "Epigastric pulsation",
+          "Tricuspid regurge"
+        ],
+        "c": 0,
+        "num": 3
+      },
+      {
+        "q": "All of the following drugs are used in congestive cardiac failure except:",
+        "o": [
+          "Spironolactone",
+          "Carvedilol",
+          "Propranolol",
+          "Digoxin",
+          "Captopril"
+        ],
+        "c": 2,
+        "num": 4
+      },
+      {
+        "q": "All of the following produce systemic hypertension except:",
+        "o": [
+          "Polycystic kidney",
+          "Pheochromocytoma",
+          "Addison's disease",
+          "Conn's syndrome"
+        ],
+        "c": 2,
+        "num": 5
+      },
+      {
+        "q": "Anti-hypertensive drug contra indicated in renal artery stenosis:",
+        "o": [
+          "Losartan",
+          "Verapamil",
+          "Propranolol",
+          "Spironolactone"
+        ],
+        "c": 0,
+        "num": 6
+      },
+      {
+        "q": "Hypertension with diabetes is best treated by:",
+        "o": [
+          "B-blocker",
+          "Thiazide",
+          "ACE inhibitor",
+          "Calcium channel blockers"
+        ],
+        "c": 2,
+        "num": 7
+      },
+      {
+        "q": "Hypertension occurs with:",
+        "o": [
+          "Low Na+ intake",
+          "Low K intake",
+          "High Na intake",
+          "All of the above"
+        ],
+        "c": 2,
+        "num": 8
+      },
+      {
+        "q": "Which of the following anti-hypertensive drug is contra indicated in a hypertensive patient with pheochromocytoma:",
+        "o": [
+          "Labetalol",
+          "Prazocin",
+          "Phenoxybenzamine",
+          "Guanethidine"
+        ],
+        "c": 1,
+        "num": 9
+      },
+      {
+        "q": "Left atrial failure is featured by all except:",
+        "o": [
+          "Dependent oedema",
+          "Paroxysmal nocturnal dyspnoea",
+          "Fine crepitations at lung bases",
+          "Gallop rhythm"
+        ],
+        "c": 0,
+        "num": 10
+      },
+      {
+        "q": "Murmur of hypertrophic obstructive cardiomyopathy is decreased by:",
+        "o": [
+          "Leg raising",
+          "Valsalva manoeuvre",
+          "Amyl nitrite inhalation",
+          "Standing"
+        ],
+        "c": 0,
+        "num": 11
+      },
+      {
+        "q": "Accelerated hypertension should not have:",
+        "o": [
+          "Retinal haemorrhage",
+          "Arteriovenous nipping",
+          "Silver-wire arteries",
+          "Papilloedema"
+        ],
+        "c": 3,
+        "num": 12
+      },
+      {
+        "q": "All are true about Hypertrophic Obstructive Cardiomyopathy, except:",
+        "o": [
+          "β agonist are useful",
+          "Asymmetrical hypertrophy of septum",
+          "Dynamic L.V. outflow obstruction",
+          "Condition improves on passive leg raising"
+        ],
+        "c": 0,
+        "num": 13
+      },
+      {
+        "q": "Which of the following is the most common location of hypertension haemorrhage?",
+        "o": [
+          "Pons",
+          "Putamen",
+          "Thalamus",
+          "Subcortical white matter"
+        ],
+        "c": 1,
+        "num": 14
+      },
+      {
+        "q": "Episodic hypertension is classical feature of:",
+        "o": [
+          "Adrenal carcinoma",
+          "Phaeochromocytoma",
+          "Conn's syndrome",
+          "Cushing's disease"
+        ],
+        "c": 1,
+        "num": 15
+      },
+      {
+        "q": "Pregnancy-associated hypertension should not be treated with:",
+        "o": [
+          "Labetalol",
+          "Telmisartan",
+          "Alpha methyldopa",
+          "Amlodipine"
+        ],
+        "c": 1,
+        "num": 16
+      },
+      {
+        "q": "The recent biomarker for early detection of HF is:",
+        "o": [
+          "Troponin I",
+          "Myoglobin",
+          "CKMB",
+          "LDH",
+          "ANP"
+        ],
+        "c": 4,
+        "num": 17
+      },
+      {
+        "q": "The most important example for hypertension related to increased catecholamine production is:",
+        "o": [
+          "Primary hypertension",
+          "Renovascular hypertension",
+          "Pheochromocytoma",
+          "Cushing syndrome",
+          "Primary hyperaldosteronism"
+        ],
+        "c": 2,
+        "num": 18
+      },
+      {
+        "q": "Most common cause of myocarditis is:",
+        "o": [
+          "Viral infection",
+          "Drug induced",
+          "Autoimmune",
+          "Fungal infection",
+          "Trauma"
+        ],
+        "c": 0,
+        "num": 19
+      },
+      {
+        "q": "Cardiomyopathy can be a result of which of the following?",
+        "o": [
+          "Hypertension",
+          "Congenital or acquired valvular abnormality",
+          "Pericardial abnormalities",
+          "None of the above"
+        ],
+        "c": 3,
+        "num": 20
+      },
+      {
+        "q": "In diagnosis of restrictive cardiomyopathy, which of the following has most relevance?",
+        "o": [
+          "Atrial size",
+          "Left ventricular diastolic dimension",
+          "Left ventricular wall thickness",
+          "Arrhythmia"
+        ],
+        "c": 1,
+        "num": 21
+      },
+      {
+        "q": "Which of the following is a feature of cardiac remodeling?",
+        "o": [
+          "Impaired ventricular systolic pump function",
+          "Cardiac enlargement",
+          "Cardiac hypertrophy",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 22
+      },
+      {
+        "q": "Cardiac involvement is common in which of the following conditions?",
+        "o": [
+          "Duchenne's progressive muscular dystrophy",
+          "Myotonic dystrophy",
+          "Friedreich's ataxia",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 23
+      },
+      {
+        "q": "In which of the following conditions, dilated cardiomyopathy is reversible?",
+        "o": [
+          "Alcohol abuse",
+          "Pregnancy",
+          "Thyroid disease",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 24
+      },
+      {
+        "q": "Which of the following viruses most often produces clinically significant acute myocarditis?",
+        "o": [
+          "Influenza",
+          "Coxsackievirus A",
+          "Coxsackievirus B",
+          "HIV"
+        ],
+        "c": 2,
+        "num": 25
+      },
+      {
+        "q": "Myocarditis can result from?",
+        "o": [
+          "Infectious process",
+          "Hypersensitivity to drugs",
+          "Radiation",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 26
+      },
+      {
+        "q": "Myocarditis may result from hypersensitivity to which of the following drugs?",
+        "o": [
+          "Thiazides",
+          "Antibiotics",
+          "Methyldopa",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 27
+      },
+      {
+        "q": "One of the cardinal features of shock include:",
+        "o": [
+          "Elevated serum lactate level",
+          "Basal lung crackles",
+          "Abdominal pain",
+          "Fever",
+          "Cyanosis"
+        ],
+        "c": 0,
+        "num": 28
+      },
+      {
+        "q": "Right sided heart failure not include:",
+        "o": [
+          "Increased jugular venous pressure",
+          "Bilateral ankle edema",
+          "Enlarged tender liver",
+          "Ascites",
+          "Bilateral basal lung crackle"
+        ],
+        "c": 4,
+        "num": 29
+      },
+      {
+        "q": "In symptomatic HCM, the most common complaint is?",
+        "o": [
+          "Dyspnea",
+          "Palpitation",
+          "Angina pectoris",
+          "Syncope"
+        ],
+        "c": 0,
+        "num": 30
+      },
+      {
+        "q": "Left ventricular cavity in HCM is typically?",
+        "o": [
+          "Small",
+          "Normal",
+          "Large",
+          "Any of the above"
+        ],
+        "c": 0,
+        "num": 31
+      },
+      {
+        "q": "Spironolactone is effective in patients with?",
+        "o": [
+          "Low-renin essential hypertension",
+          "Resistant hypertension",
+          "Primary aldosteronism",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 32
+      },
+      {
+        "q": "68 years old male presented to ER by severe central chest pain referred to the back, on examination there was unequal pulse volume. What is the most appropriate possible diagnosis?",
+        "o": [
+          "Myocardial infarction",
+          "Aortic dissecting aneurysm",
+          "Bacterial pneumonia",
+          "Pleuritic chest pain",
+          "Cardiomegaly"
+        ],
+        "c": 1,
+        "num": 33
+      },
+      {
+        "q": "Syncope most often occur secondary to:",
+        "o": [
+          "Temporary cerebral ischemia",
+          "Increased intracranial tension",
+          "Heart attack",
+          "Stroke",
+          "Hypervolemia"
+        ],
+        "c": 0,
+        "num": 34
+      },
+      {
+        "q": "One of the following is a cause of dyspnea of sudden onset:",
+        "o": [
+          "Chronic heart failure",
+          "Pulmonary Embolism",
+          "Interstitial lung fibrosis",
+          "Morbid obesity",
+          "Anemia"
+        ],
+        "c": 1,
+        "num": 35
+      },
+      {
+        "q": "Which of the following physical signs may indicate left ventricular failure:",
+        "o": [
+          "Pulsus alternans",
+          "Accentuated 1st heart sound",
+          "Elevated systolic blood pressure",
+          "Digital clubbing",
+          "Congested pulsating neck veins"
+        ],
+        "c": 0,
+        "num": 36
+      },
+      {
+        "q": "RAAS regulates arterial pressure primarily through:",
+        "o": [
+          "Nitric oxide production",
+          "Angiotensin 2 and aldosterone",
+          "Epinephrine",
+          "Endothelin production",
+          "Dopamine production"
+        ],
+        "c": 1,
+        "num": 37
+      },
+      {
+        "q": "Which of the following drugs used in HF through increase heart contractility by sliding actin on myosin and decrease HR?",
+        "o": [
+          "Digitalis",
+          "Diuretics",
+          "ACE inhibitors",
+          "Beta-blockers",
+          "Ca channel blockers"
+        ],
+        "c": 0,
+        "num": 38
+      },
+      {
+        "q": "The best vasodilator used in treatment of chronic HF is:",
+        "o": [
+          "Calcium channel blocker",
+          "Na nitroprusside",
+          "ACE inhibitors",
+          "Alpha blocker",
+          "Hydralazine"
+        ],
+        "c": 2,
+        "num": 39
+      },
+      {
+        "q": "Pulsus paradoxus occurs in which of the following:",
+        "o": [
+          "Acute severe asthma",
+          "Systemic hypertension",
+          "Bacterial pneumonia",
+          "Myocarditis",
+          "Aortic regurge"
+        ],
+        "c": 0,
+        "num": 40
+      },
+      {
+        "q": "Orthopnea may occur in:",
+        "o": [
+          "Left sided heart failure",
+          "Right sided heart failure",
+          "Pyramidal lesions",
+          "Acute cerebellar lesions",
+          "Epilepsy"
+        ],
+        "c": 0,
+        "num": 41
+      },
+      {
+        "q": "Which is not advocated in the treatment of acute pulmonary edema:",
+        "o": [
+          "Diuretics",
+          "Trendelenburg position",
+          "Morphine",
+          "Rotating tourniquets",
+          "Vasodilator"
+        ],
+        "c": 1,
+        "num": 42
+      },
+      {
+        "q": "Types of shock do not include which of the following:",
+        "o": [
+          "Hypovolemic",
+          "Cardiogenic",
+          "Septic",
+          "Distributive",
+          "Hypertensive"
+        ],
+        "c": 4,
+        "num": 43
+      },
+      {
+        "q": "Causes of LVH do not include:",
+        "o": [
+          "Aortic stenosis",
+          "Ventricular septal defect",
+          "Mitral stenosis",
+          "Systemic HTN",
+          "Mitral regurge"
+        ],
+        "c": 2,
+        "num": 44
+      },
+      {
+        "q": "Which is true about pulsus paradoxus:",
+        "o": [
+          "The pulse rate increases with inspiration",
+          "The pulse rate decreases with inspiration",
+          "Caused by severe aortic stenosis",
+          "Caused by essential hypertension",
+          "The pulse volume decreased by inspiration"
+        ],
+        "c": 4,
+        "num": 45
+      },
+      {
+        "q": "A patient presented by arterial blood pressure 135/85 needs:",
+        "o": [
+          "Life style modification",
+          "Angiotensin receptor blocker",
+          "Beta-blocker",
+          "Alpha blocker",
+          "Calcium channel blockers"
+        ],
+        "c": 0,
+        "num": 46
+      },
+      {
+        "q": "Cor-pulmonale means:",
+        "o": [
+          "Right ventricle failure due to mitral stenosis",
+          "Right ventricle failure due to left ventricle failure",
+          "Right ventricle failure due to lung disease",
+          "Right ventricle failure due to ventricular septal defect",
+          "LVH"
+        ],
+        "c": 2,
+        "num": 47
+      },
+      {
+        "q": "Which of the following is not considered as a compensatory mechanism for HF:",
+        "o": [
+          "Stimulation of sympathetic nervous system",
+          "Stimulation of renin angiotensin system",
+          "Hypertrophy of the heart",
+          "Elevated BP",
+          "Increase O2 extraction"
+        ],
+        "c": 3,
+        "num": 48
+      },
+      {
+        "q": "To establish the diagnosis of hypertension we should:",
+        "o": [
+          "Repeat BP measurement",
+          "Depend on symptoms",
+          "Measure once only",
+          "Use arterial pulse",
+          "Cardiac sounds"
+        ],
+        "c": 0,
+        "num": 49
+      },
+      {
+        "q": "Syncope is most likely to occur when the patient is:",
+        "o": [
+          "Sitting",
+          "Supine",
+          "Standing",
+          "Kneeling",
+          "Lying down"
+        ],
+        "c": 2,
+        "num": 50
+      },
+      {
+        "q": "Myocarditis is:",
+        "o": [
+          "Inflammation of myocardium",
+          "Ischemia of myocardium",
+          "Malignancy of myocardium",
+          "Degeneration of myocardium",
+          "Rupture of myocardium"
+        ],
+        "c": 0,
+        "num": 51
+      },
+      {
+        "q": "The most important investigation to assess ejection fraction:",
+        "o": [
+          "ECG",
+          "Echocardiography",
+          "Chest X-ray",
+          "Cardiac scan",
+          "MRI heart"
+        ],
+        "c": 1,
+        "num": 52
+      },
+      {
+        "q": "Which of the following does not produce systemic hypertension:",
+        "o": [
+          "Polycystic kidney",
+          "Pheochromocytoma",
+          "Addison's disease",
+          "Conn's syndrome",
+          "Cushing's disease"
+        ],
+        "c": 2,
+        "num": 53
+      },
+      {
+        "q": "Slow rising pulse is a feature of:",
+        "o": [
+          "Endotoxic shock",
+          "Aortic stenosis",
+          "Mitral stenosis",
+          "Constrictive pericarditis",
+          "Aortic regurge"
+        ],
+        "c": 1,
+        "num": 54
+      }
+    ]
+  },
+  {
+    "name": "Chest",
+    "questions": [
+      {
+        "q": "Sarcoidosis is characterized by:",
+        "o": [
+          "Extensive fibrosis",
+          "Caseating granuloma",
+          "Mild fibrosis",
+          "Non caseating granuloma",
+          "Tumour like growth"
+        ],
+        "c": 3,
+        "num": 1
+      },
+      {
+        "q": "What is the indication of long term oxygen therapy in COPD:",
+        "o": [
+          "Exercise induced arterial desaturation",
+          "Co-morbidities with ischaemic heart disease",
+          "Hypoxaemia less than 55% PaO2 and less than 88% SaO2",
+          "FEV1 less than 35%",
+          "Productive cough"
+        ],
+        "c": 2,
+        "num": 2
+      },
+      {
+        "q": "Differentiation between asthma and COPD may include:",
+        "o": [
+          "Increased FEV1 by 15% following bronchodilators",
+          "Audible Rhonchi",
+          "Chronic cough",
+          "Acute attacks of dyspnea",
+          "Diminished air entry"
+        ],
+        "c": 0,
+        "num": 3
+      },
+      {
+        "q": "One of the following is not a common finding in sarcoidosis:",
+        "o": [
+          "Fever",
+          "Parotid enlargement",
+          "Lymphadenopathy",
+          "Hepatosplenomegaly",
+          "Renal failure"
+        ],
+        "c": 4,
+        "num": 4
+      },
+      {
+        "q": "One of the following is a cause of dyspnea of sudden onset:",
+        "o": [
+          "Chronic heart failure",
+          "Pulmonary Embolism",
+          "Interstitial lung fibrosis",
+          "Morbid obesity",
+          "Anemia"
+        ],
+        "c": 1,
+        "num": 5
+      },
+      {
+        "q": "Drug of choice in mycoplasma pneumonia:",
+        "o": [
+          "Penicillin",
+          "Tetracycline",
+          "Cefuroxime",
+          "Erythromycin"
+        ],
+        "c": 3,
+        "num": 6
+      },
+      {
+        "q": "Apical bronchiectasis indicates:",
+        "o": [
+          "Foreign body",
+          "Tumor",
+          "Tuberculosis",
+          "Fibrosis"
+        ],
+        "c": 2,
+        "num": 7
+      },
+      {
+        "q": "Suppurative syndrome is characterized by the following except:",
+        "o": [
+          "Excessive expectoration of foeted sputum",
+          "Finger clubbing",
+          "Bronchial hyper-reactivity"
+        ],
+        "c": 2,
+        "num": 8
+      },
+      {
+        "q": "All are causes of bronchiectasis except:",
+        "o": [
+          "Inhaled foreign body",
+          "Primary hypogamma-globulinemia",
+          "Cystic fibrosis",
+          "Sarcoidosis"
+        ],
+        "c": 3,
+        "num": 9
+      },
+      {
+        "q": "Complications of bronchiectasis include:",
+        "o": [
+          "Cerebral abscess",
+          "Pneumonia",
+          "Empyema",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 10
+      },
+      {
+        "q": "Atypical pneumonia is caused by:",
+        "o": [
+          "Chlamydia pneumoniae",
+          "Mycoplasma pneumoniae",
+          "Legionella bacilli",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 11
+      },
+      {
+        "q": "Pneumatocele is formed in pneumonia caused by:",
+        "o": [
+          "Staphylococcus aureus",
+          "Klebsiella pneumoniae",
+          "Streptococcal pneumonia",
+          "Mycoplasma pneumoniae"
+        ],
+        "c": 0,
+        "num": 12
+      },
+      {
+        "q": "In acute pneumonia the following is required except:",
+        "o": [
+          "Sputum examination",
+          "Chest X-ray",
+          "Pulmonary function test",
+          "Blood picture"
+        ],
+        "c": 2,
+        "num": 13
+      },
+      {
+        "q": "Most common cause of hospital acquired pneumonia:",
+        "o": [
+          "Gram +ve",
+          "Gram -ve",
+          "Atypical organism"
+        ],
+        "c": 1,
+        "num": 14
+      },
+      {
+        "q": "Drug of choice of pneumococcal pneumonia is the following except:",
+        "o": [
+          "Beta lactam antibiotics",
+          "Aminoglycoside",
+          "Sulphonamide"
+        ],
+        "c": 1,
+        "num": 15
+      },
+      {
+        "q": "All are the typical features of asthma except:",
+        "o": [
+          "Eosinophilic bronchial infiltration",
+          "Airway macrophage",
+          "Epithelial shedding",
+          "Goblet cell hypoplasia"
+        ],
+        "c": 3,
+        "num": 16
+      },
+      {
+        "q": "Which of the following is included in the category of obstructive lung diseases?",
+        "o": [
+          "Asthma",
+          "Bronchiectasis",
+          "Bronchiolitis",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 17
+      },
+      {
+        "q": "Acute shortness of breath is usually associated with?",
+        "o": [
+          "Myocardial infarction",
+          "Pulmonary embolism",
+          "Pneumothorax",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 18
+      },
+      {
+        "q": "Cough that persists for more than how many weeks is defined as chronic cough?",
+        "o": [
+          "2 weeks",
+          "4 weeks",
+          "6 weeks",
+          "8 weeks"
+        ],
+        "c": 3,
+        "num": 19
+      },
+      {
+        "q": "Chest pain caused by diseases of respiratory system usually originates from involvement of?",
+        "o": [
+          "Parietal pleura",
+          "Visceral pleura",
+          "Pulmonary parenchyma",
+          "Bronchial airways"
+        ],
+        "c": 0,
+        "num": 20
+      },
+      {
+        "q": "Which of the following is associated with smoking?",
+        "o": [
+          "Spontaneous pneumothorax",
+          "Respiratory bronchiolitis - interstitial lung disease",
+          "Pulmonary Langerhans cell histiocytosis",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 21
+      },
+      {
+        "q": "Asymmetric expansion of the chest is due to?",
+        "o": [
+          "Endobronchial obstruction of a large airway",
+          "Unilateral parenchymal or pleural disease",
+          "Unilateral phrenic nerve paralysis",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 22
+      },
+      {
+        "q": "Which of the following statements about asthma is false?",
+        "o": [
+          "10-12% adults and 15% children affected by asthma",
+          "Peak age of presentation is 3 years",
+          "Sex ratio in adults is equal",
+          "None of the above"
+        ],
+        "c": 1,
+        "num": 23
+      },
+      {
+        "q": "Which of the following about asthma is false?",
+        "o": [
+          "Most patients with asthma in affluent countries are atopic",
+          "Severity of asthma varies significantly within a patient",
+          "Onset of asthma in adulthood rarely become permanently asymptomatic",
+          "Inflammatory disease of airways"
+        ],
+        "c": 2,
+        "num": 24
+      },
+      {
+        "q": "Treatment of COPD exacerbation not include:",
+        "o": [
+          "Bronchodilators",
+          "Corticosteroids",
+          "Aminophylline",
+          "Antibiotics",
+          "Levothyroxine"
+        ],
+        "c": 4,
+        "num": 25
+      },
+      {
+        "q": "Signs of respiratory difficulty include:",
+        "o": [
+          "Working ala nasi and chest indrawings",
+          "Chest tenderness",
+          "Wide subcostal angle",
+          "Epigastric pulsations",
+          "Dullness in the lower lung zones"
+        ],
+        "c": 0,
+        "num": 26
+      },
+      {
+        "q": "Imaging of the chest in sarcoidosis may reveal:",
+        "o": [
+          "Bilateral hilar lymphadenopathy and parenchymal involvement",
+          "Pneumothorax",
+          "Pneumonia",
+          "Hydropneumothorax",
+          "Lung abscess"
+        ],
+        "c": 0,
+        "num": 27
+      },
+      {
+        "q": "In bronchial asthma:",
+        "o": [
+          "Reduced FEV1",
+          "Increased PCO2",
+          "Increased VC"
+        ],
+        "c": 0,
+        "num": 28
+      },
+      {
+        "q": "Breathing in bronchial asthma is:",
+        "o": [
+          "Harsh vesicular",
+          "Bronchial",
+          "Cavernous"
+        ],
+        "c": 0,
+        "num": 29
+      },
+      {
+        "q": "Main antibody in bronchial asthma is:",
+        "o": [
+          "Immunoglobulin G",
+          "Immunoglobulin M",
+          "Immunoglobulin E"
+        ],
+        "c": 2,
+        "num": 30
+      },
+      {
+        "q": "Intrinsic asthma is characterized by all except:",
+        "o": [
+          "Onset of adult life",
+          "High circulating IgE",
+          "Sputum eosinophilia",
+          "Good response to steroid"
+        ],
+        "c": 1,
+        "num": 31
+      },
+      {
+        "q": "Immune inflammatory cells in bronchial asthma:",
+        "o": [
+          "Eosinophilia",
+          "Mast cell",
+          "Both"
+        ],
+        "c": 2,
+        "num": 32
+      },
+      {
+        "q": "Bronchial asthma wheeze is:",
+        "o": [
+          "Inspiratory sibilant",
+          "Sonorous",
+          "Expiratory sibilant"
+        ],
+        "c": 2,
+        "num": 33
+      },
+      {
+        "q": "Spirometry of bronchial asthma reveals:",
+        "o": [
+          "Restriction",
+          "Obstructive",
+          "Both"
+        ],
+        "c": 1,
+        "num": 34
+      },
+      {
+        "q": "Which of the following is not seen in bronchial asthma:",
+        "o": [
+          "Dyspnea",
+          "Cough",
+          "Chest pain",
+          "Wheeze"
+        ],
+        "c": 2,
+        "num": 35
+      },
+      {
+        "q": "The following suggest severe bronchial asthma:",
+        "o": [
+          "Central cyanosis",
+          "Hyperinflated chest",
+          "Increased breath sound"
+        ],
+        "c": 0,
+        "num": 36
+      },
+      {
+        "q": "All drugs used in treatment of chronic persistent asthma except:",
+        "o": [
+          "Inhaled beta 2 agonist",
+          "Systemic steroids",
+          "Propranolol",
+          "Inhaled steroids"
+        ],
+        "c": 2,
+        "num": 37
+      },
+      {
+        "q": "In status asthmaticus which of the following is bad prognosis sign:",
+        "o": [
+          "Severe tachycardia",
+          "Central cyanosis",
+          "Absent wheeze",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 38
+      },
+      {
+        "q": "In emphysema there is encroachment on:",
+        "o": [
+          "Hepatic dullness",
+          "Cardiac dullness",
+          "Both"
+        ],
+        "c": 2,
+        "num": 39
+      },
+      {
+        "q": "The most common cause of community acquired pneumonia is:",
+        "o": [
+          "Group A streptococcus",
+          "Haemophilus influenzae",
+          "Streptococcus pneumoniae",
+          "Klebsiella pneumoniae",
+          "Mycoplasma pneumoniae"
+        ],
+        "c": 2,
+        "num": 40
+      },
+      {
+        "q": "Finger clubbing is caused by which of the following:",
+        "o": [
+          "Chronic bronchitis",
+          "Bronchiectasis",
+          "Viral pneumonia",
+          "Myocarditis",
+          "Chronic heart failure"
+        ],
+        "c": 1,
+        "num": 41
+      },
+      {
+        "q": "Increased TVF is due to one of the following:",
+        "o": [
+          "Pleural effusion",
+          "Lung consolidation",
+          "Pulmonary fibrosis",
+          "Pneumothorax",
+          "Lung collapse"
+        ],
+        "c": 1,
+        "num": 42
+      },
+      {
+        "q": "Suppurative syndrome is not characterized by which of the following:",
+        "o": [
+          "Excessive expectoration of foeted sputum",
+          "Finger clubbing",
+          "Bronchial hyper-reactivity",
+          "Cough exacerbated by special position",
+          "Treated by antibiotics"
+        ],
+        "c": 2,
+        "num": 43
+      },
+      {
+        "q": "Severity of exercise induced asthma depends on?",
+        "o": [
+          "Level of ventilation achieved",
+          "Temperature of environment",
+          "Humidity of inspired air",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 44
+      },
+      {
+        "q": "Which of the following is false about exercise induced asthma (EIA)?",
+        "o": [
+          "Begins after exercise has ended",
+          "Recovers spontaneously within 30 minutes",
+          "Best prevented by inhaled glucocorticoids",
+          "None of the above"
+        ],
+        "c": 2,
+        "num": 45
+      },
+      {
+        "q": "Which of the following is most common and characteristic feature of asthma?",
+        "o": [
+          "Cough",
+          "Nocturnal awakening with dyspnea and/or wheeze",
+          "Constriction feeling in chest",
+          "Perspiration"
+        ],
+        "c": 1,
+        "num": 46
+      },
+      {
+        "q": "Which of the following indicate severe and prolonged bronchial obstruction in asthma?",
+        "o": [
+          "High pitched wheezing",
+          "Visibly active accessory muscles of respiration",
+          "Paradoxical pulse",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 47
+      },
+      {
+        "q": "All of the following have relation with severity of asthma except?",
+        "o": [
+          "Respiratory rate",
+          "Pulsus paradoxus",
+          "Inability to speak",
+          "Use of accessory muscles of respiration"
+        ],
+        "c": 0,
+        "num": 48
+      },
+      {
+        "q": "Which of the following is not a bronchodilator drug?",
+        "o": [
+          "Beta2-adrenergic agonists",
+          "Anticholinergics",
+          "Inhaled Corticosteroids (ICSs)",
+          "Theophylline"
+        ],
+        "c": 2,
+        "num": 49
+      },
+      {
+        "q": "Actions of Beta 2 agonists include all except?",
+        "o": [
+          "Reduction in airway hyperresponsiveness (AHR)",
+          "Inhibition of mast cell mediator release",
+          "Reduction in plasma exudation",
+          "Inhibition of sensory nerve activation"
+        ],
+        "c": 2,
+        "num": 50
+      },
+      {
+        "q": "Treatment of choice in severely ill asthma patients with impending respiratory failure is?",
+        "o": [
+          "High dose short-acting inhaled beta2-agonists",
+          "High dose inhaled corticosteroids (ICSs)",
+          "Intravenous beta 2 agonists",
+          "Intravenous corticosteroids"
+        ],
+        "c": 3,
+        "num": 51
+      },
+      {
+        "q": "The most common reason for poor control of asthma is?",
+        "o": [
+          "Continued exposure to allergens",
+          "Use of cyclooxygenase (COX) inhibitors",
+          "Noncompliance with medication",
+          "Gastroesophageal reflux"
+        ],
+        "c": 2,
+        "num": 52
+      },
+      {
+        "q": "Cor-pulmonale means:",
+        "o": [
+          "Right ventricle failure due to mitral stenosis",
+          "Right ventricle failure due to left ventricle failure",
+          "Right ventricle failure due to lung disease",
+          "Right ventricle failure due to ventricular septal defect",
+          "LVH"
+        ],
+        "c": 2,
+        "num": 53
+      },
+      {
+        "q": "Sarcoidosis is a:",
+        "o": [
+          "Pulmonary disease",
+          "Neuro pulmonary",
+          "Multisystem disease",
+          "Cardiopulmonary disease",
+          "Hepatopulmonary"
+        ],
+        "c": 2,
+        "num": 54
+      },
+      {
+        "q": "Asymmetric expansion of the chest is due to:",
+        "o": [
+          "COPD",
+          "Bronchial asthma",
+          "Endobronchial obstruction of a large airway",
+          "Bronchopneumonia",
+          "Epiglottitis"
+        ],
+        "c": 2,
+        "num": 55
+      },
+      {
+        "q": "Causes of emphysema:",
+        "o": [
+          "Acute bronchitis",
+          "Pneumonia",
+          "Chronic bronchitis",
+          "Bronchial asthma"
+        ],
+        "c": 2,
+        "num": 56
+      },
+      {
+        "q": "Breath sound in emphysema:",
+        "o": [
+          "Diminished",
+          "Absent",
+          "Normal"
+        ],
+        "c": 0,
+        "num": 57
+      },
+      {
+        "q": "Alveolocapillary block may occur in:",
+        "o": [
+          "Chronic obstructive pulmonary disease",
+          "Interstitial lung disease",
+          "Both"
+        ],
+        "c": 1,
+        "num": 58
+      },
+      {
+        "q": "The specific diagnosis method in early chronic obstructive pulmonary disease:",
+        "o": [
+          "X-ray",
+          "Blood gases",
+          "Spirometry"
+        ],
+        "c": 2,
+        "num": 59
+      },
+      {
+        "q": "Mantoux test is used to diagnose:",
+        "o": [
+          "Tuberculosis",
+          "Systemic sclerosis",
+          "Sarcoidosis"
+        ],
+        "c": 0,
+        "num": 60
+      },
+      {
+        "q": "Sarcoidosis:",
+        "o": [
+          "Caseating granuloma",
+          "Non caseating granuloma",
+          "Both"
+        ],
+        "c": 1,
+        "num": 61
+      },
+      {
+        "q": "In sarcoidosis the following is present except:",
+        "o": [
+          "Erythema nodosum",
+          "Pleural effusion",
+          "Thrombocytosis"
+        ],
+        "c": 1,
+        "num": 62
+      },
+      {
+        "q": "Sarcoidosis occurs due to defective:",
+        "o": [
+          "Humoral immunity",
+          "Cell mediated immunity",
+          "Both"
+        ],
+        "c": 1,
+        "num": 63
+      },
+      {
+        "q": "Pulmonary infiltration in sarcoidosis occur in:",
+        "o": [
+          "Stage 1",
+          "Stage 2",
+          "Stage 3"
+        ],
+        "c": 1,
+        "num": 64
+      },
+      {
+        "q": "Which of the following is the most common of diseases of the respiratory system?",
+        "o": [
+          "Obstructive lung diseases",
+          "Restrictive disorders",
+          "Pulmonary vascular diseases",
+          "Neoplastic diseases of lung"
+        ],
+        "c": 0,
+        "num": 65
+      }
+    ]
+  },
+  {
+    "name": "GIT",
+    "questions": [
+      {
+        "q": "The most common cause of acute pancreatitis is:",
+        "o": [
+          "Gall stones",
+          "Medications",
+          "Trauma",
+          "ERCP",
+          "Hypertriglyceridemia"
+        ],
+        "c": 0,
+        "num": 1
+      },
+      {
+        "q": "Which of the following is the preferred therapy in mild ulcerative colitis confined to the rectum:",
+        "o": [
+          "Topical mesalazine given by suppository",
+          "Oral prednisone",
+          "Intravenous azathioprine",
+          "Hydrocortisone given by enema",
+          "Surgery"
+        ],
+        "c": 0,
+        "num": 2
+      },
+      {
+        "q": "The typical symptoms of GERD (Gastro-esophageal reflux) include:",
+        "o": [
+          "Regurgitation",
+          "Cough",
+          "Chest pain",
+          "Wheezing",
+          "Syncope"
+        ],
+        "c": 0,
+        "num": 3
+      },
+      {
+        "q": "One of clinical manifestations of irritable bowel syndrome is:",
+        "o": [
+          "Altered bowel habit",
+          "Fever",
+          "Iron deficiency anemia",
+          "Bloody diarrhea",
+          "Tenesmus"
+        ],
+        "c": 0,
+        "num": 4
+      },
+      {
+        "q": "Which of the following is the most common cause of ulcerative colitis-related mortality:",
+        "o": [
+          "Colonic adenocarcinoma",
+          "Toxic megacolon",
+          "Perforated colon",
+          "Colonic infarction",
+          "Bloody diarrhea"
+        ],
+        "c": 1,
+        "num": 5
+      },
+      {
+        "q": "Which of the following studies is used to help distinguish ulcerative colitis from infectious colitis in a patient with acute onset of bloody diarrhea?",
+        "o": [
+          "Radiography",
+          "Stool assays",
+          "Double-contrast barium enema",
+          "Mucosal biopsy",
+          "Erect abdominal x-ray"
+        ],
+        "c": 3,
+        "num": 6
+      },
+      {
+        "q": "The golden standard in establishing a diagnosis of GERD is:",
+        "o": [
+          "Endoscopy",
+          "Barium swallow",
+          "24-Hour pH monitoring",
+          "CT chest",
+          "Abdominal x-ray"
+        ],
+        "c": 2,
+        "num": 7
+      },
+      {
+        "q": "The following laboratory result will be found in chronic pancreatitis patients presented with maldigestion:",
+        "o": [
+          "Decreased serum trypsinogen level",
+          "High serum lipase",
+          "Increased fecal elastase",
+          "Hyperglycemia",
+          "High serum amylase"
+        ],
+        "c": 0,
+        "num": 8
+      },
+      {
+        "q": "Complications of GERD include which of the following:",
+        "o": [
+          "Barrett's esophagus",
+          "Esophageal perforation",
+          "Esophageal varices",
+          "Gastric ulceration",
+          "Duodenal ulceration"
+        ],
+        "c": 0,
+        "num": 9
+      },
+      {
+        "q": "The commonest cause of chronic pancreatitis in adulthood is:",
+        "o": [
+          "Cystic fibrosis",
+          "Hereditary chronic pancreatitis",
+          "Autoimmune pancreatitis",
+          "Alcohol",
+          "Congenital pancreatic anomalies"
+        ],
+        "c": 3,
+        "num": 10
+      },
+      {
+        "q": "Alarm features in a case of irritable bowel syndrome include:",
+        "o": [
+          "Age less than 30 years",
+          "Intermittent watery diarrhea",
+          "Regressive abdominal pain",
+          "Family history of irritable bowel syndrome",
+          "Unexplained weight loss"
+        ],
+        "c": 4,
+        "num": 11
+      },
+      {
+        "q": "Although any area of the GI system may be affected in Crohn disease, which of the following is the most common site of the chronic inflammatory process:",
+        "o": [
+          "Colon",
+          "Esophagus",
+          "Ileocecal region",
+          "Stomach",
+          "Oral cavity"
+        ],
+        "c": 2,
+        "num": 12
+      },
+      {
+        "q": "Reflux esophagitis without H. pylori infection is treated by:",
+        "o": [
+          "Omeprazole",
+          "Metronidazole",
+          "Ciprofloxacin",
+          "Tetracycline",
+          "Bismuth compounds"
+        ],
+        "c": 0,
+        "num": 13
+      },
+      {
+        "q": "Common feature of Crohn's disease is:",
+        "o": [
+          "Bleeding per rectum",
+          "Hepatitis",
+          "Anal fistula",
+          "Pneumonia",
+          "Dry cough"
+        ],
+        "c": 2,
+        "num": 14
+      },
+      {
+        "q": "Which of the following drugs is a recognized cause of pancreatitis:",
+        "o": [
+          "Amiodarone",
+          "Alendronate",
+          "Atenolol",
+          "Azathioprine",
+          "Paracetamol"
+        ],
+        "c": 3,
+        "num": 15
+      },
+      {
+        "q": "Causes of dull Traub's area is seen in all except:",
+        "o": [
+          "LT lobe hepatomegaly",
+          "Pancoast tumor",
+          "Pericardial effusion",
+          "Splenomegaly",
+          "Huge gastric tumor"
+        ],
+        "c": 1,
+        "num": 16
+      },
+      {
+        "q": "Which of the following about abdominal pain in IBS is false?",
+        "o": [
+          "Sleep deprivation is usual",
+          "Exacerbated by eating",
+          "Improved by passage of flatus or stools",
+          "Worsens during the premenstrual and menstrual phases"
+        ],
+        "c": 0,
+        "num": 17
+      },
+      {
+        "q": "Ulcerative colitis causes the following complication:",
+        "o": [
+          "Intestinal stricture",
+          "Peri-anal fistula",
+          "Toxic megacolon"
+        ],
+        "c": 2,
+        "num": 18
+      },
+      {
+        "q": "Complication of ulcerative colitis:",
+        "o": [
+          "Cancer colon",
+          "Polyneuritis",
+          "Edema of lower limb"
+        ],
+        "c": 0,
+        "num": 19
+      },
+      {
+        "q": "Bacillary dysentery can be differentiated from UC by:",
+        "o": [
+          "Barium enema",
+          "Stool smear",
+          "Stool culture",
+          "Sigmoidoscopy"
+        ],
+        "c": 2,
+        "num": 20
+      },
+      {
+        "q": "In ulcerative colitis the following drugs are used except:",
+        "o": [
+          "Salazopyrine",
+          "Methotrexate",
+          "Corticosteroids"
+        ],
+        "c": 1,
+        "num": 21
+      },
+      {
+        "q": "Retrosternal burn evoked by spicy food and relieved by nitroglycerin:",
+        "o": [
+          "Angina",
+          "Esophageal spasm",
+          "Neither"
+        ],
+        "c": 1,
+        "num": 22
+      },
+      {
+        "q": "GERD is complicated by:",
+        "o": [
+          "Esophageal varices",
+          "Barrett's esophagus",
+          "Esophageal perforation"
+        ],
+        "c": 1,
+        "num": 23
+      }
+    ]
+  },
+  {
+    "name": "Hepatology",
+    "questions": [
+      {
+        "q": "Aetiology of liver cirrhosis not include:",
+        "o": [
+          "Chronic viral hepatitis (B, C)",
+          "Hemochromatosis",
+          "Non-alcoholic fatty liver disease",
+          "Alpha-1-antitrypsin deficiency",
+          "Acute viral hepatitis (A)"
+        ],
+        "c": 4,
+        "num": 1
+      },
+      {
+        "q": "Female patient without known previous past history presented by marked elevation of Liver enzymes, Prolonged PT, Encephalopathy, the most likely diagnosis is:",
+        "o": [
+          "Fulminant hepatic failure",
+          "Gastroenteritis",
+          "Peptic ulcer disease",
+          "Bacterial pneumonia",
+          "Myocarditis"
+        ],
+        "c": 0,
+        "num": 2
+      },
+      {
+        "q": "Hepatic coma is not precipitated by:",
+        "o": [
+          "Hematemesis",
+          "Protein intake",
+          "Constipation",
+          "Spontaneous bacterial peritonitis",
+          "Hyperthyroidism"
+        ],
+        "c": 4,
+        "num": 3
+      },
+      {
+        "q": "All of the following is a feature of hepatocellular failure except:",
+        "o": [
+          "Foetor hepaticus",
+          "Flapping tremors",
+          "Ascites",
+          "Hematemesis"
+        ],
+        "c": 3,
+        "num": 4
+      },
+      {
+        "q": "Liver cell failure is characterized by all except:",
+        "o": [
+          "Spider nevi",
+          "Hypoalbuminemia",
+          "Esophageal varices",
+          "Jaundice"
+        ],
+        "c": 2,
+        "num": 5
+      },
+      {
+        "q": "Important sign in Liver cell failure:",
+        "o": [
+          "Flapping tremors",
+          "Fine tremors",
+          "Intention kinetic tremors"
+        ],
+        "c": 0,
+        "num": 6
+      },
+      {
+        "q": "Clinical manifestation of Liver cell failure include:",
+        "o": [
+          "Flapping tremors",
+          "Spider nevi",
+          "Hepatomegaly",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 7
+      },
+      {
+        "q": "All of the following are manifestations of liver cell failure except:",
+        "o": [
+          "Fever",
+          "Flapping tremors",
+          "Spider nevi",
+          "Arthritis"
+        ],
+        "c": 3,
+        "num": 8
+      },
+      {
+        "q": "All of the following are presentations of hepatic coma except:",
+        "o": [
+          "Asterixis",
+          "Absent deep reflex",
+          "Abnormal electrocardiogram",
+          "Increased ammonia"
+        ],
+        "c": 1,
+        "num": 9
+      },
+      {
+        "q": "In chronic active hepatitis one of the following is found:",
+        "o": [
+          "Deep jaundice",
+          "Splenomegaly",
+          "Intermittent fever",
+          "All of the above"
+        ],
+        "c": 3,
+        "num": 10
+      },
+      {
+        "q": "Hepatitis C infection:",
+        "o": [
+          "The virus belongs to DNA virus",
+          "Short incubation period",
+          "Patient are often asymptomatic",
+          "Chronic hepatitis is rare"
+        ],
+        "c": 2,
+        "num": 11
+      },
+      {
+        "q": "Hepatic failure may produce:",
+        "o": [
+          "Flapping tremors",
+          "Fine tremors",
+          "Intention kinetic tremors"
+        ],
+        "c": 0,
+        "num": 12
+      },
+      {
+        "q": "Treatment of autoimmune hepatitis include:",
+        "o": [
+          "Ribavirin",
+          "Interferon",
+          "Corticosteroids"
+        ],
+        "c": 2,
+        "num": 13
+      },
+      {
+        "q": "Serum of patient contains only anti Hepatitis B surface antibody, he is:",
+        "o": [
+          "Acutely infected by Hepatitis B",
+          "Suffering from chronic Hepatitis B infection",
+          "Vaccinated against Hepatitis B",
+          "Low level Hepatitis B surface Ag carrier"
+        ],
+        "c": 2,
+        "num": 14
+      },
+      {
+        "q": "Which hepatitis C genotype is common in Egypt:",
+        "o": [
+          "Genotype 1a",
+          "Genotype 1b",
+          "Genotype 2",
+          "Genotype 3",
+          "Genotype 4"
+        ],
+        "c": 4,
+        "num": 15
+      },
+      {
+        "q": "Which is false regarding Reye's syndrome?",
+        "o": [
+          "Mitochondrial dysfunction of liver",
+          "Salicylates may be responsible",
+          "There may be cerebral oedema",
+          "Survivors pass on to chronic liver disease"
+        ],
+        "c": 3,
+        "num": 16
+      },
+      {
+        "q": "All are recognised complications of acute viral hepatitis except:",
+        "o": [
+          "Polyarteritis nodosa",
+          "Aplastic anaemia",
+          "Meningitis",
+          "Myocarditis"
+        ],
+        "c": 2,
+        "num": 17
+      }
+    ]
+  },
+  {
+    "name": "Blood",
+    "questions": [
+      {
+        "q": "In treatment of megaloblastic anemia:",
+        "o": [
+          "Folic acid should be given before Vit B12",
+          "Vit B12 should be given before folic acid",
+          "Given together",
+          "Oral iron should be given at first",
+          "Iron chelating agents are needed"
+        ],
+        "c": 1,
+        "num": 1
+      },
+      {
+        "q": "Which of the following is associated with splenomegaly:",
+        "o": [
+          "Chronic renal failure",
+          "Aplastic anemia",
+          "Hereditary spherocytosis",
+          "Sickle cell anemia",
+          "Iron deficiency anemia"
+        ],
+        "c": 2,
+        "num": 2
+      },
+      {
+        "q": "Iron deficiency anemia may be caused by:",
+        "o": [
+          "Chronic blood loss",
+          "Folic acid deficiency",
+          "Vit B12 deficiency",
+          "Auto-anti-bodies",
+          "Hemoglobin abnormalities"
+        ],
+        "c": 0,
+        "num": 3
+      },
+      {
+        "q": "The hallmark of aplastic anemia:",
+        "o": [
+          "Low platelets",
+          "Low RBCs",
+          "Low WBCs",
+          "Pancytopenia",
+          "Increased RBCs"
+        ],
+        "c": 3,
+        "num": 4
+      },
+      {
+        "q": "Complication of hemolytic anemia may include:",
+        "o": [
+          "Gall stone",
+          "Renal failure",
+          "HTN",
+          "DM",
+          "Lymphoma"
+        ],
+        "c": 0,
+        "num": 5
+      },
+      {
+        "q": "Red cell osmotic fragility is increased in:",
+        "o": [
+          "Thalassemia major",
+          "Hereditary spherocytosis",
+          "Iron deficiency anemia",
+          "HbC disease",
+          "Megaloblastic anemia"
+        ],
+        "c": 1,
+        "num": 6
+      },
+      {
+        "q": "Coombs test diagnose:",
+        "o": [
+          "Thalassemia",
+          "Iron deficiency anemia",
+          "Sickle cell anemia",
+          "Autoimmune hemolytic anemia",
+          "Megaloblastic anemia"
+        ],
+        "c": 3,
+        "num": 7
+      },
+      {
+        "q": "Hemolytic anemia is characterized by the following except:",
+        "o": [
+          "Hemolytic jaundice",
+          "Gall stone",
+          "Hemolytic crisis",
+          "Normal life span of red cell",
+          "Increased urinary urobilinogen"
+        ],
+        "c": 3,
+        "num": 8
+      }
+    ]
+  },
+  {
+    "name": "Neuro",
+    "questions": [
+      {
+        "q": "After post ictal stage, sequale of prolonged sleep and paralysis due to neuronal exhaustion is:",
+        "o": [
+          "Todd's paralysis",
+          "Hypoglycaemia",
+          "Migraine",
+          "Hemiplegia",
+          "Sweating"
+        ],
+        "c": 0,
+        "num": 1
+      },
+      {
+        "q": "18 years old female presented by acute fever, headache, neck stiffness, lumbar puncture revealed (increased tension, turbidity, many leucocytes, Gram negative diplococci), the most likely diagnosis is:",
+        "o": [
+          "Meningococcal meningitis",
+          "Multiple sclerosis",
+          "Viral Encephalitis",
+          "Increased intracranial tension",
+          "Seizures"
+        ],
+        "c": 0,
+        "num": 2
+      },
+      {
+        "q": "Syncope most often occur secondary to:",
+        "o": [
+          "Temporary cerebral ischemia",
+          "Increased intracranial tension",
+          "Heart attack",
+          "Stroke",
+          "Hypervolemia"
+        ],
+        "c": 0,
+        "num": 3
+      },
+      {
+        "q": "Epilepsy means:",
+        "o": [
+          "One attack of convulsion",
+          "Recurrent attacks of convulsions",
+          "No attack of convulsions",
+          "Hysterical convulsions",
+          "Severe weakness"
+        ],
+        "c": 1,
+        "num": 4
+      },
+      {
+        "q": "Which of the following is the surest sign of upper motor neurone (pyramidal) lesion:",
+        "o": [
+          "Unsteadiness",
+          "Organic clonus",
+          "Facial pain",
+          "Hemihyposthesia",
+          "Fits"
+        ],
+        "c": 1,
+        "num": 5
+      },
+      {
+        "q": "The following criterion is not present in upper motor neurone lesion:",
+        "o": [
+          "Clasp knife spasticity",
+          "Extensor plantar response",
+          "Organic clonus",
+          "Pathological reflexes",
+          "Marked wasting and fasciculation"
+        ],
+        "c": 4,
+        "num": 6
+      },
+      {
+        "q": "Male patient presented by archicerebellar affection, upper motor neurone lesion and peripheral neuropathy and positive family history, the most probable diagnosis is:",
+        "o": [
+          "Friedrich's ataxia",
+          "Bell's palsy",
+          "Huntington chorea",
+          "Cerebral palsy",
+          "Hemiplegia"
+        ],
+        "c": 0,
+        "num": 7
+      },
+      {
+        "q": "A patient presented by hemiplegia of sudden onset, the most probable aetiology is:",
+        "o": [
+          "Embolic",
+          "Neoplastic",
+          "Haemorrhagic",
+          "Thrombotic",
+          "Degenerative"
+        ],
+        "c": 0,
+        "num": 8
+      },
+      {
+        "q": "Which of the following drugs is used in the treatment of status epilepticus:",
+        "o": [
+          "Loading dose of Phenytoin (20 mg/kg)",
+          "NSAIDS",
+          "Vitamin B complex",
+          "L-Dopa",
+          "Anti-thyroid drugs"
+        ],
+        "c": 0,
+        "num": 9
+      },
+      {
+        "q": "Sign of upper motor neurone lesions are:",
+        "o": [
+          "Hypotonia",
+          "Clonus",
+          "Both"
+        ],
+        "c": 1,
+        "num": 10
+      },
+      {
+        "q": "Which is not a feature of upper motor neurone lesions:",
+        "o": [
+          "Spasticity",
+          "Clonus",
+          "Babinski sign",
+          "Fasciculation"
+        ],
+        "c": 3,
+        "num": 11
+      },
+      {
+        "q": "Hypertonia is a feature of all except:",
+        "o": [
+          "Tetany",
+          "Upper motor neurone palsy",
+          "Chorea",
+          "Myotonia"
+        ],
+        "c": 2,
+        "num": 12
+      },
+      {
+        "q": "Hypotonia is caused by all except:",
+        "o": [
+          "Upper motor neurone lesions",
+          "Lower motor neurone lesions",
+          "Rheumatic chorea",
+          "Parkinsonism"
+        ],
+        "c": 0,
+        "num": 13
+      },
+      {
+        "q": "Sure sign of pyramidal tract lesion are except:",
+        "o": [
+          "Clonus",
+          "Flexor plantar reflex",
+          "Extensor plantar reflex"
+        ],
+        "c": 1,
+        "num": 14
+      },
+      {
+        "q": "Pyramidal tract lesion may be associated with the following sign except:",
+        "o": [
+          "Ankle clonus",
+          "Babinski sign",
+          "Clasp knife spasticity",
+          "Cogwheel rigidity"
+        ],
+        "c": 3,
+        "num": 15
+      },
+      {
+        "q": "All of the following are causes of hypertonia except:",
+        "o": [
+          "Pott's disease",
+          "Syringomyelia",
+          "Shock stage",
+          "Disc prolapse"
+        ],
+        "c": 2,
+        "num": 16
+      },
+      {
+        "q": "Brown-Sequard syndrome is characterized by:",
+        "o": [
+          "Contralateral deep sensory loss",
+          "Ipsilateral superficial sensory loss",
+          "Ipsilateral hemiplegia",
+          "Contralateral hemiplegia"
+        ],
+        "c": 2,
+        "num": 17
+      },
+      {
+        "q": "Transient hemiplegia occurs in:",
+        "o": [
+          "Disseminated sclerosis",
+          "Mitral stenosis",
+          "Cerebral thrombosis"
+        ],
+        "c": 1,
+        "num": 18
+      },
+      {
+        "q": "Causes of transient hemiplegia:",
+        "o": [
+          "Motor neurone disease",
+          "Subacute combined degeneration",
+          "Todd's paralysis"
+        ],
+        "c": 2,
+        "num": 19
+      },
+      {
+        "q": "Capsular hemiplegia is presented by except:",
+        "o": [
+          "Complete hemiplegia",
+          "Hypo-reflexia",
+          "Extensor plantar reflex"
+        ],
+        "c": 1,
+        "num": 20
+      },
+      {
+        "q": "Crossed hemiplegia indicate site of lesion in:",
+        "o": [
+          "Internal capsule",
+          "Cortex",
+          "Brain stem",
+          "Cervical spine"
+        ],
+        "c": 2,
+        "num": 21
+      },
+      {
+        "q": "Weber's syndrome in crossed hemiplegia with involvement of:",
+        "o": [
+          "Facial nerve",
+          "Abducent nerve",
+          "Oculomotor nerve",
+          "Vagus nerve"
+        ],
+        "c": 2,
+        "num": 22
+      },
+      {
+        "q": "Which of the following is involved earliest in diphtheritic neuropathy?",
+        "o": [
+          "Loss of accommodation",
+          "Polyneuropathy",
+          "Paralysis of soft palate",
+          "Abducent palsy"
+        ],
+        "c": 2,
+        "num": 23
+      },
+      {
+        "q": "Management of choice in Guillain-Barre syndrome is:",
+        "o": [
+          "Immunoglobulin",
+          "Cyclophosphamide",
+          "Corticosteroid",
+          "Interferon"
+        ],
+        "c": 0,
+        "num": 24
+      },
+      {
+        "q": "All of the following produce mononeuritis multiplex except:",
+        "o": [
+          "Polyarteritis nodosa",
+          "Sarcoidosis",
+          "Rheumatoid arthritis",
+          "Infectious mononucleosis"
+        ],
+        "c": 3,
+        "num": 25
+      },
+      {
+        "q": "Peripheral neuropathy associated with hypertension is found in:",
+        "o": [
+          "Acute intermittent porphyria",
+          "Amyloidosis",
+          "TOCP poisoning",
+          "Pyridoxine deficiency"
+        ],
+        "c": 0,
+        "num": 26
+      },
+      {
+        "q": "Myopathy is best diagnosed by:",
+        "o": [
+          "Muscle enzyme study",
+          "Nerve conduction study",
+          "Muscle biopsy",
+          "Electromyography"
+        ],
+        "c": 2,
+        "num": 27
+      },
+      {
+        "q": "All of the following statements about Guillain-Barre Syndrome are true, except:",
+        "o": [
+          "Inflammatory",
+          "Demyelinating",
+          "Descending",
+          "Cranial nerve involvement"
+        ],
+        "c": 2,
+        "num": 28
+      },
+      {
+        "q": "Regarding acute transverse myelitis which is false:",
+        "o": [
+          "Viral or post vaccinate",
+          "Bladder involvement is very late",
+          "Absence of root pain",
+          "Definite upper level of sensory loss"
+        ],
+        "c": 1,
+        "num": 29
+      },
+      {
+        "q": "All of the following can occur in Motor neuron disease except:",
+        "o": [
+          "Lateral sclerosing",
+          "Pseudobulbar palsy",
+          "Progressive muscular atrophy",
+          "Peripheral neuropathy"
+        ],
+        "c": 3,
+        "num": 30
+      },
+      {
+        "q": "Diabetic autonomic peripheral neuropathy characterized by all the following except:",
+        "o": [
+          "Postural hypotension",
+          "Quadriceps wasting",
+          "Impotence",
+          "Gastro-paresis diabeticorum"
+        ],
+        "c": 1,
+        "num": 31
+      },
+      {
+        "q": "Myasthenia gravis can be treated by the following except:",
+        "o": [
+          "Corticosteroids",
+          "Thymectomy",
+          "Atropine",
+          "Prostigmine"
+        ],
+        "c": 2,
+        "num": 32
+      },
+      {
+        "q": "The following lesion occur in Motor neurone disease:",
+        "o": [
+          "Pyramidal",
+          "Cerebellar",
+          "Peripheral nerve"
+        ],
+        "c": 0,
+        "num": 33
+      },
+      {
+        "q": "Signs of motor neuron disease:",
+        "o": [
+          "Polyneuritis",
+          "Fasciculation",
+          "CNS affection"
+        ],
+        "c": 1,
+        "num": 34
+      },
+      {
+        "q": "Syncope is most likely to occur when the patient is:",
+        "o": [
+          "Sitting",
+          "Supine",
+          "Standing",
+          "Kneeling",
+          "Lying down"
+        ],
+        "c": 2,
+        "num": 35
+      },
+      {
+        "q": "According to anti-convulsion drugs, one of them has gum hyperplasia as side effect:",
+        "o": [
+          "Epanutin (Phenytoin)",
+          "Diazepam",
+          "Carbamazepine",
+          "Valproate",
+          "Clonazepam"
+        ],
+        "c": 0,
+        "num": 36
+      },
+      {
+        "q": "Signs of cerebellar ataxia does not include:",
+        "o": [
+          "Staccato speech",
+          "Staggering gait",
+          "Nystagmus",
+          "Dysdiadochokinesis",
+          "Extensor plantar response"
+        ],
+        "c": 4,
+        "num": 37
+      }
+    ]
+  }
+]

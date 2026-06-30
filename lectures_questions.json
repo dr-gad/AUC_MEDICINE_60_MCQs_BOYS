@@ -1,0 +1,1558 @@
+{
+  "sources": [
+    {
+      "id": "src-lectures",
+      "name": "أسئلة الدكاترة في المحاضرات"
+    },
+    {
+      "id": "src-allam",
+      "name": "أسئلة د علام"
+    },
+    {
+      "id": "src-old-dept",
+      "name": "ملف القسم القديم"
+    },
+    {
+      "id": "src-old-book",
+      "name": "كتاب القسم القديم"
+    },
+    {
+      "id": "src-em-2025",
+      "name": "EM 2025"
+    },
+    {
+      "id": "src-es-2025",
+      "name": "ES 2025"
+    },
+    {
+      "id": "src-em-2024",
+      "name": "EM 2024"
+    },
+    {
+      "id": "src-es-2024",
+      "name": "ES 2024"
+    },
+    {
+      "id": "src-em-2023",
+      "name": "EM 2023"
+    },
+    {
+      "id": "src-es-2023",
+      "name": "ES 2023"
+    },
+    {
+      "id": "src-em-2022",
+      "name": "EM 2022"
+    },
+    {
+      "id": "src-es-2022",
+      "name": "ES 2022"
+    },
+    {
+      "id": "src-em-2021",
+      "name": "EM 2021"
+    },
+    {
+      "id": "src-es-2021",
+      "name": "ES 2021"
+    }
+  ],
+  "medical_sections": [
+    {
+      "id": "sec-cardiology",
+      "name": "Cardiology"
+    },
+    {
+      "id": "sec-chest",
+      "name": "Chest"
+    },
+    {
+      "id": "sec-git",
+      "name": "GIT"
+    },
+    {
+      "id": "sec-hepatology",
+      "name": "Hepatology"
+    },
+    {
+      "id": "sec-blood",
+      "name": "Blood"
+    },
+    {
+      "id": "sec-neuro",
+      "name": "Neuro"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-lectures-001",
+      "type": "mcq",
+      "text": "Chronic hepatitis is liver disease lasts for more than:",
+      "normalized_text": "chronic hepatitis is liver disease lasts for more than:",
+      "medical_section_id": "sec-hepatology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "4 Weeks",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "3 months",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "6 Months",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "7 months",
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "text": "one year",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-002",
+      "type": "mcq",
+      "text": "The most common cause of chromic viral hepatitis worldwide is:",
+      "normalized_text": "the most common cause of chromic viral hepatitis worldwide is:",
+      "medical_section_id": "sec-hepatology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "chronic hepatis C",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "chronic hepatis A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Chronic hepatis E",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Chronic hepatis B",
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "text": "chronic hepatitis D",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-003",
+      "type": "mcq",
+      "text": "Acute hepatis B in adult progresse to chronic hepatis B in:",
+      "normalized_text": "acute hepatis b in adult progresse to chronic hepatis b in:",
+      "medical_section_id": "sec-hepatology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "3% of cases",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "5% f cases",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "10% of cases",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "20% of cases",
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "text": "50% of cases",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-004",
+      "type": "mcq",
+      "text": "Steatosis is accumulation of fat in the liver more than:",
+      "normalized_text": "steatosis is accumulation of fat in the liver more than:",
+      "medical_section_id": "sec-hepatology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "2% of liver weight",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "5% f liver weight",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "10% of liver weight",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "205 of liver weight",
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "text": "30% of liver weight",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-005",
+      "type": "mcq",
+      "text": "Acute hepatitis C progress to chronic hepatitis cin:",
+      "normalized_text": "acute hepatitis c progress to chronic hepatitis cin:",
+      "medical_section_id": "sec-hepatology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "20% of cases",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "40% Of cases",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "50% of cases",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "80% of cases",
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "text": "100% of cases",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-006",
+      "type": "mcq",
+      "text": "Histological assessment of chronic hepatitis depends on:",
+      "normalized_text": "histological assessment of chronic hepatitis depends on:",
+      "medical_section_id": "sec-hepatology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "degree of fibroses",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "degree of inflammation",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "degree of fibroses and inflammation",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "degree of cirrhosis",
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "text": "duration of hepatitis",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-007",
+      "type": "mcq",
+      "text": "the drug used to treat chronic hepatis B is;",
+      "normalized_text": "the drug used to treat chronic hepatis b is;",
+      "medical_section_id": "sec-hepatology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Faburic acid",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Sofosbuvir",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Tenofovir",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Amoxicillin",
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "text": "Corticosteroid",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-008",
+      "type": "mcq",
+      "text": "About 2/3 cases of chronic hepatitis presented by:",
+      "normalized_text": "about 2/3 cases of chronic hepatitis presented by:",
+      "medical_section_id": "sec-hepatology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Severe symptoms",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "No symptoms",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Cirrhosis",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Hepatocellular carcinoma",
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "text": "Jaundice",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-009",
+      "type": "fill_blank",
+      "text": "The gold standard test for diagnosis of PE is",
+      "normalized_text": "the gold standard test for diagnosis of pe is",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [],
+      "correct_answer_text": "CT Pulmonary Angiographry",
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-010",
+      "type": "fill_blank",
+      "text": "The most common sign of PE in ECG is",
+      "normalized_text": "the most common sign of pe in ecg is",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [],
+      "correct_answer_text": "Sinus tchycardia - S1Q3T3 pattern",
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-011",
+      "type": "mcq",
+      "text": "The prevalence of hypertension vary among countries and among subpopulations within a country because of:",
+      "normalized_text": "the prevalence of hypertension vary among countries and among subpopulations within a country because of:",
+      "medical_section_id": "sec-cardiology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Genetic factors",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "social factors",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Both genetic and environmental factors",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Psychic stress",
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "text": "Immunological factors",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-012",
+      "type": "mcq",
+      "text": "One of strong and independent factors for hypertension is:-",
+      "normalized_text": "one of strong and independent factors for hypertension is:-",
+      "medical_section_id": "sec-cardiology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "High dietary intake of K",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Obesity and overweight",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "High levels of physical exercise",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Low sodium intake",
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "text": "Excess water intake",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-013",
+      "type": "mcq",
+      "text": "The primary determinant of extracellular fluid volume is:-",
+      "normalized_text": "the primary determinant of extracellular fluid volume is:-",
+      "medical_section_id": "sec-cardiology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Sodium",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Calcium",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Potassium",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Glucose",
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "text": "Magnesium",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-014",
+      "type": "mcq",
+      "text": "The most important example for hypertension related to increased catecholamine production is:-",
+      "normalized_text": "the most important example for hypertension related to increased catecholamine production is:-",
+      "medical_section_id": "sec-cardiology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Primary hypertension",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Renovascular hypertension",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Pheochromocytoma",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Cushing syndrome",
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "text": "Primary hyperaldosteronism",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-015",
+      "type": "mcq",
+      "text": "RAAS regulates arterial pressure primarily through:-",
+      "normalized_text": "raas regulates arterial pressure primarily through:-",
+      "medical_section_id": "sec-cardiology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Nitric oxide production",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Angiotensin 2 and aldosterone",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "Epinephrine",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Endothelin production",
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "text": "Dopamine production",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-016",
+      "type": "mcq",
+      "text": "Pathological consequences of hypertension involve the following organs:",
+      "normalized_text": "pathological consequences of hypertension involve the following organs:",
+      "medical_section_id": "sec-cardiology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Heart, brain, Kidneys and peripheral arteries",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Stomach, small intestine and pancreas",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Muscles",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Liver and bile ducts",
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "text": "Peripheral nerves",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-017",
+      "type": "mcq",
+      "text": "To Establish the diagnosis of hypertension we should:-",
+      "normalized_text": "to establish the diagnosis of hypertension we should:-",
+      "medical_section_id": "sec-cardiology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Repeat BP measurement",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Depend on symptoms",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Measure once only",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Use arterial pulse",
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "text": "Cardiac sounds",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-018",
+      "type": "mcq",
+      "text": "All Hypertensive patients should be classified not only according to grades of hypertension but also in terms of:-",
+      "normalized_text": "all hypertensive patients should be classified not only according to grades of hypertension but also in terms of:-",
+      "medical_section_id": "sec-cardiology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Total cardiovascular risk",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Albumin level",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Insulin level",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Na+ level",
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "text": "Calcium level",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-019",
+      "type": "mcq",
+      "text": "One of the most reliable markers for renal injury and cardiovascular disease is:",
+      "normalized_text": "one of the most reliable markers for renal injury and cardiovascular disease is:",
+      "medical_section_id": "sec-cardiology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Urea level",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "abnormal albumin excretion(albumin/creat ratio)",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "K+ level",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Abnormal ECG",
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "text": "Hematuria",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-020",
+      "type": "mcq",
+      "text": "The initiation of antihypertensive drugs should be according to:-",
+      "normalized_text": "the initiation of antihypertensive drugs should be according to:-",
+      "medical_section_id": "sec-cardiology",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "The level of CV risk, SBP and DBP",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "SBP only",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "DBP",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Cardiac sounds",
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "text": "Albumin level",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-021",
+      "type": "mcq",
+      "text": "One of the following is not a marker of the severity of community acquired pneumonia:",
+      "normalized_text": "one of the following is not a marker of the severity of community acquired pneumonia:",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Chest X-ray: more than one lobe involved",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Normal albumin",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "White cell count (<4 × 109/L or >20 × 109/L)",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Blood culture - positive",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-022",
+      "type": "mcq",
+      "text": "One of the following is not a Causes of slow-resolving pneumonia:",
+      "normalized_text": "one of the following is not a causes of slow-resolving pneumonia:",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Bronchiectasis",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Tuberculosis",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Adequate antibiotic dose/duration",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Non-adherence",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-023",
+      "type": "mcq",
+      "text": "In streptococcus pneumonia one statement is false:",
+      "normalized_text": "in streptococcus pneumonia one statement is false:",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Insidious onset,",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Cough with rust coloured sputum",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "High fevers and",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Pleuritic chest pain common",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-024",
+      "type": "mcq",
+      "text": "Of the following Organism is not implicated in hospital acquired pneumonia:",
+      "normalized_text": "of the following organism is not implicated in hospital acquired pneumonia:",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Gram-negative bacteria (Pseudomonas spp., Escherichia spp., Klebsiella spp.)",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Anaerobic bacteria (Enterobacter spp.)",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Staphylococcus aureus (including MRSA)",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Mycoplasma pneumonia",
+          "is_correct": true
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-025",
+      "type": "mcq",
+      "text": "As regards Legionnaire's disease of following statement is true:",
+      "normalized_text": "as regards legionnaire's disease of following statement is true:",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Causes more severe disease with need for early intensive care.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Usually acquired by inhaling bacteria droplets.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Neurological symptoms infrequently seen,",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Elevated creatine kinase is not present.",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-026",
+      "type": "mcq",
+      "text": "Is it possible to have both asthma and COPD?",
+      "normalized_text": "is it possible to have both asthma and copd?",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "YES",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "NO",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-027",
+      "type": "mcq",
+      "text": "What is true about peoples with COPD?",
+      "normalized_text": "what is true about peoples with copd?",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "people with COPD experience more headach",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "people with COPD are infertile",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "people with COPD burn more calories",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "people with COPD tend to be short",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-028",
+      "type": "mcq",
+      "text": "which of the following is a diagnostic for COPD?",
+      "normalized_text": "which of the following is a diagnostic for copd?",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "postbronchodilator FV1 improvement less than 15%",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "postbronchodilator FV1/FVC less than 0.7",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "wheezy chest, cough and dyspnoea",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "cyanosis",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-029",
+      "type": "mcq",
+      "text": "which of the following is not considered as a risk factor for COPD?",
+      "normalized_text": "which of the following is not considered as a risk factor for copd?",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Infant lung infection",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Asthma",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Alpha 1 anti trypsin deficiency",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "obesity",
+          "is_correct": true
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-030",
+      "type": "mcq",
+      "text": "What is the most prevalent symptoms in patients with COPD have?",
+      "normalized_text": "what is the most prevalent symptoms in patients with copd have?",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "musculoskletal pain",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "Fatigue",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Burising",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "heart burn",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-031",
+      "type": "mcq",
+      "text": "is it true that in COPD patients use of opioids can increase the risk of ischaemia heart disease ?",
+      "normalized_text": "is it true that in copd patients use of opioids can increase the risk of ischaemia heart disease ?",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "True.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "text": "false",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-032",
+      "type": "mcq",
+      "text": "What is the risk factor for COPD exacerbation?",
+      "normalized_text": "what is the risk factor for copd exacerbation?",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "FV1 less than 30%",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Pneumonia",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "previous exacerbation",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "heart failure",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-033",
+      "type": "mcq",
+      "text": "What is the indication of phosphodiesterase E 4 inhibitor in COPD?",
+      "normalized_text": "what is the indication of phosphodiesterase e 4 inhibitor in copd?",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Heart failure",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Bronchiectasis",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Chronic bronchitis and history of exacerbation",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "Pneumonia",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-034",
+      "type": "mcq",
+      "text": "what is the indication of long term oxygen therapy in COPD?",
+      "normalized_text": "what is the indication of long term oxygen therapy in copd?",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Exercise induced arterial desaturation",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Co-morbidities with ischaemia heart",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "text": "Hypoxaemia less than 55% pao2 and less than 88 %Sao2",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "text": "FV1 Less than 35 %",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    },
+    {
+      "id": "q-lectures-035",
+      "type": "mcq",
+      "text": "Which of the following is contraindication for endoscopic one valve lung reduction volume surgery?",
+      "normalized_text": "which of the following is contraindication for endoscopic one valve lung reduction volume surgery?",
+      "medical_section_id": "sec-chest",
+      "source_ids": [
+        "src-lectures"
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "Diffuse emphysema",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "text": "Presence of collateral ventilation",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "text": "FV1 more than 30%",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "text": "Right side heart enlargment",
+          "is_correct": false
+        }
+      ],
+      "correct_answer_text": null,
+      "stats": {
+        "correct_count": 0,
+        "wrong_count": 0,
+        "seen_count": 0,
+        "skipped_count": 0
+      },
+      "is_favorite": false,
+      "explanation": null
+    }
+  ],
+  "meta": {
+    "total_questions": 35,
+    "mcq_count": 33,
+    "fill_blank_count": 2,
+    "source": "src-lectures",
+    "file": "أسئلة_الدكاترة.docx"
+  }
+}

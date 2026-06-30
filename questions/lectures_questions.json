@@ -1,0 +1,418 @@
+[
+  {
+    "name": "Cardiology",
+    "questions": [
+      {
+        "q": "The prevalence of hypertension vary among countries and among subpopulations within a country because of:",
+        "o": [
+          "Genetic factors",
+          "social factors",
+          "Both genetic and environmental factors",
+          "Psychic stress",
+          "Immunological factors"
+        ],
+        "c": 2,
+        "num": 1
+      },
+      {
+        "q": "One of strong and independent factors for hypertension is:-",
+        "o": [
+          "High dietary intake of K",
+          "Obesity and overweight",
+          "High levels of physical exercise",
+          "Low sodium intake",
+          "Excess water intake"
+        ],
+        "c": 1,
+        "num": 2
+      },
+      {
+        "q": "The primary determinant of extracellular fluid volume is:-",
+        "o": [
+          "Sodium",
+          "Calcium",
+          "Potassium",
+          "Glucose",
+          "Magnesium"
+        ],
+        "c": 0,
+        "num": 3
+      },
+      {
+        "q": "The most important example for hypertension related to increased catecholamine production is:-",
+        "o": [
+          "Primary hypertension",
+          "Renovascular hypertension",
+          "Pheochromocytoma",
+          "Cushing syndrome",
+          "Primary hyperaldosteronism"
+        ],
+        "c": 2,
+        "num": 4
+      },
+      {
+        "q": "RAAS regulates arterial pressure primarily through:-",
+        "o": [
+          "Nitric oxide production",
+          "Angiotensin 2 and aldosterone",
+          "Epinephrine",
+          "Endothelin production",
+          "Dopamine production"
+        ],
+        "c": 1,
+        "num": 5
+      },
+      {
+        "q": "Pathological consequences of hypertension involve the following organs:",
+        "o": [
+          "Heart, brain, Kidneys and peripheral arteries",
+          "Stomach, small intestine and pancreas",
+          "Muscles",
+          "Liver and bile ducts",
+          "Peripheral nerves"
+        ],
+        "c": 0,
+        "num": 6
+      },
+      {
+        "q": "To Establish the diagnosis of hypertension we should:-",
+        "o": [
+          "Repeat BP measurement",
+          "Depend on symptoms",
+          "Measure once only",
+          "Use arterial pulse",
+          "Cardiac sounds"
+        ],
+        "c": 0,
+        "num": 7
+      },
+      {
+        "q": "All Hypertensive patients should be classified not only according to grades of hypertension but also in terms of:-",
+        "o": [
+          "Total cardiovascular risk",
+          "Albumin level",
+          "Insulin level",
+          "Na+ level",
+          "Calcium level"
+        ],
+        "c": 0,
+        "num": 8
+      },
+      {
+        "q": "One of the most reliable markers for renal injury and cardiovascular disease is:",
+        "o": [
+          "Urea level",
+          "abnormal albumin excretion(albumin/creat ratio)",
+          "K+ level",
+          "Abnormal ECG",
+          "Hematuria"
+        ],
+        "c": 1,
+        "num": 9
+      },
+      {
+        "q": "The initiation of antihypertensive drugs should be according to:-",
+        "o": [
+          "The level of CV risk, SBP and DBP",
+          "SBP only",
+          "DBP",
+          "Cardiac sounds",
+          "Albumin level"
+        ],
+        "c": 0,
+        "num": 10
+      }
+    ]
+  },
+  {
+    "name": "Chest",
+    "questions": [
+      {
+        "q": "The gold standard test for diagnosis of PE is",
+        "o": [],
+        "c": -1,
+        "num": 1
+      },
+      {
+        "q": "The most common sign of PE in ECG is",
+        "o": [],
+        "c": -1,
+        "num": 2
+      },
+      {
+        "q": "One of the following is not a marker of the severity of community acquired pneumonia:",
+        "o": [
+          "Chest X-ray: more than one lobe involved",
+          "Normal albumin",
+          "White cell count (<4 × 109/L or >20 × 109/L)",
+          "Blood culture - positive"
+        ],
+        "c": 1,
+        "num": 3
+      },
+      {
+        "q": "One of the following is not a Causes of slow-resolving pneumonia:",
+        "o": [
+          "Bronchiectasis",
+          "Tuberculosis",
+          "Adequate antibiotic dose/duration",
+          "Non-adherence"
+        ],
+        "c": 2,
+        "num": 4
+      },
+      {
+        "q": "In streptococcus pneumonia one statement is false:",
+        "o": [
+          "Insidious onset,",
+          "Cough with rust coloured sputum",
+          "High fevers and",
+          "Pleuritic chest pain common"
+        ],
+        "c": 0,
+        "num": 5
+      },
+      {
+        "q": "Of the following Organism is not implicated in hospital acquired pneumonia:",
+        "o": [
+          "Gram-negative bacteria (Pseudomonas spp., Escherichia spp., Klebsiella spp.)",
+          "Anaerobic bacteria (Enterobacter spp.)",
+          "Staphylococcus aureus (including MRSA)",
+          "Mycoplasma pneumonia"
+        ],
+        "c": 3,
+        "num": 6
+      },
+      {
+        "q": "As regards Legionnaire's disease of following statement is true:",
+        "o": [
+          "Causes more severe disease with need for early intensive care.",
+          "Usually acquired by inhaling bacteria droplets.",
+          "Neurological symptoms infrequently seen,",
+          "Elevated creatine kinase is not present."
+        ],
+        "c": 0,
+        "num": 7
+      },
+      {
+        "q": "Is it possible to have both asthma and COPD?",
+        "o": [
+          "YES",
+          "NO"
+        ],
+        "c": 0,
+        "num": 8
+      },
+      {
+        "q": "What is true about peoples with COPD?",
+        "o": [
+          "people with COPD experience more headach",
+          "people with COPD are infertile",
+          "people with COPD burn more calories",
+          "people with COPD tend to be short"
+        ],
+        "c": 2,
+        "num": 9
+      },
+      {
+        "q": "which of the following is a diagnostic for COPD?",
+        "o": [
+          "postbronchodilator FV1 improvement less than 15%",
+          "postbronchodilator FV1/FVC less than 0.7",
+          "wheezy chest, cough and dyspnoea",
+          "cyanosis"
+        ],
+        "c": 1,
+        "num": 10
+      },
+      {
+        "q": "which of the following is not considered as a risk factor for COPD?",
+        "o": [
+          "Infant lung infection",
+          "Asthma",
+          "Alpha 1 anti trypsin deficiency",
+          "obesity"
+        ],
+        "c": 3,
+        "num": 11
+      },
+      {
+        "q": "What is the most prevalent symptoms in patients with COPD have?",
+        "o": [
+          "musculoskletal pain",
+          "Fatigue",
+          "Burising",
+          "heart burn"
+        ],
+        "c": 0,
+        "num": 12
+      },
+      {
+        "q": "is it true that in COPD patients use of opioids can increase the risk of ischaemia heart disease ?",
+        "o": [
+          "True.",
+          "false"
+        ],
+        "c": 0,
+        "num": 13
+      },
+      {
+        "q": "What is the risk factor for COPD exacerbation?",
+        "o": [
+          "FV1 less than 30%",
+          "Pneumonia",
+          "previous exacerbation",
+          "heart failure"
+        ],
+        "c": 2,
+        "num": 14
+      },
+      {
+        "q": "What is the indication of phosphodiesterase E 4 inhibitor in COPD?",
+        "o": [
+          "Heart failure",
+          "Bronchiectasis",
+          "Chronic bronchitis and history of exacerbation",
+          "Pneumonia"
+        ],
+        "c": 2,
+        "num": 15
+      },
+      {
+        "q": "what is the indication of long term oxygen therapy in COPD?",
+        "o": [
+          "Exercise induced arterial desaturation",
+          "Co-morbidities with ischaemia heart",
+          "Hypoxaemia less than 55% pao2 and less than 88 %Sao2",
+          "FV1 Less than 35 %"
+        ],
+        "c": 2,
+        "num": 16
+      },
+      {
+        "q": "Which of the following is contraindication for endoscopic one valve lung reduction volume surgery?",
+        "o": [
+          "Diffuse emphysema",
+          "Presence of collateral ventilation",
+          "FV1 more than 30%",
+          "Right side heart enlargment"
+        ],
+        "c": 1,
+        "num": 17
+      }
+    ]
+  },
+  {
+    "name": "GIT",
+    "questions": []
+  },
+  {
+    "name": "Hepatology",
+    "questions": [
+      {
+        "q": "Chronic hepatitis is liver disease lasts for more than:",
+        "o": [
+          "4 Weeks",
+          "3 months",
+          "6 Months",
+          "7 months",
+          "one year"
+        ],
+        "c": 2,
+        "num": 1
+      },
+      {
+        "q": "The most common cause of chromic viral hepatitis worldwide is:",
+        "o": [
+          "chronic hepatis C",
+          "chronic hepatis A",
+          "Chronic hepatis E",
+          "Chronic hepatis B",
+          "chronic hepatitis D"
+        ],
+        "c": 3,
+        "num": 2
+      },
+      {
+        "q": "Acute hepatis B in adult progresse to chronic hepatis B in:",
+        "o": [
+          "3% of cases",
+          "5% f cases",
+          "10% of cases",
+          "20% of cases",
+          "50% of cases"
+        ],
+        "c": 3,
+        "num": 3
+      },
+      {
+        "q": "Steatosis is accumulation of fat in the liver more than:",
+        "o": [
+          "2% of liver weight",
+          "5% f liver weight",
+          "10% of liver weight",
+          "205 of liver weight",
+          "30% of liver weight"
+        ],
+        "c": 1,
+        "num": 4
+      },
+      {
+        "q": "Acute hepatitis C progress to chronic hepatitis cin:",
+        "o": [
+          "20% of cases",
+          "40% Of cases",
+          "50% of cases",
+          "80% of cases",
+          "100% of cases"
+        ],
+        "c": 3,
+        "num": 5
+      },
+      {
+        "q": "Histological assessment of chronic hepatitis depends on:",
+        "o": [
+          "degree of fibroses",
+          "degree of inflammation",
+          "degree of fibroses and inflammation",
+          "degree of cirrhosis",
+          "duration of hepatitis"
+        ],
+        "c": 2,
+        "num": 6
+      },
+      {
+        "q": "the drug used to treat chronic hepatis B is;",
+        "o": [
+          "Faburic acid",
+          "Sofosbuvir",
+          "Tenofovir",
+          "Amoxicillin",
+          "Corticosteroid"
+        ],
+        "c": 2,
+        "num": 7
+      },
+      {
+        "q": "About 2/3 cases of chronic hepatitis presented by:",
+        "o": [
+          "Severe symptoms",
+          "No symptoms",
+          "Cirrhosis",
+          "Hepatocellular carcinoma",
+          "Jaundice"
+        ],
+        "c": 1,
+        "num": 8
+      }
+    ]
+  },
+  {
+    "name": "Blood",
+    "questions": []
+  },
+  {
+    "name": "Neuro",
+    "questions": []
+  }
+]
