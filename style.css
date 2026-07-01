@@ -581,12 +581,21 @@ body {
 .category-name {
   font-size: 1.1rem;
   font-weight: 700;
+  color: #06d6a0; /* soft mint green */
 }
 
 .category-count {
-  font-size: 0.82rem;
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   color: var(--text-secondary);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
   font-weight: 600;
+  margin-top: 6px;
+  width: fit-content;
 }
 
 .accordion-chevron {
@@ -722,13 +731,28 @@ body {
 .exam-name {
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #ffd166; /* warm gold */
 }
 
 .exam-count {
-  font-size: 0.76rem;
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   color: var(--text-secondary);
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-size: 0.72rem;
   font-weight: 600;
+  margin-top: 6px;
+  width: fit-content;
+  transition: all 0.25s ease;
+}
+
+.exam-item:hover .exam-count {
+  background: rgba(6, 214, 160, 0.05);
+  border-color: rgba(6, 214, 160, 0.2);
+  color: #06d6a0;
 }
 
 .checkbox-custom {
@@ -2678,6 +2702,8 @@ body.quiz-active #quiz-screen .quiz-nav {
   gap: 6px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 10px rgba(6, 214, 160, 0.05);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .btn-back-setup:hover {
@@ -2715,6 +2741,8 @@ body.quiz-active #quiz-screen .quiz-nav {
   font-weight: 600;
   margin: 0;
   box-shadow: 0 2px 10px rgba(255, 209, 102, 0.05);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .study-subtitle strong {
@@ -2758,13 +2786,21 @@ body.quiz-active #quiz-screen .quiz-nav {
   width: 100%;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-md);
+  border-radius: 50px; /* Fully rounded pill inputs */
   padding: 10px 16px 10px 38px;
   color: var(--text-primary);
   font-size: 0.9rem;
   outline: none;
   font-family: inherit;
   transition: all 0.25s ease;
+}
+
+.match-highlight {
+  background-color: rgba(6, 214, 160, 0.22);
+  color: #00f5d4;
+  border-radius: 4px;
+  padding: 0 4px;
+  font-weight: bold;
 }
 
 .study-search-input:focus,

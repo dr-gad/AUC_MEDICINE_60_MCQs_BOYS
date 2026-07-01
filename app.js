@@ -291,7 +291,7 @@ function bindStaticEvents() {
         if (!isNaN(qNum) && qNum >= 1 && qNum <= studyQuestions.length) {
           jumpToStudyQuestion(true); // isAuto = true
         }
-      }, 150);
+      }, 250);
     });
     studyJumpInput.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
@@ -1985,6 +1985,13 @@ function renderStudyQuestions() {
   });
 }
 
+function highlightText(text, query) {
+  if (!query) return text;
+  const escapedQuery = query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+  const regex = new RegExp(`(${escapedQuery})`, 'gi');
+  return text.replace(regex, '<mark class="match-highlight">$1</mark>');
+}
+
 function filterStudyQuestions() {
   const input = document.getElementById('study-search-input');
   const clearBtn = document.getElementById('study-search-clear');
@@ -2003,13 +2010,50 @@ function filterStudyQuestions() {
   let visibleCount = 0;
 
   cards.forEach(card => {
-    const qText = card.querySelector('.study-q-text').textContent.toLowerCase();
-    const options = Array.from(card.querySelectorAll('.study-option-text')).map(el => el.textContent.toLowerCase());
+    const idx = parseInt(card.dataset.index) - 1;
+    const q = studyQuestions[idx];
+    if (!q) return;
+
+    const qText = q.q.toLowerCase();
+    const options = q.o.map(opt => opt.toLowerCase());
     const isMatch = qText.includes(query) || options.some(opt => opt.includes(query));
 
     if (isMatch) {
       card.classList.remove('hidden');
       visibleCount++;
+
+      // Re-render card content with dynamic highlighting
+      const metaText = `${q.secName} › ${q.examName}`;
+      let qHTML = escapeAttr(q.q);
+      let optionsHTML = q.o.map((opt, oIdx) => {
+        const isCorrect = oIdx === q.c;
+        const letter = String.fromCharCode(65 + oIdx);
+        let optHTML = escapeAttr(opt);
+        if (query.length > 0) {
+          optHTML = highlightText(optHTML, query);
+        }
+        return `
+          <div class="study-option ${isCorrect ? 'correct' : ''}">
+            <div class="study-option-letter">${letter}</div>
+            <div class="study-option-text">${optHTML}</div>
+          </div>
+        `;
+      }).join('');
+
+      if (query.length > 0) {
+        qHTML = highlightText(qHTML, query);
+      }
+
+      card.innerHTML = `
+        <div class="study-q-header">
+          <span class="study-q-meta">${metaText}</span>
+          <span class="study-q-badge">Q ${idx + 1}</span>
+        </div>
+        <div class="study-q-text">${qHTML}</div>
+        <div class="study-options-container">
+          ${optionsHTML}
+        </div>
+      `;
     } else {
       card.classList.add('hidden');
     }
@@ -2030,7 +2074,8 @@ function jumpToStudyQuestion(isAuto = false) {
 
   const targetCard = document.getElementById(`study-q-${qNum}`);
   if (targetCard) {
-    if (targetCard.classList.contains('hidden')) {
+    let wasHidden = targetCard.classList.contains('hidden');
+    if (wasHidden) {
       const searchInput = document.getElementById('study-search-input');
       if (searchInput) searchInput.value = '';
       const clearBtn = document.getElementById('study-search-clear');
@@ -2038,11 +2083,14 @@ function jumpToStudyQuestion(isAuto = false) {
       filterStudyQuestions();
     }
 
-    targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    
-    targetCard.classList.remove('highlight-pulse');
-    void targetCard.offsetWidth;
-    targetCard.classList.add('highlight-pulse');
+    // Defer scroll to next tick to let browser layout reflow complete (especially if cards were unhidden)
+    const delay = wasHidden ? 60 : 0;
+    setTimeout(() => {
+      targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      targetCard.classList.remove('highlight-pulse');
+      void targetCard.offsetWidth; // trigger reflow
+      targetCard.classList.add('highlight-pulse');
+    }, delay);
   }
 }
 
