@@ -1086,6 +1086,16 @@ function switchScreen(fromId, toId) {
     }
   }
 
+  // Toggle prayer-banner visibility: hide on study-screen
+  const prayerBanner = document.getElementById('prayer-banner');
+  if (prayerBanner) {
+    if (toId === 'study-screen') {
+      prayerBanner.style.display = 'none';
+    } else {
+      prayerBanner.style.display = 'block';
+    }
+  }
+
   // Hide all screens to prevent any overlap
   document.querySelectorAll('.screen').forEach(screen => {
     screen.classList.remove('active');
