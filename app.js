@@ -272,30 +272,25 @@ function bindStaticEvents() {
   if (studySearchInput) {
     studySearchInput.addEventListener('input', () => filterStudyQuestions());
   }
-  const studySearchClear = document.getElementById('study-search-clear');
-  if (studySearchClear) {
-    studySearchClear.addEventListener('click', () => {
-      studySearchInput.value = '';
-      studySearchClear.style.display = 'none';
-      filterStudyQuestions();
-      studySearchInput.focus();
+  const studySearchToggle = document.getElementById('study-search-toggle');
+  const studySearchOverlay = document.getElementById('study-search-overlay');
+  const studySearchClose = document.getElementById('study-search-close');
+  
+  if (studySearchToggle && studySearchOverlay) {
+    studySearchToggle.addEventListener('click', () => {
+      studySearchOverlay.classList.add('active');
+      if (studySearchInput) {
+        studySearchInput.focus();
+      }
     });
   }
-  const studyJumpInput = document.getElementById('study-jump-input');
-  if (studyJumpInput) {
-    let jumpTimeout;
-    studyJumpInput.addEventListener('input', () => {
-      clearTimeout(jumpTimeout);
-      jumpTimeout = setTimeout(() => {
-        const qNum = parseInt(studyJumpInput.value.trim());
-        if (!isNaN(qNum) && qNum >= 1 && qNum <= studyQuestions.length) {
-          jumpToStudyQuestion(true); // isAuto = true
-        }
-      }, 250);
-    });
-    studyJumpInput.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        jumpToStudyQuestion(false); // isAuto = false (will show alert if invalid)
+  
+  if (studySearchClose && studySearchOverlay) {
+    studySearchClose.addEventListener('click', () => {
+      studySearchOverlay.classList.remove('active');
+      if (studySearchInput) {
+        studySearchInput.value = '';
+        filterStudyQuestions();
       }
     });
   }
@@ -1994,13 +1989,11 @@ function highlightText(text, query) {
 
 function filterStudyQuestions() {
   const input = document.getElementById('study-search-input');
-  const clearBtn = document.getElementById('study-search-clear');
   const cards = document.querySelectorAll('.study-q-card');
   const matchCountEl = document.getElementById('study-match-count');
   if (!input) return;
 
   const query = input.value.trim().toLowerCase();
-  clearBtn.style.display = query.length > 0 ? 'flex' : 'none';
 
   const matchWrapper = document.getElementById('study-match-wrapper');
   if (matchWrapper) {
@@ -2062,45 +2055,13 @@ function filterStudyQuestions() {
   matchCountEl.textContent = visibleCount;
 }
 
-function jumpToStudyQuestion(isAuto = false) {
-  const input = document.getElementById('study-jump-input');
-  if (!input) return;
-
-  const qNum = parseInt(input.value.trim());
-  if (isNaN(qNum) || qNum < 1 || qNum > studyQuestions.length) {
-    if (!isAuto) alert(`Please enter a valid question number between 1 and ${studyQuestions.length}`);
-    return;
-  }
-
-  const targetCard = document.getElementById(`study-q-${qNum}`);
-  if (targetCard) {
-    let wasHidden = targetCard.classList.contains('hidden');
-    if (wasHidden) {
-      const searchInput = document.getElementById('study-search-input');
-      if (searchInput) searchInput.value = '';
-      const clearBtn = document.getElementById('study-search-clear');
-      if (clearBtn) clearBtn.style.display = 'none';
-      filterStudyQuestions();
-    }
-
-    // Defer scroll to next tick to let browser layout reflow complete (especially if cards were unhidden)
-    const delay = wasHidden ? 60 : 0;
-    setTimeout(() => {
-      targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      targetCard.classList.remove('highlight-pulse');
-      void targetCard.offsetWidth; // trigger reflow
-      targetCard.classList.add('highlight-pulse');
-    }, delay);
-  }
-}
-
 function backToSetupFromStudy() {
   const searchInput = document.getElementById('study-search-input');
   if (searchInput) searchInput.value = '';
-  const clearBtn = document.getElementById('study-search-clear');
-  if (clearBtn) clearBtn.style.display = 'none';
-  const jumpInput = document.getElementById('study-jump-input');
-  if (jumpInput) jumpInput.value = '';
+  
+  const studySearchOverlay = document.getElementById('study-search-overlay');
+  if (studySearchOverlay) studySearchOverlay.classList.remove('active');
 
+  filterStudyQuestions();
   switchScreen('study-screen', 'setup-screen');
 }
