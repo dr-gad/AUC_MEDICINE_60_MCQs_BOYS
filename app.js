@@ -268,31 +268,36 @@ function bindStaticEvents() {
   if (backSetupBtn) {
     backSetupBtn.addEventListener('click', () => backToSetupFromStudy());
   }
-  const studySearchInput = document.getElementById('study-search-input');
-  if (studySearchInput) {
-    studySearchInput.addEventListener('input', () => filterStudyQuestions());
-  }
-  const studySearchToggle = document.getElementById('study-search-toggle');
-  const studySearchOverlay = document.getElementById('study-search-overlay');
-  const studySearchClose = document.getElementById('study-search-close');
-  
-  if (studySearchToggle && studySearchOverlay) {
-    studySearchToggle.addEventListener('click', () => {
-      studySearchOverlay.classList.add('active');
-      if (studySearchInput) {
-        studySearchInput.focus();
+  const widgetBtn = document.getElementById('study-search-widget-btn');
+  const widgetCard = document.getElementById('study-search-widget-card');
+  const widgetClose = document.getElementById('study-search-widget-close');
+  const widgetInput = document.getElementById('study-search-widget-input');
+
+  if (widgetBtn && widgetCard) {
+    widgetBtn.addEventListener('click', () => {
+      widgetBtn.style.display = 'none';
+      widgetCard.style.display = 'block';
+      if (widgetInput) {
+        widgetInput.focus();
+        performStudyWidgetSearch();
       }
     });
   }
-  
-  if (studySearchClose && studySearchOverlay) {
-    studySearchClose.addEventListener('click', () => {
-      studySearchOverlay.classList.remove('active');
-      if (studySearchInput) {
-        studySearchInput.value = '';
-        filterStudyQuestions();
+
+  if (widgetClose && widgetBtn && widgetCard) {
+    widgetClose.addEventListener('click', () => {
+      widgetCard.style.display = 'none';
+      widgetBtn.style.display = 'flex';
+      if (widgetInput) {
+        widgetInput.value = '';
       }
+      const resultsContainer = document.getElementById('study-search-widget-results');
+      if (resultsContainer) resultsContainer.innerHTML = '';
     });
+  }
+
+  if (widgetInput) {
+    widgetInput.addEventListener('input', () => performStudyWidgetSearch());
   }
 }
 
@@ -1987,81 +1992,68 @@ function highlightText(text, query) {
   return text.replace(regex, '<mark class="match-highlight">$1</mark>');
 }
 
-function filterStudyQuestions() {
-  const input = document.getElementById('study-search-input');
-  const cards = document.querySelectorAll('.study-q-card');
-  const matchCountEl = document.getElementById('study-match-count');
-  if (!input) return;
+function performStudyWidgetSearch() {
+  const input = document.getElementById('study-search-widget-input');
+  const resultsContainer = document.getElementById('study-search-widget-results');
+  if (!input || !resultsContainer) return;
 
   const query = input.value.trim().toLowerCase();
-
-  const matchWrapper = document.getElementById('study-match-wrapper');
-  if (matchWrapper) {
-    matchWrapper.style.display = query.length > 0 ? 'inline' : 'none';
+  if (query.length === 0) {
+    resultsContainer.innerHTML = '';
+    return;
   }
 
-  let visibleCount = 0;
-
-  cards.forEach(card => {
-    const idx = parseInt(card.dataset.index) - 1;
-    const q = studyQuestions[idx];
-    if (!q) return;
-
+  const matches = [];
+  studyQuestions.forEach((q, idx) => {
     const qText = q.q.toLowerCase();
     const options = q.o.map(opt => opt.toLowerCase());
     const isMatch = qText.includes(query) || options.some(opt => opt.includes(query));
-
     if (isMatch) {
-      card.classList.remove('hidden');
-      visibleCount++;
-
-      // Re-render card content with dynamic highlighting
-      const metaText = `${q.secName} › ${q.examName}`;
-      let qHTML = escapeAttr(q.q);
-      let optionsHTML = q.o.map((opt, oIdx) => {
-        const isCorrect = oIdx === q.c;
-        const letter = String.fromCharCode(65 + oIdx);
-        let optHTML = escapeAttr(opt);
-        if (query.length > 0) {
-          optHTML = highlightText(optHTML, query);
-        }
-        return `
-          <div class="study-option ${isCorrect ? 'correct' : ''}">
-            <div class="study-option-letter">${letter}</div>
-            <div class="study-option-text">${optHTML}</div>
-          </div>
-        `;
-      }).join('');
-
-      if (query.length > 0) {
-        qHTML = highlightText(qHTML, query);
-      }
-
-      card.innerHTML = `
-        <div class="study-q-header">
-          <span class="study-q-meta">${metaText}</span>
-          <span class="study-q-badge">Q ${idx + 1}</span>
-        </div>
-        <div class="study-q-text">${qHTML}</div>
-        <div class="study-options-container">
-          ${optionsHTML}
-        </div>
-      `;
-    } else {
-      card.classList.add('hidden');
+      matches.push({
+        num: idx + 1,
+        text: q.q
+      });
     }
   });
 
-  matchCountEl.textContent = visibleCount;
+  if (matches.length === 0) {
+    resultsContainer.innerHTML = '<div class="study-search-no-match">No matches found</div>';
+  } else {
+    resultsContainer.innerHTML = matches.map(m => `
+      <button class="study-search-result-item" data-qnum="${m.num}">
+        <span class="study-search-result-qnum">#${m.num}</span>
+        <span class="study-search-result-text">${highlightText(escapeAttr(m.text), query)}</span>
+      </button>
+    `).join('');
+
+    // Bind click events to results
+    const items = resultsContainer.querySelectorAll('.study-search-result-item');
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        const qNum = parseInt(item.getAttribute('data-qnum'));
+        const targetCard = document.getElementById(`study-q-${qNum}`);
+        if (targetCard) {
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          targetCard.classList.remove('highlight-pulse');
+          void targetCard.offsetWidth; // trigger reflow
+          targetCard.classList.add('highlight-pulse');
+        }
+      });
+    });
+  }
 }
 
 function backToSetupFromStudy() {
-  const searchInput = document.getElementById('study-search-input');
-  if (searchInput) searchInput.value = '';
+  const widgetBtn = document.getElementById('study-search-widget-btn');
+  const widgetCard = document.getElementById('study-search-widget-card');
+  const widgetInput = document.getElementById('study-search-widget-input');
   
-  const studySearchOverlay = document.getElementById('study-search-overlay');
-  if (studySearchOverlay) studySearchOverlay.classList.remove('active');
+  if (widgetCard) widgetCard.style.display = 'none';
+  if (widgetBtn) widgetBtn.style.display = 'flex';
+  if (widgetInput) widgetInput.value = '';
+  
+  const resultsContainer = document.getElementById('study-search-widget-results');
+  if (resultsContainer) resultsContainer.innerHTML = '';
 
-  filterStudyQuestions();
   switchScreen('study-screen', 'setup-screen');
 }
