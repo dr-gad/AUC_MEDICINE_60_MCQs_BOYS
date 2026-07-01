@@ -17,21 +17,10 @@ async function loadSectionData(sectionName) {
   const section = allSections.find(s => s.name === sectionName);
   if (!section || !section.dataFile) return false;
 
-  const scriptSrc = section.dataFile.replace('.json', '.js');
-
   try {
-    await new Promise((resolve, reject) => {
-      const script = document.createElement('script');
-      script.src = scriptSrc;
-      script.onload = resolve;
-      script.onerror = reject;
-      document.head.appendChild(script);
-    });
-
-    const cleanName = sectionName.replace(/[^a-zA-Z]/g, ' ').trim().split(/\s+/).pop().toLowerCase();
-    const varName = `${cleanName}Questions`;
-    const examsData = window[varName];
-    if (!examsData) throw new Error(`Global variable ${varName} not found`);
+    const response = await fetch(section.dataFile);
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    const examsData = await response.json();
 
     // Merge loaded questions into the section's exam objects
     examsData.forEach(loadedExam => {

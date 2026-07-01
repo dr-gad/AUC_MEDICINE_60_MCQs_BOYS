@@ -1413,7 +1413,7 @@
           "Mucosal biopsy",
           "Erect abdominal x-ray"
         ],
-        "c": 3,
+        "c": 1,
         "num": 6
       },
       {
@@ -1711,7 +1711,7 @@
           "Abnormal electrocardiogram",
           "Increased ammonia"
         ],
-        "c": 1,
+        "c": 0,
         "num": 9
       },
       {
@@ -2108,7 +2108,7 @@
           "Mitral stenosis",
           "Cerebral thrombosis"
         ],
-        "c": 1,
+        "c": 0,
         "num": 18
       },
       {

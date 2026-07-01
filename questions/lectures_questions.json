@@ -129,14 +129,18 @@
     "questions": [
       {
         "q": "The gold standard test for diagnosis of PE is",
-        "o": [],
-        "c": -1,
+        "o": [
+          "CT Pulmonary Angiographry"
+        ],
+        "c": 0,
         "num": 1
       },
       {
         "q": "The most common sign of PE in ECG is",
-        "o": [],
-        "c": -1,
+        "o": [
+          "Sinus tchycardia - S1Q3T3"
+        ],
+        "c": 0,
         "num": 2
       },
       {
@@ -303,10 +307,6 @@
     ]
   },
   {
-    "name": "GIT",
-    "questions": []
-  },
-  {
     "name": "Hepatology",
     "questions": [
       {
@@ -406,13 +406,5 @@
         "num": 8
       }
     ]
-  },
-  {
-    "name": "Blood",
-    "questions": []
-  },
-  {
-    "name": "Neuro",
-    "questions": []
   }
 ]

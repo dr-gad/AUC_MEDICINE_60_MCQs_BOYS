@@ -1102,12 +1102,12 @@
         {
           "label": "D",
           "text": "Hepatic encephalopathy",
-          "is_correct": false
+          "is_correct": true
         },
         {
           "label": "E",
           "text": "Quinidine",
-          "is_correct": true
+          "is_correct": false
         }
       ],
       "correct_answer_text": null,
@@ -6464,12 +6464,12 @@
         {
           "label": "A",
           "text": "Asterixis",
-          "is_correct": false
+          "is_correct": true
         },
         {
           "label": "B",
           "text": "Absent deep reflex",
-          "is_correct": true
+          "is_correct": false
         },
         {
           "label": "C",
@@ -9322,12 +9322,12 @@
         {
           "label": "B",
           "text": "Crohn's disease",
-          "is_correct": true
+          "is_correct": false
         },
         {
           "label": "C",
           "text": "Ulcerative colitis",
-          "is_correct": false
+          "is_correct": true
         },
         {
           "label": "D",

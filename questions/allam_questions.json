@@ -341,14 +341,6 @@
     ]
   },
   {
-    "name": "GIT",
-    "questions": []
-  },
-  {
-    "name": "Hepatology",
-    "questions": []
-  },
-  {
     "name": "Blood",
     "questions": [
       {

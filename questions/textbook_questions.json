@@ -279,7 +279,7 @@
           "Hepatic encephalopathy",
           "Quinidine"
         ],
-        "c": 4,
+        "c": 3,
         "num": 26
       },
       {
@@ -1941,7 +1941,7 @@
           "Ulcerative colitis",
           "Colorectal cancer"
         ],
-        "c": 1,
+        "c": 2,
         "num": 28
       },
       {
@@ -2107,7 +2107,7 @@
           "Abnormal electrocardiogram",
           "Increased ammonia"
         ],
-        "c": 1,
+        "c": 0,
         "num": 8
       },
       {
@@ -4737,9 +4737,5 @@
         "num": 196
       }
     ]
-  },
-  {
-    "name": "Neuro",
-    "questions": []
   }
 ]

@@ -5804,7 +5804,7 @@
         {
           "label": "B",
           "text": "Stool assays",
-          "is_correct": false
+          "is_correct": true
         },
         {
           "label": "C",
@@ -5814,7 +5814,7 @@
         {
           "label": "D",
           "text": "Mucosal biopsy",
-          "is_correct": true
+          "is_correct": false
         },
         {
           "label": "E",
@@ -6931,12 +6931,12 @@
         {
           "label": "A",
           "text": "Asterixis",
-          "is_correct": false
+          "is_correct": true
         },
         {
           "label": "B",
           "text": "Absent deep reflex",
-          "is_correct": true
+          "is_correct": false
         },
         {
           "label": "C",
@@ -8053,12 +8053,12 @@
         {
           "label": "A",
           "text": "Disseminated sclerosis",
-          "is_correct": false
+          "is_correct": true
         },
         {
           "label": "B",
           "text": "Mitral stenosis",
-          "is_correct": true
+          "is_correct": false
         },
         {
           "label": "C",

@@ -454,15 +454,20 @@
     },
     {
       "id": "q-lectures-009",
-      "type": "fill_blank",
+      "type": "mcq",
       "text": "The gold standard test for diagnosis of PE is",
       "normalized_text": "the gold standard test for diagnosis of pe is",
       "medical_section_id": "sec-chest",
       "source_ids": [
         "src-lectures"
       ],
-      "choices": [],
-      "correct_answer_text": "CT Pulmonary Angiographry",
+      "choices": [ 
+        {
+          "label": "A",
+          "text": "CT Pulmonary Angiographry",
+          "is_correct": true
+        }],
+      "correct_answer_text": null,
       "stats": {
         "correct_count": 0,
         "wrong_count": 0,
@@ -474,15 +479,21 @@
     },
     {
       "id": "q-lectures-010",
-      "type": "fill_blank",
+      "type": "mcq",
       "text": "The most common sign of PE in ECG is",
       "normalized_text": "the most common sign of pe in ecg is",
       "medical_section_id": "sec-chest",
       "source_ids": [
         "src-lectures"
       ],
-      "choices": [],
-      "correct_answer_text": "Sinus tchycardia - S1Q3T3 pattern",
+      "choices": [
+        {
+          "label": "A",
+          "text": "Sinus tchycardia - S1Q3T3",
+          "is_correct": true
+        }
+      ],
+      "correct_answer_text": " null",
       "stats": {
         "correct_count": 0,
         "wrong_count": 0,
