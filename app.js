@@ -1938,6 +1938,9 @@ function renderStudyQuestions() {
   container.innerHTML = '';
   totalCountEl.textContent = studyQuestions.length;
   matchCountEl.textContent = studyQuestions.length;
+  
+  const matchWrapper = document.getElementById('study-match-wrapper');
+  if (matchWrapper) matchWrapper.style.display = 'none';
 
   if (studyQuestions.length === 0) {
     container.innerHTML = '<div style="text-align:center; padding:40px; color:var(--text-muted);">No questions to display.</div>';
@@ -1985,6 +1988,11 @@ function filterStudyQuestions() {
 
   const query = input.value.trim().toLowerCase();
   clearBtn.style.display = query.length > 0 ? 'flex' : 'none';
+
+  const matchWrapper = document.getElementById('study-match-wrapper');
+  if (matchWrapper) {
+    matchWrapper.style.display = query.length > 0 ? 'inline' : 'none';
+  }
 
   let visibleCount = 0;
 
