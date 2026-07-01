@@ -224,6 +224,10 @@ function bindStaticEvents() {
   document.getElementById('clear-all-flags-btn')
     .addEventListener('click', () => clearAllFlags());
 
+  document.querySelectorAll('input[name="deduplicate"]').forEach(input => {
+    input.addEventListener('change', () => updateTotalCounter());
+  });
+
   // Quiz screen navigation
   document.getElementById('btn-next')
     .addEventListener('click', () => nextQuestion());
@@ -384,19 +388,21 @@ function renderSectionCard(section, container) {
     }
     card.dataset.name = section.name;
 
-    // Calculate total questions in this category (using questionCount for unloaded sections)
+    // Calculate total and unique questions in this category
     let totalQuestions = 0;
+    let totalUnique = 0;
     section.exams.forEach(exam => {
       totalQuestions += getExamQuestionCount(exam);
+      totalUnique += exam.uniqueCount || getExamQuestionCount(exam);
     });
 
     let countText = '';
     if (section.exams.length === 1) {
-      countText = `1 قسم (${totalQuestions} سؤال)`;
+      countText = `1 قسم (${totalQuestions} سؤال | ${totalUnique} غير مكرر)`;
     } else if (section.exams.length >= 3 && section.exams.length <= 10) {
-      countText = `${section.exams.length} أقسام (${totalQuestions} سؤال)`;
+      countText = `${section.exams.length} أقسام (${totalQuestions} سؤال | ${totalUnique} غير مكرر)`;
     } else {
-      countText = `${section.exams.length} قسم (${totalQuestions} سؤال)`;
+      countText = `${section.exams.length} قسم (${totalQuestions} سؤال | ${totalUnique} غير مكرر)`;
     }
     if (section.soon) {
       countText = 'قريباً...';
@@ -427,11 +433,12 @@ function renderSectionCard(section, container) {
       const examKey = `${section.name}|${exam.name}`;
       const isChecked = selectedExams.has(examKey);
       const qCount = getExamQuestionCount(exam);
+      const uCount = exam.uniqueCount || qCount;
       return `
               <div class="exam-item ${isChecked ? 'selected' : ''}" data-key="${examKey}">
                 <div class="exam-info">
                   <span class="exam-name">${exam.name}</span>
-                  <span class="exam-count">${qCount} سؤال</span>
+                  <span class="exam-count">الكل: ${qCount} | غير مكرر: ${uCount}</span>
                 </div>
                 <div class="checkbox-custom"></div>
               </div>
@@ -521,12 +528,20 @@ function deselectAllExams(secName, card) {
 // Update Selected Questions Count
 function updateTotalCounter() {
   let total = 0;
+  const deduplicate = document.querySelector('input[name="deduplicate"]:checked') ? document.querySelector('input[name="deduplicate"]:checked').value : 'off';
+
   selectedExams.forEach(key => {
     const [secName, examName] = key.split('|');
     const section = allSections.find(s => s.name === secName);
     if (section) {
       const exam = section.exams.find(e => e.name === examName);
-      if (exam) total += getExamQuestionCount(exam);
+      if (exam) {
+        if (deduplicate === 'on') {
+          total += exam.uniqueCount || getExamQuestionCount(exam);
+        } else {
+          total += getExamQuestionCount(exam);
+        }
+      }
     }
   });
   document.getElementById('selected-total').innerText = total;
@@ -540,6 +555,22 @@ function shuffleArray(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
   return array;
+}
+
+// Normalize question text for deduplication
+function normalizeText(text) {
+  if (!text) return '';
+  const PUNCT_RE = /[.,،;؛:؟?!\-–—_=+*"'`’‘“”()\[\]{}\/\\|<>«»…#%~^]/g;
+  const DIACRITICS_RE = /[\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/g;
+  return text
+    .replace(DIACRITICS_RE, '')
+    .replace(PUNCT_RE, ' ')
+    .replace(/[أإآ]/g, 'ا')
+    .replace(/ى/g, 'ي')
+    .replace(/ة/g, 'ه')
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 // Start Quiz
@@ -639,6 +670,21 @@ async function startQuiz(customQuestions = null) {
     if (questionOrder === 'random') {
       shuffleArray(quizQuestions);
     }
+  }
+
+  // Deduplicate questions if enabled
+  const deduplicate = document.querySelector('input[name="deduplicate"]:checked') ? document.querySelector('input[name="deduplicate"]:checked').value : 'off';
+  if (deduplicate === 'on') {
+    const seen = new Set();
+    const deduped = [];
+    quizQuestions.forEach(q => {
+      const norm = normalizeText(q.qText);
+      if (!seen.has(norm)) {
+        seen.add(norm);
+        deduped.push(q);
+      }
+    });
+    quizQuestions = deduped;
   }
 
   if (quizQuestions.length === 0) {

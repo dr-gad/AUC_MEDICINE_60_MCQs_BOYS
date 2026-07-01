@@ -8,16 +8,18 @@ const allSections = [
     "groupTitle": "أسئلة السنوات السابقة مقسمة طبقاً لسنة الامتحان",
     "group": "Internal Medicine",
     "exams": [
-      { "name": "EM 2021", "questionCount": 30, "questions": [] },
-      { "name": "ES 2021", "questionCount": 45, "questions": [] },
-      { "name": "EM 2022", "questionCount": 30, "questions": [] },
-      { "name": "ES 2022", "questionCount": 45, "questions": [] },
-      { "name": "EM 2023", "questionCount": 30, "questions": [] },
-      { "name": "ES 2023", "questionCount": 36, "questions": [] },
-      { "name": "EM 2024", "questionCount": 28, "questions": [] },
-      { "name": "ES 2024", "questionCount": 36, "questions": [] },
-      { "name": "EM 2025", "questionCount": 30, "questions": [] },
-      { "name": "ES 2025", "questionCount": 36, "questions": [] }
+      { "name": "EM 2021", "questionCount": 30, "uniqueCount": 30, "questions": [] },
+      { "name": "ES 2021", "questionCount": 45, "uniqueCount": 45, "questions": [] },
+      { "name": "EM 2022", "questionCount": 30, "uniqueCount": 30, "questions": [] },
+      { "name": "ES 2022", "questionCount": 45, "uniqueCount": 45, "questions": [] },
+      { "name": "EM 2023", "questionCount": 30, "uniqueCount": 30, "questions": [] },
+      { "name": "ES 2023", "questionCount": 36, "uniqueCount": 36, "questions": [] },
+      { "name": "EM 2024", "questionCount": 28, "uniqueCount": 28, "questions": [] },
+      { "name": "ES 2024", "questionCount": 36, "uniqueCount": 36, "questions": [] },
+      { "name": "EM 2025", "questionCount": 30, "uniqueCount": 30, "questions": [] },
+      { "name": "ES 2025", "questionCount": 36, "uniqueCount": 36, "questions": [] },
+      { "name": "EM 2021 (دور ثاني / Reset)", "questionCount": 30, "uniqueCount": 30, "questions": [] },
+      { "name": "ES 2021 (دور ثاني / Reset)", "questionCount": 45, "uniqueCount": 45, "questions": [] }
     ]
   },
   {
@@ -26,12 +28,12 @@ const allSections = [
     "groupTitle": "أسئلة السنوات السابقة مقسمة طبقاً للموضوع الطبي",
     "group": "Internal Medicine",
     "exams": [
-      { "name": "Cardiology", "questionCount": 86, "questions": [] },
-      { "name": "Chest", "questionCount": 75, "questions": [] },
-      { "name": "GIT", "questionCount": 43, "questions": [] },
-      { "name": "Hepatology", "questionCount": 20, "questions": [] },
-      { "name": "Blood", "questionCount": 40, "questions": [] },
-      { "name": "Neuro", "questionCount": 28, "questions": [] }
+      { "name": "Cardiology", "questionCount": 129, "uniqueCount": 92, "questions": [] },
+      { "name": "Chest", "questionCount": 111, "uniqueCount": 83, "questions": [] },
+      { "name": "GIT", "questionCount": 56, "uniqueCount": 50, "questions": [] },
+      { "name": "Hepatology", "questionCount": 23, "uniqueCount": 21, "questions": [] },
+      { "name": "Blood", "questionCount": 56, "uniqueCount": 44, "questions": [] },
+      { "name": "Neuro", "questionCount": 46, "uniqueCount": 37, "questions": [] }
     ]
   },
   {
@@ -40,12 +42,12 @@ const allSections = [
     "groupTitle": "أسئلة ملف القسم القديم مقسمة طبقاً للموضوع الطبي",
     "group": "Internal Medicine",
     "exams": [
-      { "name": "Cardiology", "questionCount": 54, "questions": [] },
-      { "name": "Chest", "questionCount": 65, "questions": [] },
-      { "name": "GIT", "questionCount": 23, "questions": [] },
-      { "name": "Hepatology", "questionCount": 17, "questions": [] },
-      { "name": "Blood", "questionCount": 8, "questions": [] },
-      { "name": "Neuro", "questionCount": 37, "questions": [] }
+      { "name": "Cardiology", "questionCount": 54, "uniqueCount": 54, "questions": [] },
+      { "name": "Chest", "questionCount": 65, "uniqueCount": 64, "questions": [] },
+      { "name": "GIT", "questionCount": 23, "uniqueCount": 23, "questions": [] },
+      { "name": "Hepatology", "questionCount": 17, "uniqueCount": 17, "questions": [] },
+      { "name": "Blood", "questionCount": 8, "uniqueCount": 8, "questions": [] },
+      { "name": "Neuro", "questionCount": 37, "uniqueCount": 37, "questions": [] }
     ]
   },
   {
@@ -54,10 +56,10 @@ const allSections = [
     "groupTitle": "أسئلة دكتور علام مقسمة طبقاً للموضوع الطبي",
     "group": "Internal Medicine",
     "exams": [
-      { "name": "Cardiology", "questionCount": 18, "questions": [] },
-      { "name": "Chest", "questionCount": 11, "questions": [] },
-      { "name": "Blood", "questionCount": 172, "questions": [] },
-      { "name": "Neuro", "questionCount": 1, "questions": [] }
+      { "name": "Cardiology", "questionCount": 18, "uniqueCount": 18, "questions": [] },
+      { "name": "Chest", "questionCount": 11, "uniqueCount": 11, "questions": [] },
+      { "name": "Blood", "questionCount": 172, "uniqueCount": 171, "questions": [] },
+      { "name": "Neuro", "questionCount": 1, "uniqueCount": 1, "questions": [] }
     ]
   },
   {
@@ -66,9 +68,9 @@ const allSections = [
     "groupTitle": "أسئلة الدكاترة في المحاضرات مقسمة طبقاً للموضوع الطبي",
     "group": "Internal Medicine",
     "exams": [
-      { "name": "Cardiology", "questionCount": 10, "questions": [] },
-      { "name": "Chest", "questionCount": 17, "questions": [] },
-      { "name": "Hepatology", "questionCount": 8, "questions": [] }
+      { "name": "Cardiology", "questionCount": 10, "uniqueCount": 10, "questions": [] },
+      { "name": "Chest", "questionCount": 17, "uniqueCount": 17, "questions": [] },
+      { "name": "Hepatology", "questionCount": 8, "uniqueCount": 8, "questions": [] }
     ]
   },
   {
@@ -77,11 +79,11 @@ const allSections = [
     "groupTitle": "أسئلة كتاب القسم القديم مقسمة طبقاً للموضوع الطبي",
     "group": "Internal Medicine",
     "exams": [
-      { "name": "Cardiology", "questionCount": 88, "questions": [] },
-      { "name": "Chest", "questionCount": 62, "questions": [] },
-      { "name": "GIT", "questionCount": 35, "questions": [] },
-      { "name": "Hepatology", "questionCount": 53, "questions": [] },
-      { "name": "Blood", "questionCount": 196, "questions": [] }
+      { "name": "Cardiology", "questionCount": 88, "uniqueCount": 84, "questions": [] },
+      { "name": "Chest", "questionCount": 62, "uniqueCount": 61, "questions": [] },
+      { "name": "GIT", "questionCount": 35, "uniqueCount": 35, "questions": [] },
+      { "name": "Hepatology", "questionCount": 53, "uniqueCount": 53, "questions": [] },
+      { "name": "Blood", "questionCount": 196, "uniqueCount": 190, "questions": [] }
     ]
   }
 ];
