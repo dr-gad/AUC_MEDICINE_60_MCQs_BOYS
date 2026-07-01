@@ -2703,13 +2703,22 @@ body.quiz-active #quiz-screen .quiz-nav {
 }
 
 .study-subtitle {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 209, 102, 0.06);
+  border: 1px solid rgba(255, 209, 102, 0.2);
+  color: #ffd166;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0;
+  box-shadow: 0 2px 10px rgba(255, 209, 102, 0.05);
 }
 
 .study-subtitle strong {
-  color: var(--color-blue);
+  color: #ffd166;
 }
 
 .study-controls {
