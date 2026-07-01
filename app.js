@@ -281,15 +281,21 @@ function bindStaticEvents() {
       studySearchInput.focus();
     });
   }
-  const studyJumpBtn = document.getElementById('study-jump-btn');
-  if (studyJumpBtn) {
-    studyJumpBtn.addEventListener('click', () => jumpToStudyQuestion());
-  }
   const studyJumpInput = document.getElementById('study-jump-input');
   if (studyJumpInput) {
+    let jumpTimeout;
+    studyJumpInput.addEventListener('input', () => {
+      clearTimeout(jumpTimeout);
+      jumpTimeout = setTimeout(() => {
+        const qNum = parseInt(studyJumpInput.value.trim());
+        if (!isNaN(qNum) && qNum >= 1 && qNum <= studyQuestions.length) {
+          jumpToStudyQuestion(true); // isAuto = true
+        }
+      }, 150);
+    });
     studyJumpInput.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
-        jumpToStudyQuestion();
+        jumpToStudyQuestion(false); // isAuto = false (will show alert if invalid)
       }
     });
   }
@@ -2012,13 +2018,13 @@ function filterStudyQuestions() {
   matchCountEl.textContent = visibleCount;
 }
 
-function jumpToStudyQuestion() {
+function jumpToStudyQuestion(isAuto = false) {
   const input = document.getElementById('study-jump-input');
   if (!input) return;
 
   const qNum = parseInt(input.value.trim());
   if (isNaN(qNum) || qNum < 1 || qNum > studyQuestions.length) {
-    alert(`Please enter a valid question number between 1 and ${studyQuestions.length}`);
+    if (!isAuto) alert(`Please enter a valid question number between 1 and ${studyQuestions.length}`);
     return;
   }
 
